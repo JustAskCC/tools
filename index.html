@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Just Ask CC Tools</title>
+<meta name="description" content="Free tools for entrepreneurs, small businesses, and community organizations in Northeast Ohio, built by CiCi Caver of Just Ask CC.">
+<meta property="og:title" content="Just Ask CC Tools">
+<meta property="og:description" content="Free tools for entrepreneurs, small businesses, and community organizations in Northeast Ohio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: dark hero band with headline, then a grid of tool cards, then a request band and footer. */
+:root{
+  --ink:#121a2e; --ink2:#1c2742; --paper:#f5f6f9; --surface:#ffffff; --text:#16213a; --muted:#5d6880; --line:#dfe3ec;
+  --gold:#f2a71b; --gold-soft:#fdf1d8; --teal:#1b8a8f; --blue:#1d5fa6;
+  --display:"Archivo",system-ui,sans-serif; --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#0e1422; --surface:#161f31; --text:#e8ecf3; --muted:#9ba7ba; --line:#28344a; --gold-soft:#33291a; color-scheme:dark;}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-120px;top:-140px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(242,167,27,.35),rgba(242,167,27,0) 65%)}
+.hero::after{content:"";position:absolute;left:-80px;bottom:-200px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(27,138,143,.28),rgba(27,138,143,0) 65%)}
+nav.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:18px;text-decoration:none;color:#fff}
+.mark{width:34px;height:34px;border-radius:9px;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-weight:900;font-size:15px;letter-spacing:.02em}
+nav.top a.link{color:#cfd6e4;text-decoration:none;font-weight:600;font-size:15px}
+nav.top a.link:hover{color:#fff}
+.hero-body{position:relative;z-index:1;padding:56px 0 76px;max-width:720px}
+.eyebrow{display:inline-block;font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:rgba(242,167,27,.12);border:1px solid rgba(242,167,27,.35);padding:5px 10px;border-radius:999px}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(36px,6vw,60px);line-height:1.03;letter-spacing:-.01em;margin:18px 0 16px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--gold)}
+.lede{color:#cfd6e4;font-size:19px;max-width:58ch;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:16px;padding:12px 20px;border-radius:10px;text-decoration:none;border:1px solid transparent}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.btn.gold:hover{filter:brightness(1.06)}
+.btn.ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn.ghost:hover{border-color:#fff}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;color:#cfd6e4;font-size:15px}
+.facts b{display:block;font-family:var(--display);font-size:26px;color:#fff;line-height:1.1}
+
+/* tools */
+section.tools{padding:64px 0 24px}
+.sec-h{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+h2{font-family:var(--display);font-weight:800;font-size:30px;margin:0;text-wrap:balance}
+.sec-h p{margin:0;color:var(--muted);max-width:52ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.tool{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
+.tool:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(18,26,46,.14)}
+.preview{background:linear-gradient(135deg,#1d5fa6,#174a82);padding:20px 20px 0;height:170px;position:relative}
+.mini{background:#fff;border-radius:10px 10px 0 0;height:100%;padding:12px;box-shadow:0 -4px 20px rgba(0,0,0,.18);display:grid;grid-template-rows:auto 1fr;gap:8px}
+.mini .bar{display:flex;justify-content:space-between;align-items:center}
+.mini .bar i{display:block;height:8px;width:90px;border-radius:4px;background:#15233b}
+.mini .bar s{display:block;height:8px;width:40px;border-radius:4px;background:#f2a71b;text-decoration:none}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal span{border-radius:4px;background:#eef1f6}
+.cal span.e1{background:#d7e6f7;box-shadow:inset 3px 0 0 #1d5fa6}
+.cal span.e2{background:#dff0e6;box-shadow:inset 3px 0 0 #2f7d4f}
+.cal span.e3{background:#fbe9dc;box-shadow:inset 3px 0 0 #c0532b}
+.cal span.e4{background:#f4ecd5;box-shadow:inset 3px 0 0 #b8860b}
+.cal span.today{background:#f2a71b}
+.tool-b{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--gold-soft);color:var(--text)}
+.tag.t2{background:rgba(27,138,143,.14)}
+.tool h3{font-family:var(--display);font-weight:800;font-size:22px;margin:0}
+.tool p{margin:0;color:var(--muted)}
+.open{margin-top:auto;padding-top:8px;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:6px}
+@media (prefers-color-scheme:dark){.open{color:#7fb2ea}}
+.tool:hover .open span{transform:translateX(3px)}
+.open span{transition:transform .15s ease}
+.soon{border:2px dashed var(--line);border-radius:16px;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:28px;color:var(--muted);min-height:260px}
+.soon h3{font-family:var(--display);color:var(--text);margin:0;font-size:20px}
+.soon p{margin:0}
+
+/* request */
+section.request{padding:40px 0 64px}
+.req{background:var(--ink2);color:#fff;border-radius:18px;padding:34px 36px;display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}
+.req h2{color:#fff;font-size:26px}
+.req p{margin:6px 0 0;color:#cfd6e4;max-width:56ch}
+.req .addr{font-size:14px;color:#cfd6e4;margin-top:8px}
+section.adapt{padding:24px 0 0}
+.adapt-box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px 34px;display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}
+.adapt-box h2{font-size:26px;margin:10px 0 6px}
+.adapt-box p{margin:0;color:var(--muted);max-width:60ch}
+.btn.outline{border-color:var(--text);color:var(--text)}
+.btn.outline:hover{background:var(--text);color:var(--surface)}
+footer{border-top:1px solid var(--line);padding:22px 0 34px;color:var(--muted);font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:560px){.req{padding:26px 22px}.hero-body{padding:34px 0 56px}.facts{gap:20px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav class="top" aria-label="Site">
+      <a class="brand" href="./"><span class="mark" aria-hidden="true">CC</span>Just Ask CC Tools</a>
+      <a class="link" href="#tools">Browse tools</a>
+    </nav>
+    <div class="hero-body">
+      <span class="eyebrow">Free for Northeast Ohio</span>
+      <h1>Simple tools that help local businesses <em>grow</em>.</h1>
+      <p class="lede">Calendars, calculators, and planning tools for entrepreneurs, small business owners, and the organizations that support them. Free to use, no sign up needed.</p>
+      <div class="cta">
+        <a class="btn gold" href="#tools">See the tools</a>
+        <a class="btn ghost" href="workshopcalendar/">Try the Workshop Calendar</a>
+      </div>
+      <div class="facts">
+        <div><b>Free</b>Always, for everyone</div>
+        <div><b>No login</b>Open and use</div>
+        <div><b>Open</b>Free to adapt</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="tools" id="tools">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2>Tools</h2>
+        <p>Each tool is shown with sample data. Copy it and make it yours.</p>
+      </div>
+      <div class="grid">
+        <a class="tool" href="workshopcalendar/">
+          <div class="preview" aria-hidden="true">
+            <div class="mini">
+              <div class="bar"><i></i><s></s></div>
+              <div class="cal">
+                <span></span><span class="today"></span><span class="e1"></span><span class="e3"></span><span></span><span class="e2"></span><span></span>
+                <span></span><span class="e1"></span><span></span><span class="e4"></span><span class="e2"></span><span></span><span></span>
+                <span></span><span></span><span class="e1"></span><span></span><span></span><span class="e4"></span><span></span>
+              </div>
+            </div>
+          </div>
+          <div class="tool-b">
+            <div class="tags"><span class="tag">Calendar</span><span class="tag t2">Free template</span></div>
+            <h3>Workshop Calendar</h3>
+            <p>A calendar and dashboard for any organization that runs workshops: month view, filters, registration links, ready to post social captions, and a team checklist. Shown with sample data.</p>
+            <span class="open">Try the demo <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <div class="soon">
+          <h3>More tools on the way</h3>
+          <p>Planning worksheets, marketing helpers, and commercial real estate calculators are next.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="adapt">
+    <div class="wrap">
+      <div class="adapt-box">
+        <div>
+          <span class="tag">Open and free to adapt</span>
+          <h2>Make it your own</h2>
+          <p>Every tool here is free to copy and customize for your own organization under the MIT License. Grab a copy on GitHub, add your events and colors, and publish it free. The step by step guide walks you through it, no coding needed.</p>
+        </div>
+        <a class="btn outline" href="https://github.com/JustAskCC/tools#make-your-own-copy-free-about-15-minutes">Get the tools on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="request">
+    <div class="wrap">
+      <div class="req">
+        <div>
+          <h2>Have an idea for a tool?</h2>
+          <p>If your business or organization needs something simple to save time, tell me about it.</p>
+          <div class="addr">Cc@justaskcc.com</div>
+        </div>
+        <a class="btn gold" href="mailto:Cc@justaskcc.com?subject=Tool%20idea">Suggest a tool</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Built by CiCi Caver, Just Ask CC · University Heights, Ohio · Free under the <a href="https://github.com/JustAskCC/tools/blob/main/LICENSE">MIT License</a></span>
+    <a href="https://justaskcc.com">justaskcc.com</a>
+  </div>
+</footer>
+</body>
+</html>
