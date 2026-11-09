@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CBM Workshop Calendar</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style id="app-style">
+/* Layout: summary band, then tabbed workspace (upcoming list, month grid, team checklist, past). */
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --ink:#15233b; --muted:#5b6880; --line:#dde3ec;
+  --accent:#1d5fa6; --accent-ink:#ffffff; --accent-soft:#e3edf8; --gold:#d99a1b; --gold-soft:#fbf1dc;
+  --good:#2f7d4f; --good-soft:#e2f2e8; --warn:#b4581a; --warn-soft:#fbe9dc;
+  --display:"Archivo",system-ui,sans-serif; --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --radius:10px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1622; --surface:#17212f; --ink:#e7ecf3; --muted:#9aa7bb; --line:#2a3647;
+  --accent:#5c9be0; --accent-ink:#0b1320; --accent-soft:#1c2d44; --gold:#e9b44a; --gold-soft:#33291a;
+  --good:#5cbf86; --good-soft:#18301f; --warn:#ef9a5e; --warn-soft:#3a2516; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0f1622; --surface:#17212f; --ink:#e7ecf3; --muted:#9aa7bb; --line:#2a3647;
+  --accent:#5c9be0; --accent-ink:#0b1320; --accent-soft:#1c2d44; --gold:#e9b44a; --gold-soft:#33291a;
+  --good:#5cbf86; --good-soft:#18301f; --warn:#ef9a5e; --warn-soft:#3a2516; color-scheme:dark;}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header.top{background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between;padding-top:28px;padding-bottom:22px}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,4vw,40px);line-height:1.1;margin:6px 0 4px;text-wrap:balance}
+.sub{color:var(--muted);margin:0;max-width:60ch}
+.stats{display:flex;gap:10px;flex-wrap:wrap}
+.stat{border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;min-width:104px;background:var(--bg)}
+.stat b{display:block;font-family:var(--display);font-size:24px;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--muted)}
+.next{margin:22px 0 0;display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;background:var(--accent);color:var(--accent-ink);border-radius:14px;padding:18px 22px}
+.next .when{font-family:var(--display);text-align:center;line-height:1;border-right:1px solid color-mix(in srgb,var(--accent-ink) 30%,transparent);padding-right:18px}
+.next .when b{display:block;font-size:34px}
+.next .when span{font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.next h2{font-family:var(--display);margin:2px 0;font-size:20px;text-wrap:balance}
+.next .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;font-weight:700}
+.next .meta{color:inherit;opacity:.92;font-size:15px}
+.next .btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;border-radius:8px;padding:8px 14px;font-weight:700;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.primary:hover{filter:brightness(1.08)}
+.next .btn{background:var(--accent-ink);color:var(--accent);border-color:transparent}
+.next .btn.ghost{background:transparent;color:var(--accent-ink);border-color:color-mix(in srgb,var(--accent-ink) 50%,transparent)}
+nav.tabs{display:flex;gap:4px;margin:26px 0 0;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.tabs a{font-family:var(--display);font-weight:700;font-size:15px;text-decoration:none;color:var(--muted);padding:10px 14px;border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs a[aria-current="page"]{color:var(--ink);border-color:var(--gold)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0}
+.filters input[type=search]{flex:1 1 220px;min-width:0;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:transparent;padding:8px 12px;cursor:pointer;font-size:14px;font-weight:600;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--accent-soft);color:var(--ink)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 11px;font-size:13px;font-weight:600;cursor:pointer;color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.month-h{font-family:var(--display);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:26px 0 10px;display:flex;align-items:center;gap:10px}
+.month-h::after{content:"";flex:1;height:1px;background:var(--line)}
+.list{display:grid;gap:10px}
+.card{display:grid;grid-template-columns:64px 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;border-left:4px solid var(--c,var(--accent))}
+.date{text-align:center;font-family:var(--display);line-height:1}
+.date b{display:block;font-size:26px}
+.date span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card h3{font-family:var(--display);font-size:17px;margin:0 0 4px;text-wrap:balance}
+.card h3 button{all:unset;cursor:pointer}
+.card h3 button:hover{text-decoration:underline}
+.meta{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--muted);font-size:14px}
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--ink);vertical-align:2px;margin-left:6px}
+.pill.fmt-in{background:var(--gold-soft)}
+.actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.today-pill{background:var(--gold);color:#1b1404}
+.empty{padding:30px;text-align:center;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius)}
+.tbd{margin:28px 0 0;background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius);padding:14px 18px}
+.tbd h4{margin:0 0 6px;font-family:var(--display);font-size:14px}
+.tbd ul{margin:0;padding-left:18px;color:var(--muted)}
+/* calendar */
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:6px 0 12px}
+.cal-head h2{font-family:var(--display);margin:0;font-size:22px}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--line);gap:1px}
+.cal .dow{background:var(--bg);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px}
+.cal .day{background:var(--surface);min-height:108px;padding:6px;display:flex;flex-direction:column;gap:4px}
+.cal .day.out{background:var(--bg)}
+.cal .day.out .n{opacity:.4}
+.cal .n{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+.cal .day.is-today .n{background:var(--gold);color:#1b1404;border-radius:999px;width:24px;height:24px;display:grid;place-items:center}
+.ev{all:unset;cursor:pointer;display:block;font-size:12px;line-height:1.3;padding:4px 6px;border-radius:6px;background:var(--accent-soft);border-left:3px solid var(--c,var(--accent));overflow-wrap:anywhere}
+.ev:hover{filter:brightness(.96)}
+.ev:focus-visible{outline:2px solid var(--gold)}
+.ev small{display:block;color:var(--muted)}
+/* checklist */
+.ck-sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:18px 0}
+.ck-sum .box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.ck-sum .box h4{margin:0 0 6px;font-family:var(--display);font-size:14px}
+.ck-sum .box p{margin:0;color:var(--muted);font-size:14px}
+.ck-sum .big{font-family:var(--display);font-size:28px;font-weight:800;font-variant-numeric:tabular-nums}
+.bar{height:8px;border-radius:999px;background:var(--line);overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--good)}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+thead th{position:sticky;top:0;background:var(--surface);font-size:12px;font-weight:700;color:var(--muted);line-height:1.25}
+thead th.c{text-align:center;min-width:86px}
+td.c{text-align:center}
+td.w{min-width:240px}
+td.w button{all:unset;cursor:pointer;font-weight:700}
+td.w button:hover{text-decoration:underline}
+td.w small{display:block;color:var(--muted)}
+.tick{width:28px;height:28px;border-radius:7px;border:1.5px solid var(--line);background:transparent;display:inline-grid;place-items:center;font-weight:800;color:transparent}
+.tick.on{background:var(--good);border-color:var(--good);color:#fff}
+.tick:not(:disabled){cursor:pointer}
+.tick:disabled{cursor:default}
+.prog{display:flex;align-items:center;gap:8px;min-width:110px}
+.prog .bar{flex:1;margin:0}
+.prog span{font-variant-numeric:tabular-nums;font-size:13px;color:var(--muted);width:34px}
+.soon{color:var(--warn);font-weight:700}
+/* modal */
+dialog{border:0;border-radius:14px;padding:0;max-width:640px;width:calc(100% - 32px);background:var(--surface);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(10,18,30,.55)}
+.dlg-h{padding:20px 22px 14px;border-bottom:1px solid var(--line);border-top:5px solid var(--c,var(--accent))}
+.dlg-h h2{font-family:var(--display);margin:4px 0 0;font-size:22px;text-wrap:balance}
+.dlg-b{padding:16px 22px 22px;display:grid;gap:16px;max-height:70vh;overflow:auto}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px 18px;margin:0}
+.facts dt{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:0;font-weight:600}
+.dlg-b h4{margin:0 0 6px;font-family:var(--display);font-size:14px}
+.dlg-b p{margin:0}
+.caption{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:14px}
+.draft{font-size:12px;color:var(--muted);font-weight:600}
+.dlg-f{display:flex;gap:8px;flex-wrap:wrap;justify-content:space-between;padding:14px 22px;border-top:1px solid var(--line)}
+.x{position:absolute;right:12px;top:12px;border:0;background:transparent;font-size:22px;cursor:pointer;color:var(--muted);line-height:1;padding:6px}
+.field{display:grid;gap:4px}
+.field label{font-size:13px;font-weight:700}
+.field input,.field textarea{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.field textarea{min-height:90px;resize:vertical}
+.ck-list{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.ck-list li{display:flex;align-items:center;gap:10px;font-size:14px}
+footer{margin:40px 0 0;padding:18px 0 30px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:var(--surface);padding:10px 16px;border-radius:8px;font-size:14px;font-weight:600;z-index:50}
+.edit-on{background:var(--gold-soft);border-color:var(--gold)}
+@media (max-width:720px){
+  .next{grid-template-columns:auto 1fr}
+  .next .btns{grid-column:1/-1}
+  .card{grid-template-columns:52px 1fr}
+  .card .actions{grid-column:1/-1;justify-content:flex-start}
+  .cal .day{min-height:74px;padding:4px}
+  .ev{font-size:0;padding:0;height:8px;border-radius:4px;border-left-width:0;background:var(--c,var(--accent))}
+  .ev small{display:none}
+  .cal .dow{font-size:10px;padding:6px 4px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script id="cbm-state" type="application/json">{"checks": ["Presenter confirmed", "QR code created", "Entered in Zoom", "Entered in Constant Contact", "Panelists notified (first notice)", "Panelists notified (day of)", "In monthly newsletter", "Constant Contact email 1 scheduled", "Constant Contact email 2 scheduled", "Attendance updated"], "workshops": [{"date": "2026-07-08", "title": "Is Starting a Nonprofit for You?", "time": "12:00 PM", "location": "Zoom", "presenter": "David Holmes", "partner": "", "host": "Anita Khayat", "checks": [true, false, true, true, true, true, false, false, false, false], "description": "", "caption": "", "category": "Nonprofit", "link": "", "id": "2026-07-08-isstartinganonprofitfory"}, {"date": "2026-07-15", "title": "Navigating Grants with Candid Search", "time": "12:00 PM", "location": "Zoom", "presenter": "David Holmes", "partner": "", "host": "Anita Khayat", "checks": [true, false, true, true, true, false, false, false, false, false], "description": "", "caption": "", "category": "Nonprofit", "link": "", "id": "2026-07-15-navigatinggrantswithcand"}, {"date": "2026-07-22", "title": "Grant Writing Basics", "time": "12:00 PM", "location": "Zoom", "presenter": "Anita Khayat", "partner": "", "host": "Dan Yurman", "checks": [true, false, true, true, true, false, false, false, false, false], "description": "", "caption": "", "category": "Nonprofit", "link": "", "id": "2026-07-22-grantwritingbasics"}, {"date": "2026-08-12", "title": "Funding Your Nonprofit", "time": "12:00 PM", "location": "Zoom", "presenter": "Bob Fedor", "partner": "", "host": "Anita Khayat", "checks": [true, false, true, true, true, false, false, false, false, false], "description": "", "caption": "", "category": "Nonprofit", "link": "", "id": "2026-08-12-fundingyournonprofit"}, {"date": "2026-08-18", "title": "Building Capacity for Your Nonprofit", "time": "12:00 PM", "location": "Zoom", "presenter": "Dan Yurman", "partner": "", "host": "Anita Khayat", "checks": [true, false, true, true, true, false, false, false, false, false], "description": "", "caption": "", "category": "Nonprofit", "link": "", "id": "2026-08-18-buildingcapacityforyourn"}, {"date": "2026-08-25", "title": "Technology for Nonprofits", "time": "12:00 PM", "location": "Zoom", "presenter": "Dan Yurman", "partner": "", "host": "Anita Khayat", "checks": [true, false, true, true, true, false, false, false, false, false], "description": "", "caption": "", "category": "Nonprofit", "link": "", "id": "2026-08-25-technologyfornonprofits"}, {"date": "2026-09-10", "title": "New Product Development, Part 1", "time": "12:00 PM", "location": "To be confirmed", "presenter": "Dave Lupyan", "partner": "", "host": "Dan Yurman", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "", "caption": "", "category": "Startup", "link": "", "id": "2026-09-10-newproductdevelopmentpar"}, {"date": "2026-09-17", "title": "New Product Development, Part 2", "time": "12:00 PM", "location": "To be confirmed", "presenter": "Dave Lupyan", "partner": "", "host": "Dan Yurman", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "", "caption": "", "category": "Startup", "link": "", "id": "2026-09-17-newproductdevelopmentpar"}, {"date": "2026-09-22", "title": "Measure What Matters: KPIs", "time": "12:00 PM", "location": "To be confirmed", "presenter": "Anita Khayat", "partner": "", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "", "caption": "", "category": "Finance", "link": "", "id": "2026-09-22-measurewhatmatterskpis"}, {"date": "2026-09-23", "title": "Financial Literacy 1 (HCSC on site)", "time": "7:00 PM", "location": "HCSC (on site)", "presenter": "Richard Brooks", "partner": "", "host": "Robert Cohen", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "", "caption": "", "category": "Finance", "link": "", "id": "2026-09-23-financialliteracy1hcscon"}, {"date": "2026-09-24", "title": "New Product Development, Part 3", "time": "12:00 PM", "location": "To be confirmed", "presenter": "Dave Lupyan", "partner": "", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "", "caption": "", "category": "Startup", "link": "", "id": "2026-09-24-newproductdevelopmentpar"}, {"date": "2026-09-30", "title": "Business Networking and Relationship Building", "time": "12:00 PM", "location": "To be confirmed", "presenter": "Diane Helbig", "partner": "", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "", "caption": "", "category": "Marketing", "link": "", "id": "2026-09-30-businessnetworkingandrel"}, {"date": "2026-09-30", "title": "Financial Literacy 2 (HCSC on site)", "time": "7:00 PM", "location": "HCSC (on site)", "presenter": "Richard Brooks", "partner": "", "host": "Robert Cohen", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "", "caption": "", "category": "Finance", "link": "", "id": "2026-09-30-financialliteracy2hcscon"}, {"date": "2026-10-06", "title": "Cybersecurity", "time": "12:00 PM", "location": "Zoom", "presenter": "Dan Yurman", "partner": "", "host": "", "checks": [false, false, false, false, false, false, false, false, false, false], "description": "", "caption": "", "category": "Technology", "link": "", "id": "2026-10-06-cybersecurity"}, {"date": "2026-10-19", "title": "From Zero Experience to Liftoff", "time": "7:00 PM", "location": "Westlake", "presenter": "Tony", "partner": "", "host": "", "checks": [false, false, false, true, false, false, false, false, false, false], "description": "", "caption": "", "category": "Startup", "link": "", "id": "2026-10-19-fromzeroexperiencetolift"}, {"date": "2026-10-20", "title": "Take the Guesswork Out of Marketing", "time": "12:00 PM", "location": "Zoom", "presenter": "CiCi Caver", "partner": "WBC", "host": "", "checks": [false, false, false, true, false, false, false, false, false, false], "description": "", "caption": "", "category": "Marketing", "link": "", "id": "2026-10-20-taketheguessworkoutofmar"}, {"date": "2026-10-21", "title": "Get Your Board Fundraising", "time": "12:00 PM", "location": "Zoom", "presenter": "David Holmes", "partner": "", "host": "", "checks": [false, false, true, false, false, false, false, false, false, false], "description": "", "caption": "", "category": "Nonprofit", "link": "", "id": "2026-10-21-getyourboardfundraising"}, {"date": "2026-10-22", "title": "AI for Small Business", "time": "12:00 PM", "location": "Zoom", "presenter": "Andrew Ciszczon", "partner": "SBA", "host": "", "checks": [false, false, false, true, false, false, false, false, false, false], "description": "", "caption": "", "category": "Technology", "link": "", "id": "2026-10-22-aiforsmallbusiness"}, {"date": "2026-10-26", "title": "Your Big Idea to Your First Action", "time": "7:00 PM", "location": "Westlake", "presenter": "Cindy", "partner": "", "host": "", "checks": [false, false, false, true, false, false, false, false, false, false], "description": "", "caption": "", "category": "Startup", "link": "", "id": "2026-10-26-yourbigideatoyourfirstac"}, {"date": "2026-11-09", "title": "From Idea to Plan, Part 1: Customer Value", "time": "7:00 PM", "location": "Westlake", "presenter": "Sue Marrone", "partner": "", "host": "", "checks": [false, true, false, false, false, false, false, false, false, false], "description": "Part one of a two part series that turns a business idea into a working plan. Sue Marrone walks through who your customer really is, what problem you solve for them, and how to describe your value in plain words people remember.", "caption": "Got a business idea but no plan yet? Start with the customer. 💡\n\nJoin Sue Marrone for From Idea to Plan, Part 1: Customer Value. You will leave knowing who you serve, what they need, and how to say why you are the answer.\n\n📅 {date}\n🕖 {time}\n📍 {location}\n\nFree and open to all. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness", "category": "Startup", "link": "", "id": "2026-11-09-fromideatoplanpart1custo"}, {"date": "2026-11-10", "title": "Financial Series, Part 1", "time": "12:00 PM", "location": "Zoom", "presenter": "Richard Brooks", "partner": "PNC Fairfax", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "The first session of the Financial Series with Richard Brooks, presented with PNC Fairfax. Covers the money basics every owner needs: reading your numbers, separating business and personal finances, and building habits that keep cash steady.", "caption": "Your numbers tell a story. Learn how to read it. 📊\n\nRichard Brooks kicks off our Financial Series with PNC Fairfax, covering the money basics every small business owner needs.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Save your seat: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #PNC", "category": "Finance", "link": "", "id": "2026-11-10-financialseriespart1"}, {"date": "2026-11-11", "title": "Leveraging LinkedIn for Business Growth", "time": "12:00 PM", "location": "Zoom", "presenter": "Diane Helbig", "partner": "", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "Diane Helbig shows owners how to use LinkedIn as a growth tool: a profile that attracts the right people, a simple posting rhythm, and conversations that turn connections into clients and referrals.", "caption": "Your next client might already be in your LinkedIn network. 🤝\n\nJoin Diane Helbig for Leveraging LinkedIn for Business Growth and learn how to turn your profile and posts into real conversations and real business.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #LinkedInTips", "category": "Marketing", "link": "", "id": "2026-11-11-leveraginglinkedinforbus"}, {"date": "2026-11-13", "title": "Financial Series, Part 2", "time": "12:00 PM", "location": "Zoom", "presenter": "Richard Brooks", "partner": "PNC Fairfax", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "Part two of the Financial Series with Richard Brooks and PNC Fairfax. Builds on part one with budgeting, cash flow planning, and preparing your business to talk with a lender.", "caption": "Part 2 of our Financial Series is here. 💰\n\nRichard Brooks and PNC Fairfax go deeper into budgeting, cash flow, and getting lender ready. Missed Part 1? You can still join.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #PNC", "category": "Finance", "link": "", "id": "2026-11-13-financialseriespart2"}, {"date": "2026-11-16", "title": "From Idea to Plan, Part 2: Build and Grow", "time": "7:00 PM", "location": "Westlake", "presenter": "Sue Marrone", "partner": "", "host": "", "checks": [false, true, false, false, false, false, false, false, false, false], "description": "Part two of the series with Sue Marrone. Takes the customer work from part one and turns it into next steps: pricing, getting the word out, and a simple plan to launch and grow.", "caption": "You know your customer. Now build the plan. 🛠️\n\nSue Marrone leads From Idea to Plan, Part 2: Build and Grow, covering pricing, reaching customers, and the steps to launch with confidence.\n\n📅 {date}\n🕖 {time}\n📍 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness", "category": "Startup", "link": "", "id": "2026-11-16-fromideatoplanpart2build"}, {"date": "2026-11-18", "title": "Is Starting a Nonprofit for You?", "time": "12:00 PM", "location": "Zoom", "presenter": "David Holmes", "partner": "", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "David Holmes helps you decide whether a nonprofit is the right path for your mission. Covers what it takes to form and run one, board and compliance basics, and other ways to do good work without starting a new organization.", "caption": "Thinking about starting a nonprofit? Ask the right questions first. ❤️\n\nDavid Holmes walks through what it really takes to launch and lead a nonprofit, and the other paths that might fit your mission better.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #NonprofitLeadership", "category": "Nonprofit", "link": "", "id": "2026-11-18-isstartinganonprofitfory"}, {"date": "2026-11-18", "title": "AI for Small Business", "time": "9:30 AM", "location": "Beachwood Library", "presenter": "Andy Ciszczon", "partner": "Key Bank", "host": "", "checks": [false, true, false, false, false, false, false, false, false, false], "description": "An in person morning session with Andy Ciszczon, presented with Key Bank. Practical, beginner friendly ways small businesses can use AI tools to save time on marketing, customer service, and everyday admin work.", "caption": "AI does not have to be complicated. 🤖\n\nJoin Andy Ciszczon and Key Bank for a hands on morning session on simple ways small businesses can use AI to save time and get more done.\n\n📅 {date}\n🕤 {time}\n📍 {location}\n\nFree. Seats are limited: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #AIforBusiness #KeyBank", "category": "Technology", "link": "", "id": "2026-11-18-aiforsmallbusiness"}, {"date": "2026-11-19", "title": "Mastering Your Business Finances", "time": "12:00 PM", "location": "Zoom", "presenter": "Richard Brooks", "partner": "", "host": "SBA", "checks": [false, false, false, false, false, false, false, false, false, false], "description": "Richard Brooks, with the SBA, covers how to take control of your business finances: understanding financial statements, tracking what matters, and using your numbers to make better decisions.", "caption": "Stop guessing and start knowing where your money goes. 📈\n\nRichard Brooks and the SBA present Mastering Your Business Finances: statements, key numbers, and smarter decisions.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #SBA", "category": "Finance", "link": "", "id": "2026-11-19-masteringyourbusinessfin"}, {"date": "2026-11-23", "title": "Business Finance Made Simple", "time": "7:00 PM", "location": "Westlake", "presenter": "Tony Sacco", "partner": "", "host": "", "checks": [false, true, false, false, false, false, false, false, false, false], "description": "Tony Sacco breaks business finance into plain language for new and growing owners: startup costs, pricing for profit, and keeping simple records you will actually use.", "caption": "Finance, minus the jargon. ✅\n\nTony Sacco makes business finance simple: startup costs, pricing for profit, and records that make tax time easier.\n\n📅 {date}\n🕖 {time}\n📍 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness", "category": "Finance", "link": "", "id": "2026-11-23-businessfinancemadesimpl"}, {"date": "2026-12-17", "title": "SBA Financials, Part 2", "time": "12:00 PM", "location": "Zoom", "presenter": "Richard Brooks", "partner": "SBA", "host": "", "checks": [false, false, false, false, false, false, false, false, false, false], "description": "The second SBA financials session with Richard Brooks. Continues the work on financial statements and planning, with time for your questions.", "caption": "Wrap up the year with stronger numbers. 🎯\n\nRichard Brooks returns with the SBA for Financials, Part 2, continuing our work on statements and planning for the year ahead.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #SBA", "category": "Finance", "link": "", "id": "2026-12-17-sbafinancialspart2"}, {"date": "2027-01-06", "title": "LaunchPad, Part 1", "time": "7:00 PM", "location": "Shaker Library", "presenter": "Tony Sacco", "partner": "", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "Session one of LaunchPad, a five part evening series for aspiring and new entrepreneurs. Tony Sacco opens with testing your idea and setting goals for your launch.", "caption": "New year, new business? 🚀\n\nLaunchPad is our five part evening series for aspiring entrepreneurs. Tony Sacco opens Part 1 with testing your idea and setting launch goals.\n\n📅 {date}\n🕖 {time}\n📍 {location}\n\nFree. Register for the series: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #LaunchPad", "category": "LaunchPad", "link": "", "id": "2027-01-06-launchpadpart1"}, {"date": "2027-01-07", "title": "LaunchPad, Part 2", "time": "7:00 PM", "location": "Shaker Library", "presenter": "Cindie Pacheco", "partner": "", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "Session two of LaunchPad with Cindie Pacheco, focused on understanding your market and the customers you want to reach.", "caption": "LaunchPad continues! 🚀\n\nCindie Pacheco leads Part 2, helping you understand your market and the customers you want to reach.\n\n📅 {date}\n🕖 {time}\n📍 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #LaunchPad", "category": "LaunchPad", "link": "", "id": "2027-01-07-launchpadpart2"}, {"date": "2027-01-12", "title": "Emerging Trends and Threats in Cybersecurity", "time": "12:00 PM", "location": "Zoom", "presenter": "Jonathan Fausz", "partner": "", "host": "Dan Yurman", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "Jonathan Fausz covers the cybersecurity threats small businesses face right now, from phishing to ransomware, and the practical steps that protect your data, customers, and reputation.", "caption": "Small businesses are big targets. 🔒\n\nJonathan Fausz shares the latest cybersecurity threats and the simple steps that keep your business, data, and customers safe.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #Cybersecurity", "category": "Technology", "link": "", "id": "2027-01-12-emergingtrendsandthreats"}, {"date": "2027-01-13", "title": "LaunchPad, Part 3", "time": "7:00 PM", "location": "Shaker Library", "presenter": "Sue Marrone", "partner": "", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "Session three of LaunchPad with Sue Marrone, turning your idea and market research into a clear business plan.", "caption": "Halfway through LaunchPad! 🚀\n\nSue Marrone leads Part 3, turning your idea and research into a clear business plan.\n\n📅 {date}\n🕖 {time}\n📍 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #LaunchPad", "category": "LaunchPad", "link": "", "id": "2027-01-13-launchpadpart3"}, {"date": "2027-01-14", "title": "LaunchPad, Part 4", "time": "7:00 PM", "location": "Shaker Library", "presenter": "Sue Marrone", "partner": "", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "Session four of LaunchPad with Sue Marrone, covering marketing, pricing, and how you will reach your first customers.", "caption": "LaunchPad Part 4 is all about getting customers. 📣\n\nSue Marrone covers marketing, pricing, and landing your first sales.\n\n📅 {date}\n🕖 {time}\n📍 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #LaunchPad", "category": "LaunchPad", "link": "", "id": "2027-01-14-launchpadpart4"}, {"date": "2027-01-20", "title": "LaunchPad, Part 5", "time": "7:00 PM", "location": "Shaker Library", "presenter": "Tony Sacco", "partner": "", "host": "Anita Khayat", "checks": [true, false, false, false, false, false, false, false, false, false], "description": "The final LaunchPad session with Tony Sacco: money, legal setup, and your action plan for launch day.", "caption": "The LaunchPad finale. 🎉\n\nTony Sacco closes the series with money, legal setup, and your action plan for launch day.\n\n📅 {date}\n🕖 {time}\n📍 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #ClevelandSmallBusiness #LaunchPad", "category": "LaunchPad", "link": "", "id": "2027-01-20-launchpadpart5"}, {"date": "2027-01-21", "title": "Are You Ready to Start a Nonprofit?", "time": "12:00 PM", "location": "Zoom", "presenter": "David Holmes", "partner": "PNC", "host": "Anita Khayat", "checks": [false, false, false, false, false, false, false, false, false, false], "description": "David Holmes, presented with PNC, helps future founders weigh whether a nonprofit is the right vehicle for their mission and what the first steps look like.", "caption": "Have a mission? Find out if a nonprofit is the right way to pursue it. ❤️\n\nDavid Holmes and PNC walk through readiness, requirements, and first steps.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #NonprofitLeadership #PNC", "category": "Nonprofit", "link": "", "id": "2027-01-21-areyoureadytostartanonpr"}, {"date": "2027-01-27", "title": "Funding Your Nonprofit", "time": "12:00 PM", "location": "Zoom", "presenter": "Bob Fedor and Anita Khayat", "partner": "PNC", "host": "Anita Khayat", "checks": [false, false, false, false, false, false, false, false, false, false], "description": "Bob Fedor and Anita Khayat, presented with PNC, cover the main ways nonprofits raise money: individual donors, grants, events, and building a funding mix that lasts.", "caption": "Great missions need steady funding. 💵\n\nBob Fedor and Anita Khayat share how nonprofits build a funding mix that lasts, from donors to grants to events. Presented with PNC.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #NonprofitLeadership #PNC", "category": "Nonprofit", "link": "", "id": "2027-01-27-fundingyournonprofit"}, {"date": "2027-01-28", "title": "IT for Nonprofits", "time": "12:00 PM", "location": "Zoom", "presenter": "Dan Yurman", "partner": "PNC", "host": "Anita Khayat", "checks": [false, false, false, false, false, false, false, false, false, false], "description": "Dan Yurman, presented with PNC, covers affordable technology for nonprofits: the right tools for email, donors, and files, plus basic security.", "caption": "Run your nonprofit smarter with the right tech. 💻\n\nDan Yurman covers affordable tools for donors, email, and files, plus the security basics. Presented with PNC.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #NonprofitLeadership #PNC", "category": "Nonprofit", "link": "", "id": "2027-01-28-itfornonprofits"}, {"date": "2027-02-03", "title": "Grant Writing Basics", "time": "12:00 PM", "location": "Zoom", "presenter": "Anita Khayat", "partner": "PNC", "host": "Dan Yurman", "checks": [false, false, false, false, false, false, false, false, false, false], "description": "Anita Khayat, presented with PNC, teaches the building blocks of a strong grant proposal: finding the right funders, telling your story, and building a budget reviewers trust.", "caption": "Ready to write your first grant? ✍️\n\nAnita Khayat shares the building blocks of a strong proposal, from finding funders to telling your story. Presented with PNC.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #NonprofitLeadership #GrantWriting #PNC", "category": "Nonprofit", "link": "", "id": "2027-02-03-grantwritingbasics"}, {"date": "2027-02-04", "title": "Building Capacity for Nonprofits", "time": "12:00 PM", "location": "Zoom", "presenter": "Dan Yurman", "partner": "PNC", "host": "Anita Khayat", "checks": [false, false, false, false, false, false, false, false, false, false], "description": "Dan Yurman, presented with PNC, covers how nonprofits grow their ability to deliver: people, systems, and planning that let your mission scale.", "caption": "Grow your impact by growing your capacity. 🌱\n\nDan Yurman covers the people, systems, and planning that help nonprofits scale their mission. Presented with PNC.\n\n📅 {date}\n🕛 {time}\n💻 {location}\n\nFree. Register: {link}\n\n#ClevelandBusinessMentors #CBMWorkshops #NonprofitLeadership #PNC", "category": "Nonprofit", "link": "", "id": "2027-02-04-buildingcapacityfornonpr"}], "tbd": ["PNC workshop, topic to be decided (Anita)", "SBA December topic: HR", "SBA December topic: Supply Chain"], "defaultLink": "https://clevelandbusinessmentors.org/webinars/"}</script>
+<script id="app-script">
+(function(){
+"use strict";
+var STATE = JSON.parse(document.getElementById("cbm-state").textContent);
+var CAT_COLOR = {Startup:"#1d5fa6",Finance:"#2f7d4f",Marketing:"#c0532b",Technology:"#6a4fb3",Nonprofit:"#b8860b",LaunchPad:"#0f8a96"};
+var MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+var MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var DOW=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var ui = {view:"upcoming", q:"", fmt:"all", cat:"all", calY:0, calM:0, edit:false, showPastCk:false};
+var artifactApi = null;
+
+function pd(s){var p=s.split(/\D/);return new Date(+p[0],+p[1]-1,+p[2]);}
+function todayStr(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+var TODAY = todayStr();
+function longDate(s){var d=pd(s);return DOW[d.getDay()]+", "+MONTHS[d.getMonth()]+" "+d.getDate()+", "+d.getFullYear();}
+function shortDow(s){return DOW[pd(s).getDay()].slice(0,3);}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];});}
+function isZoom(w){return /zoom/i.test(w.location);}
+function fmtLabel(w){return isZoom(w)?"Zoom":"In person";}
+function link(w){return w.link||STATE.defaultLink;}
+function color(w){return CAT_COLOR[w.category]||"#1d5fa6";}
+function minutes(t){var m=/(\d+):(\d+)\s*(AM|PM)/i.exec(t||"");if(!m)return 720;var h=+m[1]%12;if(/pm/i.test(m[3]))h+=12;return h*60+ +m[2];}
+function sortW(a,b){return a.date<b.date?-1:a.date>b.date?1:minutes(a.time)-minutes(b.time);}
+STATE.workshops.sort(sortW);
+function byId(id){for(var i=0;i<STATE.workshops.length;i++)if(STATE.workshops[i].id===id)return STATE.workshops[i];}
+function upcoming(){return STATE.workshops.filter(function(w){return w.date>=TODAY;});}
+function past(){return STATE.workshops.filter(function(w){return w.date<TODAY;}).reverse();}
+function captionText(w){
+  if(!w.caption) return "";
+  return w.caption.replace(/\{date\}/g,longDate(w.date)).replace(/\{time\}/g,w.time+" Eastern").replace(/\{location\}/g,w.location).replace(/\{link\}/g,link(w));
+}
+function gcal(w){
+  var d=w.date.replace(/\D/g,""), m=minutes(w.time), e=m+60;
+  function hm(x){return String(Math.floor(x/60)).padStart(2,"0")+String(x%60).padStart(2,"0")+"00";}
+  var p=new URLSearchParams({action:"TEMPLATE",text:w.title+" (Cleveland Business Mentors)",dates:d+"T"+hm(m)+"/"+d+"T"+hm(e),ctz:"America/New_York",details:(w.description?w.description+"\n\n":"")+"Presenter: "+w.presenter+"\nRegister: "+link(w),location:w.location});
+  return "https://calendar.google.com/calendar/render?"+p.toString();
+}
+function matches(w){
+  if(ui.fmt==="zoom"&&!isZoom(w))return false;
+  if(ui.fmt==="in"&&isZoom(w))return false;
+  if(ui.cat!=="all"&&w.category!==ui.cat)return false;
+  if(ui.q){var hay=(w.title+" "+w.presenter+" "+w.location+" "+w.partner+" "+w.host+" "+w.category).toLowerCase();if(hay.indexOf(ui.q.toLowerCase())<0)return false;}
+  return true;
+}
+function toast(msg){var t=document.createElement("div");t.className="toast";t.setAttribute("role","status");t.textContent=msg;document.body.appendChild(t);setTimeout(function(){t.remove();},2600);}
+function copy(text){
+  if(!text){toast("No caption yet for this workshop");return;}
+  try{navigator.clipboard.writeText(text).then(function(){toast("Caption copied");},function(){toast("Copy was blocked. Select the caption text and copy it by hand.");});}
+  catch(e){toast("Copy was blocked. Select the caption text and copy it by hand.");}
+}
+
+/* ---------- render ---------- */
+function render(){
+  var up=upcoming(), nx=up[0];
+  var nZoom=up.filter(isZoom).length;
+  var h='';
+  h+='<header class="top"><div class="wrap"><div><div class="eyebrow">Cleveland Business Mentors · Launch, Grow, Thrive</div>';
+  h+='<h1>CBM Workshop Calendar</h1><p class="sub">Free workshops and webinars for entrepreneurs, small business owners, and nonprofit leaders across Northeast Ohio.</p></div>';
+  h+='<div class="stats"><div class="stat"><b>'+up.length+'</b><span>Upcoming</span></div><div class="stat"><b>'+nZoom+'</b><span>On Zoom</span></div><div class="stat"><b>'+(up.length-nZoom)+'</b><span>In person</span></div><div class="stat"><b>'+new Set(up.map(function(w){return w.presenter;})).size+'</b><span>Presenters</span></div></div>';
+  h+='</div></header><main class="wrap">';
+  if(nx){
+    var d=pd(nx.date);
+    h+='<section class="next" aria-label="Next workshop"><div class="when"><span>'+MON[d.getMonth()]+'</span><b>'+d.getDate()+'</b><span>'+shortDow(nx.date)+'</span></div>';
+    h+='<div><div class="tag">'+(nx.date===TODAY?"Today":"Next up")+'</div><h2>'+esc(nx.title)+'</h2><div class="meta">'+esc(nx.time)+' · '+esc(nx.location)+' · '+esc(nx.presenter)+'</div></div>';
+    h+='<div class="btns"><a class="btn" href="'+esc(link(nx))+'" target="_blank" rel="noopener">Register</a><button class="btn ghost" data-open="'+nx.id+'">Details</button></div></section>';
+  }
+  var tabs=[["upcoming","Upcoming"],["calendar","Calendar"],["checklist","Team checklist"],["past","Past workshops"]];
+  h+='<nav class="tabs" aria-label="Views">'+tabs.map(function(t){return '<a href="#'+t[0]+'"'+(ui.view===t[0]?' aria-current="page"':'')+'>'+t[1]+'</a>';}).join("")+'</nav>';
+  if(ui.view!=="checklist") h+=filtersHtml();
+  if(ui.view==="upcoming") h+=listHtml(up.filter(matches),true);
+  else if(ui.view==="past") h+=listHtml(past().filter(matches),false);
+  else if(ui.view==="calendar") h+=calHtml();
+  else h+=checklistHtml();
+  h+='</main><footer><div class="wrap"><span>Questions? Email <a href="mailto:info@cbmentors.org">info@cbmentors.org</a> (info@cbmentors.org) or call (888) 516 8801. <a href="https://clevelandbusinessmentors.org/webinars/" target="_blank" rel="noopener">CBM webinars page</a></span>';
+  h+='<button class="btn'+(ui.edit?' edit-on':'')+'" id="edit-toggle" aria-pressed="'+ui.edit+'">'+(ui.edit?"Team edit mode is on":"Team edit mode")+'</button></div></footer>';
+  h+='<dialog id="dlg" aria-labelledby="dlg-title"></dialog>';
+  document.getElementById("app").innerHTML=h.replace("516 8801","516 8801");
+}
+function filtersHtml(){
+  var cats=["all"].concat(Object.keys(CAT_COLOR));
+  var h='<div class="filters"><label class="sr" for="q" style="position:absolute;left:-9999px">Search workshops</label><input type="search" id="q" placeholder="Search by title, presenter, partner, or location" value="'+esc(ui.q)+'">';
+  h+='<div class="seg" role="group" aria-label="Format">'+[["all","All"],["zoom","Zoom"],["in","In person"]].map(function(f){return '<button data-fmt="'+f[0]+'" aria-pressed="'+(ui.fmt===f[0])+'">'+f[1]+'</button>';}).join("")+'</div>';
+  h+='<div class="chips" role="group" aria-label="Topic">'+cats.map(function(c){return '<button class="chip" data-cat="'+c+'" aria-pressed="'+(ui.cat===c)+'">'+(c==="all"?"All topics":c)+'</button>';}).join("")+'</div></div>';
+  return h;
+}
+function cardHtml(w,isUp){
+  var d=pd(w.date);
+  var h='<article class="card" style="--c:'+color(w)+'"><div class="date"><span>'+MON[d.getMonth()]+'</span><b>'+d.getDate()+'</b><span>'+shortDow(w.date)+'</span></div>';
+  h+='<div><h3><button data-open="'+w.id+'">'+esc(w.title)+'</button>'+(w.date===TODAY?'<span class="pill today-pill">Today</span>':'')+'<span class="pill">'+esc(w.category)+'</span><span class="pill'+(isZoom(w)?'':' fmt-in')+'">'+fmtLabel(w)+'</span></h3>';
+  h+='<div class="meta"><span>'+esc(w.time)+'</span><span>'+esc(w.location)+'</span><span>Presenter: '+esc(w.presenter)+'</span>'+(w.partner?'<span>Partner: '+esc(w.partner)+'</span>':'')+'</div></div>';
+  h+='<div class="actions">';
+  if(isUp){h+='<a class="btn primary" href="'+esc(link(w))+'" target="_blank" rel="noopener">Register</a>';if(w.caption)h+='<button class="btn" data-copy="'+w.id+'">Copy caption</button>';}
+  h+='<button class="btn" data-open="'+w.id+'">Details</button></div></article>';
+  return h;
+}
+function listHtml(arr,isUp){
+  if(!arr.length) return '<div class="empty">No workshops match these filters.</div>';
+  var h='',cur='';
+  arr.forEach(function(w){var d=pd(w.date),k=MONTHS[d.getMonth()]+" "+d.getFullYear();if(k!==cur){if(cur)h+='</div>';h+='<div class="month-h">'+k+'</div><div class="list">';cur=k;}h+=cardHtml(w,isUp);});
+  h+='</div>';
+  if(isUp&&STATE.tbd&&STATE.tbd.length) h+='<div class="tbd"><h4>Being scheduled</h4><ul>'+STATE.tbd.map(function(t){return '<li>'+esc(t)+'</li>';}).join("")+'</ul></div>';
+  return h;
+}
+function calHtml(){
+  var y=ui.calY,m=ui.calM,first=new Date(y,m,1),start=new Date(y,m,1-first.getDay());
+  var h='<div class="cal-head"><button class="btn" data-cal="-1" aria-label="Previous month">‹ Prev</button><h2>'+MONTHS[m]+' '+y+'</h2><button class="btn" data-cal="1" aria-label="Next month">Next ›</button></div>';
+  h+='<div class="cal" role="grid">'+DOW.map(function(d){return '<div class="dow">'+d.slice(0,3)+'</div>';}).join("");
+  for(var i=0;i<42;i++){
+    var d=new Date(start.getFullYear(),start.getMonth(),start.getDate()+i);
+    if(i===35&&d.getMonth()!==m)break;
+    var ds=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+    var evs=STATE.workshops.filter(function(w){return w.date===ds&&matches(w);});
+    h+='<div class="day'+(d.getMonth()!==m?' out':'')+(ds===TODAY?' is-today':'')+'"><span class="n">'+d.getDate()+'</span>';
+    evs.forEach(function(w){h+='<button class="ev" style="--c:'+color(w)+'" data-open="'+w.id+'" aria-label="'+esc(w.title+", "+w.time)+'">'+esc(w.title)+'<small>'+esc(w.time)+' · '+fmtLabel(w)+'</small></button>';});
+    h+='</div>';
+  }
+  return h+'</div>';
+}
+function pct(w){return Math.round(w.checks.filter(Boolean).length/w.checks.length*100);}
+function daysTo(s){return Math.round((pd(s)-pd(TODAY))/86400000);}
+function checklistHtml(){
+  var up=upcoming(), rows=ui.showPastCk?STATE.workshops.slice().reverse():up;
+  var total=up.length*STATE.checks.length, done=up.reduce(function(a,w){return a+w.checks.filter(Boolean).length;},0);
+  var soon=up.filter(function(w){return daysTo(w.date)<=14&&pct(w)<100;});
+  var noCap=up.filter(function(w){return !w.caption;}).length, ownLink=up.filter(function(w){return w.link;}).length;
+  var h='<div class="ck-sum"><div class="box"><h4>Upcoming tasks done</h4><div class="big">'+(total?Math.round(done/total*100):0)+'%</div><div class="bar"><i style="width:'+(total?done/total*100:0)+'%"></i></div><p>'+done+' of '+total+' tasks across '+up.length+' workshops</p></div>';
+  h+='<div class="box"><h4>Needs attention in the next 14 days</h4><div class="big">'+soon.length+'</div><p>'+(soon.length?soon.slice(0,3).map(function(w){return esc(w.title);}).join(", ")+(soon.length>3?" and more":""):"Everything in the next two weeks is on track")+'</p></div>';
+  h+='<div class="box"><h4>Promotion ready</h4><div class="big">'+(up.length-noCap)+'/'+up.length+'</div><p>Have a social caption. '+ownLink+' have their own registration link; the rest use the CBM webinars page.</p></div></div>';
+  h+='<div class="filters"><div class="seg" role="group" aria-label="Rows"><button data-ckrows="up" aria-pressed="'+!ui.showPastCk+'">Upcoming</button><button data-ckrows="all" aria-pressed="'+ui.showPastCk+'">All workshops</button></div>';
+  h+='<span class="draft">'+(ui.edit?"Click a box to mark a task done. Changes save for everyone.":"Turn on Team edit mode at the bottom of the page to check off tasks.")+'</span></div>';
+  h+='<div class="tbl-wrap"><table><thead><tr><th>Workshop</th><th>Progress</th>'+STATE.checks.map(function(c){return '<th class="c" scope="col">'+esc(c)+'</th>';}).join("")+'</tr></thead><tbody>';
+  rows.forEach(function(w){
+    var dt=daysTo(w.date);
+    h+='<tr><td class="w"><button data-open="'+w.id+'">'+esc(w.title)+'</button><small>'+longDate(w.date)+' · '+esc(w.time)+(dt>=0&&dt<=14&&pct(w)<100?' · <span class="soon">'+(dt===0?"today":"in "+dt+" day"+(dt===1?"":"s"))+'</span>':'')+'</small></td>';
+    h+='<td><div class="prog"><div class="bar"><i style="width:'+pct(w)+'%"></i></div><span>'+pct(w)+'%</span></div></td>';
+    w.checks.forEach(function(c,i){h+='<td class="c"><button class="tick'+(c?' on':'')+'" data-tick="'+w.id+'|'+i+'" aria-pressed="'+c+'" aria-label="'+esc(STATE.checks[i]+" for "+w.title)+'"'+(ui.edit?'':' disabled')+'>✓</button></td>';});
+    h+='</tr>';
+  });
+  return h+'</tbody></table></div>';
+}
+function openDlg(id,editing){
+  var w=byId(id); if(!w)return;
+  var dlg=document.getElementById("dlg"), isUp=w.date>=TODAY, cap=captionText(w);
+  var h='<div class="dlg-h" style="--c:'+color(w)+'" ><button class="x" data-close aria-label="Close">×</button><div class="eyebrow">'+esc(w.category)+' · '+fmtLabel(w)+'</div><h2 id="dlg-title">'+esc(w.title)+'</h2></div><div class="dlg-b">';
+  h+='<dl class="facts"><div><dt>Date</dt><dd>'+longDate(w.date)+'</dd></div><div><dt>Time</dt><dd>'+esc(w.time)+' Eastern</dd></div><div><dt>Location</dt><dd>'+esc(w.location)+'</dd></div><div><dt>Presenter</dt><dd>'+esc(w.presenter||"To be confirmed")+'</dd></div>';
+  if(w.partner)h+='<div><dt>Partner</dt><dd>'+esc(w.partner)+'</dd></div>';
+  if(w.host)h+='<div><dt>Host</dt><dd>'+esc(w.host)+'</dd></div>';
+  h+='</dl>';
+  if(editing){
+    h+='<div class="field"><label for="f-link">Registration link (leave blank to use the CBM webinars page)</label><input id="f-link" type="url" value="'+esc(w.link)+'" placeholder="'+esc(STATE.defaultLink)+'"></div>';
+    h+='<div class="field"><label for="f-loc">Location</label><input id="f-loc" value="'+esc(w.location)+'"></div>';
+    h+='<div class="field"><label for="f-desc">Workshop details</label><textarea id="f-desc">'+esc(w.description)+'</textarea></div>';
+    h+='<div class="field"><label for="f-cap">Social caption. Use {date}, {time}, {location}, {link} and they fill in automatically.</label><textarea id="f-cap" style="min-height:180px">'+esc(w.caption)+'</textarea></div>';
+  } else {
+    h+='<div><h4>About this workshop</h4><p>'+(w.description?esc(w.description):'<span class="draft">Details coming soon.</span>')+'</p></div>';
+    if(cap)h+='<div><h4>Social media caption <span class="draft">(ready to post)</span></h4><div class="caption" id="cap-text">'+esc(cap)+'</div></div>';
+    h+='<div><h4>Team checklist ('+pct(w)+'% done)</h4><ul class="ck-list">'+STATE.checks.map(function(c,i){return '<li><button class="tick'+(w.checks[i]?' on':'')+'" data-tick="'+w.id+'|'+i+'" aria-pressed="'+w.checks[i]+'" aria-label="'+esc(c)+'"'+(ui.edit?'':' disabled')+'>✓</button>'+esc(c)+'</li>';}).join("")+'</ul></div>';
+  }
+  h+='</div><div class="dlg-f"><div style="display:flex;gap:8px;flex-wrap:wrap">';
+  if(editing) h+='<button class="btn primary" data-save="'+w.id+'">Save changes</button><button class="btn" data-open="'+w.id+'">Cancel</button>';
+  else {
+    if(isUp)h+='<a class="btn primary" href="'+esc(link(w))+'" target="_blank" rel="noopener">Register</a>';
+    if(cap)h+='<button class="btn" data-copy="'+w.id+'">Copy caption</button>';
+    if(isUp)h+='<a class="btn" href="'+esc(gcal(w))+'" target="_blank" rel="noopener">Add to Google Calendar</a>';
+  }
+  h+='</div>'+(ui.edit&&!editing?'<button class="btn edit-on" data-editw="'+w.id+'">Edit workshop</button>':'')+'</div>';
+  dlg.innerHTML=h;
+  dlg.style.setProperty("--c",color(w));
+  if(!dlg.open){try{dlg.showModal();}catch(e){dlg.setAttribute("open","");}}
+  dlg.dataset.id=id;
+}
+
+/* ---------- saving (shared for everyone via artifact capability) ---------- */
+var HEAD='<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CBM Workshop Calendar</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">';
+function buildDoc(){
+  var css=document.getElementById("app-style").textContent, js=document.getElementById("app-script").textContent;
+  var json=JSON.stringify(STATE).replace(/</g,"\\u003c");
+  return "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n"+HEAD+"\n<style id=\"app-style\">"+css+"</style>\n</head>\n<body>\n<div id=\"app\"></div>\n<script id=\"cbm-state\" type=\"application/json\">"+json+"<\/script>\n<script id=\"app-script\">"+js+"<\/script>\n</body>\n</html>";
+}
+var saveTimer=null, pendingRevert=[];
+function save(revert){
+  if(revert)pendingRevert.push(revert);
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(function(){
+    var reverts=pendingRevert; pendingRevert=[];
+    if(!artifactApi){reverts.forEach(function(f){f();});rerender();toast("Saving only works on the published dashboard page.");return;}
+    artifactApi.publish(buildDoc()).then(function(){toast("Saved for everyone");},function(err){
+      var code=(err&&(err.code||err.name||err.message))||"";
+      reverts.forEach(function(f){f();});rerender();
+      if(/not_writer|not_granted/.test(code))toast("View only: you need edit access to save changes.");
+      else if(/conflict/.test(code))toast("Someone else just saved. The page is refreshing.");
+      else toast("Could not save. Please try again.");
+    });
+  },700);
+}
+function rerender(){var dlg=document.getElementById("dlg"),openId=dlg&&dlg.open?dlg.dataset.id:null;var y=window.scrollY;render();window.scrollTo(0,y);if(openId)openDlg(openId);}
+
+/* ---------- events ---------- */
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-open],[data-copy],[data-fmt],[data-cat],[data-cal],[data-tick],[data-close],[data-editw],[data-save],[data-ckrows],#edit-toggle");
+  if(!t){var dlg=document.getElementById("dlg");if(dlg&&e.target===dlg)dlg.close();return;}
+  if(t.dataset.open){openDlg(t.dataset.open);return;}
+  if(t.dataset.copy){copy(captionText(byId(t.dataset.copy)));return;}
+  if(t.hasAttribute("data-close")){document.getElementById("dlg").close();return;}
+  if(t.dataset.fmt){ui.fmt=t.dataset.fmt;rerender();return;}
+  if(t.dataset.cat){ui.cat=t.dataset.cat;rerender();return;}
+  if(t.dataset.ckrows){ui.showPastCk=t.dataset.ckrows==="all";rerender();return;}
+  if(t.dataset.cal){ui.calM+=+t.dataset.cal;if(ui.calM<0){ui.calM=11;ui.calY--;}if(ui.calM>11){ui.calM=0;ui.calY++;}rerender();return;}
+  if(t.id==="edit-toggle"){ui.edit=!ui.edit;rerender();if(ui.edit)toast(artifactApi?"Edit mode on. Changes save for everyone with edit access.":"Edit mode on. Saving works on the published page.");return;}
+  if(t.dataset.editw){openDlg(t.dataset.editw,true);return;}
+  if(t.dataset.tick){
+    if(!ui.edit)return;
+    var p=t.dataset.tick.split("|"),w=byId(p[0]),i=+p[1];
+    w.checks[i]=!w.checks[i]; var was=!w.checks[i];
+    save(function(){w.checks[i]=was;}); rerender(); return;
+  }
+  if(t.dataset.save){
+    var w2=byId(t.dataset.save), old={link:w2.link,location:w2.location,description:w2.description,caption:w2.caption};
+    w2.link=document.getElementById("f-link").value.trim();
+    w2.location=document.getElementById("f-loc").value.trim()||w2.location;
+    w2.description=document.getElementById("f-desc").value.trim();
+    w2.caption=document.getElementById("f-cap").value.trim();
+    save(function(){Object.assign(w2,old);}); openDlg(w2.id); render(); openDlg(w2.id); return;
+  }
+});
+document.addEventListener("input",function(e){if(e.target.id==="q"){ui.q=e.target.value;var pos=e.target.selectionStart;rerender();var q=document.getElementById("q");if(q){q.focus();q.setSelectionRange(pos,pos);}}});
+function route(){var v=(location.hash||"").slice(1);ui.view=["upcoming","calendar","checklist","past"].indexOf(v)>=0?v:"upcoming";render();}
+window.addEventListener("hashchange",route);
+var t0=pd(TODAY); ui.calY=t0.getFullYear(); ui.calM=t0.getMonth();
+route();
+try{ if(window.claude&&window.claude.use){ window.claude.use("artifact").then(function(a){artifactApi=a;},function(){}); } }catch(e){}
+})();
+</script>
+</body>
+</html>
