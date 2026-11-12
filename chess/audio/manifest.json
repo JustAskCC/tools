@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T09:06:01.322Z",
+ "updated": "2026-11-12T10:27:50.100Z",
  "characters": [
   {
    "key": "malik",
@@ -113,6 +113,10 @@
   {
    "key": "fred",
    "name": "Fred"
+  },
+  {
+   "key": "cory",
+   "name": "Cory"
   }
  ],
  "clips": [
@@ -8496,6 +8500,286 @@
    ]
   },
   {
+   "id": "cory_hello_1",
+   "char": "cory",
+   "moment": "hello",
+   "piece": null,
+   "text": "I'm here! I know, I know. I'm a little late. Traffic was crazy. Let's play.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_hello_2",
+   "char": "cory",
+   "moment": "hello",
+   "piece": null,
+   "text": "Relax. I got it under control.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_think_1",
+   "char": "cory",
+   "moment": "think",
+   "piece": null,
+   "text": "Hold on. I'm working on something big. Bigger than this move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_think_2",
+   "char": "cory",
+   "moment": "think",
+   "piece": null,
+   "text": "Y'all don't understand what I'm building over here.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_quiet_1",
+   "char": "cory",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Take your time. I'm busy anyway.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_quiet_2",
+   "char": "cory",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. Watch and learn. That's how a pro does it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_took_1",
+   "char": "cory",
+   "moment": "took",
+   "piece": null,
+   "text": "I'll take that. Told you I had a plan.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_took_2",
+   "char": "cory",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece is mine now. That's called a power move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_lost_1",
+   "char": "cory",
+   "moment": "lost",
+   "piece": null,
+   "text": "Hold on, that doesn't count. I wasn't ready.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_lost_2",
+   "char": "cory",
+   "moment": "lost",
+   "piece": null,
+   "text": "Okay, the timing just wasn't right on that one.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_gavecheck",
+   "char": "cory",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! See? I told you I got it under control.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_gotcheck",
+   "char": "cory",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? That's not my fault. The board was being weird.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_win",
+   "char": "cory",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Somebody record this. This is going viral.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_lose",
+   "char": "cory",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won? Okay. I'll make it up to you. Next time. For real this time.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_hint",
+   "char": "cory",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. Don't say I never did anything for you.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_draw",
+   "char": "cory",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. Nobody wins, so technically nobody lost. Especially not me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_resign",
+   "char": "cory",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. Your dad still got it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_timewin",
+   "char": "cory",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out! Time is money. Trust me, I know.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_timelose",
+   "char": "cory",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time ran out? I was on an important call.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_rematch",
+   "char": "cory",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Rematch? I'll be right back. I mean, I'm ready right now.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
    "id": "malik_takeback",
    "char": "malik",
    "moment": "takeback",
@@ -8876,6 +9160,20 @@
   {
    "id": "fred_takeback",
    "char": "fred",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cory_takeback",
+   "char": "cory",
    "moment": "takeback",
    "piece": null,
    "text": "Okay, you can take that back. Look carefully this time!",
