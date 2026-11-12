@@ -143,89 +143,6 @@ h2.q{font-weight:900;font-size:20px;text-align:center;margin:18px 0 10px}
 .wait{font-weight:800!important;color:var(--purple)}
 .cheers{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}
 .cheers button{padding:9px 2px;border-radius:12px;background:rgba(255,255,255,.14);font-weight:800;font-size:12px}
-/* winner dance */
-#danceOv{position:fixed;inset:0;z-index:40;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;
-  background:radial-gradient(ellipse at 50% 85%,#3b2a7a 0%,#160c33 55%,#07031a 100%);cursor:pointer}
-#danceOv.hide{display:none}
-#danceOv .dtitle{font:900 30px Montserrat,sans-serif;color:#FFC93C;text-shadow:0 3px 0 #000;margin-bottom:6px;text-align:center;padding:0 12px;animation:dtpulse .5s ease-in-out infinite alternate}
-#danceOv .dsub{font:700 14px Montserrat,sans-serif;color:#cfc6ff;margin-top:14px}
-@keyframes dtpulse{to{transform:scale(1.08)}}
-.spot{position:absolute;bottom:-10%;width:60vmax;height:120vmax;transform-origin:50% 100%;opacity:.22;pointer-events:none;
-  background:linear-gradient(to top,var(--c),transparent 80%);clip-path:polygon(45% 100%,55% 100%,100% 0,0 0)}
-.spot.s1{--c:#FF6F61;left:-25vmax;animation:sweep1 2.4s ease-in-out infinite alternate}
-.spot.s2{--c:#2E86FF;right:-25vmax;animation:sweep2 2.1s ease-in-out infinite alternate}
-.spot.s3{--c:#FFC93C;left:calc(50% - 30vmax);animation:sweep3 1.7s ease-in-out infinite alternate}
-@keyframes sweep1{from{transform:rotate(-10deg)}to{transform:rotate(35deg)}}
-@keyframes sweep2{from{transform:rotate(10deg)}to{transform:rotate(-35deg)}}
-@keyframes sweep3{from{transform:rotate(-20deg)}to{transform:rotate(20deg)}}
-.discoball{position:absolute;top:-6px;left:50%;width:56px;height:56px;margin-left:-28px;border-radius:50%;
-  background:repeating-conic-gradient(#ddd 0 10deg,#888 10deg 20deg),#ccc;box-shadow:0 0 30px #fff8;animation:spin 3s linear infinite}
-.discoball:before{content:"";position:absolute;left:27px;top:-200px;width:2px;height:200px;background:#999}
-@keyframes spin{to{transform:rotate(360deg)}}
-.floor{position:absolute;bottom:0;left:0;right:0;height:22%;display:grid;grid-template-columns:repeat(8,1fr);perspective:300px;opacity:.55}
-.floor i{animation:tile 1s steps(1) infinite}
-.floor i:nth-child(3n){animation-delay:-.33s}.floor i:nth-child(3n+1){animation-delay:-.66s}
-@keyframes tile{0%{background:#FF6F61}33%{background:#2E86FF}66%{background:#1ABC9C}}
-.dancer{position:relative;width:200px;height:330px;transform-origin:50% 100%;z-index:2}
-.dancer>*{position:absolute}
-.dancer .dhead{width:124px;height:124px;left:38px;top:0;border-radius:50%;object-fit:cover;border:4px solid #fff;z-index:5;box-shadow:0 4px 0 #0004}
-.dancer .torso{left:66px;top:108px;width:68px;height:92px;border-radius:24px 24px 14px 14px;background:var(--shirt);z-index:3}
-.dancer .hips{left:66px;top:186px;width:68px;height:26px;border-radius:6px 6px 10px 10px;background:var(--pants);z-index:3}
-.dancer .arm{top:114px;width:16px;height:50px;border-radius:9px;background:var(--shirt);transform-origin:8px 6px;z-index:2}
-.dancer .arm.l{left:58px}.dancer .arm.r{left:126px}
-.dancer .fore{position:absolute;left:1px;top:42px;width:14px;height:46px;border-radius:8px;background:var(--skin);transform-origin:7px 4px}
-.dancer .hand{position:absolute;left:-3px;top:36px;width:20px;height:20px;border-radius:50%;background:var(--skin)}
-.dancer .leg{top:200px;width:20px;height:60px;border-radius:9px;background:var(--pants);transform-origin:10px 6px;z-index:2}
-.dancer .leg.l{left:72px}.dancer .leg.r{left:108px}
-.dancer .shin{position:absolute;left:1px;top:52px;width:18px;height:54px;border-radius:8px;background:var(--pants);transform-origin:9px 4px}
-.dancer .shoe{position:absolute;top:48px;left:-6px;width:32px;height:14px;border-radius:10px 12px 4px 4px;background:var(--shoe)}
-.dancer .leg.r .shoe{left:-6px}
-.dshadow{width:150px;height:18px;border-radius:50%;background:#0008;margin-top:-12px;z-index:1;animation:shad .5s ease-in-out infinite alternate}
-@keyframes shad{to{transform:scaleX(.8)}}
-/* move: hype (raise the roof) */
-.dancer.hype{animation:bounce .4s ease-in-out infinite alternate}
-.hype .arm.l{animation:hypeL .4s ease-in-out infinite alternate}.hype .arm.r{animation:hypeR .4s ease-in-out infinite alternate}
-.hype .arm.l .fore{transform:rotate(-70deg)}.hype .arm.r .fore{transform:rotate(70deg)}
-.hype .leg.l{animation:kneeL .4s ease-in-out infinite alternate}.hype .leg.r{animation:kneeR .4s ease-in-out infinite alternate}
-@keyframes hypeL{from{transform:rotate(130deg)}to{transform:rotate(165deg)}}
-@keyframes hypeR{from{transform:rotate(-130deg)}to{transform:rotate(-165deg)}}
-@keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-14px)}}
-@keyframes kneeL{from{transform:rotate(4deg)}to{transform:rotate(14deg)}}
-@keyframes kneeR{from{transform:rotate(-4deg)}to{transform:rotate(-14deg)}}
-/* move: floss */
-.dancer.floss{animation:flossBody .5s ease-in-out infinite alternate}
-.floss .arm{animation:flossArm .5s ease-in-out infinite alternate}
-.floss .arm .fore{transform:rotate(0)}
-.floss .leg.l{transform:rotate(6deg)}.floss .leg.r{transform:rotate(-6deg)}
-@keyframes flossArm{from{transform:rotate(35deg)}to{transform:rotate(-35deg)}}
-@keyframes flossBody{from{transform:translateX(12px) rotate(-3deg)}to{transform:translateX(-12px) rotate(3deg)}}
-/* move: disco point */
-.dancer.disco{animation:sway .6s ease-in-out infinite alternate}
-.disco .arm.l{transform:rotate(35deg)}.disco .arm.l .fore{transform:rotate(-110deg)}
-.disco .arm.r{animation:point .6s ease-in-out infinite alternate}.disco .arm.r .fore{transform:rotate(-10deg)}
-.disco .leg.l{animation:kneeL .6s ease-in-out infinite alternate}.disco .leg.r{transform:rotate(-8deg)}
-@keyframes point{from{transform:rotate(-155deg)}to{transform:rotate(-20deg)}}
-@keyframes sway{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
-/* move: robot */
-.robot .arm.l{animation:robL 1.2s steps(1) infinite}.robot .arm.r{animation:robR 1.2s steps(1) infinite}
-.robot .arm.l .fore{animation:robFL 1.2s steps(1) infinite}.robot .arm.r .fore{animation:robFR 1.2s steps(1) infinite}
-.dancer.robot{animation:robBody 1.2s steps(1) infinite}
-.robot .leg.l{transform:rotate(5deg)}.robot .leg.r{transform:rotate(-5deg)}
-@keyframes robL{0%{transform:rotate(90deg)}25%{transform:rotate(10deg)}50%{transform:rotate(90deg)}75%{transform:rotate(170deg)}}
-@keyframes robR{0%{transform:rotate(-10deg)}25%{transform:rotate(-90deg)}50%{transform:rotate(-170deg)}75%{transform:rotate(-90deg)}}
-@keyframes robFL{0%{transform:rotate(-90deg)}25%{transform:rotate(0)}50%{transform:rotate(0)}75%{transform:rotate(-90deg)}}
-@keyframes robFR{0%{transform:rotate(0)}25%{transform:rotate(90deg)}50%{transform:rotate(0)}75%{transform:rotate(90deg)}}
-@keyframes robBody{0%{transform:rotate(0)}25%{transform:rotate(-4deg)}50%{transform:rotate(0)}75%{transform:rotate(4deg)}}
-/* move: sprinkler */
-.dancer.sprinkler{animation:bounce .3s ease-in-out infinite alternate}
-.sprinkler .arm.l{transform:rotate(25deg)}.sprinkler .arm.l .fore{transform:rotate(-150deg)}
-.sprinkler .arm.r{animation:sprink 1.2s steps(6) infinite alternate}.sprinkler .arm.r .fore{transform:rotate(0)}
-.sprinkler .leg.l{animation:hop .3s ease-in-out infinite alternate}.sprinkler .leg.r{transform:rotate(-4deg)}
-@keyframes sprink{from{transform:rotate(-30deg)}to{transform:rotate(-140deg)}}
-@keyframes hop{from{transform:rotate(0)}to{transform:rotate(30deg)}}
-.hype .dhead,.floss .dhead,.disco .dhead,.sprinkler .dhead{animation:headbob .4s ease-in-out infinite alternate}
-@keyframes headbob{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
-
 </style>
 </head>
 <body>
@@ -297,12 +214,6 @@ h2.q{font-weight:900;font-size:20px;text-align:center;margin:18px 0 10px}
   </div>
 </div></div>
 <div class="ov hide" id="promoOv"><div class="card"><h3>Promotion!</h3><p>Your pawn made it across. Choose your new piece:</p><div class="promos" id="promos"></div></div></div>
-<div id="danceOv" class="hide"><div class="spot s1"></div><div class="spot s2"></div><div class="spot s3"></div><div class="discoball"></div><div class="floor"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-<div class="dtitle" id="danceT"></div>
-<div class="dancer" id="dancer"><div class="arm l"><div class="fore"><div class="hand"></div></div></div><div class="arm r"><div class="fore"><div class="hand"></div></div></div>
-<div class="leg l"><div class="shin"><div class="shoe"></div></div></div><div class="leg r"><div class="shin"><div class="shoe"></div></div></div>
-<div class="torso"></div><div class="hips"></div><img class="dhead" id="danceHead" alt=""></div><div class="dshadow"></div>
-<div class="dsub">Tap to continue</div></div>
 <div class="ov hide" id="endOv"><div class="card"><img id="endImg" alt=""><h3 id="endH"></h3><p id="endP"></p><p id="endR" class="rematchline"></p>
   <div class="row"><button style="background:var(--green)" id="bAgain">Rematch</button><button style="background:var(--purple)" id="bSwitch">Pick Another Player</button></div></div></div>
 <div class="ov hide" id="confirmOv"><div class="card"><h3>Resign?</h3><p>Are you sure you want to give up this game?</p>
@@ -860,7 +771,7 @@ function say(text,thinking,clip){
   b.innerHTML=thinking?'<span class="dots"><span></span><span></span><span></span></span> '+text:text;
   b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),160);
 }
-function startGame(){if(danceDone)danceDone();
+function startGame(){
   if(ONLINE&&!isOnline())closeOnline();
   gameId++;clearTimeout(aiTimer);
   myColor=colorPref==="r"?(Math.random()<.5?"w":"b"):colorPref;
@@ -1079,9 +990,9 @@ function endOnline(kind){
   $("status").textContent=title;bubble(title);
   $("endImg").src=FACES[cur];$("endH").textContent=title;$("endP").textContent=msg;$("endR").textContent="";
   if(youWon)confetti();
+  setTimeout(()=>{if(youWon){toon("fanfare");setTimeout(()=>toon("applause"),900);}else if(kind==="draw")sfx("draw");else toon("sadTrombone");},350);
   render();drawClock();
-  if(kind==="draw"){setTimeout(()=>sfx("draw"),350);setTimeout(()=>$("endOv").classList.remove("hide"),700);}
-  else setTimeout(()=>{toon(youWon?"applause":"airhorn");winnerDance(youWon?myAvatar:cur,youWon?"You win!":nm+" wins!").then(()=>{if(over)$("endOv").classList.remove("hide");});},700);
+  setTimeout(()=>$("endOv").classList.remove("hide"),700);
 }
 function endGame(kind){
   over=true;busy=false;clearTimeout(aiTimer);
@@ -1093,66 +1004,12 @@ function endGame(kind){
   $("endImg").src=O.face;$("endH").textContent=title;$("endP").textContent=endText;
   if(youWon){WINS[cur]=(WINS[cur]||0)+1;saveWins();}
   if(youWon)confetti();
+  setTimeout(()=>{if(youWon){toon("fanfare");setTimeout(()=>toon("applause"),900);}else if(kind==="draw")sfx("draw");else toon("sadTrombone");},350);
   render();drawClock();
-  if(kind==="draw"){setTimeout(()=>sfx("draw"),350);setTimeout(()=>$("endOv").classList.remove("hide"),1300);}
-  else{
-    const gD=gameId;
-    setTimeout(()=>{if(gD!==gameId)return;toon(youWon?"applause":"airhorn");
-      winnerDance(youWon?myAvatar:cur,youWon?"You win!":O.name+" wins!").then(()=>{if(gD===gameId&&over)$("endOv").classList.remove("hide");});
-    },kind==="resign"?300:1100);
-  }
+  setTimeout(()=>$("endOv").classList.remove("hide"),kind==="resign"?300:1300);
   $("endR").textContent="";
   const g=gameId;
   lastSpeech.then(()=>setTimeout(()=>{if(over&&g===gameId){const t=sayLine("rematch");$("endR").textContent=t?"\u201C"+t+"\u201D":"";}},700));
-}
-
-/* ---------- winner dance ---------- */
-const OUTFIT={};
-function outfitFor(k){
-  if(OUTFIT[k])return Promise.resolve(OUTFIT[k]);
-  return new Promise(res=>{const im=new Image();im.onload=()=>{
-    let o={shirt:"#2E86FF",pants:"#2B2B4F",skin:"#C68A5E",shoe:"#fff"};
-    try{const c=document.createElement("canvas");c.width=c.height=40;const x=c.getContext("2d");x.drawImage(im,0,0,40,40);
-      const px=(a,b)=>{const d=x.getImageData(a,b,3,3).data;let r=0,g=0,bb=0;for(let i=0;i<d.length;i+=4){r+=d[i];g+=d[i+1];bb+=d[i+2];}const n=d.length/4;return[r/n|0,g/n|0,bb/n|0];};
-      const hex=a=>"#"+a.map(v=>Math.max(0,Math.min(255,v)).toString(16).padStart(2,"0")).join("");
-      const sh=px(19,36),sk=px(19,22);
-      o.shirt=hex(sh);o.skin=hex(sk);
-      const lum=sh[0]*.3+sh[1]*.59+sh[2]*.11;
-      o.pants=lum>150?"#2B2B4F":(lum<60?"#3d5a99":"#1f2433");
-    }catch(e){}
-    OUTFIT[k]=o;res(o);};im.onerror=()=>res({shirt:"#2E86FF",pants:"#2B2B4F",skin:"#C68A5E",shoe:"#fff"});im.src=FACES[k];});
-}
-const MOVES=["hype","floss","disco","robot","sprinkler"];
-let danceTimers=[],danceDone=null;
-function danceBeat(secs){
-  if(!SND)return;const a=ac();if(!a)return;const bpm=118,beat=60/bpm,n=Math.floor(secs/beat);
-  const bass=[110,110,131,98];
-  for(let i=0;i<n;i++){const t=i*beat;
-    tone(150,t,.18,"sine",.5,45);                       /* kick */
-    noiseBurst(t+beat/2,.05,.12,"highpass",7000);        /* hat */
-    if(i%2===1){noiseBurst(t,.12,.22,"bandpass",1800,1);} /* clap */
-    tone(bass[Math.floor(i/2)%4],t+beat/2,.2,"square",.05);
-    if(i%4===0)tone([523,659,587,784][Math.floor(i/4)%4],t,.25,"triangle",.05);
-  }
-}
-function winnerDance(who,title){
-  return new Promise(res=>{
-    danceTimers.forEach(clearTimeout);danceTimers=[];
-    const ov=$("danceOv"),d=$("dancer");
-    outfitFor(who).then(o=>{
-      d.style.setProperty("--shirt",o.shirt);d.style.setProperty("--pants",o.pants);d.style.setProperty("--skin",o.skin);d.style.setProperty("--shoe",o.shoe);
-      $("danceHead").src=FACES[who];$("danceT").textContent=title;
-      const seq=MOVES.slice().sort(()=>Math.random()-.5).slice(0,3);
-      d.className="dancer "+seq[0];
-      danceTimers.push(setTimeout(()=>{d.className="dancer "+seq[1];},2100));
-      danceTimers.push(setTimeout(()=>{d.className="dancer "+seq[2];},4200));
-      ov.classList.remove("hide");danceBeat(6.4);
-      let fin=false;const done=()=>{if(fin)return;fin=true;danceTimers.forEach(clearTimeout);ov.classList.add("hide");ov.onclick=null;res();};
-      danceDone=done;
-      danceTimers.push(setTimeout(done,6600));
-      setTimeout(()=>{ov.onclick=done;},500);
-    });
-  });
 }
 function confetti(){
   const cols=["#2E86FF","#FFC93C","#FF6F61","#1ABC9C","#8E44AD","#2ECC71","#FF8C1A","#E74C3C"];
@@ -1189,7 +1046,7 @@ $("bAgain").onclick=()=>{
   startGame();};
 $("bSwitch").onclick=goHome;
 
-function goHome(){if(danceDone)danceDone();if(ONLINE){send({t:"bye"});setTimeout(closeOnline,200);}["bUndo","bHint"].forEach(i=>$(i).classList.remove("hide"));$("cheers").classList.add("hide");clockSecs=+((document.querySelector("#segClock button.on")||{dataset:{v:600}}).dataset.v);try{speechSynthesis.cancel()}catch(e){}stopClip();gameId++;over=true;clearTimeout(aiTimer);clearInterval(tick);$("endOv").classList.add("hide");$("game").classList.add("hide");$("home").classList.remove("hide");buildRoster();window.scrollTo(0,0);}
+function goHome(){if(ONLINE){send({t:"bye"});setTimeout(closeOnline,200);}["bUndo","bHint"].forEach(i=>$(i).classList.remove("hide"));$("cheers").classList.add("hide");clockSecs=+((document.querySelector("#segClock button.on")||{dataset:{v:600}}).dataset.v);try{speechSynthesis.cancel()}catch(e){}stopClip();gameId++;over=true;clearTimeout(aiTimer);clearInterval(tick);$("endOv").classList.add("hide");$("game").classList.add("hide");$("home").classList.remove("hide");buildRoster();window.scrollTo(0,0);}
 </script>
 <script>
 if("serviceWorker" in navigator && /justaskcc\.com|coolkidsuniversity\.(com|org)|localhost|127\.0\.0\.1/.test(location.hostname)){
