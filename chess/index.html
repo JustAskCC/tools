@@ -682,10 +682,21 @@ async function playClip(clip){
 /* funny sounds for the computer's first pawn moves, so early turns don't repeat the same lines */
 const FUN=["fun1","fun2","fun3","fun4","fun5","fun6","fun7","fun8"];let funBag=[];
 const FUN_BY={cory:["cory1","cory2"]};let funFor=null;
+/* these characters always celebrate a capture with "Big, big, big Michael Michael" */
+const CAPTURE_SOUND={carter:"fun7",chloe:"fun7",fred:"fun7",reggie:"fun7"};
+function nextFun(){if(funFor!==cur){funFor=cur;funBag=[];}if(!funBag.length)funBag=(FUN_BY[cur]||FUN).slice().sort(()=>Math.random()-.5);return funBag.pop();}
+/* play a sound with music notes in the bubble, then optionally say a line */
+function soundThen(f,next){
+  try{speechSynthesis.cancel()}catch(e){}stopClip();
+  const b=$("bubble");b.textContent="\u266A \u266B \u266A";b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),160);
+  const g=gameId;
+  const done=SND?playOn(0,"audio/fun/"+f+".mp3"):Promise.resolve();
+  lastSpeech=done.then(()=>{if(next&&g===gameId&&!over)return next();});
+}
 function playFun(){
   if(funFor!==cur){funFor=cur;funBag=[];}
   if(!funBag.length)funBag=(FUN_BY[cur]||FUN).slice().sort(()=>Math.random()-.5);
-  const f=funBag.pop();
+  const f=funBag.pop();if(true){soundThen(f,null);return;}
   try{speechSynthesis.cancel()}catch(e){}stopClip();
   const b=$("bubble");b.textContent="\u266A \u266B \u266A";b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),160);
   if(!SND)return;
@@ -862,9 +873,13 @@ function play(mv,promoTo){
     else if(cap)sayLine("lost",PN[cap[1]]);
     aiTimer=setTimeout(()=>aiTurn(gameId),cap||inCheck(S,S.turn)?1100:250);
   }else{
-    if(inCheck(S,myColor))sayLine("gavecheck");
-    else if(cap)sayLine("took",PN[cap[1]]);
+    if(inCheck(S,myColor)){if(Math.random()<.3)soundThen("cory1",()=>sayLine("gavecheck"));else sayLine("gavecheck");}
+    else if(cap){
+      const capSound=CAPTURE_SOUND[cur]||(Math.random()<.5?nextFun():null);
+      if(capSound)soundThen(capSound,()=>sayLine("took",PN[cap[1]]));else sayLine("took",PN[cap[1]]);
+    }
     else if(earlyTurn()&&movedP&&movedP[1]==="P")playFun();
+    else if(Math.random()<.15)soundThen("cory1",null);
     else sayLine("quiet");
   }
 }
