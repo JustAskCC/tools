@@ -661,12 +661,21 @@ function clipFor(moment,piece){
   return pick(withAudio.length?withAudio:pool);
 }
 function stopClip(){clipToken++;CLIPAUDIO.forEach(a=>{try{a.pause()}catch(e){}});CLIPAUDIO=[];}
+/* iPhones only let a page play sound from an audio player that a tap has started once.
+   So two players are unlocked on the first taps and reused for every clip. */
+const SILENT="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjYwLjE2LjEwMAAAAAAAAAAAAAAA//NwwAAAAAAAAAAAAEluZm8AAAAPAAAABgAAAykAWlpaWlpaWlpaWlpaWlpaWnt7e3t7e3t7e3t7e3t7e3t7nJycnJycnJycnJycnJycnL29vb29vb29vb29vb29vb293t7e3t7e3t7e3t7e3t7e3t7/////////////////////AAAAAExhdmM2MC4zMQAAAAAAAAAAAAAAACQCowAAAAAAAAMpso+sIAAAAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//NCxKMAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//NAxKQAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/80LEowAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=";
+const PLAYERS=[new Audio(),new Audio()];PLAYERS.forEach(p=>{p.preload="auto";p.setAttribute("playsinline","");});
+let unlocked=false;
+function unlockAudio(){if(unlocked)return;PLAYERS.forEach(p=>{try{p.src=SILENT;const pr=p.play();if(pr)pr.then(()=>{p.pause();unlocked=true;}).catch(()=>{});}catch(e){}});}
+document.addEventListener("pointerdown",unlockAudio);document.addEventListener("touchend",unlockAudio);
+function playOn(i,src){return new Promise(res=>{const p=PLAYERS[i]||PLAYERS[0];try{p.pause();}catch(e){}
+  p.onended=res;p.onerror=res;p.onpause=res;p.src=src;const pr=p.play();if(pr)pr.catch(res);CLIPAUDIO.push(p);});}
 async function playClip(clip){
   stopClip();const my=clipToken;
   for(const p of clip.parts){
     if(my!==clipToken)return;
     if(!p.files.length)continue;
-    await Promise.all(p.files.map(src=>new Promise(res=>{const a=new Audio(src);CLIPAUDIO.push(a);a.onended=res;a.onerror=res;a.play().catch(res);})));
+    await Promise.all(p.files.map((src,i)=>playOn(i,src)));
   }
 }
 /* Says the right line for a game moment. Returns the text shown in the bubble. */
@@ -680,8 +689,7 @@ function playFun(){
   try{speechSynthesis.cancel()}catch(e){}stopClip();
   const b=$("bubble");b.textContent="\u266A \u266B \u266A";b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),160);
   if(!SND)return;
-  const my=clipToken;const a=new Audio("audio/fun/"+f+".mp3");CLIPAUDIO.push(a);
-  lastSpeech=new Promise(res=>{a.onended=res;a.onerror=res;a.play().catch(res);});
+  lastSpeech=playOn(0,"audio/fun/"+f+".mp3");
 }
 function earlyTurn(){return hist.length<=4;}
 function sayLine(moment,piece,thinking){
