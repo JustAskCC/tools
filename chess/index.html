@@ -672,8 +672,10 @@ async function playClip(clip){
 /* Says the right line for a game moment. Returns the text shown in the bubble. */
 /* funny sounds for the computer's first pawn moves, so early turns don't repeat the same lines */
 const FUN=["fun1","fun2","fun3","fun4","fun5","fun6","fun7","fun8"];let funBag=[];
+const FUN_BY={cory:["cory1","cory2"]};let funFor=null;
 function playFun(){
-  if(!funBag.length)funBag=FUN.slice().sort(()=>Math.random()-.5);
+  if(funFor!==cur){funFor=cur;funBag=[];}
+  if(!funBag.length)funBag=(FUN_BY[cur]||FUN).slice().sort(()=>Math.random()-.5);
   const f=funBag.pop();
   try{speechSynthesis.cancel()}catch(e){}stopClip();
   const b=$("bubble");b.textContent="\u266A \u266B \u266A";b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),160);
