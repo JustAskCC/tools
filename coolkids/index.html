@@ -200,7 +200,7 @@ function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "
 function stPill(s) { const st = PIPE_STYLE[s] || PIPE_STYLE.Planned; return `<span class="st" style="--sbg:${st[0]};--sfg:${st[1]}">${esc(s)}</span>`; }
 function stSelect(it, cls) {
   const s = statusOf(it), st = PIPE_STYLE[s];
-  const dis = (db && canWrite !== false) ? "" : " disabled";
+  const dis = ((db && canWrite !== false) || canSheetEdit()) ? "" : " disabled";
   return `<select class="sts ${cls || ""}" data-key="${esc(it.key)}" aria-label="Status for ${esc(it.title)}" style="--sbg:${st[0]};--sfg:${st[1]}"${dis}>${PIPE.map(p => `<option${p === s ? " selected" : ""}>${p}</option>`).join("")}</select>`;
 }
 function fmtDate(iso) { if (!iso) return ""; if (!/^\d{4}-\d{2}-\d{2}T/.test(iso)) return iso; try { return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }); } catch (e) { return ""; } }
@@ -378,8 +378,8 @@ function pageView() {
   const meta = [["Collection", c.label], ["Department", it.dept], ["Learning world", it.world], [c.group, it.group], ["Ages", it.ageLabel], ["Grade", it.grade], ["Genre", it.genre], ["Characters", it.chars.join(", ")]]
     .filter((m, i, arr) => m[1] && arr.findIndex(x => x[1] === m[1]) === i).map(m => `<dt>${esc(m[0])}</dt><dd>${esc(m[1])}</dd>`).join("");
   const note = noteOf(it), upd = updatedOf(it);
-  const editable = db && canWrite !== false;
-  const statusCard = sheetMode ? `<div class="card status"><h3>Status</h3>${stPill(statusOf(it))}${note ? `<div style="font-size:13.5px">${esc(note)}</div>` : ""}${(overrides[it.key] && (overrides[it.key].by || overrides[it.key].date)) ? `<div class="saved">Updated${overrides[it.key].by ? " by " + esc(overrides[it.key].by) : ""}${overrides[it.key].date ? " on " + esc(overrides[it.key].date) : ""}</div>` : ""}<a class="btn ghost" style="text-decoration:none;justify-self:start" href="${SHEET_EDIT}" target="_blank" rel="noopener">Change status in the sheet</a><div class="saved">Find ${esc(it.code)} ${esc(it.title)} in the sheet.</div></div>` : `<div class="card status"><h3>Status</h3>${stSelect(it, "big")}<label class="k" for="noteBox" style="font-size:12px;color:var(--muted);font-weight:700">Note</label><textarea id="noteBox" placeholder="What's next, who's on it, links to files"${editable ? "" : " disabled"}>${esc(note)}</textarea><div style="display:flex;gap:10px;align-items:center"><button class="btn" type="button" id="saveNote"${editable ? "" : " disabled"}>Save note</button><span class="saved" id="savedMsg">${upd ? "Updated " + fmtDate(upd) : (editable ? "Not changed yet" : "Read only here")}</span></div></div>`;
+  const editable = (db && canWrite !== false) || canSheetEdit();
+  const statusCard = (sheetMode && !canSheetEdit()) ? `<div class="card status"><h3>Status</h3>${stPill(statusOf(it))}${note ? `<div style="font-size:13.5px">${esc(note)}</div>` : ""}${(overrides[it.key] && (overrides[it.key].by || overrides[it.key].date)) ? `<div class="saved">Updated${overrides[it.key].by ? " by " + esc(overrides[it.key].by) : ""}${overrides[it.key].date ? " on " + esc(overrides[it.key].date) : ""}</div>` : ""}<a class="btn ghost" style="text-decoration:none;justify-self:start" href="${SHEET_EDIT}" target="_blank" rel="noopener">Change status in the sheet</a><div class="saved">Find ${esc(it.code)} ${esc(it.title)} in the sheet.</div></div>` : `<div class="card status"><h3>Status</h3>${stSelect(it, "big")}<label class="k" for="noteBox" style="font-size:12px;color:var(--muted);font-weight:700">Note</label><textarea id="noteBox" placeholder="What's next, who's on it, links to files"${editable ? "" : " disabled"}>${esc(note)}</textarea><div style="display:flex;gap:10px;align-items:center"><button class="btn" type="button" id="saveNote"${editable ? "" : " disabled"}>Save note</button><span class="saved" id="savedMsg">${upd ? "Updated " + fmtDate(upd) : (editable ? "Not changed yet" : "Read only here")}</span></div></div>`;
   const copy = it.copy ? `<button class="btn ghost" type="button" id="copyHook">Copy hook</button>` : "";
   return `
     <div class="pnav"><a class="btn ghost" href="#${it.col}" style="text-decoration:none">Back to ${esc(c.label)}</a><span style="display:flex;gap:8px">${prev ? `<a class="btn ghost" style="text-decoration:none" href="#item-${esc(prev.key)}">Previous</a>` : ""}${next ? `<a class="btn ghost" style="text-decoration:none" href="#item-${esc(next.key)}">Next</a>` : ""}</span></div>
@@ -406,6 +406,7 @@ function bindPage() {
 /* ---------- Saving ---------- */
 let writing = {};
 async function save(it, status, note) {
+  if (canSheetEdit()) return saveSheet(it, status, note);
   if (!db || canWrite === false) return;
   if (writing[it.key]) return;
   writing[it.key] = true;
@@ -431,6 +432,19 @@ function showBanner(t) { const b = $("banner"); b.textContent = t; b.hidden = !t
 const SHEET_EDIT = "https://docs.google.com/spreadsheets/d/1kNBqPu7ha7WXiJFxhniUKX58112poVGiuL5eHK9KxlE/edit";
 const SHEET_CSV = "https://docs.google.com/spreadsheets/d/1kNBqPu7ha7WXiJFxhniUKX58112poVGiuL5eHK9KxlE/gviz/tq?tqx=out:csv&sheet=Status";
 let sheetMode = false;
+const SAVE_URL = "";
+let team = { name: "", code: "" };
+try { team = JSON.parse(localStorage.getItem("ckuTeam") || "{}"); team.name = team.name || ""; team.code = team.code || ""; } catch (e) { team = { name: "", code: "" }; }
+function canSheetEdit() { return sheetMode && !!SAVE_URL && !!team.code; }
+function setTeam(t) { team = t; try { localStorage.setItem("ckuTeam", JSON.stringify(t)); } catch (e) {} }
+function sheetBanner(msg) {
+  const link = `<a href="${SHEET_EDIT}" target="_blank" rel="noopener" style="color:inherit;font-weight:700">Status Tracker sheet</a>`;
+  const b = $("banner"); b.hidden = false; b.style.background = "var(--soft)"; b.style.color = "var(--ink)";
+  if (!SAVE_URL) { b.innerHTML = (msg ? msg + " " : "") + `Live statuses from the ${link}. To change a status or add a note, update it in the sheet, then refresh this page.`; return; }
+  if (team.code) { b.innerHTML = (msg ? msg + " " : "") + `Signed in as <b>${esc(team.name || "team member")}</b>. Change any status on this page and it saves to the ${link}. <button type="button" class="linkbtn" id="signOut">Sign out</button>`; const so = $("signOut"); if (so) so.onclick = () => { setTeam({ name: "", code: "" }); sheetBanner(""); render(); }; return; }
+  b.innerHTML = (msg ? msg + " " : "") + `To update statuses, enter your name and the team code. <span style="display:inline-flex;gap:6px;flex-wrap:wrap;margin-top:6px"><input id="tmName" placeholder="Your name" aria-label="Your name" style="font:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--line);border-radius:8px"><input id="tmCode" type="password" placeholder="Team code" aria-label="Team code" style="font:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--line);border-radius:8px"><button type="button" class="btn" id="tmGo" style="padding:5px 12px">Start updating</button></span>`;
+  $("tmGo").onclick = () => { const n = $("tmName").value.trim(), c = $("tmCode").value.trim(); if (!c) return; setTeam({ name: n, code: c }); sheetBanner(""); render(); };
+}
 function parseCSV(text) {
   const rows = []; let row = [], cell = "", q = false;
   for (let i = 0; i < text.length; i++) {
@@ -457,11 +471,28 @@ async function loadSheet() {
     const next = {};
     rows.forEach(rw => { const k = (rw[kI] || "").trim(); if (!k || !BYKEY[k]) return; next[k] = { status: (rw[sI] || "").trim(), note: (rw[nI] || "").trim(), by: (rw[bI] || "").trim(), date: (rw[dI] || "").trim() }; });
     overrides = next;
-    const b = $("banner"); b.innerHTML = `Live statuses from the ${link}. To change a status or add a note, update it in the sheet, then refresh this page.`; b.hidden = false; b.style.background = "var(--soft)"; b.style.color = "var(--ink)";
+    sheetBanner("");
   } catch (e) {
     const b = $("banner"); b.innerHTML = `Could not load live statuses right now, so these are the starting statuses. Open the ${link} to see or change them.`; b.hidden = false;
   }
   render();
+}
+
+async function saveSheet(it, status, note) {
+  if (writing[it.key]) return;
+  writing[it.key] = true;
+  const msg = $("savedMsg"); if (msg) msg.textContent = "Saving...";
+  try {
+    const r = await fetch(SAVE_URL, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify({ code: team.code, key: it.key, status, note: (note || "").slice(0, 2000), by: team.name }) });
+    const j = await r.json();
+    if (j && j.ok) {
+      overrides[it.key] = { status, note: note || "", by: team.name, date: j.date || new Date().toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) };
+      writing[it.key] = false; render(); const m2 = $("savedMsg"); if (m2) m2.textContent = "Saved to the sheet"; return;
+    }
+    if (j && j.error === "code") { setTeam({ name: team.name, code: "" }); sheetBanner("That team code did not work."); }
+    else if (msg) msg.textContent = "Could not save. Try again.";
+  } catch (e) { if (msg) msg.textContent = "Could not save. Check your connection and try again."; }
+  writing[it.key] = false; render();
 }
 
 /* ---------- Render ---------- */
