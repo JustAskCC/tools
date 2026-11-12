@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T08:48:50.554Z",
+ "updated": "2026-11-12T09:04:26.421Z",
  "characters": [
   {
    "key": "malik",
@@ -5972,10 +5972,12 @@
    "piece": null,
    "text": "We play with respect. Ready to begin?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -5986,10 +5988,12 @@
    "piece": null,
    "text": "Patience. Let me study the board.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_think_1.mp3"
+     ]
     }
    ]
   },
@@ -6000,10 +6004,12 @@
    "piece": null,
    "text": "Confidence is useful. A good move would be even better.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_think_2.mp3"
+     ]
     }
    ]
   },
@@ -6014,10 +6020,12 @@
    "piece": null,
    "text": "Your move.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -6028,10 +6036,12 @@
    "piece": null,
    "text": "Your move. I will reserve my wise remarks until I have one.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -6042,10 +6052,12 @@
    "piece": null,
    "text": "That piece was unguarded.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_took_1.mp3"
+     ]
     }
    ]
   },
@@ -6056,10 +6068,12 @@
    "piece": null,
    "text": "An unguarded piece. Even a good plan needs someone watching the door.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_took_2.mp3"
+     ]
     }
    ]
   },
@@ -6070,10 +6084,12 @@
    "piece": null,
    "text": "You earned that piece. Good move.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -6084,10 +6100,12 @@
    "piece": null,
    "text": "Good move. I was teaching you confidence. Apparently, it worked.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -6098,10 +6116,12 @@
    "piece": null,
    "text": "Check. Consider your response.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -6112,10 +6132,12 @@
    "piece": null,
    "text": "Check. Well. That advice about staying alert seems relevant to me now.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -6126,10 +6148,12 @@
    "piece": null,
    "text": "Checkmate. Good game. The old man has a few moves left.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_win.mp3"
+     ]
     }
    ]
   },
@@ -6140,10 +6164,12 @@
    "piece": null,
    "text": "You won. Well earned. Please allow me a dignified moment of surprise.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_lose.mp3"
+     ]
     }
    ]
   },
@@ -6154,10 +6180,12 @@
    "piece": null,
    "text": "Blue squares. Accept useful advice. Especially when it is free.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_hint.mp3"
+     ]
     }
    ]
   },
@@ -6168,10 +6196,12 @@
    "piece": null,
    "text": "Stalemate. A draw after a fair contest.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_draw.mp3"
+     ]
     }
    ]
   },
@@ -6182,10 +6212,12 @@
    "piece": null,
    "text": "Good game. We can return to the board another day.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_resign.mp3"
+     ]
     }
    ]
   },
@@ -6196,10 +6228,12 @@
    "piece": null,
    "text": "Your time has expired. I win this round.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_timewin.mp3"
+     ]
     }
    ]
   },
@@ -6210,10 +6244,12 @@
    "piece": null,
    "text": "My time has expired. You win this round.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_timelose.mp3"
+     ]
     }
    ]
   },
@@ -6224,10 +6260,12 @@
    "piece": null,
    "text": "Again? I have recovered from being impressed.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandparobert/grandparobert_rematch.mp3"
+     ]
     }
    ]
   },
