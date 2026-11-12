@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T10:32:23.871Z",
+ "updated": "2026-11-12T10:41:40.027Z",
  "characters": [
   {
    "key": "malik",
@@ -8506,10 +8506,12 @@
    "piece": null,
    "text": "Oh good, a challenge. I fix pipes all day, so this should be easy. Try to keep up.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -8520,10 +8522,12 @@
    "piece": null,
    "text": "Relax. I got it under control. I always have it under control.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -8534,10 +8538,12 @@
    "piece": null,
    "text": "Hold on. Genius at work. Don't rush brilliance.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_think_1.mp3"
+     ]
     }
    ]
   },
@@ -8548,10 +8554,12 @@
    "piece": null,
    "text": "Let me think. This board is basically plumbing. Everything flows where I tell it.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_think_2.mp3"
+     ]
     }
    ]
   },
@@ -8562,10 +8570,12 @@
    "piece": null,
    "text": "Your move. Take your time. I'll just stand here being right.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -8576,10 +8586,12 @@
    "piece": null,
    "text": "Your turn. Wow. Bold choice. Interesting. Wrong, but interesting.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -8590,10 +8602,12 @@
    "piece": null,
    "text": "I'll take that. You just sprung a leak.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_took_1.mp3"
+     ]
     }
    ]
   },
@@ -8604,10 +8618,12 @@
    "piece": null,
    "text": "That piece went right down the drain. You're welcome.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_took_2.mp3"
+     ]
     }
    ]
   },
@@ -8618,10 +8634,12 @@
    "piece": null,
    "text": "Oh, wow. You got one piece. Should we call the news?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -8632,10 +8650,12 @@
    "piece": null,
    "text": "Okay. I let you have that. Obviously.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -8646,10 +8666,12 @@
    "piece": null,
    "text": "Check. Your king's got a clog. I'd call a professional, but that's me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -8660,10 +8682,12 @@
    "piece": null,
    "text": "Check? Oh, sure. Because that makes sense. Totally fair. Great.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -8674,10 +8698,12 @@
    "piece": null,
    "text": "Checkmate. Shocking. Truly nobody saw that coming. Except me. I saw it.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_win.mp3"
+     ]
     }
    ]
   },
@@ -8688,10 +8714,12 @@
    "piece": null,
    "text": "You won? Wow. Congratulations. I was clearly going easy on you. Clearly.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_lose.mp3"
+     ]
     }
    ]
   },
@@ -8702,10 +8730,12 @@
    "piece": null,
    "text": "Blue squares. Don't worry, I'll do the thinking for both of us. As usual.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_hint.mp3"
+     ]
     }
    ]
   },
@@ -8716,10 +8746,12 @@
    "piece": null,
    "text": "Stalemate. So I didn't lose. Which means I basically won.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_draw.mp3"
+     ]
     }
    ]
   },
@@ -8730,10 +8762,12 @@
    "piece": null,
    "text": "You're giving up? Smart. Finally, a good decision.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_resign.mp3"
+     ]
     }
    ]
   },
@@ -8744,10 +8778,12 @@
    "piece": null,
    "text": "Your clock ran out. Time is money. I charge by the hour, trust me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_timewin.mp3"
+     ]
     }
    ]
   },
@@ -8758,10 +8794,12 @@
    "piece": null,
    "text": "My time ran out? That clock is broken. I'd fix it, but I'm off the clock.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_timelose.mp3"
+     ]
     }
    ]
   },
@@ -8772,10 +8810,12 @@
    "piece": null,
    "text": "Rematch? Sure. Let me show you how it's really done. Again.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/cory/cory_rematch.mp3"
+     ]
     }
    ]
   },
