@@ -265,11 +265,11 @@ h2.q{font-weight:900;font-size:20px;text-align:center;margin:18px 0 10px}
     <div class="row" style="margin-top:12px"><button style="background:var(--green)" id="onHost">Start a Game</button><button style="background:var(--blue)" id="onJoinBtn">Join a Game</button><button style="background:#888" id="onCancel">Back</button></div>
   </div>
   <div id="onHostBox" class="hide">
-    <h3>Your game code</h3><p class="pftag">Send this code to your friend. They tap Join a Game and type it in.</p>
+    <h3>Your game code</h3><p class="pftag">Send this code to your friend. They tap Join a Game and type it in, or just tap the link you send. Come back to this screen after you send it.</p>
     <div class="code" id="onCode">......</div>
     <div class="opt2"><div class="lb">Chess clock</div><div class="seg" id="segOnClock"><button data-v="300">5 min</button><button class="on" data-v="600">10 min</button><button data-v="0">Off</button></div></div>
     <p class="wait" id="onWait">Getting your code ready...</p>
-    <div class="row"><button style="background:#888" id="onCancel2">Cancel</button></div>
+    <div class="row"><button style="background:var(--green)" id="onShare" class="hide">Send code</button><button style="background:#888" id="onCancel2">Cancel</button></div>
   </div>
   <div id="onJoinBox" class="hide">
     <h3>Join a game</h3><p class="pftag">Type the code your friend sent you.</p>
@@ -543,9 +543,14 @@ let ONLINE=null, PEERLIB=null, onClock=600;
 const CHEERS=["Good move!","Your turn!","Hmm...","Good game!"];
 const ONLINE_OK=!!window.RTCPeerConnection && /justaskcc\.com|coolkidsuniversity\.(com|org)|localhost|127\.0\.0\.1/.test(location.hostname);
 if(ONLINE_OK)$("bOnline").classList.remove("hide");
+setTimeout(()=>{const j=(new URLSearchParams(location.search).get("join")||"").replace(/\D/g,"");
+  if(ONLINE_OK&&j.length===6){buildAvatars();onShow("onJoinBox");$("onCodeIn").value=j;$("onJoinMsg").textContent="Tap Join to play.";
+    try{const q=new URLSearchParams(location.search);q.delete("join");history.replaceState(null,"",location.pathname+(q.toString()?"?"+q:""))}catch(e){}}},300);
 let myAvatar=(()=>{try{return localStorage.getItem("ckccAvatar")||"carter"}catch(e){return "carter"}})();
 function peerOpts(){const q=new URLSearchParams(location.search);const h=q.get("peerhost");
-  return h?{host:h,port:Number(q.get("peerport")||9000),path:"/",secure:false}:{};}
+  const ice={config:{iceServers:[{urls:"stun:stun.l.google.com:19302"},{urls:"stun:stun1.l.google.com:19302"},{urls:"stun:stun.cloudflare.com:3478"},
+    {urls:["turn:eu-0.turn.peerjs.com:3478","turn:us-0.turn.peerjs.com:3478"],username:"peerjs",credential:"peerjsp"}]},debug:0};
+  return h?Object.assign(ice,{host:h,port:Number(q.get("peerport")||9000),path:"/",secure:false}):ice;}
 function loadPeer(){
   if(PEERLIB)return PEERLIB;
   PEERLIB=new Promise((res,rej)=>{if(window.Peer)return res(window.Peer);const s=document.createElement("script");
@@ -561,22 +566,45 @@ function buildAvatars(){
 function closeOnline(){if(ONLINE){try{ONLINE.conn&&ONLINE.conn.close()}catch(e){}try{ONLINE.peer&&ONLINE.peer.destroy()}catch(e){}}ONLINE=null;}
 $("bOnline").onclick=()=>{buildAvatars();onShow("onPick");};
 $("onCancel").onclick=()=>{$("onOv").classList.add("hide");};
-$("onCancel2").onclick=$("onCancel3").onclick=()=>{closeOnline();onShow("onPick");};
+$("onCancel2").onclick=$("onCancel3").onclick=()=>{if(ONLINE){clearTimeout(ONLINE.jT);clearTimeout(ONLINE.rcT);}closeOnline();onShow("onPick");};
 seg("segOnClock",v=>{onClock=+v;});
 function newCode(){return String(Math.floor(100000+Math.random()*900000));}
 $("onHost").onclick=async()=>{
   onShow("onHostBox");$("onCode").textContent="......";$("onWait").textContent="Getting your code ready...";
   let Peer;try{Peer=await loadPeer();}catch(e){$("onWait").textContent="Can't connect right now. Check your internet and try again.";return;}
-  const tryCode=(n)=>{
-    const code=newCode();const peer=new Peer("ckcc-"+code,peerOpts());
-    ONLINE={peer,host:true,code};
-    peer.on("open",()=>{$("onCode").textContent=code;$("onWait").textContent="Waiting for your friend to join...";});
-    peer.on("error",err=>{if(err.type==="unavailable-id"&&n<4){try{peer.destroy()}catch(e){}tryCode(n+1);}
-      else $("onWait").textContent="Can't connect right now. Check your internet and try again.";});
-    peer.on("connection",conn=>{if(ONLINE.conn){conn.close();return;}ONLINE.conn=conn;wire(conn);});
+  const tryCode=(n,keep,held)=>{
+    const code=keep||newCode();const peer=new Peer("ckcc-"+code,peerOpts());
+    ONLINE={peer,host:true,code,fails:0,held:held||0,everOpen:!!keep};
+    peer.on("open",()=>{if(!ONLINE||ONLINE.peer!==peer)return;ONLINE.fails=0;$("onCode").textContent=code;$("onShare").classList.toggle("hide",!navigator.share);
+      if(!ONLINE.started)$("onWait").textContent="Waiting for your friend to join...";});
+    peer.on("disconnected",()=>{if(!ONLINE||ONLINE.peer!==peer||peer.destroyed)return;
+      if(!ONLINE.started)$("onWait").textContent="Reconnecting...";hostReconnect();});
+    peer.on("error",err=>{if(!ONLINE||ONLINE.peer!==peer)return;
+      if(err.type==="unavailable-id"){
+        if(!peer.open&&!ONLINE.everOpen&&n<4){try{peer.destroy()}catch(e){}return tryCode(n+1);}
+        /* our code is still held by the server from before: keep trying the same code for a bit */
+        const hd=ONLINE.held+1;
+        if(hd<8)return setTimeout(()=>{if(ONLINE&&ONLINE.peer===peer){try{peer.destroy()}catch(e){}tryCode(n,code,hd);}},2500);
+        try{peer.destroy()}catch(e){}$("onWait").textContent="Your code changed. Send your friend the new code.";return tryCode(0);}
+      if(["network","server-error","socket-error","socket-closed","disconnected"].includes(err.type)){if(!ONLINE.started)$("onWait").textContent="Reconnecting...";return hostReconnect();}
+      if(!ONLINE.started)$("onWait").textContent="Can't connect right now. Check your internet and try again.";});
+    peer.on("open",()=>{if(ONLINE&&ONLINE.peer===peer)ONLINE.everOpen=true;});
+    peer.on("connection",conn=>{if(!ONLINE)return;if(ONLINE.conn&&ONLINE.conn.open){conn.close();return;}
+      try{ONLINE.conn&&ONLINE.conn.close()}catch(e){}ONLINE.conn=conn;wire(conn);});
   };
   tryCode(0);
 };
+function hostReconnect(){
+  if(!ONLINE||!ONLINE.peer||ONLINE.peer.destroyed)return;
+  clearTimeout(ONLINE.rcT);ONLINE.rcT=setTimeout(()=>{const p=ONLINE&&ONLINE.peer;if(!p||p.destroyed||p.open)return;
+    try{p.reconnect();}catch(e){}if(++ONLINE.fails<20)ONLINE.rcT=setTimeout(hostReconnect,3000);},600);
+}
+/* phones pause the page when you leave the app to text the code: reconnect as soon as you come back */
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState!=="visible"||!ONLINE||!ONLINE.peer)return;
+  if(ONLINE.host&&ONLINE.peer.disconnected&&!ONLINE.peer.destroyed){ONLINE.fails=0;hostReconnect();}
+  if(!ONLINE.host&&!ONLINE.started&&ONLINE.joinCode)joinAttempt();});
+$("onShare").onclick=()=>{if(!ONLINE||!ONLINE.code)return;const link=location.origin+location.pathname+"?join="+ONLINE.code;
+  navigator.share({title:"Cool Kids Chess Club",text:"Play chess with me in Cool Kids Chess Club! Tap the link to join, or type code "+ONLINE.code+" in Join a Game.",url:link}).catch(()=>{});};
 $("onJoinBtn").onclick=()=>{onShow("onJoinBox");$("onCodeIn").value="";$("onJoinMsg").textContent="";setTimeout(()=>$("onCodeIn").focus(),50);};
 $("onCodeIn").oninput=e=>{e.target.value=e.target.value.replace(/\D/g,"").slice(0,6);};
 $("onJoinGo").onclick=async()=>{
@@ -585,11 +613,36 @@ $("onJoinGo").onclick=async()=>{
   $("onJoinMsg").textContent="Connecting...";
   let Peer;try{Peer=await loadPeer();}catch(e){$("onJoinMsg").textContent="Can't connect right now. Check your internet.";return;}
   closeOnline();
-  const peer=new Peer(undefined,peerOpts());ONLINE={peer,host:false,code};
-  peer.on("error",err=>{$("onJoinMsg").textContent=err.type==="peer-unavailable"?"No game found with that code. Check the numbers and try again.":"Can't connect right now. Try again.";});
-  peer.on("open",()=>{const conn=peer.connect("ckcc-"+code,{reliable:true});ONLINE.conn=conn;wire(conn);
-    setTimeout(()=>{if(ONLINE&&ONLINE.conn===conn&&!conn.open)$("onJoinMsg").textContent="Still trying... make sure your friend is still on the code screen.";},8000);});
+  ONLINE={peer:null,host:false,code,joinCode:code,until:Date.now()+90000,tries:0};
+  guestPeer();
 };
+function guestPeer(){
+  if(!ONLINE||ONLINE.host)return;try{ONLINE.peer&&ONLINE.peer.destroy()}catch(e){}
+  const peer=new window.Peer(undefined,peerOpts());ONLINE.peer=peer;
+  peer.on("error",err=>{if(!ONLINE||ONLINE.peer!==peer||ONLINE.started)return;
+    if(err.type==="peer-unavailable"||["network","server-error","socket-error","socket-closed","disconnected"].includes(err.type)){
+      if(peer.disconnected&&!peer.destroyed){try{peer.reconnect()}catch(e){}}
+      return joinRetry();}
+    if(err.type==="browser-incompatible")$("onJoinMsg").textContent="This browser can't play online. Try Safari or Chrome.";else joinRetry();});
+  peer.on("disconnected",()=>{if(ONLINE&&ONLINE.peer===peer&&!peer.destroyed)setTimeout(()=>{try{peer.reconnect()}catch(e){}},500);});
+  peer.on("open",()=>{if(ONLINE&&ONLINE.peer===peer&&!ONLINE.started)joinAttempt();});
+}
+function joinAttempt(){
+  if(!ONLINE||ONLINE.host||ONLINE.started)return;const peer=ONLINE.peer;if(!peer||peer.destroyed){guestPeer();return;}
+  if(!peer.open){if(peer.disconnected){try{peer.reconnect()}catch(e){}}return;}
+  clearTimeout(ONLINE.jT);ONLINE.tries++;
+  try{ONLINE.conn&&!ONLINE.conn.open&&ONLINE.conn.close()}catch(e){}
+  const conn=peer.connect("ckcc-"+ONLINE.joinCode,{reliable:true});ONLINE.conn=conn;wire(conn);
+  ONLINE.jT=setTimeout(()=>{if(ONLINE&&ONLINE.conn===conn&&!conn.open)joinRetry();},7000);
+}
+function joinRetry(){
+  if(!ONLINE||ONLINE.host||ONLINE.started)return;clearTimeout(ONLINE.jT);
+  if(Date.now()>ONLINE.until){$("onJoinMsg").textContent="Couldn't find that game. Check the code, and make sure your friend has the code screen open, then tap Join again.";return;}
+  $("onJoinMsg").textContent="Looking for the game... ask your friend to keep the code screen open.";
+  ONLINE.jT=setTimeout(joinAttempt,2500);
+  /* a peer that never reached the server is dead: also schedule a check that rebuilds it */
+  clearTimeout(ONLINE.wT);ONLINE.wT=setTimeout(()=>{if(ONLINE&&!ONLINE.host&&!ONLINE.started&&ONLINE.peer&&ONLINE.peer.destroyed)guestPeer();},3000);
+}
 function send(m){try{ONLINE&&ONLINE.conn&&ONLINE.conn.open&&ONLINE.conn.send(m)}catch(e){}}
 function wire(conn){
   conn.on("open",()=>{send({t:"hello",av:myAvatar});
@@ -603,12 +656,12 @@ function onData(m){
   if(m.t==="hello"){
     if(ONLINE.host){
       if(ONLINE.startMsg){if(!hist.length)send(ONLINE.startMsg);return;}  /* friend did not get it yet */
-      ONLINE.them=R[m.av]?m.av:"carter";
+      ONLINE.them=R[m.av]?m.av:"carter";ONLINE.started=true;
       const hostColor=Math.random()<.5?"w":"b";ONLINE.clock=onClock;
       ONLINE.startMsg={t:"start",color:hostColor==="w"?"b":"w",clock:onClock,av:myAvatar};send(ONLINE.startMsg);startOnline(hostColor,onClock);
     }
     return;}
-  if(m.t==="start"){if(ONLINE.started)return;ONLINE.started=true;clearInterval(ONLINE.helloTimer);ONLINE.them=R[m.av]?m.av:"carter";ONLINE.clock=m.clock;startOnline(m.color==="w"?"w":"b",Number(m.clock)||0);return;}
+  if(m.t==="start"){if(ONLINE.started)return;ONLINE.started=true;clearInterval(ONLINE.helloTimer);clearTimeout(ONLINE.jT);ONLINE.them=R[m.av]?m.av:"carter";ONLINE.clock=m.clock;startOnline(m.color==="w"?"w":"b",Number(m.clock)||0);return;}
   if(m.t==="move"){
     if(over||S.turn===myColor)return;
     const mv=legal(S).find(x=>x.from===m.from&&x.to===m.to);if(!mv)return;
