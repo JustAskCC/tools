@@ -1068,8 +1068,8 @@ function endOnline(kind){
   $("endImg").src=FACES[cur];$("endH").textContent=title;$("endP").textContent=msg;$("endR").textContent="";
   if(youWon)confetti();
   render();drawClock();
-  const winner=kind==="draw"?null:(youWon?myAvatar:cur);
-  if(winner&&BODIES[winner])setTimeout(()=>winnerDance(winner,youWon?"You win!":nm+" wins!").then(()=>{if(over)$("endOv").classList.remove("hide");}),700);
+  const pd=kind==="draw"?null:pickDancer(youWon,nm);
+  if(pd)setTimeout(()=>winnerDance(pd.who,pd.title).then(()=>{if(over)$("endOv").classList.remove("hide");}),700);
   else{setTimeout(()=>{if(youWon){toon("fanfare");setTimeout(()=>toon("applause"),900);}else if(kind==="draw")sfx("draw");else toon("sadTrombone");},350);
     setTimeout(()=>$("endOv").classList.remove("hide"),700);}
 }
@@ -1084,11 +1084,11 @@ function endGame(kind){
   if(youWon){WINS[cur]=(WINS[cur]||0)+1;saveWins();}
   if(youWon)confetti();
   render();drawClock();
-  const winner=kind==="draw"?null:(youWon?myAvatar:cur);
-  if(winner&&BODIES[winner]){
+  const pd=kind==="draw"?null:pickDancer(youWon,O.name);
+  if(pd){
     const gD=gameId;
     setTimeout(()=>{if(gD!==gameId)return;
-      winnerDance(winner,youWon?"You win!":O.name+" wins!").then(()=>{if(gD===gameId&&over)$("endOv").classList.remove("hide");});
+      winnerDance(pd.who,pd.title).then(()=>{if(gD===gameId&&over)$("endOv").classList.remove("hide");});
     },kind==="resign"?300:1100);
   }else{
     setTimeout(()=>{if(youWon){toon("fanfare");setTimeout(()=>toon("applause"),900);}else if(kind==="draw")sfx("draw");else toon("sadTrombone");},350);
@@ -1120,6 +1120,12 @@ function danceBeat(secs){
     tone(150,t,.18,"sine",.45,45);noiseBurst(t+beat/2,.05,.1,"highpass",7000);
     if(i%2===1)noiseBurst(t,.12,.18,"bandpass",1800,1);
     tone(bass[Math.floor(i/2)%4],t+beat/2,.2,"square",.04);}
+}
+function pickDancer(youWon,oppName){
+  const w=youWon?myAvatar:cur;
+  if(BODIES[w])return{who:w,title:youWon?"You win!":oppName+" wins!"};
+  if(youWon&&BODIES[cur])return{who:cur,title:"You win! "+oppName+" dances anyway!"};
+  return null;
 }
 function winnerDance(who,title){
   const B=BODIES[who];if(!B)return Promise.resolve(false);
