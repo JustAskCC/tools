@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T10:41:40.027Z",
+ "updated": "2026-11-12T12:05:47.200Z",
  "characters": [
   {
    "key": "malik",
@@ -3160,26 +3160,30 @@
    "char": "chloe",
    "moment": "hello",
    "piece": null,
-   "text": "Ready? I have a plan. I am choosing to be mysterious about it.",
+   "text": "Alright, everybody focus. I want to see some good moves and some good sportsmanship.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chloe/chloe_hello_1.mp3"
+     ]
     }
    ]
   },
   {
-   "id": "chloe_hello_2",
+   "id": "chloe_rematch_1",
    "char": "chloe",
-   "moment": "hello",
+   "moment": "rematch",
    "piece": null,
-   "text": "Ready? I have a few ideas I want to try.",
+   "text": "Another round? Ooh, somebody has something to prove.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chloe/chloe_rematch_1.mp3"
+     ]
     }
    ]
   },
@@ -3188,166 +3192,14 @@
    "char": "chloe",
    "moment": "think",
    "piece": null,
-   "text": "Let me look at the whole board.",
+   "text": "Oh boy, hold on. Something is not adding up on this board.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_think_2",
-   "char": "chloe",
-   "moment": "think",
-   "piece": null,
-   "text": "Interesting. You are making my plan do actual work.",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_quiet_1",
-   "char": "chloe",
-   "moment": "quiet",
-   "piece": null,
-   "text": "Your move. Take a good look first.",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_quiet_2",
-   "char": "chloe",
-   "moment": "quiet",
-   "piece": null,
-   "text": "Your turn. That move has a backstory. You will meet it shortly.",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_took_1",
-   "char": "chloe",
-   "moment": "took",
-   "piece": null,
-   "text": "I will take that piece. Watch what you leave open.",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_took_2",
-   "char": "chloe",
-   "moment": "took",
-   "piece": null,
-   "text": "That piece was unprotected. I appreciate the invitation.",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_lost_1",
-   "char": "chloe",
-   "moment": "lost",
-   "piece": null,
-   "text": "Good catch. I left that piece open.",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_lost_2",
-   "char": "chloe",
-   "moment": "lost",
-   "piece": null,
-   "text": "Smart move. Slightly inconvenient for my entire plan.",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_gavecheck",
-   "char": "chloe",
-   "moment": "gavecheck",
-   "piece": null,
-   "text": "Check! What are your options?",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_gotcheck",
-   "char": "chloe",
-   "moment": "gotcheck",
-   "piece": null,
-   "text": "Check? I see you. Unfortunately, so does my king.",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_win",
-   "char": "chloe",
-   "moment": "win",
-   "piece": null,
-   "text": "Checkmate! Quiet planning. Loud results. Good game!",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_lose",
-   "char": "chloe",
-   "moment": "lose",
-   "piece": null,
-   "text": "You won! Okay, that was smooth. I need to see that last move again.",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
+     "files": [
+      "audio/chloe/chloe_think_1.mp3"
+     ]
     }
    ]
   },
@@ -3356,40 +3208,30 @@
    "char": "chloe",
    "moment": "hint",
    "piece": null,
-   "text": "Blue squares. A little help. Please do not use it too brilliantly against me.",
+   "text": "Okay, I'm gonna help you. Look at those blue squares. And don't say I never did anything for you.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chloe/chloe_hint.mp3"
+     ]
     }
    ]
   },
   {
-   "id": "chloe_draw",
+   "id": "chloe_quiet_1",
    "char": "chloe",
-   "moment": "draw",
+   "moment": "quiet",
    "piece": null,
-   "text": "Stalemate! We both worked hard for that draw.",
+   "text": "Okay, your move. Don't let everybody see you panicking.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "chloe_resign",
-   "char": "chloe",
-   "moment": "resign",
-   "piece": null,
-   "text": "Good game. We can try another whenever you are ready.",
-   "sfx": null,
-   "ready": false,
-   "parts": [
-    {
-     "files": []
+     "files": [
+      "audio/chloe/chloe_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -3398,12 +3240,286 @@
    "char": "chloe",
    "moment": "timewin",
    "piece": null,
-   "text": "Your clock ran out. I win this round.",
+   "text": "Time's up! Oh, you were doing all that thinking for what?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chloe/chloe_timewin.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_resign",
+   "char": "chloe",
+   "moment": "resign",
+   "piece": null,
+   "text": "You're quitting? Aw. Okay, good game. We'll try again.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_resign.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_quiet_2",
+   "char": "chloe",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn, Bestie. And please make a good decision.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_quiet_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_rematch_2",
+   "char": "chloe",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Run it back because I have a few things I need to prove.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_rematch_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_lost_1",
+   "char": "chloe",
+   "moment": "lost",
+   "piece": null,
+   "text": "Now, why would you do that to me? I thought we were friends!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_lost_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_took_1",
+   "char": "chloe",
+   "moment": "took",
+   "piece": null,
+   "text": "And I'll be taking that. Thank you very much.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_took_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_win_1",
+   "char": "chloe",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Okay! Now that was a finish.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_win_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_gavecheck_1",
+   "char": "chloe",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check. Oh, somebody better protect that king.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_gavecheck_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_win_2",
+   "char": "chloe",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Oh, I know you see that. Good game though.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_win_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_gavecheck_2",
+   "char": "chloe",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Oh, your king is in trouble.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_gavecheck_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_hello_2",
+   "char": "chloe",
+   "moment": "hello",
+   "piece": null,
+   "text": "Hey! You ready? Because I have been practicing and I am NOT playing around today!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_hello_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_hello_3",
+   "char": "chloe",
+   "moment": "hello",
+   "piece": null,
+   "text": "Oh, we're playing chess today? Okay then, I hope you came prepared.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_hello_3.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_took_2",
+   "char": "chloe",
+   "moment": "took",
+   "piece": null,
+   "text": "Ooh! Somebody just lost a piece! Are we gonna talk about that?",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_took_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_took_3",
+   "char": "chloe",
+   "moment": "took",
+   "piece": null,
+   "text": "Ooh, gotcha! You really left that piece sitting there?",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_took_3.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_draw",
+   "char": "chloe",
+   "moment": "draw",
+   "piece": null,
+   "text": "A stalemate? So nobody won? Oh, that is just ridiculous!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_draw.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_lose",
+   "char": "chloe",
+   "moment": "lose",
+   "piece": null,
+   "text": "Okay, okay, you won! Don't start acting brand new now!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_lose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_lost_2",
+   "char": "chloe",
+   "moment": "lost",
+   "piece": null,
+   "text": "Oh, you thought you ate with that one, huh? Okay, I see you.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_lost_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_gotcheck",
+   "char": "chloe",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Excuse me? Check? Oh, you are getting a little too comfortable.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -3412,26 +3528,62 @@
    "char": "chloe",
    "moment": "timelose",
    "piece": null,
-   "text": "My time ran out. You win this round!",
+   "text": "Wait! My time ran out? Oh boy, I wasn't even finished thinking.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chloe/chloe_timelose.mp3"
+     ]
     }
    ]
   },
   {
-   "id": "chloe_rematch",
+   "id": "chloe_quiet_3",
    "char": "chloe",
-   "moment": "rematch",
+   "moment": "quiet",
    "piece": null,
-   "text": "Again? I have a revised plan and no intention of explaining it.",
+   "text": "Are you gonna move that piece or just stare at it? I'm just asking!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chloe/chloe_quiet_3.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_think_2",
+   "char": "chloe",
+   "moment": "think",
+   "piece": null,
+   "text": "Shh, I'm trying to concentrate. You're messing up my whole thought process.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_think_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chloe_think_3",
+   "char": "chloe",
+   "moment": "think",
+   "piece": null,
+   "text": "Shh, we're thinking over here. Well, somebody is.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/chloe/chloe_think_3.mp3"
+     ]
     }
    ]
   },
