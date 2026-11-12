@@ -669,6 +669,18 @@ async function playClip(clip){
   }
 }
 /* Says the right line for a game moment. Returns the text shown in the bubble. */
+/* funny sounds for the computer's first pawn moves, so early turns don't repeat the same lines */
+const FUN=["fun1","fun2","fun3","fun4","fun5","fun6","fun7","fun8"];let funBag=[];
+function playFun(){
+  if(!funBag.length)funBag=FUN.slice().sort(()=>Math.random()-.5);
+  const f=funBag.pop();
+  try{speechSynthesis.cancel()}catch(e){}stopClip();
+  const b=$("bubble");b.textContent="\u266A \u266B \u266A";b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),160);
+  if(!SND)return;
+  const my=clipToken;const a=new Audio("audio/fun/"+f+".mp3");CLIPAUDIO.push(a);
+  lastSpeech=new Promise(res=>{a.onended=res;a.onerror=res;a.play().catch(res);});
+}
+function earlyTurn(){return hist.length<=4;}
 function sayLine(moment,piece,thinking){
   const clip=clipFor(moment,piece);
   let text;
@@ -815,7 +827,7 @@ function askPromo(mv){
   $("promoOv").classList.remove("hide");
 }
 function play(mv,promoTo){
-  const who=S.turn,O=O_();
+  const who=S.turn,O=O_(),movedP=S.b[mv.from];
   hist.push({S,last,capsBy:{w:capsBy.w.slice(),b:capsBy.b.slice()},log:log.slice(),timers:{...timers}});
   log.push(san(S,mv,promoTo));
   const n=apply(S,mv,promoTo);const cap=n.cap;delete n.cap;
@@ -841,12 +853,13 @@ function play(mv,promoTo){
   }else{
     if(inCheck(S,myColor))sayLine("gavecheck");
     else if(cap)sayLine("took",PN[cap[1]]);
+    else if(earlyTurn()&&movedP&&movedP[1]==="P")playFun();
     else sayLine("quiet");
   }
 }
 function aiTurn(id){
   if(id!==gameId||over)return;
-  const O=O_();busy=true;sayLine("think",null,true);render();
+  const O=O_();busy=true;if(earlyTurn()&&!isOnline())say("",true);else sayLine("think",null,true);render();
   const[a,b]=O.think;const delay=a+Math.random()*(b-a);const t0=Date.now();
   setTimeout(()=>{
     if(id!==gameId||over)return;
