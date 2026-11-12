@@ -1,6 +1,6 @@
 {
   "name": "Cool Kids Chess Club",
-  "short_name": "Kids Chess",
+  "short_name": "Cool Kids Chess Club",
   "description": "Play chess against the Cool Kids University characters.",
   "start_url": "./",
   "scope": "./",
