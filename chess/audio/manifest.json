@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T10:27:50.100Z",
+ "updated": "2026-11-12T10:32:23.871Z",
  "characters": [
   {
    "key": "malik",
@@ -8504,7 +8504,7 @@
    "char": "cory",
    "moment": "hello",
    "piece": null,
-   "text": "I'm here! I know, I know. I'm a little late. Traffic was crazy. Let's play.",
+   "text": "Oh good, a challenge. I fix pipes all day, so this should be easy. Try to keep up.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8518,7 +8518,7 @@
    "char": "cory",
    "moment": "hello",
    "piece": null,
-   "text": "Relax. I got it under control.",
+   "text": "Relax. I got it under control. I always have it under control.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8532,7 +8532,7 @@
    "char": "cory",
    "moment": "think",
    "piece": null,
-   "text": "Hold on. I'm working on something big. Bigger than this move.",
+   "text": "Hold on. Genius at work. Don't rush brilliance.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8546,7 +8546,7 @@
    "char": "cory",
    "moment": "think",
    "piece": null,
-   "text": "Y'all don't understand what I'm building over here.",
+   "text": "Let me think. This board is basically plumbing. Everything flows where I tell it.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8560,7 +8560,7 @@
    "char": "cory",
    "moment": "quiet",
    "piece": null,
-   "text": "Your move. Take your time. I'm busy anyway.",
+   "text": "Your move. Take your time. I'll just stand here being right.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8574,7 +8574,7 @@
    "char": "cory",
    "moment": "quiet",
    "piece": null,
-   "text": "Your turn. Watch and learn. That's how a pro does it.",
+   "text": "Your turn. Wow. Bold choice. Interesting. Wrong, but interesting.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8588,7 +8588,7 @@
    "char": "cory",
    "moment": "took",
    "piece": null,
-   "text": "I'll take that. Told you I had a plan.",
+   "text": "I'll take that. You just sprung a leak.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8602,7 +8602,7 @@
    "char": "cory",
    "moment": "took",
    "piece": null,
-   "text": "That piece is mine now. That's called a power move.",
+   "text": "That piece went right down the drain. You're welcome.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8616,7 +8616,7 @@
    "char": "cory",
    "moment": "lost",
    "piece": null,
-   "text": "Hold on, that doesn't count. I wasn't ready.",
+   "text": "Oh, wow. You got one piece. Should we call the news?",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8630,7 +8630,7 @@
    "char": "cory",
    "moment": "lost",
    "piece": null,
-   "text": "Okay, the timing just wasn't right on that one.",
+   "text": "Okay. I let you have that. Obviously.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8644,7 +8644,7 @@
    "char": "cory",
    "moment": "gavecheck",
    "piece": null,
-   "text": "Check! See? I told you I got it under control.",
+   "text": "Check. Your king's got a clog. I'd call a professional, but that's me.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8658,7 +8658,7 @@
    "char": "cory",
    "moment": "gotcheck",
    "piece": null,
-   "text": "Check? That's not my fault. The board was being weird.",
+   "text": "Check? Oh, sure. Because that makes sense. Totally fair. Great.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8672,7 +8672,7 @@
    "char": "cory",
    "moment": "win",
    "piece": null,
-   "text": "Checkmate! Somebody record this. This is going viral.",
+   "text": "Checkmate. Shocking. Truly nobody saw that coming. Except me. I saw it.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8686,7 +8686,7 @@
    "char": "cory",
    "moment": "lose",
    "piece": null,
-   "text": "You won? Okay. I'll make it up to you. Next time. For real this time.",
+   "text": "You won? Wow. Congratulations. I was clearly going easy on you. Clearly.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8700,7 +8700,7 @@
    "char": "cory",
    "moment": "hint",
    "piece": null,
-   "text": "Blue squares. Don't say I never did anything for you.",
+   "text": "Blue squares. Don't worry, I'll do the thinking for both of us. As usual.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8714,7 +8714,7 @@
    "char": "cory",
    "moment": "draw",
    "piece": null,
-   "text": "Stalemate. Nobody wins, so technically nobody lost. Especially not me.",
+   "text": "Stalemate. So I didn't lose. Which means I basically won.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8728,7 +8728,7 @@
    "char": "cory",
    "moment": "resign",
    "piece": null,
-   "text": "Good game. Your dad still got it.",
+   "text": "You're giving up? Smart. Finally, a good decision.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8742,7 +8742,7 @@
    "char": "cory",
    "moment": "timewin",
    "piece": null,
-   "text": "Your clock ran out! Time is money. Trust me, I know.",
+   "text": "Your clock ran out. Time is money. I charge by the hour, trust me.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8756,7 +8756,7 @@
    "char": "cory",
    "moment": "timelose",
    "piece": null,
-   "text": "My time ran out? I was on an important call.",
+   "text": "My time ran out? That clock is broken. I'd fix it, but I'm off the clock.",
    "sfx": null,
    "ready": false,
    "parts": [
@@ -8770,7 +8770,7 @@
    "char": "cory",
    "moment": "rematch",
    "piece": null,
-   "text": "Rematch? I'll be right back. I mean, I'm ready right now.",
+   "text": "Rematch? Sure. Let me show you how it's really done. Again.",
    "sfx": null,
    "ready": false,
    "parts": [
