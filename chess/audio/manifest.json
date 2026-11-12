@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T12:05:47.200Z",
+ "updated": "2026-11-12T13:43:47.023Z",
  "characters": [
   {
    "key": "malik",
@@ -81,6 +81,10 @@
   {
    "key": "grandmalu",
    "name": "Grandma Lu"
+  },
+  {
+   "key": "alexis",
+   "name": "alexis"
   },
   {
    "key": "grandparobert",
@@ -6108,6 +6112,370 @@
    ]
   },
   {
+   "id": "alexis_hello_1",
+   "char": "alexis",
+   "moment": "hello",
+   "piece": null,
+   "text": "Hallelujah! Well, look who came to play chess with Grandma! Praise the Lord!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_hello_2",
+   "char": "alexis",
+   "moment": "hello",
+   "piece": null,
+   "text": "Well, hello, sweetheart! Grandma loves you, but I'm not just gonna let you win!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_think_1",
+   "char": "alexis",
+   "moment": "think",
+   "piece": null,
+   "text": "Lord, give me wisdom, because I surely need it right now.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_think_2",
+   "char": "alexis",
+   "moment": "think",
+   "piece": null,
+   "text": "Mmm hmm. Now hold on just a minute. I think I see what you're trying to do!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_think_3",
+   "char": "alexis",
+   "moment": "think",
+   "piece": null,
+   "text": "Lord, I need you to come down here and help me with this chessboard! Hallelujah!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_quiet_1",
+   "char": "alexis",
+   "moment": "quiet",
+   "piece": null,
+   "text": "All right, baby. Your turn. Take your time. Patience is a virtue!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_quiet_2",
+   "char": "alexis",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Go ahead, sweetheart. Let's see what that beautiful mind comes up with!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_took_1",
+   "char": "alexis",
+   "moment": "took",
+   "piece": null,
+   "text": "Hallelujah! Look at that! Grandma got your piece!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_took_2",
+   "char": "alexis",
+   "moment": "took",
+   "piece": null,
+   "text": "Thank you, Jesus! That worked out better than I expected!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_lost_1",
+   "char": "alexis",
+   "moment": "lost",
+   "piece": null,
+   "text": "Oh, Lord! Now how in the world did I let that happen?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_lost_2",
+   "char": "alexis",
+   "moment": "lost",
+   "piece": null,
+   "text": "Jesus, take the wheel! Baby, I did not see that coming!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_lost_3",
+   "char": "alexis",
+   "moment": "lost",
+   "piece": null,
+   "text": "Not today, devil! Oh, wait a minute. That's just a chess piece! Ha ha ha!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_gavecheck_1",
+   "char": "alexis",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Hallelujah! Now you better watch that king!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_gavecheck_2",
+   "char": "alexis",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Well, praise the Lord! Looks like your king needs a little help!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_gotcheck_1",
+   "char": "alexis",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Lord have mercy! Now why is my king in all this trouble?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_gotcheck_2",
+   "char": "alexis",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Oh, my goodness! You're making Grandma work today!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_win_1",
+   "char": "alexis",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Hallelujah! Glory to God! Grandma still has it!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_win_2",
+   "char": "alexis",
+   "moment": "win",
+   "piece": null,
+   "text": "Well, praise the Lord! That was a wonderful game, sweetheart. Let's play again!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_lose_1",
+   "char": "alexis",
+   "moment": "lose",
+   "piece": null,
+   "text": "Hallelujah! Look at you! You beat Grandma! Oh, I'm so proud of you!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_lose_2",
+   "char": "alexis",
+   "moment": "lose",
+   "piece": null,
+   "text": "Well, glory! You really showed Grandma something today! Praise the Lord!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_hint",
+   "char": "alexis",
+   "moment": "hint",
+   "piece": null,
+   "text": "Look at those blue squares, baby. Grandma is helping you, just this once!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_draw",
+   "char": "alexis",
+   "moment": "draw",
+   "piece": null,
+   "text": "A stalemate? Well, bless it. Nobody won, but we both played beautifully!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_resign",
+   "char": "alexis",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game, sweetheart. Grandma is proud of you for playing. Let's try again soon!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_timewin",
+   "char": "alexis",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Oh, baby, your time ran out! Patience is a virtue, but so is moving those pieces!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_timelose",
+   "char": "alexis",
+   "moment": "timelose",
+   "piece": null,
+   "text": "Lord, my time ran out! Grandma was too busy praying over that move!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_rematch",
+   "char": "alexis",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Let's play again, sweetheart! Grandma is just getting warmed up. Hallelujah!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
    "id": "grandparobert_hello_1",
    "char": "grandparobert",
    "moment": "hello",
@@ -9240,6 +9608,20 @@
   {
    "id": "grandmalu_takeback",
    "char": "grandmalu",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "alexis_takeback",
+   "char": "alexis",
    "moment": "takeback",
    "piece": null,
    "text": "Okay, you can take that back. Look carefully this time!",
