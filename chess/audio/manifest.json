@@ -1,0 +1,8815 @@
+{
+ "version": 1,
+ "updated": "2026-11-12T08:48:50.554Z",
+ "characters": [
+  {
+   "key": "malik",
+   "name": "Malik"
+  },
+  {
+   "key": "lily",
+   "name": "Lily"
+  },
+  {
+   "key": "ollie",
+   "name": "Ollie"
+  },
+  {
+   "key": "jaemin",
+   "name": "Jae Min"
+  },
+  {
+   "key": "brittany",
+   "name": "Brittany"
+  },
+  {
+   "key": "ethan",
+   "name": "Ethan"
+  },
+  {
+   "key": "maya",
+   "name": "Maya"
+  },
+  {
+   "key": "jayden",
+   "name": "Jayden"
+  },
+  {
+   "key": "jamie",
+   "name": "Jamie"
+  },
+  {
+   "key": "twins",
+   "name": "Zoe & Zuri"
+  },
+  {
+   "key": "chloe",
+   "name": "Chloe"
+  },
+  {
+   "key": "mrparker",
+   "name": "Mr. Parker"
+  },
+  {
+   "key": "ramirez",
+   "name": "Ms. Ramirez"
+  },
+  {
+   "key": "rivera",
+   "name": "Mr. Rivera"
+  },
+  {
+   "key": "ellis",
+   "name": "Mr. Ellis"
+  },
+  {
+   "key": "mali",
+   "name": "Mali Rivers"
+  },
+  {
+   "key": "reggie",
+   "name": "Reggie"
+  },
+  {
+   "key": "grumble",
+   "name": "Mrs. Grumble"
+  },
+  {
+   "key": "harrison",
+   "name": "Mr. Harrison"
+  },
+  {
+   "key": "grandmalu",
+   "name": "Grandma Lu"
+  },
+  {
+   "key": "grandparobert",
+   "name": "Grandpa Robert"
+  },
+  {
+   "key": "brooks",
+   "name": "Mr. Brooks"
+  },
+  {
+   "key": "carter",
+   "name": "Carter"
+  },
+  {
+   "key": "chanel",
+   "name": "Ms. Chanel"
+  },
+  {
+   "key": "whitaker",
+   "name": "Mr. Whitaker"
+  },
+  {
+   "key": "principal",
+   "name": "Principal V"
+  },
+  {
+   "key": "cici",
+   "name": "CiCi"
+  },
+  {
+   "key": "fred",
+   "name": "Fred"
+  }
+ ],
+ "clips": [
+  {
+   "id": "malik_hello_1",
+   "char": "malik",
+   "moment": "hello",
+   "piece": null,
+   "text": "I was told to make better choices. So naturally, I challenged you.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_hello_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_hello_2",
+   "char": "malik",
+   "moment": "hello",
+   "piece": null,
+   "text": "Ready? My knight has been practicing its jumps.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_hello_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_think_1",
+   "char": "malik",
+   "moment": "think",
+   "piece": null,
+   "text": "Wait. That looked smarter in my head.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_think_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_think_2",
+   "char": "malik",
+   "moment": "think",
+   "piece": null,
+   "text": "Let me cook. I have no idea what the recipe is yet.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_think_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_quiet_1",
+   "char": "malik",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. I left you something to think about.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_quiet_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_quiet_2",
+   "char": "malik",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. That move was on purpose. Mostly.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_quiet_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_took_1",
+   "char": "malik",
+   "moment": "took",
+   "piece": null,
+   "text": "Got your piece! My plan is finally working!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_took_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_took_2",
+   "char": "malik",
+   "moment": "took",
+   "piece": null,
+   "text": "Caught in four K! That piece had no backup!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_took_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_lost_1",
+   "char": "malik",
+   "moment": "lost",
+   "piece": null,
+   "text": "Hey! I was saving that piece!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_lost_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_lost_2",
+   "char": "malik",
+   "moment": "lost",
+   "piece": null,
+   "text": "I was using that! Badly, apparently.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_lost_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_gavecheck",
+   "char": "malik",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Now your king has homework!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_gavecheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_gotcheck",
+   "char": "malik",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? My king would like to unsubscribe.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_gotcheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_win",
+   "char": "malik",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! That victory dance is absolutely necessary.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_win.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_lose",
+   "char": "malik",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won? Okay, plot twist. I would like a different ending.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_lose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_hint",
+   "char": "malik",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. You got this hint from a very mysterious genius. Me.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_hint.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_draw",
+   "char": "malik",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! Neither of us wins. That is unexpected.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_draw.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_resign",
+   "char": "malik",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. Come back when you want another try.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_resign.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_timewin",
+   "char": "malik",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time ran out! I win this round.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_timewin.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_timelose",
+   "char": "malik",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time ran out? I was still making my plan!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_timelose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "malik_rematch",
+   "char": "malik",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Rematch? My last plan was clearly a rough draft.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/malik/malik_rematch.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_hello_1",
+   "char": "lily",
+   "moment": "hello",
+   "piece": null,
+   "text": "Hi! I brought a strategy and several backup worries.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_hello_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_hello_2",
+   "char": "lily",
+   "moment": "hello",
+   "piece": null,
+   "text": "I checked my pieces. All here. Let's play!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_hello_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_think_1",
+   "char": "lily",
+   "moment": "think",
+   "piece": null,
+   "text": "Deep breath. I can work this out.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_think_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_think_2",
+   "char": "lily",
+   "moment": "think",
+   "piece": null,
+   "text": "Everything is fine. I have only checked this six times.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_think_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_quiet_1",
+   "char": "lily",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. We can take this one move at a time.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_quiet_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_quiet_2",
+   "char": "lily",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn! I am going to act normal about it.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_quiet_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_took_1",
+   "char": "lily",
+   "moment": "took",
+   "piece": null,
+   "text": "Oh! I can take that piece!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_took_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_took_2",
+   "char": "lily",
+   "moment": "took",
+   "piece": null,
+   "text": "I got your piece! Politely. But I am keeping it.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_took_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_lost_1",
+   "char": "lily",
+   "moment": "lost",
+   "piece": null,
+   "text": "Oh dear. I liked that piece.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_lost_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_lost_2",
+   "char": "lily",
+   "moment": "lost",
+   "piece": null,
+   "text": "That is fine. My backup plan has a backup plan.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_lost_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_gavecheck",
+   "char": "lily",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! I saw it, and I did it!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_gavecheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_gotcheck",
+   "char": "lily",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? Wonderful. A problem I actually need to worry about.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_gotcheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_win",
+   "char": "lily",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! I won! My worries would like to take the credit.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_win.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_lose",
+   "char": "lily",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Honestly, surviving the suspense deserves a little trophy too.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_lose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_hint",
+   "char": "lily",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares! I already worried about this move for both of us.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_hint.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_draw",
+   "char": "lily",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! We both made it to a draw.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_draw.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_resign",
+   "char": "lily",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. Trying something new takes courage.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_resign.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_timewin",
+   "char": "lily",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out. I win this time!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_timewin.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_timelose",
+   "char": "lily",
+   "moment": "timelose",
+   "piece": null,
+   "text": "Oh! My time is up. You win!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_timelose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lily_rematch",
+   "char": "lily",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Again? Apparently I enjoy suspense now. Character development.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/lily/lily_rematch.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_hello_1",
+   "char": "ollie",
+   "moment": "hello",
+   "piece": null,
+   "text": "Welcome! My schedule says chess, followed by looking successful.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_hello_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_hello_2",
+   "char": "ollie",
+   "moment": "hello",
+   "piece": null,
+   "text": "All pieces present. Let the meeting begin!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_hello_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_think_1",
+   "char": "ollie",
+   "moment": "think",
+   "piece": null,
+   "text": "Let me review my options.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_think_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_think_2",
+   "char": "ollie",
+   "moment": "think",
+   "piece": null,
+   "text": "My strategy department is experiencing a brief delay. It is just me.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_think_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_quiet_1",
+   "char": "ollie",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move, partner.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_quiet_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_quiet_2",
+   "char": "ollie",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. I will pretend this was all in the business plan.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_quiet_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_took_1",
+   "char": "ollie",
+   "moment": "took",
+   "piece": null,
+   "text": "That looks like a good deal for me!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_took_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_took_2",
+   "char": "ollie",
+   "moment": "took",
+   "piece": null,
+   "text": "Your piece has been acquired. Excellent customer service.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_took_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_lost_1",
+   "char": "ollie",
+   "moment": "lost",
+   "piece": null,
+   "text": "That was not in my plan.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_lost_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_lost_2",
+   "char": "ollie",
+   "moment": "lost",
+   "piece": null,
+   "text": "That was an expensive lesson. Please send no more invoices.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_lost_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_gavecheck",
+   "char": "ollie",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! A very promising development.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_gavecheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_gotcheck",
+   "char": "ollie",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? I would like to speak to my strategy manager. Unfortunately, that is me.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_gotcheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_win",
+   "char": "ollie",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Big win for a company with no employees.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_win.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_lose",
+   "char": "ollie",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won. I will be describing this as valuable market research.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_lose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_hint",
+   "char": "ollie",
+   "moment": "hint",
+   "piece": null,
+   "text": "The blue squares. Consider it free consulting. A rare offer.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_hint.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_draw",
+   "char": "ollie",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. We will call this a balanced result.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_draw.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_resign",
+   "char": "ollie",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. Thank you for doing chess business with me.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_resign.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_timewin",
+   "char": "ollie",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time is up. This round goes to me.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_timewin.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_timelose",
+   "char": "ollie",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time is up. I scheduled too much thinking!",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_timelose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ollie_rematch",
+   "char": "ollie",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Rematch? My shareholders demand it. Also me.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/ollie/ollie_rematch.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_hello_1",
+   "char": "jaemin",
+   "moment": "hello",
+   "piece": null,
+   "text": "Carter said this would be interesting. I am checking his sources.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_hello_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_hello_2",
+   "char": "jaemin",
+   "moment": "hello",
+   "piece": null,
+   "text": "Carter says you enjoy a challenge. So do I.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_hello_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_think_1",
+   "char": "jaemin",
+   "moment": "think",
+   "piece": null,
+   "text": "There is more than one possibility here.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_think_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_think_2",
+   "char": "jaemin",
+   "moment": "think",
+   "piece": null,
+   "text": "My first idea was confident. My second idea has evidence.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_think_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_quiet_1",
+   "char": "jaemin",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_quiet_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_quiet_2",
+   "char": "jaemin",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. I have a prediction. Please do not make it embarrassing.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_quiet_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_took_1",
+   "char": "jaemin",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece was unprotected.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_took_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_took_2",
+   "char": "jaemin",
+   "moment": "took",
+   "piece": null,
+   "text": "An unprotected piece. A very generous business model.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_took_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_lost_1",
+   "char": "jaemin",
+   "moment": "lost",
+   "piece": null,
+   "text": "I missed that. Good observation.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_lost_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_lost_2",
+   "char": "jaemin",
+   "moment": "lost",
+   "piece": null,
+   "text": "That was good. Annoyingly good. Facts are facts.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_lost_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_gavecheck",
+   "char": "jaemin",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check. Look at your king.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_gavecheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_gotcheck",
+   "char": "jaemin",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check. My previous assessment was a little optimistic.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_gotcheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_win",
+   "char": "jaemin",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate. Good game. I would celebrate, but this is my celebrating face.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_win.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_lose",
+   "char": "jaemin",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won. My prediction has been formally withdrawn.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_lose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_hint",
+   "char": "jaemin",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. Evidence suggests you should look there.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_hint.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_draw",
+   "char": "jaemin",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. No legal move, and no check. That makes it a draw.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_draw.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_resign",
+   "char": "jaemin",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. We can learn from the moves we played.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_resign.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_timewin",
+   "char": "jaemin",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock reached zero. I win on time.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_timewin.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_timelose",
+   "char": "jaemin",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My clock reached zero. You win on time.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_timelose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jaemin_rematch",
+   "char": "jaemin",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Again? I have new data and a personal interest.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/jaemin/jaemin_rematch.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "brittany_hello_1",
+   "char": "brittany",
+   "moment": "hello",
+   "piece": null,
+   "text": "Let's play. I brought confidence. We will see if I brought a strategy.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_hello_2",
+   "char": "brittany",
+   "moment": "hello",
+   "piece": null,
+   "text": "I like a challenge. Pull up a chair!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_think_1",
+   "char": "brittany",
+   "moment": "think",
+   "piece": null,
+   "text": "Wait. I have an idea.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_think_2",
+   "char": "brittany",
+   "moment": "think",
+   "piece": null,
+   "text": "Hold on. Let me cook. The board is taking its time agreeing.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_quiet_1",
+   "char": "brittany",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. Make it interesting!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_quiet_2",
+   "char": "brittany",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. That move had a little main character energy.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_took_1",
+   "char": "brittany",
+   "moment": "took",
+   "piece": null,
+   "text": "Thank you! That piece is joining my team.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_took_2",
+   "char": "brittany",
+   "moment": "took",
+   "piece": null,
+   "text": "Your piece was caught in four K. I saw the whole thing.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_lost_1",
+   "char": "brittany",
+   "moment": "lost",
+   "piece": null,
+   "text": "My piece? You really were paying attention!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_lost_2",
+   "char": "brittany",
+   "moment": "lost",
+   "piece": null,
+   "text": "Okay, you ate with that move. I need a minute.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_gavecheck",
+   "char": "brittany",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Your king needs a plan!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_gotcheck",
+   "char": "brittany",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? Oh, so this is the dramatic episode.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_win",
+   "char": "brittany",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Ate and left no crumbs. Mrs. Grumble can confirm.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_lose",
+   "char": "brittany",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won. I was not prepared for your victory era. Good game!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_hint",
+   "char": "brittany",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. A little help from your extremely generous rival.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_draw",
+   "char": "brittany",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! We will have to settle this another time.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_resign",
+   "char": "brittany",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. You can always come back and try again.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_timewin",
+   "char": "brittany",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out. This round is mine!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_timelose",
+   "char": "brittany",
+   "moment": "timelose",
+   "piece": null,
+   "text": "I ran out of time! You win this round.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_rematch",
+   "char": "brittany",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Rematch? I cannot let that be the season finale.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_hello_1",
+   "char": "ethan",
+   "moment": "hello",
+   "piece": null,
+   "text": "The court is now in session. My opponent has chosen to represent themselves.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_hello_2",
+   "char": "ethan",
+   "moment": "hello",
+   "piece": null,
+   "text": "Ready? I intend to make a very convincing move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_think_1",
+   "char": "ethan",
+   "moment": "think",
+   "piece": null,
+   "text": "Let me examine the evidence.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_think_2",
+   "char": "ethan",
+   "moment": "think",
+   "piece": null,
+   "text": "I am reviewing the evidence. It is being very unhelpful.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_quiet_1",
+   "char": "ethan",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. The board is listening.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_quiet_2",
+   "char": "ethan",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Please keep your argument on the board.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_took_1",
+   "char": "ethan",
+   "moment": "took",
+   "piece": null,
+   "text": "I am taking that piece into evidence!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_took_2",
+   "char": "ethan",
+   "moment": "took",
+   "piece": null,
+   "text": "I submit this captured piece as evidence of excellent taste.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_lost_1",
+   "char": "ethan",
+   "moment": "lost",
+   "piece": null,
+   "text": "Objection! Oh. That move is allowed.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_lost_2",
+   "char": "ethan",
+   "moment": "lost",
+   "piece": null,
+   "text": "Objection! That was legal, but emotionally inconvenient.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_gavecheck",
+   "char": "ethan",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! I rest my case.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_gotcheck",
+   "char": "ethan",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? I would like a recess. Apparently the clock disagrees.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_win",
+   "char": "ethan",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! A unanimous verdict. Granted, I was the only judge.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_lose",
+   "char": "ethan",
+   "moment": "lose",
+   "piece": null,
+   "text": "You win. I respect the verdict. I have several questions for my defense.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_hint",
+   "char": "ethan",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. I am sharing evidence. Please appreciate the paperwork.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_draw",
+   "char": "ethan",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! This case ends in a draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_resign",
+   "char": "ethan",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. Court is adjourned until next time.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_timewin",
+   "char": "ethan",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time is up. The ruling goes to me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_timelose",
+   "char": "ethan",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time is up. The ruling goes to you.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_rematch",
+   "char": "ethan",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Rematch? I have prepared an appeal.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_hello_1",
+   "char": "maya",
+   "moment": "hello",
+   "piece": null,
+   "text": "Hi. I debug robots for fun. Somehow, this is the relaxing hobby.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_hello_2",
+   "char": "maya",
+   "moment": "hello",
+   "piece": null,
+   "text": "I like finding patterns. This should be fun.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_think_1",
+   "char": "maya",
+   "moment": "think",
+   "piece": null,
+   "text": "I think there is a pattern here.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_think_2",
+   "char": "maya",
+   "moment": "think",
+   "piece": null,
+   "text": "My plan has a bug. Naturally, it worked perfectly in my head.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_quiet_1",
+   "char": "maya",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_quiet_2",
+   "char": "maya",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. No pressure. Just several possible consequences.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_took_1",
+   "char": "maya",
+   "moment": "took",
+   "piece": null,
+   "text": "There was a gap in your defense.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_took_2",
+   "char": "maya",
+   "moment": "took",
+   "piece": null,
+   "text": "I found the gap. Small bug. Fairly large consequence.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_lost_1",
+   "char": "maya",
+   "moment": "lost",
+   "piece": null,
+   "text": "Oh. I did not account for that.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_lost_2",
+   "char": "maya",
+   "moment": "lost",
+   "piece": null,
+   "text": "That was clever. I dislike how much I admire it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_gavecheck",
+   "char": "maya",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check. I think my idea worked.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_gotcheck",
+   "char": "maya",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check. Great. An unscheduled system update.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_win",
+   "char": "maya",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! My strategy worked. I am trying to look unsurprised.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_lose",
+   "char": "maya",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! I need to study that. For science. And the rematch.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_hint",
+   "char": "maya",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. I found something useful while overthinking.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_draw",
+   "char": "maya",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. An interesting result for both of us.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_resign",
+   "char": "maya",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. Every attempt gives us something to learn.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_timewin",
+   "char": "maya",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time ran out. This game goes to me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_timelose",
+   "char": "maya",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time ran out. You win. I was still working it out.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_rematch",
+   "char": "maya",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Again? I have fixed one bug. There are probably others.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_hello_1",
+   "char": "jayden",
+   "moment": "hello",
+   "piece": null,
+   "text": "Let's go! No running on this court. Honestly, a strange rule.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_hello_2",
+   "char": "jayden",
+   "moment": "hello",
+   "piece": null,
+   "text": "Different court. Same concentration. Let's play!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_think_1",
+   "char": "jayden",
+   "moment": "think",
+   "piece": null,
+   "text": "I am looking for an opening.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_think_2",
+   "char": "jayden",
+   "moment": "think",
+   "piece": null,
+   "text": "Reading the defense. It is being extremely defensive.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_quiet_1",
+   "char": "jayden",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Show me what you have!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_quiet_2",
+   "char": "jayden",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. I believe this is called building suspense.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_took_1",
+   "char": "jayden",
+   "moment": "took",
+   "piece": null,
+   "text": "I found the opening and took it!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_took_2",
+   "char": "jayden",
+   "moment": "took",
+   "piece": null,
+   "text": "Clean steal! No replay needed. Unless it makes me look cooler.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_lost_1",
+   "char": "jayden",
+   "moment": "lost",
+   "piece": null,
+   "text": "Good steal. I left that piece open.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_lost_2",
+   "char": "jayden",
+   "moment": "lost",
+   "piece": null,
+   "text": "That was clutch. Terrible timing for me to admit it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_gavecheck",
+   "char": "jayden",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Protect your king!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_gotcheck",
+   "char": "jayden",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? Okay. Your defense just became my problem.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_win",
+   "char": "jayden",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Taking the dub. Yes, I practiced the celebration too.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_lose",
+   "char": "jayden",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Clutch finish. I am annoyed and impressed. Both can happen.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_hint",
+   "char": "jayden",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. Consider this a timeout with excellent coaching.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_draw",
+   "char": "jayden",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! This one ends in a draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_resign",
+   "char": "jayden",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. We can practice again anytime.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_timewin",
+   "char": "jayden",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time ran out. I take this round!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_timelose",
+   "char": "jayden",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My clock ran out! You take this round.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_rematch",
+   "char": "jayden",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Another game? My comeback needs somewhere to happen.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_hello_1",
+   "char": "jamie",
+   "moment": "hello",
+   "piece": null,
+   "text": "Hi! I have a new idea. Historically, this is where things get interesting.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_hello_2",
+   "char": "jamie",
+   "moment": "hello",
+   "piece": null,
+   "text": "I have an idea. Let's see if it works!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_think_1",
+   "char": "jamie",
+   "moment": "think",
+   "piece": null,
+   "text": "What happens if I move here?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_think_2",
+   "char": "jamie",
+   "moment": "think",
+   "piece": null,
+   "text": "My brain has too many tabs open. One of them has the answer.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_quiet_1",
+   "char": "jamie",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn! What will you discover?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_quiet_2",
+   "char": "jamie",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn! That was either clever or excellent research material.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_took_1",
+   "char": "jamie",
+   "moment": "took",
+   "piece": null,
+   "text": "I found a piece I can capture!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_took_2",
+   "char": "jamie",
+   "moment": "took",
+   "piece": null,
+   "text": "Experiment successful! I am trying very hard not to look shocked.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_lost_1",
+   "char": "jamie",
+   "moment": "lost",
+   "piece": null,
+   "text": "You got my piece! Nice discovery!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_lost_2",
+   "char": "jamie",
+   "moment": "lost",
+   "piece": null,
+   "text": "Oh! A plot twist. My favorite thing, except when it happens to me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_gavecheck",
+   "char": "jamie",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! I spotted it!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_gotcheck",
+   "char": "jamie",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? That was not in my notes. My notes were mostly arrows.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_win",
+   "char": "jamie",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! It worked! I mean, yes. Exactly as planned. Mostly.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_lose",
+   "char": "jamie",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Can you teach me that before I pretend I discovered it?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_hint",
+   "char": "jamie",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares! I found a clue and resisted making a whole presentation.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_draw",
+   "char": "jamie",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! That is a result worth exploring.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_resign",
+   "char": "jamie",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. I am glad we tried this together.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_timewin",
+   "char": "jamie",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time is up. I win this round!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_timelose",
+   "char": "jamie",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time is up! I got carried away thinking.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_rematch",
+   "char": "jamie",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Again? I have questions. So many questions.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_hello_1",
+   "char": "twins",
+   "moment": "hello",
+   "piece": null,
+   "text": "Zoe: Two brains. Zuri: One board. Zoe: Somehow, still disagreements.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_hello_2",
+   "char": "twins",
+   "moment": "hello",
+   "piece": null,
+   "text": "Zuri: You brought a strategy? Zoe: We brought two.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_think_1",
+   "char": "twins",
+   "moment": "think",
+   "piece": null,
+   "text": "Zoe: I have an idea. Zuri: Let me hear it first.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_think_2",
+   "char": "twins",
+   "moment": "think",
+   "piece": null,
+   "text": "Zoe: Let me cook. Zuri: Last time, we needed a new recipe.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_quiet_1",
+   "char": "twins",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Zoe: Your move. Zuri: We will be watching the board.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_quiet_2",
+   "char": "twins",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Zuri: Your turn. Zoe: We reached a decision. Alert the news.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_took_1",
+   "char": "twins",
+   "moment": "took",
+   "piece": null,
+   "text": "Zoe: We got your piece! Zuri: Good teamwork.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_took_2",
+   "char": "twins",
+   "moment": "took",
+   "piece": null,
+   "text": "Zoe: Got your piece! Zuri: Teamwork. Briefly, but still.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_lost_1",
+   "char": "twins",
+   "moment": "lost",
+   "piece": null,
+   "text": "Zoe: Our piece! Zuri: We both missed that.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_lost_2",
+   "char": "twins",
+   "moment": "lost",
+   "piece": null,
+   "text": "Zuri: That was your plan. Zoe: Our plan when it works, remember?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_gavecheck",
+   "char": "twins",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Zoe: Check! Zuri: Your king needs attention.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_gotcheck",
+   "char": "twins",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Zoe: Check? Zuri: I would like to review the meeting minutes.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_win",
+   "char": "twins",
+   "moment": "win",
+   "piece": null,
+   "text": "Zoe: Checkmate! Zuri: Two brains, one win. Zoe: I did the important part.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_lose",
+   "char": "twins",
+   "moment": "lose",
+   "piece": null,
+   "text": "Zuri: You won. Zoe: Against both of us. Zuri: Please do not make a speech.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_hint",
+   "char": "twins",
+   "moment": "hint",
+   "piece": null,
+   "text": "Zoe: Blue squares. Zuri: We agreed on that immediately. Historic.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_draw",
+   "char": "twins",
+   "moment": "draw",
+   "piece": null,
+   "text": "Zuri: Stalemate. Zoe: Three players and still a draw!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_resign",
+   "char": "twins",
+   "moment": "resign",
+   "piece": null,
+   "text": "Zoe: Good game. Zuri: Come back when you want another try.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_timewin",
+   "char": "twins",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Zuri: Your time ran out. Zoe: This round goes to us!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_timelose",
+   "char": "twins",
+   "moment": "timelose",
+   "piece": null,
+   "text": "Zoe: Our time ran out! Zuri: We discussed too much.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_rematch",
+   "char": "twins",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Zoe: Rematch? Zuri: First, a private discussion. Zoe: Very private. Zuri: Stop announcing it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    },
+    {
+     "files": []
+    },
+    {
+     "files": []
+    },
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_hello_1",
+   "char": "chloe",
+   "moment": "hello",
+   "piece": null,
+   "text": "Ready? I have a plan. I am choosing to be mysterious about it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_hello_2",
+   "char": "chloe",
+   "moment": "hello",
+   "piece": null,
+   "text": "Ready? I have a few ideas I want to try.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_think_1",
+   "char": "chloe",
+   "moment": "think",
+   "piece": null,
+   "text": "Let me look at the whole board.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_think_2",
+   "char": "chloe",
+   "moment": "think",
+   "piece": null,
+   "text": "Interesting. You are making my plan do actual work.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_quiet_1",
+   "char": "chloe",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Take a good look first.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_quiet_2",
+   "char": "chloe",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. That move has a backstory. You will meet it shortly.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_took_1",
+   "char": "chloe",
+   "moment": "took",
+   "piece": null,
+   "text": "I will take that piece. Watch what you leave open.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_took_2",
+   "char": "chloe",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece was unprotected. I appreciate the invitation.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_lost_1",
+   "char": "chloe",
+   "moment": "lost",
+   "piece": null,
+   "text": "Good catch. I left that piece open.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_lost_2",
+   "char": "chloe",
+   "moment": "lost",
+   "piece": null,
+   "text": "Smart move. Slightly inconvenient for my entire plan.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_gavecheck",
+   "char": "chloe",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! What are your options?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_gotcheck",
+   "char": "chloe",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? I see you. Unfortunately, so does my king.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_win",
+   "char": "chloe",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Quiet planning. Loud results. Good game!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_lose",
+   "char": "chloe",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Okay, that was smooth. I need to see that last move again.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_hint",
+   "char": "chloe",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. A little help. Please do not use it too brilliantly against me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_draw",
+   "char": "chloe",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! We both worked hard for that draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_resign",
+   "char": "chloe",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. We can try another whenever you are ready.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_timewin",
+   "char": "chloe",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out. I win this round.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_timelose",
+   "char": "chloe",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time ran out. You win this round!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_rematch",
+   "char": "chloe",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Again? I have a revised plan and no intention of explaining it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_hello_1",
+   "char": "mrparker",
+   "moment": "hello",
+   "piece": null,
+   "text": "Welcome! A chess game with no plot yet. My favorite kind of trouble.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_hello_2",
+   "char": "mrparker",
+   "moment": "hello",
+   "piece": null,
+   "text": "You do not have to know every move. Let's begin with one.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_think_1",
+   "char": "mrparker",
+   "moment": "think",
+   "piece": null,
+   "text": "Let me read the board carefully.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_think_2",
+   "char": "mrparker",
+   "moment": "think",
+   "piece": null,
+   "text": "The plot thickens. So does my need for a better move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_quiet_1",
+   "char": "mrparker",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. What happens next?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_quiet_2",
+   "char": "mrparker",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. Please give my king a manageable character arc.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_took_1",
+   "char": "mrparker",
+   "moment": "took",
+   "piece": null,
+   "text": "I will take that piece. A new chapter begins!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_took_2",
+   "char": "mrparker",
+   "moment": "took",
+   "piece": null,
+   "text": "Your piece has left the story. A brief but memorable role.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_lost_1",
+   "char": "mrparker",
+   "moment": "lost",
+   "piece": null,
+   "text": "You got my piece! What a twist!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_lost_2",
+   "char": "mrparker",
+   "moment": "lost",
+   "piece": null,
+   "text": "A plot twist. How thoughtful of you to put it directly in my way.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_gavecheck",
+   "char": "mrparker",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! How will your king respond?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_gotcheck",
+   "char": "mrparker",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? Apparently, we have reached the suspense chapter.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_win",
+   "char": "mrparker",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! The end. The author would like to thank careful planning.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_lose",
+   "char": "mrparker",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Excellent ending. I have some notes for my character.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_hint",
+   "char": "mrparker",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. A clue, because even good mysteries need those.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_draw",
+   "char": "mrparker",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! This story ends in a draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_resign",
+   "char": "mrparker",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. We can start a new chapter another time.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_timewin",
+   "char": "mrparker",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out. This chapter goes to me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_timelose",
+   "char": "mrparker",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time ran out. This chapter goes to you!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_rematch",
+   "char": "mrparker",
+   "moment": "rematch",
+   "piece": null,
+   "text": "A sequel? I promise absolutely nothing about the ending.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_hello_1",
+   "char": "ramirez",
+   "moment": "hello",
+   "piece": null,
+   "text": "Welcome. Deep breath. Even my excellent advice works better when I use it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_hello_2",
+   "char": "ramirez",
+   "moment": "hello",
+   "piece": null,
+   "text": "Ready? You can think through one move at a time.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_think_1",
+   "char": "ramirez",
+   "moment": "think",
+   "piece": null,
+   "text": "I am taking a moment to look carefully.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_think_2",
+   "char": "ramirez",
+   "moment": "think",
+   "piece": null,
+   "text": "I am practicing patience. The board is providing opportunities.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_quiet_1",
+   "char": "ramirez",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. Give yourself time to look.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_quiet_2",
+   "char": "ramirez",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. I am modeling calm. There is quite a lot to model today.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_took_1",
+   "char": "ramirez",
+   "moment": "took",
+   "piece": null,
+   "text": "I took your piece. You can still make a new plan.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_took_2",
+   "char": "ramirez",
+   "moment": "took",
+   "piece": null,
+   "text": "I took your piece. This is a setback, not your whole biography.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_lost_1",
+   "char": "ramirez",
+   "moment": "lost",
+   "piece": null,
+   "text": "You got my piece. Good observation!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_lost_2",
+   "char": "ramirez",
+   "moment": "lost",
+   "piece": null,
+   "text": "Good move. I am calmly reconsidering several decisions.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_gavecheck",
+   "char": "ramirez",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check. Pause and look for your options.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_gotcheck",
+   "char": "ramirez",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check! A lovely chance to practice the breathing I keep recommending.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_win",
+   "char": "ramirez",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate. Good game. My calm face was doing some serious work.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_lose",
+   "char": "ramirez",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Look at that. My strategy has some reflecting to do.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_hint",
+   "char": "ramirez",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. A little support. Even good thinkers get help.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_draw",
+   "char": "ramirez",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. A draw is part of learning the game.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_resign",
+   "char": "ramirez",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. You can choose to try again another time.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_timewin",
+   "char": "ramirez",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out. I win on time this round.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_timelose",
+   "char": "ramirez",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My clock ran out. You win on time this round.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_rematch",
+   "char": "ramirez",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Another game? I have taken my own advice and had a breath.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_hello_1",
+   "char": "rivera",
+   "moment": "hello",
+   "piece": null,
+   "text": "Welcome to the lab. Today's safety equipment is a better plan.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_hello_2",
+   "char": "rivera",
+   "moment": "hello",
+   "piece": null,
+   "text": "This board is our workshop. Bring your ideas!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_think_1",
+   "char": "rivera",
+   "moment": "think",
+   "piece": null,
+   "text": "I am testing a possible move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_think_2",
+   "char": "rivera",
+   "moment": "think",
+   "piece": null,
+   "text": "My prototype is having a very educational failure.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_quiet_1",
+   "char": "rivera",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Try your idea!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_quiet_2",
+   "char": "rivera",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. Let's see whether my design survives contact with reality.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_took_1",
+   "char": "rivera",
+   "moment": "took",
+   "piece": null,
+   "text": "I found a gap in your design!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_took_2",
+   "char": "rivera",
+   "moment": "took",
+   "piece": null,
+   "text": "Your piece exposed a design flaw. I have collected the evidence.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_lost_1",
+   "char": "rivera",
+   "moment": "lost",
+   "piece": null,
+   "text": "You got my piece! Time to rebuild.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_lost_2",
+   "char": "rivera",
+   "moment": "lost",
+   "piece": null,
+   "text": "You broke my strategy. Very educational. Slightly inconvenient.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_gavecheck",
+   "char": "rivera",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Time to test your defense.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_gotcheck",
+   "char": "rivera",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? My defense needs an upgrade. Immediately would be good.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_win",
+   "char": "rivera",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! It works! Please ignore the earlier prototype.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_lose",
+   "char": "rivera",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Excellent engineering. I would like my defense back in working order.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_hint",
+   "char": "rivera",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. A design suggestion from someone currently testing theirs.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_draw",
+   "char": "rivera",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! We built our way to a draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_resign",
+   "char": "rivera",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. There is always another idea to try.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_timewin",
+   "char": "rivera",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out. This round goes to me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_timelose",
+   "char": "rivera",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My clock ran out. You win this round!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_rematch",
+   "char": "rivera",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Another build? Version two has fewer obvious problems. In theory.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_hello_1",
+   "char": "ellis",
+   "moment": "hello",
+   "piece": null,
+   "text": "Hypothesis: we will have fun. My winning is an unrelated personal hope.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_hello_2",
+   "char": "ellis",
+   "moment": "hello",
+   "piece": null,
+   "text": "I predict an interesting game. Let's test that idea!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_think_1",
+   "char": "ellis",
+   "moment": "think",
+   "piece": null,
+   "text": "Let me examine the possibilities.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_think_2",
+   "char": "ellis",
+   "moment": "think",
+   "piece": null,
+   "text": "The data has declined to support my first idea. How considerate.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_quiet_1",
+   "char": "ellis",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. What is your prediction?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_quiet_2",
+   "char": "ellis",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. I predict something interesting. A wonderfully safe prediction.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_took_1",
+   "char": "ellis",
+   "moment": "took",
+   "piece": null,
+   "text": "My experiment worked. I captured your piece!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_took_2",
+   "char": "ellis",
+   "moment": "took",
+   "piece": null,
+   "text": "Experiment successful! I will now pretend I expected that.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_lost_1",
+   "char": "ellis",
+   "moment": "lost",
+   "piece": null,
+   "text": "You got my piece! Excellent observation.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_lost_2",
+   "char": "ellis",
+   "moment": "lost",
+   "piece": null,
+   "text": "Excellent observation. A deeply inconvenient discovery for me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_gavecheck",
+   "char": "ellis",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! What can you try next?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_gotcheck",
+   "char": "ellis",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check! Fascinating. I would enjoy this more from your side.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_win",
+   "char": "ellis",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! The results are in. My lab coat did not do the thinking.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_lose",
+   "char": "ellis",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! The evidence is clear. I am taking it personally. Scientifically personally.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_hint",
+   "char": "ellis",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. A useful clue, without the forty minute lecture.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_draw",
+   "char": "ellis",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! An interesting result: a draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_resign",
+   "char": "ellis",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. We learned something by trying.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_timewin",
+   "char": "ellis",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time ran out. I win this experiment.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_timelose",
+   "char": "ellis",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time ran out. You win this experiment!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_rematch",
+   "char": "ellis",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Again? We need more data. Conveniently, I also want a rematch.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_hello_1",
+   "char": "mali",
+   "moment": "hello",
+   "piece": null,
+   "text": "Welcome, friend. I bring calm. My pieces have made no such promise.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_hello_2",
+   "char": "mali",
+   "moment": "hello",
+   "piece": null,
+   "text": "Take a comfortable breath. The board is ready.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_think_1",
+   "char": "mali",
+   "moment": "think",
+   "piece": null,
+   "text": "I am giving this move my attention.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_think_2",
+   "char": "mali",
+   "moment": "think",
+   "piece": null,
+   "text": "I am releasing attachment to my first plan. It was not very good.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_quiet_1",
+   "char": "mali",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move, friend.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_quiet_2",
+   "char": "mali",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. We can be peaceful and still want to win.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_took_1",
+   "char": "mali",
+   "moment": "took",
+   "piece": null,
+   "text": "I will take that piece and make my move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_took_2",
+   "char": "mali",
+   "moment": "took",
+   "piece": null,
+   "text": "I gently take your piece. The taking part is quite definite.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_lost_1",
+   "char": "mali",
+   "moment": "lost",
+   "piece": null,
+   "text": "You captured my piece. Well observed.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_lost_2",
+   "char": "mali",
+   "moment": "lost",
+   "piece": null,
+   "text": "I am letting that piece go. You have made the decision very easy.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_gavecheck",
+   "char": "mali",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check, friend. Look for a safe response.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_gotcheck",
+   "char": "mali",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check. A wonderful moment for the breathing I was postponing.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_win",
+   "char": "mali",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate. Inner peace. Outer victory. A pleasant combination.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_lose",
+   "char": "mali",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won. I am accepting this with grace. Grace requires a small moment.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_hint",
+   "char": "mali",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares, friend. Wisdom occasionally comes in a very obvious color.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_draw",
+   "char": "mali",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. We have reached a draw together.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_resign",
+   "char": "mali",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. Thank you for the time we shared.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_timewin",
+   "char": "mali",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time has run out. This round goes to me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_timelose",
+   "char": "mali",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time has run out. This round goes to you.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_rematch",
+   "char": "mali",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Another game? My peace is restored. My competitive side never left.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_hello_1",
+   "char": "reggie",
+   "moment": "hello",
+   "piece": null,
+   "text": "Ready? I am here to support you. Unfortunately, I also like winning.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_hello_2",
+   "char": "reggie",
+   "moment": "hello",
+   "piece": null,
+   "text": "Let's see what you have been practicing.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_think_1",
+   "char": "reggie",
+   "moment": "think",
+   "piece": null,
+   "text": "Give me a second to work this out.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_think_2",
+   "char": "reggie",
+   "moment": "think",
+   "piece": null,
+   "text": "Let me cook. Preferably before my whole plan burns.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_quiet_1",
+   "char": "reggie",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Look before you leap.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_quiet_2",
+   "char": "reggie",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. I am being quiet because my first idea was terrible.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_took_1",
+   "char": "reggie",
+   "moment": "took",
+   "piece": null,
+   "text": "I got your piece. Watch that opening.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_took_2",
+   "char": "reggie",
+   "moment": "took",
+   "piece": null,
+   "text": "I got your piece. Big brother discount. All the way to free.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_lost_1",
+   "char": "reggie",
+   "moment": "lost",
+   "piece": null,
+   "text": "You got me! Nice move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_lost_2",
+   "char": "reggie",
+   "moment": "lost",
+   "piece": null,
+   "text": "Okay, that was smooth. Who has been teaching you my tricks?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_gavecheck",
+   "char": "reggie",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Make sure your king is safe.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_gotcheck",
+   "char": "reggie",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? You came prepared. I should have asked more questions.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_win",
+   "char": "reggie",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Good game. I will keep the victory speech under an hour.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_lose",
+   "char": "reggie",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Proud of you. Slightly wounded, but very proud.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_hint",
+   "char": "reggie",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. Do not tell anybody I helped you beat me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_draw",
+   "char": "reggie",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! We will call that a draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_resign",
+   "char": "reggie",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. You can come back and try again.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_timewin",
+   "char": "reggie",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time ran out. This round goes to me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_timelose",
+   "char": "reggie",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time ran out! You take this one.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_rematch",
+   "char": "reggie",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Again? I need to defend my reputation around here.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_hello_1",
+   "char": "grumble",
+   "moment": "hello",
+   "piece": null,
+   "text": "No crumbs. No sticky fingers. And no telling me to let you cook. This is not a kitchen.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_hello_2",
+   "char": "grumble",
+   "moment": "hello",
+   "piece": null,
+   "text": "No crumbs on the chessboard. I just cleaned it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_think_1",
+   "char": "grumble",
+   "moment": "think",
+   "piece": null,
+   "text": "Hmph. I am thinking.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_think_2",
+   "char": "grumble",
+   "moment": "think",
+   "piece": null,
+   "text": "Hmph. The obvious move is being suspiciously unhelpful.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_quiet_1",
+   "char": "grumble",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. The pieces will not move themselves.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_quiet_2",
+   "char": "grumble",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. The suspense is lovely. My patience is limited.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_took_1",
+   "char": "grumble",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece is coming with me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_took_2",
+   "char": "grumble",
+   "moment": "took",
+   "piece": null,
+   "text": "Confiscated. Finally, a rule I enjoy enforcing.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_lost_1",
+   "char": "grumble",
+   "moment": "lost",
+   "piece": null,
+   "text": "My piece! Hmph. Fair move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_lost_2",
+   "char": "grumble",
+   "moment": "lost",
+   "piece": null,
+   "text": "That was clever. Do not become unbearable about it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_gavecheck",
+   "char": "grumble",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Yes, I meant to do that.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_gotcheck",
+   "char": "grumble",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? Hmph. I preferred this game ten seconds ago.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_win",
+   "char": "grumble",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate. Ate and left no crumbs. For once, a sensible expression.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_lose",
+   "char": "grumble",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won. Excellent work. There. My daily compliment. Used up.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_hint",
+   "char": "grumble",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. I am helping. Try not to look so surprised.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_draw",
+   "char": "grumble",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. A draw. At least the board stayed tidy.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_resign",
+   "char": "grumble",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. There is always another day to practice.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_timewin",
+   "char": "grumble",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time is up. This round is mine.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_timelose",
+   "char": "grumble",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time is up? Hmph. Well played.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_rematch",
+   "char": "grumble",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Another game? Fine. Apparently, I am having fun. Keep that quiet.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_hello_1",
+   "char": "harrison",
+   "moment": "hello",
+   "piece": null,
+   "text": "Pull up a chair. I have had years to practice looking harmless.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_hello_2",
+   "char": "harrison",
+   "moment": "hello",
+   "piece": null,
+   "text": "A good game and good company. What a pleasant afternoon.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_think_1",
+   "char": "harrison",
+   "moment": "think",
+   "piece": null,
+   "text": "Let me have a look here.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_think_2",
+   "char": "harrison",
+   "moment": "think",
+   "piece": null,
+   "text": "Ah, yes. A position that looked much nicer before I understood it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_quiet_1",
+   "char": "harrison",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move, my friend.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_quiet_2",
+   "char": "harrison",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. I will be over here looking completely innocent.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_took_1",
+   "char": "harrison",
+   "moment": "took",
+   "piece": null,
+   "text": "I will take that piece, if you please.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_took_2",
+   "char": "harrison",
+   "moment": "took",
+   "piece": null,
+   "text": "I will take that piece. Retired, not retired from winning.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_lost_1",
+   "char": "harrison",
+   "moment": "lost",
+   "piece": null,
+   "text": "Oh, you got my piece! Nicely done.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_lost_2",
+   "char": "harrison",
+   "moment": "lost",
+   "piece": null,
+   "text": "Very clever. You have made my afternoon mildly inconvenient.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_gavecheck",
+   "char": "harrison",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check, my friend.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_gotcheck",
+   "char": "harrison",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check! Oh, you are not just here for the cookies.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_win",
+   "char": "harrison",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate. Experience does come with a few useful side effects.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_lose",
+   "char": "harrison",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Well played. I shall blame absolutely nothing. Publicly.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_hint",
+   "char": "harrison",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. A little neighborly assistance. No lawn mowing required.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_draw",
+   "char": "harrison",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. A good, honest draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_resign",
+   "char": "harrison",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. You are welcome back anytime.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_timewin",
+   "char": "harrison",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out. This round goes to me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_timelose",
+   "char": "harrison",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My clock ran out. This round goes to you.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_rematch",
+   "char": "harrison",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Another game? My innocent expression still has plenty of life in it.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_hello_1",
+   "char": "grandmalu",
+   "moment": "hello",
+   "piece": null,
+   "text": "Come sit down, baby. Grandma loves you. Grandma also loves a win.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_hello_2",
+   "char": "grandmalu",
+   "moment": "hello",
+   "piece": null,
+   "text": "Grandma is happy to see you. Now, bring your best game.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_think_1",
+   "char": "grandmalu",
+   "moment": "think",
+   "piece": null,
+   "text": "Let Grandma think for a moment.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_think_2",
+   "char": "grandmalu",
+   "moment": "think",
+   "piece": null,
+   "text": "Let Grandma think. Wisdom still needs a minute.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_quiet_1",
+   "char": "grandmalu",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn, honey.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_quiet_2",
+   "char": "grandmalu",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn, honey. I cannot do everything around here.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_took_1",
+   "char": "grandmalu",
+   "moment": "took",
+   "piece": null,
+   "text": "Grandma is taking that piece.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_took_2",
+   "char": "grandmalu",
+   "moment": "took",
+   "piece": null,
+   "text": "Thank you for that piece. Such a thoughtful visit.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_lost_1",
+   "char": "grandmalu",
+   "moment": "lost",
+   "piece": null,
+   "text": "You got Grandma's piece! Good thinking.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_lost_2",
+   "char": "grandmalu",
+   "moment": "lost",
+   "piece": null,
+   "text": "Oh, you took Grandma's piece. So that is the kind of visit this is.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_gavecheck",
+   "char": "grandmalu",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check, sweetheart. Look after your king.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_gotcheck",
+   "char": "grandmalu",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? You have been practicing without telling Grandma. Interesting.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_win",
+   "char": "grandmalu",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate, baby. Sweetheart is a term of affection, not a promise to let you win.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_lose",
+   "char": "grandmalu",
+   "moment": "lose",
+   "piece": null,
+   "text": "You beat Grandma! I am proud. I am also requesting another game.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_hint",
+   "char": "grandmalu",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares, honey. Advice is free. That next piece might cost you.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_draw",
+   "char": "grandmalu",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! We both held our ground.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_resign",
+   "char": "grandmalu",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game, sweetheart. We can play another time.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_timewin",
+   "char": "grandmalu",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time ran out. Grandma takes this round.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_timelose",
+   "char": "grandmalu",
+   "moment": "timelose",
+   "piece": null,
+   "text": "Grandma ran out of time. You win, honey!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_rematch",
+   "char": "grandmalu",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Again? Grandma is still sweet. The strategy is getting less sweet.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_hello_1",
+   "char": "grandparobert",
+   "moment": "hello",
+   "piece": null,
+   "text": "Sit down. I have a plan. It survived longer than my last pair of reading glasses.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_hello_2",
+   "char": "grandparobert",
+   "moment": "hello",
+   "piece": null,
+   "text": "We play with respect. Ready to begin?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_think_1",
+   "char": "grandparobert",
+   "moment": "think",
+   "piece": null,
+   "text": "Patience. Let me study the board.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_think_2",
+   "char": "grandparobert",
+   "moment": "think",
+   "piece": null,
+   "text": "Confidence is useful. A good move would be even better.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_quiet_1",
+   "char": "grandparobert",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_quiet_2",
+   "char": "grandparobert",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. I will reserve my wise remarks until I have one.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_took_1",
+   "char": "grandparobert",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece was unguarded.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_took_2",
+   "char": "grandparobert",
+   "moment": "took",
+   "piece": null,
+   "text": "An unguarded piece. Even a good plan needs someone watching the door.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_lost_1",
+   "char": "grandparobert",
+   "moment": "lost",
+   "piece": null,
+   "text": "You earned that piece. Good move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_lost_2",
+   "char": "grandparobert",
+   "moment": "lost",
+   "piece": null,
+   "text": "Good move. I was teaching you confidence. Apparently, it worked.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_gavecheck",
+   "char": "grandparobert",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check. Consider your response.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_gotcheck",
+   "char": "grandparobert",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check. Well. That advice about staying alert seems relevant to me now.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_win",
+   "char": "grandparobert",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate. Good game. The old man has a few moves left.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_lose",
+   "char": "grandparobert",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won. Well earned. Please allow me a dignified moment of surprise.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_hint",
+   "char": "grandparobert",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. Accept useful advice. Especially when it is free.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_draw",
+   "char": "grandparobert",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. A draw after a fair contest.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_resign",
+   "char": "grandparobert",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. We can return to the board another day.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_timewin",
+   "char": "grandparobert",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time has expired. I win this round.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_timelose",
+   "char": "grandparobert",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time has expired. You win this round.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_rematch",
+   "char": "grandparobert",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Again? I have recovered from being impressed.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_hello_1",
+   "char": "brooks",
+   "moment": "hello",
+   "piece": null,
+   "text": "Welcome to chess club. Confidence is welcome. Evidence is preferred.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_hello_2",
+   "char": "brooks",
+   "moment": "hello",
+   "piece": null,
+   "text": "Ready? Watch how the pieces work together.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_think_1",
+   "char": "brooks",
+   "moment": "think",
+   "piece": null,
+   "text": "I am looking for a useful pattern.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_think_2",
+   "char": "brooks",
+   "moment": "think",
+   "piece": null,
+   "text": "There is a pattern here. It is doing an excellent job of hiding.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_quiet_1",
+   "char": "brooks",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. What do you notice?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_quiet_2",
+   "char": "brooks",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. I have asked the board a question. It has declined to answer.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_took_1",
+   "char": "brooks",
+   "moment": "took",
+   "piece": null,
+   "text": "I took that piece. What left it open?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_took_2",
+   "char": "brooks",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece was open. The board does not award points for optimism.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_lost_1",
+   "char": "brooks",
+   "moment": "lost",
+   "piece": null,
+   "text": "Excellent. You found the opening.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_lost_2",
+   "char": "brooks",
+   "moment": "lost",
+   "piece": null,
+   "text": "Excellent move. My lesson plan now includes being surprised.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_gavecheck",
+   "char": "brooks",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check. Look for the moves that keep your king safe.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_gotcheck",
+   "char": "brooks",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check! Good thinking. Poor timing for my peace of mind.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_win",
+   "char": "brooks",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate. Showing your work does have its benefits.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_lose",
+   "char": "brooks",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Excellent reasoning. I have been assigned the homework.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_hint",
+   "char": "brooks",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. A clue. Please appreciate my heroic restraint from giving a lecture.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_draw",
+   "char": "brooks",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. A draw is a result we can study too.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_resign",
+   "char": "brooks",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. We can learn from the position we reached.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_timewin",
+   "char": "brooks",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out. I win on time.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_timelose",
+   "char": "brooks",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My clock ran out. You win on time.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_rematch",
+   "char": "brooks",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Again? I have a new question. It is how to stop that last strategy.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "carter_hello_1",
+   "char": "carter",
+   "moment": "hello",
+   "piece": null,
+   "text": "Approximately three minutes ago, I made a beat. Now let's see if my chess skills can keep up.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_hello_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_hello_2",
+   "char": "carter",
+   "moment": "hello",
+   "piece": null,
+   "text": "I've been practicing. Statistically speaking, you should probably be concerned.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_hello_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_think_1",
+   "char": "carter",
+   "moment": "think",
+   "piece": null,
+   "text": "Okay, let me calculate the possibilities. There's approximately... a lot.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_think_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_think_2",
+   "char": "carter",
+   "moment": "think",
+   "piece": null,
+   "text": "Hold on. My brain is processing. And no, it's not buffering.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_think_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_quiet_1",
+   "char": "carter",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. I recommend thinking carefully. Just a suggestion.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_quiet_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_quiet_2",
+   "char": "carter",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. I've already calculated approximately four ways this could go wrong. For you.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_quiet_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_took_1",
+   "char": "carter",
+   "moment": "took",
+   "piece": null,
+   "text": "Technically, that piece was already mine. You just didn't know it yet.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_took_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_took_2",
+   "char": "carter",
+   "moment": "took",
+   "piece": null,
+   "text": "Captured! Right on the beat. That's what I call excellent timing.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_took_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_lost_1",
+   "char": "carter",
+   "moment": "lost",
+   "piece": null,
+   "text": "Okay, that was a surprisingly intelligent decision. Respectfully.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_lost_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_lost_2",
+   "char": "carter",
+   "moment": "lost",
+   "piece": null,
+   "text": "You took my piece? Interesting. Very interesting. I'm updating my calculations.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_lost_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_gavecheck",
+   "char": "carter",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Approximately one king is having a very bad day.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_gavecheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_gotcheck",
+   "char": "carter",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? Wait. That's not how I calculated this situation.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_gotcheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_win",
+   "char": "carter",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! And that concludes my scientific demonstration of winning.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_win.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_lose",
+   "char": "carter",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won? Hmm. Statistically, that was always a possibility. A very small possibility.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_lose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_hint",
+   "char": "carter",
+   "moment": "hint",
+   "piece": null,
+   "text": "The blue squares are giving you a hint. Technically, I'm helping you beat me. Which is questionable.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_hint.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_draw",
+   "char": "carter",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! So approximately nobody won? That's an interesting conclusion.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_draw.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_resign",
+   "char": "carter",
+   "moment": "resign",
+   "piece": null,
+   "text": "You're resigning? Understandable. Sometimes a strategic retreat is necessary.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_resign.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_timewin",
+   "char": "carter",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time expired! Technically, that means I win. Rules are rules.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_timewin.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_timelose",
+   "char": "carter",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My clock ran out? Okay, that's a scheduling issue, not an intelligence issue.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_timelose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carter_rematch",
+   "char": "carter",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Rematch? I've approximately identified every mistake I made. Well, most of them.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/carter/carter_rematch.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chanel_hello_1",
+   "char": "chanel",
+   "moment": "hello",
+   "piece": null,
+   "text": "Five, six, seven, eight. Confidence is lovely. Please bring a plan too.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_hello_2",
+   "char": "chanel",
+   "moment": "hello",
+   "piece": null,
+   "text": "Find your focus. We have a whole board to work with.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_think_1",
+   "char": "chanel",
+   "moment": "think",
+   "piece": null,
+   "text": "I am planning the next few steps.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_think_2",
+   "char": "chanel",
+   "moment": "think",
+   "piece": null,
+   "text": "I am finding the rhythm. The board has chosen a very awkward tempo.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_quiet_1",
+   "char": "chanel",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Make it count.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_quiet_2",
+   "char": "chanel",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move, darling. A dramatic pause is still a pause.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_took_1",
+   "char": "chanel",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece missed a step.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_took_2",
+   "char": "chanel",
+   "moment": "took",
+   "piece": null,
+   "text": "Your piece missed a step. I provided an exit.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_lost_1",
+   "char": "chanel",
+   "moment": "lost",
+   "piece": null,
+   "text": "You took my piece! Nice footwork.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_lost_2",
+   "char": "chanel",
+   "moment": "lost",
+   "piece": null,
+   "text": "Nice footwork. Deeply inconvenient choreography.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_gavecheck",
+   "char": "chanel",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Time for your next step.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_gotcheck",
+   "char": "chanel",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? A surprise solo for my king. How generous.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_win",
+   "char": "chanel",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Ate and left no crumbs. Now that is a clean finish.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_lose",
+   "char": "chanel",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! Standing ovation. My strategy is in the dressing room reconsidering.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_hint",
+   "char": "chanel",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares, darling. Direction, free of charge. Enjoy this rare occasion.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_draw",
+   "char": "chanel",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! We finish this dance with a draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_resign",
+   "char": "chanel",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. Thank you for sharing the floor.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_timewin",
+   "char": "chanel",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time is up. This round goes to me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_timelose",
+   "char": "chanel",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time is up. This round goes to you!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_rematch",
+   "char": "chanel",
+   "moment": "rematch",
+   "piece": null,
+   "text": "An encore? I have adjusted the choreography.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_hello_1",
+   "char": "whitaker",
+   "moment": "hello",
+   "piece": null,
+   "text": "Welcome to the library. Quiet voices. Loud plot twists.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_hello_2",
+   "char": "whitaker",
+   "moment": "hello",
+   "piece": null,
+   "text": "Settle in, young reader. Let's see where this game goes.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_think_1",
+   "char": "whitaker",
+   "moment": "think",
+   "piece": null,
+   "text": "Let me study this page of the story.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_think_2",
+   "char": "whitaker",
+   "moment": "think",
+   "piece": null,
+   "text": "I have read mysteries with fewer problems than this position.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_quiet_1",
+   "char": "whitaker",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move, young reader.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_quiet_2",
+   "char": "whitaker",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Kindly stop making the villain in my story so competent.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_took_1",
+   "char": "whitaker",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece is joining my collection.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_took_2",
+   "char": "whitaker",
+   "moment": "took",
+   "piece": null,
+   "text": "Checked out. No renewal. A very strict lending policy.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_lost_1",
+   "char": "whitaker",
+   "moment": "lost",
+   "piece": null,
+   "text": "You got my piece! Quite the plot twist.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_lost_2",
+   "char": "whitaker",
+   "moment": "lost",
+   "piece": null,
+   "text": "A plot twist. I preferred the earlier draft.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_gavecheck",
+   "char": "whitaker",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! A little suspense for our story.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_gotcheck",
+   "char": "whitaker",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check! My king would like to skip ahead to a happier chapter.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_win",
+   "char": "whitaker",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! The end. A modest masterpiece, if I may review myself.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_lose",
+   "char": "whitaker",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! An excellent ending. I was clearly the supporting character.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_hint",
+   "char": "whitaker",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. A clue from the librarian. No overdue fees attached.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_draw",
+   "char": "whitaker",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! This tale closes with a draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_resign",
+   "char": "whitaker",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. A new story can begin another day.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_timewin",
+   "char": "whitaker",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out. This chapter belongs to me.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_timelose",
+   "char": "whitaker",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My clock ran out. This chapter belongs to you.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_rematch",
+   "char": "whitaker",
+   "moment": "rematch",
+   "piece": null,
+   "text": "A sequel? My character has requested a better ending.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_hello_1",
+   "char": "principal",
+   "moment": "hello",
+   "piece": null,
+   "text": "You challenged the principal? Bold. I have canceled a very important paperclip meeting.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_hello_2",
+   "char": "principal",
+   "moment": "hello",
+   "piece": null,
+   "text": "High expectations. Good sportsmanship. Let's begin!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_think_1",
+   "char": "principal",
+   "moment": "think",
+   "piece": null,
+   "text": "I am considering a very important decision.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_think_2",
+   "char": "principal",
+   "moment": "think",
+   "piece": null,
+   "text": "I am not overthinking. This is an executive review.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_quiet_1",
+   "char": "principal",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Make a thoughtful choice.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_quiet_2",
+   "char": "principal",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Yes, I am watching. It is in the job description.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_took_1",
+   "char": "principal",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece has been called to my office!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_took_2",
+   "char": "principal",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece is reporting to my office. Immediately.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_lost_1",
+   "char": "principal",
+   "moment": "lost",
+   "piece": null,
+   "text": "My piece? That was a bold decision!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_lost_2",
+   "char": "principal",
+   "moment": "lost",
+   "piece": null,
+   "text": "Bold move. I admire it. I would admire it more if it happened to someone else.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_gavecheck",
+   "char": "principal",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! Your king requires immediate attention!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_gotcheck",
+   "char": "principal",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? In front of my entire imaginary faculty?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_win",
+   "char": "principal",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Principal energy. Now, who authorized my victory parade?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_lose",
+   "char": "principal",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won! A champion! I will be processing this privately and announcing it loudly.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_hint",
+   "char": "principal",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. An official announcement. For once, it is useful immediately.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_draw",
+   "char": "principal",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate! The official result is a draw.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_resign",
+   "char": "principal",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. My door is open for another challenge.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_timewin",
+   "char": "principal",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time is up. This round goes to the principal.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_timelose",
+   "char": "principal",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time is up! The win goes to you.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_rematch",
+   "char": "principal",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Rematch? I have cleared my extremely important schedule.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cici_hello_1",
+   "char": "cici",
+   "moment": "hello",
+   "piece": null,
+   "text": "Welcome to the table, baby. I negotiate houses for a living. This board is easy.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cici_hello_2",
+   "char": "cici",
+   "moment": "hello",
+   "piece": null,
+   "text": "Phone on silent, coffee in hand. Let's play.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cici_think_1",
+   "char": "cici",
+   "moment": "think",
+   "piece": null,
+   "text": "Hold on. Let me think. You're over there looking entirely too pleased with yourself.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_think_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_think_2",
+   "char": "cici",
+   "moment": "think",
+   "piece": null,
+   "text": "My turn? Good. We need to discuss a few things.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_think_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_think_3",
+   "char": "cici",
+   "moment": "think",
+   "piece": null,
+   "text": "You've been quiet. That makes me nervous. What are you planning?",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_think_3.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_quiet_1",
+   "char": "cici",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Baby, listen! You might want to look at that board one more time.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_quiet_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_quiet_2",
+   "char": "cici",
+   "moment": "quiet",
+   "piece": null,
+   "text": "I'm not sure you're making the right decisions. But go ahead. I'm listening.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_quiet_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_quiet_3",
+   "char": "cici",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Do you need time to think about that? Because I have time.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_quiet_3.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_quiet_4",
+   "char": "cici",
+   "moment": "quiet",
+   "piece": null,
+   "text": "That little pawn has somewhere to be. You better pay attention.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_quiet_4.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_quiet_5",
+   "char": "cici",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Baby, protect your queen. She cannot do everything by herself.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_quiet_5.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_took_1",
+   "char": "cici",
+   "moment": "took",
+   "piece": null,
+   "text": "In what world? In what world was I supposed to let you get away with that?",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_took_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_took_2",
+   "char": "cici",
+   "moment": "took",
+   "piece": null,
+   "text": "Oh, what? You thought you had me, huh?",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_took_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_took_3",
+   "char": "cici",
+   "moment": "took",
+   "piece": null,
+   "text": "Now why would you put that piece right there? You know what? Never mind. Thank you.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_took_3.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_lost_queen",
+   "char": "cici",
+   "moment": "lost",
+   "piece": "queen",
+   "text": "Ooooh, I know you lying! You just took my queen?",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_lost_queen.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_lost_bishop",
+   "char": "cici",
+   "moment": "lost",
+   "piece": "bishop",
+   "text": "You took my bishop? After everything we've been through?",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_lost_bishop.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_lost_1",
+   "char": "cici",
+   "moment": "lost",
+   "piece": null,
+   "text": "Listen here! We were having a perfectly nice game until you did that.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_lost_1.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_lost_2",
+   "char": "cici",
+   "moment": "lost",
+   "piece": null,
+   "text": "Oh my. Now how did I miss that?",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_lost_2.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_lost_3",
+   "char": "cici",
+   "moment": "lost",
+   "piece": null,
+   "text": "Wait a minute. You've been practicing without me?",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_lost_3.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_lost_4",
+   "char": "cici",
+   "moment": "lost",
+   "piece": null,
+   "text": "That was a good move. I don't appreciate it, but it was a good move.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_lost_4.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_lost_5",
+   "char": "cici",
+   "moment": "lost",
+   "piece": null,
+   "text": "Oh, that was clever. See, this is why I have to watch you.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_lost_5.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_gavecheck",
+   "char": "cici",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check! You might want to come get your king.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_gavecheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_gotcheck",
+   "char": "cici",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Oh, you put me in check? Okay. Let me sit up.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_gotcheck.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_win",
+   "char": "cici",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate! Now come on. You knew something was happening over here.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_win.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_lose",
+   "char": "cici",
+   "moment": "lose",
+   "piece": null,
+   "text": "You won? Oh my. I'm going to hear about this all day.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_lose.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_hint",
+   "char": "cici",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares, baby. Mama always shares the good listings.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cici_draw",
+   "char": "cici",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. Nobody wins, but everybody learned something.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cici_resign",
+   "char": "cici",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game, baby. You made me work for that one.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_resign.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cici_timewin",
+   "char": "cici",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your time ran out, baby. Time management is a life skill.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cici_timelose",
+   "char": "cici",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My clock ran out? I was on a client call in my head.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cici_rematch",
+   "char": "cici",
+   "moment": "rematch",
+   "piece": null,
+   "text": "One more game. And stop smiling like that. Set up the board.",
+   "sfx": null,
+   "ready": true,
+   "parts": [
+    {
+     "files": [
+      "audio/cici/cici_rematch.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fred_hello_1",
+   "char": "fred",
+   "moment": "hello",
+   "piece": null,
+   "text": "What's good? I just got off a job site and finished my homework. Let's see what you've got.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_hello_2",
+   "char": "fred",
+   "moment": "hello",
+   "piece": null,
+   "text": "Stay focused, stay humble. And watch your pieces.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_think_1",
+   "char": "fred",
+   "moment": "think",
+   "piece": null,
+   "text": "Hold on. Let me measure twice and move once.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_think_2",
+   "char": "fred",
+   "moment": "think",
+   "piece": null,
+   "text": "I'm building something here. Every good build starts with a plan.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_quiet_1",
+   "char": "fred",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your move. Take your time. Good work is never rushed.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_quiet_2",
+   "char": "fred",
+   "moment": "quiet",
+   "piece": null,
+   "text": "Your turn. Make it clean. Like my outfit.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_took_1",
+   "char": "fred",
+   "moment": "took",
+   "piece": null,
+   "text": "I'll take that. That's what we call profit.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_took_2",
+   "char": "fred",
+   "moment": "took",
+   "piece": null,
+   "text": "That piece just got demolished. Respectfully.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_lost_1",
+   "char": "fred",
+   "moment": "lost",
+   "piece": null,
+   "text": "Okay, I see you! That was a smart move.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_lost_2",
+   "char": "fred",
+   "moment": "lost",
+   "piece": null,
+   "text": "Wait, who taught you that? Was it Carter?",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_gavecheck",
+   "char": "fred",
+   "moment": "gavecheck",
+   "piece": null,
+   "text": "Check. Your king's foundation is looking a little shaky.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_gotcheck",
+   "char": "fred",
+   "moment": "gotcheck",
+   "piece": null,
+   "text": "Check? Okay. Don't tell Mom about this.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_win",
+   "char": "fred",
+   "moment": "win",
+   "piece": null,
+   "text": "Checkmate. Built that win from the ground up.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_lose",
+   "char": "fred",
+   "moment": "lose",
+   "piece": null,
+   "text": "You beat me? Respect. That was a solid investment of your time.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_hint",
+   "char": "fred",
+   "moment": "hint",
+   "piece": null,
+   "text": "Blue squares. Free advice from a future millionaire.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_draw",
+   "char": "fred",
+   "moment": "draw",
+   "piece": null,
+   "text": "Stalemate. Nobody wins. We'll call it a break even.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_resign",
+   "char": "fred",
+   "moment": "resign",
+   "piece": null,
+   "text": "Good game. Stay focused, stay humble, and come back stronger.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_timewin",
+   "char": "fred",
+   "moment": "timewin",
+   "piece": null,
+   "text": "Your clock ran out. Time is money, little one.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_timelose",
+   "char": "fred",
+   "moment": "timelose",
+   "piece": null,
+   "text": "My time ran out? I was thinking like it was finals week.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_rematch",
+   "char": "fred",
+   "moment": "rematch",
+   "piece": null,
+   "text": "Run it back? I'm just getting my money's worth.",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "malik_takeback",
+   "char": "malik",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "lily_takeback",
+   "char": "lily",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ollie_takeback",
+   "char": "ollie",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jaemin_takeback",
+   "char": "jaemin",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brittany_takeback",
+   "char": "brittany",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ethan_takeback",
+   "char": "ethan",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "maya_takeback",
+   "char": "maya",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jayden_takeback",
+   "char": "jayden",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "jamie_takeback",
+   "char": "jamie",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "twins_takeback",
+   "char": "twins",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chloe_takeback",
+   "char": "chloe",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mrparker_takeback",
+   "char": "mrparker",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ramirez_takeback",
+   "char": "ramirez",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rivera_takeback",
+   "char": "rivera",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "ellis_takeback",
+   "char": "ellis",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mali_takeback",
+   "char": "mali",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "reggie_takeback",
+   "char": "reggie",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grumble_takeback",
+   "char": "grumble",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "harrison_takeback",
+   "char": "harrison",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandmalu_takeback",
+   "char": "grandmalu",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "grandparobert_takeback",
+   "char": "grandparobert",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "brooks_takeback",
+   "char": "brooks",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "carter_takeback",
+   "char": "carter",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "chanel_takeback",
+   "char": "chanel",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "whitaker_takeback",
+   "char": "whitaker",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "principal_takeback",
+   "char": "principal",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "cici_takeback",
+   "char": "cici",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "fred_takeback",
+   "char": "fred",
+   "moment": "takeback",
+   "piece": null,
+   "text": "Okay, you can take that back. Look carefully this time!",
+   "sfx": null,
+   "ready": false,
+   "parts": [
+    {
+     "files": []
+    }
+   ]
+  }
+ ]
+}

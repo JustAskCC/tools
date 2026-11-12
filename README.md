@@ -9,6 +9,7 @@ Free, simple web tools for entrepreneurs, small businesses, and the organization
 | Tool | Folder | Live version |
 |---|---|---|
 | Workshop Calendar | `workshopcalendar/` | [tools.justaskcc.com/workshopcalendar](https://tools.justaskcc.com/workshopcalendar/) |
+| Cool Kids Chess Club | `chess/` | [tools.justaskcc.com/chess](https://tools.justaskcc.com/chess/) |
 
 ## Make your own copy (free, about 15 minutes)
 
