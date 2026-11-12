@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cool Kids Chess Club</title>
+<link rel="manifest" href="app.webmanifest">
+<meta name="theme-color" content="#12183a">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kids Chess">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--blue:#2E86FF;--yellow:#FFC93C;--coral:#FF6F61;--teal:#1ABC9C;--purple:#8E44AD;--green:#2ECC71;--orange:#FF8C1A;--red:#E74C3C;--ink:#1d1640}
@@ -752,6 +759,11 @@ $("bAgain").onclick=()=>startGame();
 $("bSwitch").onclick=goHome;
 
 function goHome(){try{speechSynthesis.cancel()}catch(e){}stopClip();gameId++;over=true;clearTimeout(aiTimer);clearInterval(tick);$("endOv").classList.add("hide");$("game").classList.add("hide");$("home").classList.remove("hide");buildRoster();window.scrollTo(0,0);}
+</script>
+<script>
+if("serviceWorker" in navigator && /justaskcc\.com|coolkidsuniversity\.(com|org)|localhost|127\.0\.0\.1/.test(location.hostname)){
+  window.addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").catch(()=>{});});
+}
 </script>
 </body>
 </html>
