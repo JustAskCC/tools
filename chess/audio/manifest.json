@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T09:04:26.421Z",
+ "updated": "2026-11-12T09:06:01.322Z",
  "characters": [
   {
    "key": "malik",
@@ -8198,10 +8198,12 @@
    "piece": null,
    "text": "Stay focused, stay humble. And watch your pieces.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -8212,10 +8214,12 @@
    "piece": null,
    "text": "Hold on. Let me measure twice and move once.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_think_1.mp3"
+     ]
     }
    ]
   },
@@ -8226,10 +8230,12 @@
    "piece": null,
    "text": "I'm building something here. Every good build starts with a plan.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_think_2.mp3"
+     ]
     }
    ]
   },
@@ -8240,10 +8246,12 @@
    "piece": null,
    "text": "Your move. Take your time. Good work is never rushed.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -8254,10 +8262,12 @@
    "piece": null,
    "text": "Your turn. Make it clean. Like my outfit.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -8268,10 +8278,12 @@
    "piece": null,
    "text": "I'll take that. That's what we call profit.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_took_1.mp3"
+     ]
     }
    ]
   },
@@ -8282,10 +8294,12 @@
    "piece": null,
    "text": "That piece just got demolished. Respectfully.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_took_2.mp3"
+     ]
     }
    ]
   },
@@ -8296,10 +8310,12 @@
    "piece": null,
    "text": "Okay, I see you! That was a smart move.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -8310,10 +8326,12 @@
    "piece": null,
    "text": "Wait, who taught you that? Was it Carter?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -8324,10 +8342,12 @@
    "piece": null,
    "text": "Check. Your king's foundation is looking a little shaky.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -8338,10 +8358,12 @@
    "piece": null,
    "text": "Check? Okay. Don't tell Mom about this.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -8352,10 +8374,12 @@
    "piece": null,
    "text": "Checkmate. Built that win from the ground up.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_win.mp3"
+     ]
     }
    ]
   },
@@ -8366,10 +8390,12 @@
    "piece": null,
    "text": "You beat me? Respect. That was a solid investment of your time.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_lose.mp3"
+     ]
     }
    ]
   },
@@ -8380,10 +8406,12 @@
    "piece": null,
    "text": "Blue squares. Free advice from a future millionaire.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_hint.mp3"
+     ]
     }
    ]
   },
@@ -8394,10 +8422,12 @@
    "piece": null,
    "text": "Stalemate. Nobody wins. We'll call it a break even.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_draw.mp3"
+     ]
     }
    ]
   },
@@ -8408,10 +8438,12 @@
    "piece": null,
    "text": "Good game. Stay focused, stay humble, and come back stronger.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_resign.mp3"
+     ]
     }
    ]
   },
@@ -8422,10 +8454,12 @@
    "piece": null,
    "text": "Your clock ran out. Time is money, little one.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_timewin.mp3"
+     ]
     }
    ]
   },
@@ -8436,10 +8470,12 @@
    "piece": null,
    "text": "My time ran out? I was thinking like it was finals week.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_timelose.mp3"
+     ]
     }
    ]
   },
@@ -8450,10 +8486,12 @@
    "piece": null,
    "text": "Run it back? I'm just getting my money's worth.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/fred/fred_rematch.mp3"
+     ]
     }
    ]
   },
