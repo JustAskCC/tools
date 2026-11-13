@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T13:43:47.023Z",
+ "updated": "2026-11-13T01:33:03.365Z",
  "characters": [
   {
    "key": "malik",
@@ -6118,10 +6118,12 @@
    "piece": null,
    "text": "Hallelujah! Well, look who came to play chess with Grandma! Praise the Lord!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -6132,10 +6134,12 @@
    "piece": null,
    "text": "Well, hello, sweetheart! Grandma loves you, but I'm not just gonna let you win!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -6146,10 +6150,12 @@
    "piece": null,
    "text": "Lord, give me wisdom, because I surely need it right now.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_think_1.mp3"
+     ]
     }
    ]
   },
@@ -6160,10 +6166,12 @@
    "piece": null,
    "text": "Mmm hmm. Now hold on just a minute. I think I see what you're trying to do!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_think_2.mp3"
+     ]
     }
    ]
   },
@@ -6174,10 +6182,12 @@
    "piece": null,
    "text": "Lord, I need you to come down here and help me with this chessboard! Hallelujah!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_think_3.mp3"
+     ]
     }
    ]
   },
@@ -6188,10 +6198,12 @@
    "piece": null,
    "text": "All right, baby. Your turn. Take your time. Patience is a virtue!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -6202,10 +6214,12 @@
    "piece": null,
    "text": "Go ahead, sweetheart. Let's see what that beautiful mind comes up with!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -6216,10 +6230,12 @@
    "piece": null,
    "text": "Hallelujah! Look at that! Grandma got your piece!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_took_1.mp3"
+     ]
     }
    ]
   },
@@ -6230,10 +6246,12 @@
    "piece": null,
    "text": "Thank you, Jesus! That worked out better than I expected!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_took_2.mp3"
+     ]
     }
    ]
   },
@@ -6244,10 +6262,12 @@
    "piece": null,
    "text": "Oh, Lord! Now how in the world did I let that happen?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -6258,10 +6278,12 @@
    "piece": null,
    "text": "Jesus, take the wheel! Baby, I did not see that coming!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -6272,10 +6294,12 @@
    "piece": null,
    "text": "Not today, devil! Oh, wait a minute. That's just a chess piece! Ha ha ha!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_lost_3.mp3"
+     ]
     }
    ]
   },
@@ -6286,10 +6310,12 @@
    "piece": null,
    "text": "Check! Hallelujah! Now you better watch that king!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_gavecheck_1.mp3"
+     ]
     }
    ]
   },
@@ -6300,10 +6326,12 @@
    "piece": null,
    "text": "Well, praise the Lord! Looks like your king needs a little help!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_gavecheck_2.mp3"
+     ]
     }
    ]
   },
@@ -6314,10 +6342,12 @@
    "piece": null,
    "text": "Lord have mercy! Now why is my king in all this trouble?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_gotcheck_1.mp3"
+     ]
     }
    ]
   },
@@ -6328,10 +6358,12 @@
    "piece": null,
    "text": "Oh, my goodness! You're making Grandma work today!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_gotcheck_2.mp3"
+     ]
     }
    ]
   },
@@ -6342,10 +6374,12 @@
    "piece": null,
    "text": "Checkmate! Hallelujah! Glory to God! Grandma still has it!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_win_1.mp3"
+     ]
     }
    ]
   },
@@ -6356,10 +6390,12 @@
    "piece": null,
    "text": "Well, praise the Lord! That was a wonderful game, sweetheart. Let's play again!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_win_2.mp3"
+     ]
     }
    ]
   },
@@ -6370,10 +6406,12 @@
    "piece": null,
    "text": "Hallelujah! Look at you! You beat Grandma! Oh, I'm so proud of you!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_lose_1.mp3"
+     ]
     }
    ]
   },
@@ -6384,10 +6422,12 @@
    "piece": null,
    "text": "Well, glory! You really showed Grandma something today! Praise the Lord!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_lose_2.mp3"
+     ]
     }
    ]
   },
