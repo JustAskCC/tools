@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Cool Kids University Characters</title>
+<meta name="description" content="Meet the Cool Kids University characters: who they are, their personalities, and how their world works together to teach kids ages 4 to 10.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..900&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;background:#0F1233;overflow:hidden;font-family:Montserrat,sans-serif;}
+#viewport{position:fixed;inset:0 0 64px 0;display:flex;align-items:center;justify-content:center;}
+#stage{width:1920px;height:1080px;position:relative;flex:none;transform-origin:center center;}
+#stage>section{position:absolute;inset:0;width:1920px;height:1080px;display:none !important;}
+#stage>section.on{display:flex !important;}
+:root{--navy:#1B1F4B;--cream:#FFF8EC;--sun:#FFC93C;--coral:#FF6B5B;--teal:#19B5A5;--purple:#7B5CD6;--blue:#2F80ED;--green:#3DBE6B;--orange:#FF9233;}
+section{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--navy);padding:128px;display:flex;flex-direction:column;gap:32px;box-sizing:border-box;}
+section.dark{background:var(--navy);color:var(--cream);}
+section.alt{background:#EAF6FF;}
+h1{font-size:120px;font-weight:900;line-height:1.02;margin:0;}
+h2{font-size:64px;font-weight:900;line-height:1.08;margin:0;}
+h3{font-size:36px;font-weight:800;margin:0;line-height:1.15;}
+.lead{font-size:36px;line-height:1.3;margin:0;}
+.tx{font-size:24px;line-height:1.4;margin:0;}
+.tag{align-self:flex-start;font-size:24px;font-weight:800;text-transform:uppercase;letter-spacing:2px;background:var(--navy);color:var(--cream);padding:10px 24px;border-radius:40px;margin:0;}
+.tag.yb{background:var(--sun);color:var(--navy);}
+.tag.cb{background:var(--coral);color:var(--navy);}
+.tag.bb{background:var(--blue);color:#fff;}
+.row{display:flex;flex-direction:row;}
+.col{display:flex;flex-direction:column;}
+.pc{flex:1;min-width:0;background:#fff;border:3px solid var(--navy);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;}
+.pc img{width:100%;object-fit:cover;display:block;}
+.pc .strip{padding:10px 18px;}
+.pc .nm{font-size:30px;font-weight:900;margin:0;color:var(--navy);}
+.pc .rl{font-size:24px;font-weight:800;margin:0;padding:12px 18px 0;color:var(--navy);}
+.pc .ln{font-size:24px;line-height:1.3;margin:0;padding:8px 18px 18px;color:var(--navy);}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.g4 .pc .ln{display:none;}
+.y{background:var(--sun);} .t{background:var(--teal);} .c{background:var(--coral);} .pu{background:#B9A6F2;} .g{background:#8FDDA8;} .o{background:var(--orange);} .b{background:#8EC2FF;} .n{background:#C9CDEB;}
+.tile{flex:1;border-radius:32px;padding:40px 36px;display:flex;flex-direction:column;gap:18px;color:var(--navy);}
+.tile .big{font-size:72px;font-weight:900;margin:0;opacity:.9;}
+.tile .tx{font-size:28px;}
+.bl{font-size:28px;line-height:1.4;margin:0;padding-left:32px;}
+.grp{background:#fff;border:3px solid var(--navy);border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;gap:14px;}
+.grp h3{font-size:28px;}
+.minis{display:flex;flex-direction:row;gap:14px;}
+.mini{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;}
+.mini img{width:120px;height:120px;border-radius:60px;object-fit:cover;object-position:center top;border:5px solid var(--navy);}
+.mini p{font-size:24px;font-weight:700;margin:0;text-align:center;}
+.bc{border-color:var(--coral) !important;} .bo{border-color:var(--orange) !important;} .by{border-color:var(--sun) !important;} .bg{border-color:var(--green) !important;} .bpu{border-color:var(--purple) !important;} .bt{border-color:var(--teal) !important;} .bb{border-color:var(--blue) !important;} .bn{border-color:var(--navy) !important;}
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;}
+.center .nm{font-weight:900;margin:0;}
+.pills{display:flex;flex-wrap:wrap;gap:12px;}
+.pill{font-size:24px;font-weight:800;background:#fff;border:3px solid var(--navy);border-radius:30px;padding:8px 20px;color:var(--navy);}
+.quote{border-radius:24px;padding:24px 32px;}
+.quote p{font-size:32px;font-weight:800;font-style:italic;margin:0;color:var(--navy);line-height:1.3;}
+.step{flex:1;border-radius:32px;padding:36px 32px;display:flex;flex-direction:column;gap:16px;color:var(--navy);}
+.step .sn{font-size:72px;font-weight:900;margin:0;}
+.step .tx{font-size:26px;}
+.arrow{font-size:96px;font-weight:900;margin:0;align-self:center;color:var(--navy);}
+.tbl{width:100%;border-collapse:collapse;font-size:28px;background:#fff;border-radius:24px;overflow:hidden;}
+.tbl th{background:var(--navy);color:var(--cream);text-align:left;padding:22px 26px;font-size:28px;}
+.tbl td{padding:24px 26px;border-top:2px solid #D7DCF0;line-height:1.3;}
+.rise{animation:rise .6s ease-out both;}
+.d1{animation-delay:.05s;} .d2{animation-delay:.15s;} .d3{animation-delay:.25s;} .d4{animation-delay:.35s;} .d5{animation-delay:.45s;} .d6{animation-delay:.55s;} .d7{animation-delay:.65s;} .d8{animation-delay:.75s;}
+@keyframes rise{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+.g5 .pc .ln{display:none;}
+.g4 .pc .nm,.g5 .pc .nm{font-size:28px;}
+.g4 .pc img,.g5 .pc img{object-position:center 28% !important;}
+
+#bar{position:fixed;left:0;right:0;bottom:0;height:64px;display:flex;align-items:center;justify-content:center;gap:16px;color:#FFF8EC;font-size:16px;}
+#bar button{font:700 16px Montserrat,sans-serif;background:#FFC93C;color:#1B1F4B;border:0;border-radius:24px;padding:10px 22px;cursor:pointer;}
+#bar button:disabled{opacity:.4;cursor:default;}
+#bar a{color:#FFF8EC;opacity:.8;font-size:14px;}
+</style></head><body>
+<div id="viewport"><div id="stage">
+<section id="cover" class="dark" style="flex-direction:row;align-items:center;gap:80px;">
+<img src="images/logo.png" alt="Cool Kids University logo" style="width:720px;height:720px;object-fit:contain;" class="rise d1">
+<div style="flex:1;display:flex;flex-direction:column;gap:32px;">
+<p class="tag yb rise d1">Character guide</p>
+<h1 class="rise d2" style="font-size:104px;color:#FFF8EC;">The Cool Kids University</h1>
+<p class="lead rise d3" style="color:#E6E8FA;">Meet the characters of Cool Kids University: who they are, their personalities, and how their family, neighborhood and school work together to teach kids ages 4 to 10.</p>
+<div class="pills rise d4"><span class="pill">Characters</span><span class="pill">Personas</span><span class="pill">How it works</span></div>
+</div>
+
+</section>
+<section id="world">
+<p class="tag">The world</p>
+<h2>One family. One block. One school.</h2>
+<div class="row" style="gap:28px;align-items:stretch;flex:1;">
+<div class="tile c rise d1"><p class="big">Home</p><h3>The Charles family</h3><p class="tx">Chloe and Carter, mom CiCi, big brothers, grandparents and a great grandmother. Real family life, love, rules and laughter.</p></div>
+<div class="tile t rise d2"><p class="big">Block</p><h3>The neighborhood</h3><p class="tx">Friends a few houses over, a teen mentor next door and a neighborhood yogi who helps everyone slow down.</p></div>
+<div class="tile pu rise d3"><p class="big">School</p><h3>Cool Kids University</h3><p class="tx">Classmates, best friends, rivals and a faculty of teachers who each bring a subject and a passion to life.</p></div>
+</div>
+<p class="lead rise d4"><b>More than 40 characters</b> across four generations, built so every kid can find someone who looks, talks and dreams like them.</p>
+
+</section><section id="map" class="alt">
+<p class="tag">The cast map</p>
+<h2>Everyone connects back to Chloe and Carter.</h2>
+<div class="row" style="gap:28px;align-items:stretch;flex:1;">
+<div class="col" style="flex:1;gap:24px;">
+<div class="grp rise d1"><h3>Family and neighbors</h3><div class="minis"><div class="mini"><img src="images/cici2.jpg" alt="CiCi" class="bc"><p>CiCi</p></div><div class="mini"><img src="images/reggie.jpg" alt="Reggie" class="bn"><p>Reggie</p></div><div class="mini"><img src="images/robert.jpg" alt="Grandpa Robert" class="bg"><p>Grandpa Robert</p></div><div class="mini"><img src="images/aaliyah.jpg" alt="Aaliyah" class="bo"><p>Aaliyah</p></div></div></div>
+<div class="grp rise d2"><h3>Chloe's crew</h3><div class="minis"><div class="mini"><img src="images/mariyah2.jpg" alt="Mariyah" class="bpu"><p>Mariyah</p></div><div class="mini"><img src="images/nyla2.jpg" alt="Nyla" class="bt"><p>Nyla</p></div><div class="mini"><img src="images/amara.jpg" alt="Amara" class="bpu"><p>Amara</p></div><div class="mini"><img src="images/jessica2.jpg" alt="Jessica" class="bc"><p>Jessica</p></div></div></div>
+</div>
+<div class="center rise d3"><img src="images/chloe_carter.jpg" alt="Chloe and Carter" style="width:400px;height:520px;object-fit:cover;object-position:center top;border-radius:32px;"><p class="nm" style="font-size:36px;">Chloe and Carter</p></div>
+<div class="col" style="flex:1;gap:24px;">
+<div class="grp rise d4"><h3>Carter's crew</h3><div class="minis"><div class="mini"><img src="images/jaydenpark.jpg" alt="Jae-din" class="bb"><p>Jae-din</p></div><div class="mini"><img src="images/ollie.jpg" alt="Ollie" class="by"><p>Ollie</p></div><div class="mini"><img src="images/ethan.jpg" alt="Ethan" class="bg"><p>Ethan</p></div><div class="mini"><img src="images/autumn.jpg" alt="Autumn" class="by"><p>Autumn</p></div></div></div>
+<div class="grp rise d5"><h3>Cool Kids University</h3><div class="minis"><div class="mini"><img src="images/principal2.jpg" alt="Principal V" class="bo"><p>Principal V</p></div><div class="mini"><img src="images/johnson.jpg" alt="Mrs. Johnson" class="bpu"><p>Mrs. Johnson</p></div><div class="mini"><img src="images/ellis.jpg" alt="Mr. Ellis" class="bg"><p>Mr. Ellis</p></div><div class="mini"><img src="images/ramirez.jpg" alt="Ms. Ramirez" class="bc"><p>Ms. Ramirez</p></div></div></div>
+</div>
+</div>
+
+</section><section id="chloe" style="flex-direction:row;gap:72px;align-items:center;"><img class="rise d1" src="images/chloe.jpg" alt="Chloe" style="width:620px;height:824px;object-fit:cover;object-position:center top;border-radius:40px;border:6px solid var(--navy);"><div style="flex:1;display:flex;flex-direction:column;gap:28px;">
+<p class="tag cb rise d1">Main character</p>
+<h2 class="rise d2" style="font-size:96px;">Chloe</h2>
+<p class="lead rise d2">The big sister and the emotional lead of the universe.</p>
+<div class="pills rise d3"><span class="pill">Age 11</span><span class="pill">Sixth grade</span><span class="pill">Big sister</span></div>
+<p class="tx rise d3" style="font-size:28px;">Stylish, witty and observant. Confident on the outside, sensitive on the inside. She reads a room before the adults do and is learning that confidence is not pretending everything is fine.</p>
+<div class="quote c rise d4"><p>“I noticed it before anybody said it out loud.”</p></div>
+<p class="tx rise d5" style="font-size:28px;"><b>Teaches kids:</b> friendship, confidence, leadership and how to name big feelings.</p>
+</div></section><section id="carter" style="flex-direction:row;gap:72px;align-items:center;"><div style="flex:1;display:flex;flex-direction:column;gap:28px;">
+<p class="tag bb rise d1">Main character</p>
+<h2 class="rise d2" style="font-size:96px;">Carter</h2>
+<p class="lead rise d2">The little brother who sees more than people expect.</p>
+<div class="pills rise d3"><span class="pill">Age 9</span><span class="pill">Fourth grade</span><span class="pill">Chess master</span><span class="pill">Music producer in training</span></div>
+<p class="tx rise d3" style="font-size:28px;">Funny, sharp and creative, with dry humor and quiet confidence. He turns everyday sounds into beats and believes every person has a theme song.</p>
+<div class="quote b rise d4"><p>“I was not being quiet. I was making a beat in my head.”</p></div>
+<p class="tx rise d5" style="font-size:28px;"><b>Teaches kids:</b> chess strategy, music, problem solving and finding your voice.</p>
+</div><img class="rise d1" src="images/carter.jpg" alt="Carter" style="width:620px;height:824px;object-fit:cover;object-position:center top;border-radius:40px;border:6px solid var(--navy);"></section><section id="family">
+<p class="tag">Home</p>
+<h2>The Charles family keeps everyone grounded.</h2>
+<div class="row" style="gap:28px;align-items:stretch;">
+<div class="pc rise d1"><img src="images/cici2.jpg" alt="CiCi" style="height:380px;object-position:center top;"><div class="strip c"><p class="nm">CiCi</p></div><p class="rl">Mom, entrepreneur, heart of the home</p><p class="ln">“We don’t just dream it, we work for it!” The strongest voice in the room and the softest place to land.</p></div>
+<div class="pc rise d2"><img src="images/reggie.jpg" alt="Reggie" style="height:380px;object-position:center top;"><div class="strip n"><p class="nm">Reggie</p></div><p class="rl">Age 24, oldest brother, entrepreneur</p><p class="ln">Calm, reliable and protective. Chloe’s safe place and Carter’s coach. “We’ll figure it out.”</p></div>
+<div class="pc rise d3"><img src="images/robert.jpg" alt="Grandpa Robert" style="height:380px;object-position:center top;"><div class="strip g"><p class="nm">Grandpa Robert</p></div><p class="rl">Age 72, retired Army veteran</p><p class="ln">Disciplined, wise and soft for his grandkids. “A promise made is a promise kept.”</p></div>
+</div>
+<p class="tx rise d4" style="font-size:26px;">Still to add with art: big brother Fred, Grandma Lu, Great Grandma Helen and dad Darius.</p>
+
+</section><section id="block" class="alt">
+<p class="tag">The block</p>
+<h2>Neighbors who mentor, make trouble and make it home.</h2>
+<div class="row" style="gap:24px;align-items:stretch;">
+<div class="pc rise d1"><img src="images/aaliyah.jpg" alt="Aaliyah" style="height:330px;object-position:center top;"><div class="strip o"><p class="nm">Aaliyah</p></div><p class="rl">Age 16, neighbor and mentor</p><p class="ln">“You don’t have to be the loudest person in the room to change it.”</p></div>
+<div class="pc rise d2"><img src="images/malik.jpg" alt="Malik" style="height:330px;object-position:center top;"><div class="strip y"><p class="nm">Malik</p></div><p class="rl">Age 7, Aaliyah’s little brother</p><p class="ln">Trouble finds him, fun follows. “That wasn’t my fault... probably.”</p></div>
+<div class="pc rise d3"><img src="images/mali.jpg" alt="Mr. Mali" style="height:330px;object-position:center top;"><div class="strip g"><p class="nm">Mr. Mali</p></div><p class="rl">Neighborhood yogi</p><p class="ln">Owns Still Waters Wellness Studio and gives smooth stones for tough days.</p></div>
+<div class="pc rise d4"><img src="images/harrison.jpg" alt="Mr. Harrison" style="height:330px;object-position:center top;"><div class="strip b"><p class="nm">Mr. Harrison</p></div><p class="rl">Age 68, neighbor next door</p><p class="ln">Retired history teacher with famous cookies. “It’s the small, kind things that change the world.”</p></div>
+</div>
+
+</section><section id="chloecrew" class="alt">
+<p class="tag">Chloe's crew</p>
+<h2>Sixth grade friends, rivals and personalities.</h2>
+<div class="g5">
+<div class="pc rise d200"><img src="images/mariyah2.jpg" alt="Mariyah" style="height:230px;object-position:center top;"><div class="strip 1"><p class="nm">Mariyah</p></div><p class="rl">Best friend, loyal</p><p class="ln">pu</p></div>
+<div class="pc rise d200"><img src="images/nyla2.jpg" alt="Nyla" style="height:230px;object-position:center top;"><div class="strip 2"><p class="nm">Nyla</p></div><p class="rl">“Let’s go!”</p><p class="ln">t</p></div>
+<div class="pc rise d200"><img src="images/jessica2.jpg" alt="Jessica" style="height:230px;object-position:center top;"><div class="strip 3"><p class="nm">Jessica</p></div><p class="rl">“Obviously.”</p><p class="ln">c</p></div>
+<div class="pc rise d200"><img src="images/skylar.jpg" alt="Skylar" style="height:230px;object-position:center top;"><div class="strip 4"><p class="nm">Skylar</p></div><p class="rl">“Watch me!”</p><p class="ln">pu</p></div>
+<div class="pc rise d200"><img src="images/lottie.jpg" alt="Lottie" style="height:230px;object-position:center top;"><div class="strip 5"><p class="nm">Lottie</p></div><p class="rl">Zero apologies</p><p class="ln">c</p></div>
+<div class="pc rise d200"><img src="images/ava.jpg" alt="Ava" style="height:230px;object-position:center top;"><div class="strip 6"><p class="nm">Ava</p></div><p class="rl">Quiet observer</p><p class="ln">t</p></div>
+<div class="pc rise d200"><img src="images/amara.jpg" alt="Amara" style="height:230px;object-position:center top;"><div class="strip 7"><p class="nm">Amara</p></div><p class="rl">Future author</p><p class="ln">pu</p></div>
+<div class="pc rise d200"><img src="images/brittany.jpg" alt="Brittany" style="height:230px;object-position:center top;"><div class="strip 8"><p class="nm">Brittany</p></div><p class="rl">Kind cheerleader</p><p class="ln">g</p></div>
+<div class="pc rise d200"><img src="images/maya.jpg" alt="Maya" style="height:230px;object-position:center top;"><div class="strip 9"><p class="nm">Maya</p></div><p class="rl">Future robotics engineer</p><p class="ln">o</p></div>
+<div class="pc rise d200"><img src="images/sisters.jpg" alt="Zoe and Zuri" style="height:230px;object-position:center top;"><div class="strip 1"><p class="nm">Zoe and Zuri</p></div><p class="rl">The drama observers</p><p class="ln">g</p></div>
+</div>
+
+</section><section id="cartercrew" class="alt">
+<p class="tag">Carter's crew</p>
+<h2>Fourth grade friends with big dreams.</h2>
+<div class="g4">
+<div class="pc rise d1"><img src="images/jaydenpark.jpg" alt="Jae-din Park" style="height:200px;object-position:center top;"><div class="strip b"><p class="nm">Jae-din Park</p></div><p class="rl">Best friend, future robotics engineer</p><p class="ln"></p></div>
+<div class="pc rise d2"><img src="images/autumn.jpg" alt="Autumn" style="height:200px;object-position:center top;"><div class="strip y"><p class="nm">Autumn</p></div><p class="rl">Artist, “Every color has a reason to shine.”</p><p class="ln"></p></div>
+<div class="pc rise d3"><img src="images/ollie.jpg" alt="Ollie" style="height:200px;object-position:center top;"><div class="strip n"><p class="nm">Ollie</p></div><p class="rl">Future CEO</p><p class="ln"></p></div>
+<div class="pc rise d4"><img src="images/ethan.jpg" alt="Ethan" style="height:200px;object-position:center top;"><div class="strip g"><p class="nm">Ethan</p></div><p class="rl">Future lawyer, “Well, actually...”</p><p class="ln"></p></div>
+<div class="pc rise d5"><img src="images/lily.jpg" alt="Lily" style="height:200px;object-position:center top;"><div class="strip pu"><p class="nm">Lily</p></div><p class="rl">Worries a lot, loves a lot more</p><p class="ln"></p></div>
+<div class="pc rise d6"><img src="images/mason.jpg" alt="Mason" style="height:200px;object-position:center top;"><div class="strip o"><p class="nm">Mason</p></div><p class="rl">Life of the group</p><p class="ln"></p></div>
+<div class="pc rise d7"><img src="images/jayden.jpg" alt="Jayden Parker" style="height:200px;object-position:center top;"><div class="strip b"><p class="nm">Jayden Parker</p></div><p class="rl">Point guard</p><p class="ln"></p></div>
+<div class="pc rise d8"><img src="images/jay.jpg" alt="Jay" style="height:200px;object-position:center top;"><div class="strip c"><p class="nm">Jay</p></div><p class="rl">Chill outside, softy inside</p><p class="ln"></p></div>
+</div>
+
+</section><section id="school">
+<p class="tag">Running the school</p>
+<h2>The grown ups who keep Cool Kids University on track.</h2>
+<div class="row" style="gap:20px;align-items:stretch;">
+<div class="pc rise d1"><img src="images/principal2.jpg" alt="Principal V" style="height:300px;object-position:center top;"><div class="strip o"><p class="nm">Principal V</p></div><p class="rl">Principal Vivian Hawthorne</p><p class="ln">“High expectations. Big heart. Stronger together.”</p></div>
+<div class="pc rise d2"><img src="images/ramirez.jpg" alt="Ms. Ramirez" style="height:300px;object-position:center top;"><div class="strip c"><p class="nm">Ms. Ramirez</p></div><p class="rl">School counselor</p><p class="ln">“You are braver than you believe.” Keeps a calm box for tough days.</p></div>
+<div class="pc rise d3"><img src="images/daniels.jpg" alt="Coach Daniels" style="height:300px;object-position:center top;"><div class="strip pu"><p class="nm">Coach Daniels</p></div><p class="rl">Gym teacher, Zumba queen</p><p class="ln">“Breathe. You got this!” Purple everything.</p></div>
+<div class="pc rise d4"><img src="images/whitaker3.jpg" alt="Mr. Whitaker" style="height:300px;object-position:center top;"><div class="strip y"><p class="nm">Mr. Whitaker</p></div><p class="rl">Librarian, story keeper</p><p class="ln">“A book can take you anywhere.”</p></div>
+<div class="pc rise d5"><img src="images/grumble.jpg" alt="Mrs. Grumble" style="height:300px;object-position:center top;"><div class="strip g"><p class="nm">Mrs. Grumble</p></div><p class="rl">Lunch aide</p><p class="ln">“No seconds!” Secretly leaves kind notes.</p></div>
+</div>
+
+</section><section id="faculty">
+<p class="tag">Classroom teachers</p>
+<h2>Teachers who believe in every kid.</h2>
+<div class="row" style="gap:18px;align-items:stretch;">
+<div class="pc rise d1"><img src="images/johnson.jpg" alt="Mrs. Johnson" style="height:300px;object-position:center top;"><div class="strip pu"><p class="nm">Mrs. Johnson</p></div><p class="rl">Language arts</p><p class="ln">“You don’t have to be perfect to be amazing.”</p></div>
+<div class="pc rise d2"><img src="images/mrparker.jpg" alt="Mr. Parker" style="height:300px;object-position:center top;"><div class="strip g"><p class="nm">Mr. Parker</p></div><p class="rl">Math and science</p><p class="ln">“Your zip code doesn’t determine your destiny.”</p></div>
+<div class="pc rise d3"><img src="images/benparker.jpg" alt="Mr. Parker" style="height:300px;object-position:center top;"><div class="strip b"><p class="nm">Mr. Parker</p></div><p class="rl">Reading intervention</p><p class="ln">“Kids need the right person to believe in them.”</p></div>
+<div class="pc rise d4"><img src="images/msparker.jpg" alt="Ms. Parker" style="height:300px;object-position:center top;"><div class="strip o"><p class="nm">Ms. Parker</p></div><p class="rl">Reading intervention</p><p class="ln">“Just keep turning the page.”</p></div>
+<div class="pc rise d5"><img src="images/morgan.jpg" alt="Ms. Morgan" style="height:300px;object-position:center top;"><div class="strip y"><p class="nm">Ms. Morgan</p></div><p class="rl">Fifth grade</p><p class="ln">“Mistakes are proof you’re trying.”</p></div>
+<div class="pc rise d6"><img src="images/thompson.jpg" alt="Ms. Thompson" style="height:300px;object-position:center top;"><div class="strip c"><p class="nm">Ms. Thompson</p></div><p class="rl">Third grade</p><p class="ln">“Progress, not perfection.”</p></div>
+</div>
+
+</section><section id="arts" class="dark">
+<p class="tag yb">The arts</p>
+<h2 style="color:#FFF8EC;">Music and movement make school feel like a stage.</h2>
+<div class="row" style="gap:24px;align-items:stretch;">
+<div class="pc rise d1"><img src="images/harmony.jpg" alt="Ms. Harmony" style="height:360px;object-position:center top;"><div class="strip c"><p class="nm">Ms. Harmony</p></div><p class="rl">Music teacher</p><p class="ln">“Music is how the heart speaks when words can’t.”</p></div>
+<div class="pc rise d2"><img src="images/rafa.jpg" alt="Prof. Rafa" style="height:360px;object-position:center top;"><div class="strip pu"><p class="nm">Prof. Rafa</p></div><p class="rl">Voice and songwriting</p><p class="ln">“Don’t sing the note. Sing the feeling.”</p></div>
+<div class="pc rise d3"><img src="images/jules.jpg" alt="Mr. Jules" style="height:360px;object-position:center top;"><div class="strip n"><p class="nm">Mr. Jules</p></div><p class="rl">Music production</p><p class="ln">“Don’t copy the sound. Become the sound.”</p></div>
+<div class="pc rise d4"><img src="images/chanel.jpg" alt="Ms. Chanel" style="height:360px;object-position:center top;"><div class="strip y"><p class="nm">Ms. Chanel</p></div><p class="rl">Dance and movement</p><p class="ln">Discipline, grace and confidence.</p></div>
+</div>
+
+</section><section id="stem" class="dark">
+<p class="tag yb">STEM and humanities</p>
+<h2 style="color:#FFF8EC;">Specialists who make every subject come alive.</h2>
+<div class="row" style="gap:18px;align-items:stretch;">
+<div class="pc rise d1"><img src="images/ellis.jpg" alt="Mr. Ellis" style="height:300px;object-position:center top;"><div class="strip g"><p class="nm">Mr. Ellis</p></div><p class="rl">STEM teacher</p><p class="ln">“Curiosity builds the future.”</p></div>
+<div class="pc rise d2"><img src="images/rivera.jpg" alt="Mr. Rivera" style="height:300px;object-position:center top;"><div class="strip b"><p class="nm">Mr. Rivera</p></div><p class="rl">Robotics and innovation</p><p class="ln">“Build it. Break it. Make it better.”</p></div>
+<div class="pc rise d3"><img src="images/brooks.jpg" alt="Mr. Brooks" style="height:300px;object-position:center top;"><div class="strip o"><p class="nm">Mr. Brooks</p></div><p class="rl">Mathematics, chess club</p><p class="ln">“There is always a pattern.”</p></div>
+<div class="pc rise d4"><img src="images/evans.jpg" alt="Mrs. Evans" style="height:300px;object-position:center top;"><div class="strip y"><p class="nm">Mrs. Evans</p></div><p class="rl">Black history</p><p class="ln">She teaches facts, legacy and power.</p></div>
+<div class="pc rise d5"><img src="images/izzy.jpg" alt="Dr. Izzy" style="height:300px;object-position:center top;"><div class="strip c"><p class="nm">Dr. Izzy</p></div><p class="rl">English language arts</p><p class="ln">“Every great story begins with one brave sentence.”</p></div>
+</div>
+
+</section><section id="action">
+<p class="tag">Learning in action</p>
+<h2>The same cast teaches STEM and feelings.</h2>
+<div class="row" style="gap:32px;align-items:stretch;">
+<div class="col rise d1" style="flex:1;gap:16px;"><img src="images/malikdino.jpg" alt="Malik in the CKU fossil lab" style="width:100%;height:560px;object-fit:cover;object-position:center 30%;border-radius:32px;border:5px solid var(--navy);"><p class="tx" style="font-size:28px;"><b>STEM:</b> Malik explores fossils with 3D printing in the CKU lab.</p></div>
+<div class="col rise d2" style="flex:1.3;gap:16px;"><img src="images/mia.jpg" alt="Calm Corner apology scene" style="width:100%;height:560px;object-fit:cover;border-radius:32px;border:5px solid var(--navy);"><p class="tx" style="font-size:28px;"><b>SEL:</b> an apology and repair in the Calm Corner.</p></div>
+</div>
+
+</section><section id="how">
+<p class="tag">How it works</p>
+<h2>Characters lead the learning, in any subject.</h2>
+<div class="row" style="gap:20px;align-items:stretch;">
+<div class="step y rise d1"><p class="sn">1</p><h3>Characters</h3><p class="tx">Any character can teach or appear in any lesson. No one is locked to one subject.</p></div>
+<p class="arrow rise d2">›</p>
+<div class="step t rise d2"><p class="sn">2</p><h3>Lessons</h3><p class="tx">Each lesson is a story for the child’s age, with a character script, a worksheet and a quiz.</p></div>
+<p class="arrow rise d3">›</p>
+<div class="step c rise d3"><p class="sn">3</p><h3>Products</h3><p class="tx">The same cast powers books, the app, games, videos and workshops.</p></div>
+<p class="arrow rise d4">›</p>
+<div class="step pu rise d4"><p class="sn">4</p><h3>Kids grow</h3><p class="tx">Reading, academics and social emotional skills, learned from characters they love.</p></div>
+</div>
+<p class="lead rise d5">Plan: <b>120 lessons</b> across <b>12 departments</b>, all taught by the Cool Kids cast.</p>
+
+</section><section id="engines" class="alt">
+<p class="tag">Story engines</p>
+<h2>Who leads which kind of learning.</h2>
+<table class="tbl rise d1">
+<tr><th>Character group</th><th>What they teach</th><th>Where it shows up</th></tr>
+<tr><td><b>Chloe</b> and her crew</td><td>Feelings, friendship, confidence, leadership</td><td>Feelings book series, SEL lessons, Feelings Stories</td></tr>
+<tr><td><b>Carter</b> and his crew</td><td>Chess, music, STEM, finding your voice</td><td>Cool Kids Chess Club game, Carter’s chess guidebook</td></tr>
+<tr><td><b>Ms. Ramirez</b> and Coach Daniels</td><td>Calm, coping, confidence, healthy bodies</td><td>Cool Kids Check In kit, movement breaks</td></tr>
+<tr><td><b>Faculty</b></td><td>Reading, math, science, history, the arts</td><td>Lesson library, worksheets, quizzes, videos</td></tr>
+<tr><td><b>Family and mentors</b></td><td>Money, calm, responsibility, family support</td><td>Life skills lessons, parent and family guides</td></tr>
+</table>
+
+</section><section id="next">
+<p class="tag">Next up</p>
+<h2>What the universe needs before launch.</h2>
+<div class="row" style="gap:28px;align-items:stretch;">
+<div class="tile y rise d1"><h3>Artwork to finish</h3><ul class="bl"><li>Full sheets for Chloe and Carter</li><li>Fred, Grandma Lu, Great Grandma Helen, Darius</li><li>Rocky, Mr. Love, Ms. Chanel</li></ul></div>
+<div class="tile c rise d2"><h3>Canon locked</h3><ul class="bl"><li>Everyone attends Cool Kids University</li><li>Mr. Whitaker is the librarian</li><li>Carter’s best friend is Jae-din Park</li></ul></div>
+<div class="tile t rise d3"><h3>Brand cleanup</h3><ul class="bl"><li>Swap Nike, Jordan and Supreme logos for original CKU streetwear</li><li>One consistent art style</li></ul></div>
+</div>
+
+</section><section id="close" class="dark" style="flex-direction:row;align-items:center;gap:72px;">
+<div style="flex:1;display:flex;flex-direction:column;gap:32px;">
+<img src="images/logo.png" alt="Cool Kids University logo" class="rise d1" style="width:260px;height:260px;object-fit:contain;">
+<h1 class="rise d2" style="font-size:96px;">Every kid should see themselves in the story.</h1>
+<p class="lead rise d3" style="color:#E6E8FA;">Learn. Wonder. Grow.</p>
+</div>
+<img class="rise d3" src="images/chloe_carter.jpg" alt="Chloe and Carter" style="width:640px;height:824px;object-fit:cover;object-position:center top;border-radius:40px;border:6px solid #FFC93C;">
+
+</section>
+</div></div>
+<div id="bar"><button id="prev" aria-label="Previous slide">Back</button><span id="count"></span><button id="next" aria-label="Next slide">Next</button><a href="../">More tools</a></div>
+<script>
+const S=[...document.querySelectorAll('#stage>section')];let i=0;
+const st=document.getElementById('stage');
+function fit(){const v=document.getElementById('viewport');const s=Math.min(v.clientWidth/1920,v.clientHeight/1080);st.style.transform='scale('+s+')';}
+function show(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('on',k===i));
+document.getElementById('count').textContent=(i+1)+' / '+S.length;
+document.getElementById('prev').disabled=i===0;document.getElementById('next').disabled=i===S.length-1;history.replaceState(null,'','#'+(i+1));}
+document.getElementById('prev').onclick=()=>show(i-1);document.getElementById('next').onclick=()=>show(i+1);
+addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')show(i+1);if(e.key==='ArrowLeft')show(i-1);});
+let x0=null;addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)show(i+(dx<0?1:-1));x0=null;});
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script></body></html>

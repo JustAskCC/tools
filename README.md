@@ -10,6 +10,7 @@ Free, simple web tools for entrepreneurs, small businesses, and the organization
 |---|---|---|
 | Workshop Calendar | `workshopcalendar/` | [tools.justaskcc.com/workshopcalendar](https://tools.justaskcc.com/workshopcalendar/) |
 | Cool Kids Chess Club | `chess/` | [tools.justaskcc.com/chess](https://tools.justaskcc.com/chess/) |
+| Cool Kids University Characters | `characters/` | [tools.justaskcc.com/characters](https://tools.justaskcc.com/characters/) |
 
 ## Make your own copy (free, about 15 minutes)
 
