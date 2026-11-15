@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice Studio | Just Ask CC Tools</title>
+<meta name="description" content="Turn your scripts into natural narration and teaching audio, free on your own device.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: dark header, then stacked cards: 1 engine, 2 voice, 3 style, 4 script, 5 listen and download. */
+:root{
+  --ink:#121a2e; --paper:#f5f6f9; --surface:#fff; --text:#16213a; --muted:#5d6880; --line:#dfe3ec;
+  --gold:#f2a71b; --gold-soft:#fdf1d8; --teal:#1b8a8f; --blue:#1d5fa6; --red:#b3372b;
+  --display:"Archivo",system-ui,sans-serif; --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#0e1422; --surface:#161f31; --text:#e8ecf3; --muted:#9ba7ba; --line:#28344a; --gold-soft:#33291a; color-scheme:dark;}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.5}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+.wrap{max-width:820px;margin:0 auto;padding:0 18px}
+header{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+header::before{content:"";position:absolute;right:-110px;top:-130px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(242,167,27,.35),rgba(242,167,27,0) 65%)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;position:relative}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:17px;text-decoration:none;color:#fff}
+.mark{width:32px;height:32px;border-radius:9px;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-weight:900;font-size:14px}
+.hero{position:relative;padding:18px 0 34px}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(32px,7vw,48px);line-height:1.04;margin:0 0 10px}
+h1 em{font-style:normal;color:var(--gold)}
+.lede{color:#cfd6e4;margin:0;max-width:56ch}
+main{padding:22px 0 60px;display:flex;flex-direction:column;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card h2{font-family:var(--display);font-weight:800;font-size:20px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+.step{width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-size:14px;flex:none}
+.hint{color:var(--muted);font-size:15px;margin:0 0 14px}
+label{font-weight:700;font-size:15px;display:block;margin-bottom:6px}
+input[type=text],input[type=password],input[type=search],select,textarea{width:100%;font:inherit;color:var(--text);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:11px 12px}
+textarea{min-height:220px;resize:vertical;line-height:1.55}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.row > *{flex:1 1 auto}
+button,.btn{font:inherit;font-weight:700;font-size:16px;border-radius:10px;padding:11px 18px;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+button.gold,.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+button:disabled{opacity:.5;cursor:not-allowed}
+button.small{padding:6px 12px;font-size:14px}
+.big{width:100%;padding:15px;font-size:18px}
+.status{font-size:15px;margin-top:10px;color:var(--muted);min-height:1.2em}
+.status.err{color:var(--red)}
+.status.ok{color:var(--teal)}
+a{color:var(--blue)}
+@media (prefers-color-scheme:dark){a{color:#7fb2ea}}
+.check{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--muted);margin-top:12px}
+.check input{margin-top:4px;accent-color:var(--gold)}
+
+/* engine switch */
+.engines{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.engine{flex-direction:column;align-items:flex-start;text-align:left;gap:2px;padding:14px;border-width:2px}
+.engine small{font-weight:400;color:var(--muted);font-size:14px}
+.engine.sel{border-color:var(--gold);background:var(--gold-soft)}
+.pill{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--teal);color:#fff;border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:2px}
+
+/* voices */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.filters input{flex:1 1 200px}
+.filters select{flex:0 1 150px}
+.voices{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;max-height:430px;overflow:auto;padding:2px}
+.voice{border:2px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;display:flex;flex-direction:column;gap:6px;background:var(--surface);text-align:left}
+.voice.sel{border-color:var(--gold);background:var(--gold-soft)}
+.voice b{font-family:var(--display);font-size:16px;line-height:1.2}
+.voice .meta{font-size:13px;color:var(--muted)}
+.voice .desc{font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.voice .play{align-self:flex-start}
+.top-pick{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--teal)}
+.empty{color:var(--muted);font-size:15px;padding:14px;border:1px dashed var(--line);border-radius:12px;grid-column:1/-1}
+
+/* presets */
+.presets{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.preset{flex-direction:column;gap:2px;padding:12px 8px}
+.preset small{font-weight:400;color:var(--muted);font-size:13px}
+.preset.sel{border-color:var(--gold);background:var(--gold-soft)}
+.slider{margin-bottom:12px}
+.slider .lab{display:flex;justify-content:space-between;font-size:15px;font-weight:700}
+.slider .lab span{color:var(--muted);font-weight:400}
+input[type=range]{width:100%;accent-color:var(--gold)}
+details summary{cursor:pointer;font-weight:700;color:var(--muted);font-size:15px;margin:6px 0}
+
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+.tags button{padding:5px 10px;font-size:13px;font-weight:600;border-radius:999px}
+.count{font-size:14px;color:var(--muted);text-align:right;margin-top:6px}
+
+.progress{height:8px;background:var(--line);border-radius:999px;overflow:hidden;margin-top:12px;display:none}
+.progress i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+audio{width:100%;margin-top:10px}
+.history{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.take{border:1px solid var(--line);border-radius:12px;padding:12px}
+.take .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.take .top b{font-family:var(--display)}
+.take .top span{font-size:13px;color:var(--muted)}
+.take p{margin:6px 0 0;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.take .row{margin-top:8px}
+.take .row > *{flex:0 0 auto}
+footer{color:var(--muted);font-size:14px;text-align:center;padding:0 0 30px}
+.hide{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav><a class="brand" href="../"><span class="mark" aria-hidden="true">CC</span>Just Ask CC Tools</a></nav>
+    <div class="hero">
+      <h1>Voice <em>Studio</em></h1>
+      <p class="lede">Turn any script into natural narration. Pick a voice, choose Narrate, Teach or Storytime, and download the audio. Free voices run right on your device, with no credits and no account.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- 1. Engine -->
+  <section class="card">
+    <h2><span class="step">1</span>Choose your voices</h2>
+    <div class="engines">
+      <button class="engine" data-e="free"><span>Free voices <span class="pill">$0</span></span><small>Runs on your device. Unlimited.</small></button>
+      <button class="engine" data-e="premium"><span>Premium voices</span><small>ElevenLabs. Most lifelike, uses credits.</small></button>
+    </div>
+
+    <div id="freePanel">
+      <p class="hint">The first time, your device downloads the voice model (about 90MB). After that it's saved, so it opens quickly next time. Use WiFi for the first load.</p>
+      <button class="gold" id="loadBtn">Load free voices</button>
+      <div class="progress" id="loadProgress"><i></i></div>
+      <div class="status" id="loadStatus"></div>
+      <label class="check hide" id="gpuRow"><input type="checkbox" id="gpu"> Use this device's graphics chip for faster voices. Best on laptops and desktops. The first download is bigger, about 300MB.</label>
+    </div>
+
+    <div id="premiumPanel" class="hide">
+      <p class="hint">Paste your ElevenLabs API key once. It stays on this device and is sent only to ElevenLabs. Get a key at <a href="https://elevenlabs.io/app/settings/api-keys" target="_blank" rel="noopener">elevenlabs.io, Settings, API Keys</a>.</p>
+      <div class="row">
+        <input type="password" id="apiKey" placeholder="Paste your API key" autocomplete="off" spellcheck="false">
+        <button class="gold" id="connectBtn" style="flex:0 0 auto">Connect</button>
+      </div>
+      <div class="status" id="connectStatus"></div>
+      <div class="row hide" id="connectedRow" style="margin-top:6px">
+        <span id="credits" style="color:var(--muted);font-size:15px"></span>
+        <button class="small" id="forgetBtn" style="flex:0 0 auto">Remove key from this device</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Voice -->
+  <section class="card">
+    <h2><span class="step">2</span>Pick a voice</h2>
+    <p class="hint" id="voiceHint">Tap a voice to choose it. Tap Sample to hear it.</p>
+    <div class="filters">
+      <input type="search" id="search" placeholder="Search voices">
+      <select id="gender"><option value="">Any voice</option><option value="female">Women</option><option value="male">Men</option></select>
+      <button class="small hide" id="refreshBtn" style="flex:0 0 auto">Refresh</button>
+    </div>
+    <div class="voices" id="voices"></div>
+  </section>
+
+  <!-- 3. Style -->
+  <section class="card">
+    <h2><span class="step">3</span>Pick a reading style</h2>
+    <p class="hint">Each style sets the pace and the pauses between paragraphs. You can fine tune below.</p>
+    <div class="presets">
+      <button class="preset" data-p="narrate">Narrate<small>Smooth, steady</small></button>
+      <button class="preset" data-p="teach">Teach<small>Clear, patient</small></button>
+      <button class="preset" data-p="story">Storytime<small>Lively</small></button>
+    </div>
+    <div class="slider">
+      <div class="lab">Speed <span id="speedV"></span></div>
+      <input type="range" id="speed" min="0.7" max="1.3" step="0.05">
+    </div>
+    <div class="slider">
+      <div class="lab">Pause between paragraphs <span id="pauseV"></span></div>
+      <input type="range" id="pause" min="0" max="2" step="0.1">
+    </div>
+    <div id="premiumStyle" class="hide">
+      <div class="slider">
+        <div class="lab">Expression <span id="styleV"></span></div>
+        <input type="range" id="style" min="0" max="1" step="0.05">
+      </div>
+      <details>
+        <summary>More settings</summary>
+        <div class="slider" style="margin-top:10px">
+          <div class="lab">Consistency <span id="stabV"></span></div>
+          <input type="range" id="stability" min="0" max="1" step="0.05">
+          <div class="hint" style="margin:4px 0 0;font-size:13px">Higher sounds steadier. Lower sounds more emotional.</div>
+        </div>
+        <label for="model" style="margin-top:12px">Voice engine</label>
+        <select id="model">
+          <option value="eleven_multilingual_v2">Studio quality (best for long narration)</option>
+          <option value="eleven_v3">Most expressive (supports emotion tags)</option>
+          <option value="eleven_turbo_v2_5">Fast</option>
+          <option value="eleven_flash_v2_5">Fastest, lowest cost</option>
+        </select>
+      </details>
+    </div>
+  </section>
+
+  <!-- 4. Script -->
+  <section class="card">
+    <h2><span class="step">4</span>Write or paste your script</h2>
+    <p class="hint">Long scripts are fine. Leave a blank line between paragraphs for a natural pause. Punctuation matters: commas and periods tell the voice where to breathe.</p>
+    <textarea id="script" placeholder="Welcome to today's lesson. We're going to learn how plants turn sunlight into food..."></textarea>
+    <div class="count" id="count">0 characters</div>
+    <div id="tagBox" class="hide">
+      <div class="hint" style="margin:8px 0 0;font-size:14px">Emotion tags work with the Most expressive premium engine. Tap to insert at your cursor.</div>
+      <div class="tags" id="tags"></div>
+    </div>
+  </section>
+
+  <!-- 5. Generate -->
+  <section class="card">
+    <h2><span class="step">5</span>Listen and download</h2>
+    <label for="title">Name this recording</label>
+    <input type="text" id="title" placeholder="Lesson 1: Photosynthesis">
+    <div style="height:12px"></div>
+    <button class="gold big" id="genBtn">Create audio</button>
+    <div class="progress" id="genProgress"><i></i></div>
+    <div class="status" id="genStatus"></div>
+    <div class="history" id="history"></div>
+  </section>
+
+</main>
+<footer>Built by CiCi Caver, Just Ask CC · Free voices by Kokoro (Apache 2.0) · Premium voices by ElevenLabs · Free under the <a href="https://github.com/JustAskCC/tools/blob/main/LICENSE">MIT License</a></footer>
+
+<!-- Runs the free Kokoro voice model in a background thread so the page never freezes. -->
+<script type="text/plain" id="workerSrc">
+import { KokoroTTS } from "https://cdn.jsdelivr.net/npm/kokoro-js@1.2.1/dist/kokoro.web.js";
+const MODEL = "onnx-community/Kokoro-82M-v1.0-ONNX";
+let tts = null;
+let queue = Promise.resolve();
+self.onmessage = e => { queue = queue.then(() => handle(e.data)); };
+
+async function handle(m){
+  try{
+    if(m.type === "load"){
+      if(tts){ self.postMessage({type:"ready", voices:Object.keys(tts.voices)}); return; }
+      const files = {};
+      tts = await KokoroTTS.from_pretrained(MODEL, {
+        dtype: m.dtype, device: m.device,
+        progress_callback: p => {
+          if(p.status === "progress" && p.total){
+            files[p.file] = [p.loaded, p.total];
+            let l = 0, t = 0;
+            for(const f in files){ l += files[f][0]; t += files[f][1]; }
+            self.postMessage({type:"progress", loaded:l, total:t});
+          }
+        }
+      });
+      self.postMessage({type:"ready", voices:Object.keys(tts.voices)});
+    }
+    else if(m.type === "gen"){
+      const parts = [];
+      let sr = 24000;
+      for(let i = 0; i < m.chunks.length; i++){
+        const c = m.chunks[i];
+        if(c.text){
+          const a = await tts.generate(c.text, {voice:m.voice, speed:m.speed});
+          sr = a.sampling_rate || sr;
+          parts.push(a.audio);
+        }
+        if(c.pause) parts.push(new Float32Array(Math.round(sr * c.pause)));
+        self.postMessage({type:"tick", id:m.id, i:i+1, n:m.chunks.length});
+      }
+      const wav = encodeWav(parts, sr);
+      self.postMessage({type:"done", id:m.id, wav}, [wav]);
+    }
+  }catch(err){
+    self.postMessage({type:"error", id:m.id, stage:m.type, message:String((err && err.message) || err)});
+  }
+}
+
+function encodeWav(parts, sr){
+  let n = 0; for(const p of parts) n += p.length;
+  const buf = new ArrayBuffer(44 + n * 2), v = new DataView(buf);
+  const w = (o, s) => { for(let i = 0; i < s.length; i++) v.setUint8(o + i, s.charCodeAt(i)); };
+  w(0,"RIFF"); v.setUint32(4, 36 + n * 2, true); w(8,"WAVE"); w(12,"fmt ");
+  v.setUint32(16,16,true); v.setUint16(20,1,true); v.setUint16(22,1,true);
+  v.setUint32(24,sr,true); v.setUint32(28,sr*2,true); v.setUint16(32,2,true); v.setUint16(34,16,true);
+  w(36,"data"); v.setUint32(40, n * 2, true);
+  let o = 44;
+  for(const p of parts){ for(let i = 0; i < p.length; i++){ const s = Math.max(-1, Math.min(1, p[i])); v.setInt16(o, s < 0 ? s * 0x8000 : s * 0x7FFF, true); o += 2; } }
+  return buf;
+}
+</script>
+
+<script>
+const $ = id => document.getElementById(id);
+const store = {
+  get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} },
+  del(k){ try{ localStorage.removeItem(k); }catch(e){} }
+};
+function setStatus(id, msg, cls){ const el = $(id); el.textContent = msg; el.className = "status" + (cls ? " " + cls : ""); }
+function bar(id, f){ const el = $(id); el.style.display = "block"; el.firstElementChild.style.width = Math.round(f * 100) + "%"; }
+function hideBar(id){ setTimeout(()=>{ $(id).style.display = "none"; }, 600); }
+
+/* ---------- Free voices (Kokoro). Grades come from the Kokoro voice list; only the better ones are shown. ---------- */
+const FREE_VOICES = [
+  {id:"af_heart",   name:"Heart",    who:"American woman", g:"female", desc:"Warm and natural. The best overall voice.", top:true},
+  {id:"af_bella",   name:"Bella",    who:"American woman", g:"female", desc:"Bright and confident. Great for storytelling.", top:true},
+  {id:"af_nicole",  name:"Nicole",   who:"American woman", g:"female", desc:"Soft and close, like a calm podcast host."},
+  {id:"bf_emma",    name:"Emma",     who:"British woman",  g:"female", desc:"Clear and polished. Good for lessons.", top:true},
+  {id:"af_sarah",   name:"Sarah",    who:"American woman", g:"female", desc:"Friendly everyday voice."},
+  {id:"af_aoede",   name:"Aoede",    who:"American woman", g:"female", desc:"Smooth and even."},
+  {id:"af_kore",    name:"Kore",     who:"American woman", g:"female", desc:"Steady and grounded."},
+  {id:"af_nova",    name:"Nova",     who:"American woman", g:"female", desc:"Light and modern."},
+  {id:"af_alloy",   name:"Alloy",    who:"American woman", g:"female", desc:"Neutral and clear."},
+  {id:"af_sky",     name:"Sky",      who:"American woman", g:"female", desc:"Youthful and airy."},
+  {id:"bf_isabella",name:"Isabella", who:"British woman",  g:"female", desc:"Gentle and refined."},
+  {id:"am_michael", name:"Michael",  who:"American man",   g:"male",   desc:"Warm and steady narrator.", top:true},
+  {id:"am_fenrir",  name:"Fenrir",   who:"American man",   g:"male",   desc:"Deeper, strong presence."},
+  {id:"am_puck",    name:"Puck",     who:"American man",   g:"male",   desc:"Upbeat and playful. Fun for kids' stories."},
+  {id:"bm_george",  name:"George",   who:"British man",    g:"male",   desc:"Classic storybook narrator.", top:true},
+  {id:"bm_fable",   name:"Fable",    who:"British man",    g:"male",   desc:"Expressive storyteller."}
+];
+
+let engine = store.get("vs_engine") || "free";
+let freeVoice = store.get("vs_free_voice") || "af_heart";
+let worker = null, modelState = "idle", modelVoices = null, loadWaiters = [];
+let jobId = 0; const jobs = {};
+const sampleCache = {};
+
+function startWorker(){
+  if(worker) return worker;
+  const src = $("workerSrc").textContent;
+  worker = new Worker(URL.createObjectURL(new Blob([src], {type:"text/javascript"})), {type:"module"});
+  worker.onmessage = e => {
+    const m = e.data;
+    if(m.type === "progress"){
+      bar("loadProgress", m.loaded / m.total);
+      setStatus("loadStatus", "Downloading voices... " + Math.round(m.loaded / 1048576) + " of " + Math.round(m.total / 1048576) + " MB");
+    } else if(m.type === "ready"){
+      modelState = "ready"; modelVoices = m.voices;
+      bar("loadProgress", 1); hideBar("loadProgress");
+      setStatus("loadStatus", "Free voices are ready. Pick one below.", "ok");
+      $("loadBtn").textContent = "Voices loaded"; $("loadBtn").disabled = true;
+      store.set("vs_loaded_once", "1");
+      loadWaiters.splice(0).forEach(w => w.ok());
+      renderVoices();
+    } else if(m.type === "tick"){
+      jobs[m.id] && jobs[m.id].tick(m.i, m.n);
+    } else if(m.type === "done"){
+      jobs[m.id] && jobs[m.id].ok(new Blob([m.wav], {type:"audio/wav"})); delete jobs[m.id];
+    } else if(m.type === "error"){
+      if(m.stage === "load"){
+        modelState = "idle";
+        try{ worker.terminate(); }catch(_){} worker = null;
+        $("loadBtn").disabled = false; $("loadBtn").textContent = "Try again";
+        hideBar("loadProgress");
+        setStatus("loadStatus", "The voices could not load on this device. " + m.message, "err");
+        loadWaiters.splice(0).forEach(w => w.fail(new Error(m.message)));
+      } else if(jobs[m.id]){ jobs[m.id].fail(new Error(m.message)); delete jobs[m.id]; }
+    }
+  };
+  worker.onerror = e => {
+    setStatus("loadStatus", "This browser could not start the free voices. Try Chrome, Edge, or the newest Safari.", "err");
+    modelState = "idle"; $("loadBtn").disabled = false;
+    loadWaiters.splice(0).forEach(w => w.fail(new Error("Worker failed")));
+  };
+  return worker;
+}
+
+function loadModel(){
+  if(modelState === "ready") return Promise.resolve();
+  const p = new Promise((ok, fail) => loadWaiters.push({ok, fail}));
+  if(modelState === "loading") return p;
+  modelState = "loading";
+  $("loadBtn").disabled = true; $("loadBtn").textContent = "Loading...";
+  setStatus("loadStatus", store.get("vs_loaded_once") ? "Opening saved voices..." : "Starting download...");
+  const useGpu = $("gpu").checked && "gpu" in navigator;
+  try{
+    startWorker().postMessage({type:"load", device: useGpu ? "webgpu" : "wasm", dtype: useGpu ? "fp32" : "q8"});
+  }catch(e){
+    modelState = "idle"; $("loadBtn").disabled = false;
+    setStatus("loadStatus", "This browser could not start the free voices. Try Chrome, Edge, or the newest Safari.", "err");
+    loadWaiters.splice(0).forEach(w => w.fail(e));
+  }
+  return p;
+}
+
+function speakFree(chunks, voice, speed, onTick){
+  const id = ++jobId;
+  return new Promise((ok, fail) => {
+    jobs[id] = {ok, fail, tick: onTick || (()=>{})};
+    worker.postMessage({type:"gen", id, chunks, voice, speed});
+  });
+}
+
+/* split into short pieces the model reads well, keeping paragraph pauses */
+function freeChunks(text, paraPause){
+  const out = [];
+  const paras = text.split(/\n\s*\n/).map(p => p.replace(/\s+/g, " ").trim()).filter(Boolean);
+  paras.forEach((para, pi) => {
+    const sentences = para.match(/[^.!?;:]+[.!?;:]+["')\]]*|[^.!?;:]+$/g) || [para];
+    let cur = "";
+    const flush = () => { if(cur.trim()) out.push({text:cur.trim(), pause:0.12}); cur = ""; };
+    for(let s of sentences){
+      s = s.trim(); if(!s) continue;
+      while(s.length > 380){
+        let cut = s.lastIndexOf(",", 380); if(cut < 120) cut = s.lastIndexOf(" ", 380); if(cut < 1) cut = 380;
+        if(cur) flush();
+        out.push({text:s.slice(0, cut + 1).trim(), pause:0.08});
+        s = s.slice(cut + 1).trim();
+      }
+      if((cur + " " + s).length > 380) flush();
+      cur = cur ? cur + " " + s : s;
+    }
+    flush();
+    if(out.length && pi < paras.length - 1) out[out.length - 1].pause = paraPause;
+  });
+  if(out.length) out[out.length - 1].pause = 0.3;
+  return out;
+}
+
+/* ---------- Premium voices (ElevenLabs) ---------- */
+const API = "https://api.elevenlabs.io";
+let key = store.get("vs_key") || "";
+let premVoices = [];
+let premVoice = store.get("vs_voice") || "";
+let previewAudio = null;
+
+async function api(path, opts={}){
+  const res = await fetch(API + path, {...opts, headers:{"xi-api-key":key, ...(opts.headers||{})}});
+  if(!res.ok){
+    let msg = "Something went wrong (" + res.status + ").";
+    try{ const j = await res.json(); const d = j.detail; msg = (d && (d.message || (typeof d === "string" ? d : ""))) || msg; }catch(e){}
+    if(res.status === 401) msg = "That key was not accepted. Check it and try again. " + msg;
+    throw new Error(msg);
+  }
+  return res;
+}
+async function connect(){
+  const val = $("apiKey").value.trim() || key;
+  if(!val){ setStatus("connectStatus","Paste your API key first.","err"); return; }
+  key = val;
+  setStatus("connectStatus","Connecting...");
+  try{
+    await loadPremVoices();
+    store.set("vs_key", key);
+    $("apiKey").value = ""; $("apiKey").placeholder = "Key saved on this device";
+    $("connectedRow").classList.remove("hide");
+    setStatus("connectStatus","Connected. " + premVoices.length + " voices ready.","ok");
+    loadCredits();
+  }catch(e){ setStatus("connectStatus", e.message, "err"); }
+}
+async function loadCredits(){
+  try{
+    const j = await (await api("/v1/user/subscription")).json();
+    if(j.character_limit) $("credits").textContent = Math.max(0, j.character_limit - j.character_count).toLocaleString() + " characters left this month";
+  }catch(e){ $("credits").textContent = ""; }
+}
+function forget(){
+  store.del("vs_key"); key = ""; premVoices = [];
+  $("connectedRow").classList.add("hide"); $("apiKey").placeholder = "Paste your API key";
+  setStatus("connectStatus","Key removed from this device."); renderVoices();
+}
+async function loadPremVoices(){
+  const j = await (await api("/v1/voices")).json();
+  premVoices = (j.voices || []).sort((a,b)=>a.name.localeCompare(b.name));
+  if(!premVoices.find(v=>v.voice_id===premVoice)) premVoice = premVoices[0] ? premVoices[0].voice_id : "";
+  renderVoices();
+}
+function splitPremium(text, max){
+  const parts = []; let cur = "";
+  const push = ()=>{ if(cur.trim()) parts.push(cur.trim()); cur = ""; };
+  for(const para of text.split(/\n\s*\n/)){
+    if((cur + "\n\n" + para).length <= max){ cur = cur ? cur + "\n\n" + para : para; continue; }
+    push();
+    if(para.length <= max){ cur = para; continue; }
+    for(const s of (para.match(/[^.!?]+[.!?]+["')\]]*\s*|[^.!?]+$/g) || [para])){
+      if((cur + s).length <= max){ cur += s; continue; }
+      push();
+      if(s.length <= max){ cur = s; continue; }
+      for(let i=0;i<s.length;i+=max) parts.push(s.slice(i,i+max));
+    }
+  }
+  push(); return parts;
+}
+
+/* ---------- Voice list ---------- */
+function stopPreview(){
+  if(previewAudio){ previewAudio.pause(); previewAudio = null; }
+  document.querySelectorAll(".play").forEach(b => { b.textContent = "▶ Sample"; b.disabled = false; });
+}
+function playUrl(url, btn){
+  stopPreview();
+  previewAudio = new Audio(url);
+  btn.textContent = "■ Stop";
+  const a = previewAudio;
+  a.onended = () => { btn.textContent = "▶ Sample"; if(previewAudio === a) previewAudio = null; };
+  a.play().catch(() => { btn.textContent = "▶ Sample"; });
+}
+async function sampleFree(v, btn){
+  if(btn.textContent.startsWith("■")){ stopPreview(); return; }
+  if(sampleCache[v.id]){ playUrl(sampleCache[v.id], btn); return; }
+  btn.disabled = true; btn.textContent = modelState === "ready" ? "Making sample..." : "Loading voices...";
+  try{
+    await loadModel();
+    btn.textContent = "Making sample...";
+    const line = "Hi, I'm " + v.name + ". I can narrate your stories, and teach your lessons, in a clear and natural voice.";
+    const blob = await speakFree([{text:line, pause:0.2}], v.id, Number($("speed").value));
+    sampleCache[v.id] = URL.createObjectURL(blob);
+    btn.disabled = false;
+    playUrl(sampleCache[v.id], btn);
+  }catch(e){
+    btn.disabled = false; btn.textContent = "▶ Sample";
+  }
+}
+
+function card(name, meta, desc, selected, top, onPick){
+  const el = document.createElement("div");
+  el.className = "voice" + (selected ? " sel" : "");
+  el.tabIndex = 0; el.setAttribute("role","button"); el.setAttribute("aria-pressed", selected ? "true" : "false");
+  if(top){ const t = document.createElement("span"); t.className = "top-pick"; t.textContent = "Top pick"; el.appendChild(t); }
+  const b = document.createElement("b"); b.textContent = name; el.appendChild(b);
+  const m = document.createElement("div"); m.className = "meta"; m.textContent = meta; el.appendChild(m);
+  if(desc){ const d = document.createElement("div"); d.className = "desc"; d.textContent = desc; el.appendChild(d); }
+  el.onclick = onPick;
+  el.onkeydown = e => { if(e.key === "Enter" || e.key === " "){ e.preventDefault(); onPick(); } };
+  return el;
+}
+function sampleBtn(onClick){
+  const p = document.createElement("button");
+  p.className = "small play"; p.textContent = "▶ Sample";
+  p.onclick = e => { e.stopPropagation(); onClick(p); };
+  return p;
+}
+
+function renderVoices(){
+  const box = $("voices");
+  const q = $("search").value.trim().toLowerCase();
+  const g = $("gender").value;
+  box.innerHTML = "";
+  if(engine === "free"){
+    let list = FREE_VOICES.filter(v => !modelVoices || modelVoices.includes(v.id));
+    list = list.filter(v => (!q || (v.name + " " + v.who + " " + v.desc).toLowerCase().includes(q)) && (!g || v.g === g));
+    if(!list.length){ box.innerHTML = '<div class="empty">No voices match. Try another word.</div>'; return; }
+    list.forEach(v => {
+      const el = card(v.name, v.who, v.desc, v.id === freeVoice, v.top, () => { freeVoice = v.id; store.set("vs_free_voice", v.id); renderVoices(); });
+      el.appendChild(sampleBtn(btn => sampleFree(v, btn)));
+      box.appendChild(el);
+    });
+  } else {
+    if(!key || !premVoices.length){
+      box.innerHTML = '<div class="empty">' + (key ? "No voices found. Add some in ElevenLabs, then tap Refresh." : "Connect your ElevenLabs account in step 1 to see your premium voices.") + '</div>';
+      return;
+    }
+    const list = premVoices.filter(v => {
+      const L = v.labels || {};
+      const hay = (v.name + " " + (v.description||"") + " " + Object.values(L).join(" ")).toLowerCase();
+      return (!q || hay.includes(q)) && (!g || (L.gender||"") === g);
+    });
+    if(!list.length){ box.innerHTML = '<div class="empty">No voices match. Try another word.</div>'; return; }
+    list.forEach(v => {
+      const L = v.labels || {};
+      const meta = [L.gender, L.age && L.age.replace(/[_-]/g," "), L.accent, L.use_case && L.use_case.replace(/[_-]/g," ")].filter(Boolean).join(" · ");
+      const el = card(v.name, meta, v.description || "", v.voice_id === premVoice, false, () => { premVoice = v.voice_id; store.set("vs_voice", premVoice); renderVoices(); });
+      if(v.preview_url) el.appendChild(sampleBtn(btn => { if(btn.textContent.startsWith("■")) stopPreview(); else playUrl(v.preview_url, btn); }));
+      box.appendChild(el);
+    });
+  }
+}
+
+/* ---------- Engine switch ---------- */
+function setEngine(e){
+  engine = e; store.set("vs_engine", e);
+  stopPreview();
+  document.querySelectorAll(".engine").forEach(b => b.classList.toggle("sel", b.dataset.e === e));
+  $("freePanel").classList.toggle("hide", e !== "free");
+  $("premiumPanel").classList.toggle("hide", e !== "premium");
+  $("premiumStyle").classList.toggle("hide", e !== "premium");
+  $("refreshBtn").classList.toggle("hide", e !== "premium");
+  toggleTags(); renderVoices();
+  if(e === "premium" && key && !premVoices.length){
+    loadPremVoices().then(()=>{ setStatus("connectStatus","Connected. " + premVoices.length + " voices ready.","ok"); loadCredits(); })
+      .catch(err=>setStatus("connectStatus", err.message, "err"));
+  }
+}
+
+/* ---------- Style ---------- */
+const PRESETS = {
+  narrate:{speed:1.0,  pause:0.7, style:0.25, stability:0.55},
+  teach:  {speed:0.9,  pause:1.0, style:0.15, stability:0.7},
+  story:  {speed:1.05, pause:0.8, style:0.55, stability:0.35}
+};
+let preset = store.get("vs_preset") || "narrate";
+function applyPreset(p){
+  preset = p; store.set("vs_preset", p);
+  const s = PRESETS[p];
+  $("speed").value = s.speed; $("pause").value = s.pause; $("style").value = s.style; $("stability").value = s.stability;
+  document.querySelectorAll(".preset").forEach(b => b.classList.toggle("sel", b.dataset.p === p));
+  showVals();
+}
+function showVals(){
+  $("speedV").textContent = Number($("speed").value).toFixed(2) + "x";
+  $("pauseV").textContent = Number($("pause").value).toFixed(1) + " sec";
+  $("styleV").textContent = Math.round($("style").value * 100) + "%";
+  $("stabV").textContent = Math.round($("stability").value * 100) + "%";
+}
+
+/* ---------- Script ---------- */
+const TAGS = ["[pause]","[excited]","[curious]","[warmly]","[whispers]","[laughs softly]","[sighs]","[cheerfully]","[serious]"];
+function updateCount(){ $("count").textContent = $("script").value.length.toLocaleString() + " characters"; }
+function insertTag(t){
+  const ta = $("script");
+  const s = ta.selectionStart ?? ta.value.length, e = ta.selectionEnd ?? s;
+  const before = ta.value.slice(0,s), after = ta.value.slice(e);
+  const pad = before && !/\s$/.test(before) ? " " : "";
+  ta.value = before + pad + t + " " + after;
+  const pos = (before + pad + t + " ").length;
+  ta.focus(); ta.setSelectionRange(pos,pos); updateCount();
+}
+function toggleTags(){ $("tagBox").classList.toggle("hide", !(engine === "premium" && $("model").value === "eleven_v3")); }
+
+/* ---------- Generate ---------- */
+let busy = false;
+async function generate(){
+  if(busy) return;
+  const text = $("script").value.trim();
+  if(!text){ setStatus("genStatus","Add your script in step 4.","err"); return; }
+  busy = true; $("genBtn").disabled = true;
+  try{
+    if(engine === "free") await generateFree(text); else await generatePremium(text);
+  }finally{
+    busy = false; $("genBtn").disabled = false; hideBar("genProgress");
+  }
+}
+
+async function generateFree(text){
+  try{
+    if(modelState !== "ready"){ setStatus("genStatus","Loading free voices first..."); await loadModel(); }
+    const chunks = freeChunks(text, Number($("pause").value));
+    setStatus("genStatus","Creating your audio on this device...");
+    bar("genProgress", 0.02);
+    const blob = await speakFree(chunks, freeVoice, Number($("speed").value), (i, n) => {
+      bar("genProgress", i / n);
+      setStatus("genStatus","Creating your audio on this device... " + Math.round(i / n * 100) + "%");
+    });
+    const v = FREE_VOICES.find(x => x.id === freeVoice);
+    addTake(blob, text, (v ? v.name : "Free voice") + " · Free", "wav");
+    setStatus("genStatus","Done. Your audio is ready below.","ok");
+  }catch(e){
+    setStatus("genStatus","Could not create the audio. " + e.message, "err");
+  }
+}
+
+async function generatePremium(text){
+  if(!key){ setStatus("genStatus","Connect your ElevenLabs account in step 1 first.","err"); return; }
+  if(!premVoice){ setStatus("genStatus","Choose a voice in step 2.","err"); return; }
+  const model = $("model").value;
+  const max = {eleven_v3:2800}[model] || 4500;
+  const parts = splitPremium(text, max);
+  const settings = {stability:Number($("stability").value), similarity_boost:0.8, style:Number($("style").value), use_speaker_boost:true, speed:Math.min(1.2, Math.max(0.7, Number($("speed").value)))};
+  if(model === "eleven_v3") delete settings.use_speaker_boost;
+  const blobs = [];
+  bar("genProgress", 0);
+  try{
+    for(let i=0;i<parts.length;i++){
+      setStatus("genStatus", parts.length > 1 ? "Creating section " + (i+1) + " of " + parts.length + "..." : "Creating your audio...");
+      const body = {text:parts[i], model_id:model, voice_settings:settings};
+      if(model !== "eleven_v3"){
+        if(i>0) body.previous_text = parts[i-1].slice(-800);
+        if(i<parts.length-1) body.next_text = parts[i+1].slice(0,800);
+      }
+      const res = await api("/v1/text-to-speech/" + encodeURIComponent(premVoice) + "?output_format=mp3_44100_128", {
+        method:"POST", headers:{"Content-Type":"application/json","Accept":"audio/mpeg"}, body:JSON.stringify(body)
+      });
+      blobs.push(await res.blob());
+      bar("genProgress", (i+1)/parts.length);
+    }
+    const v = premVoices.find(x=>x.voice_id===premVoice);
+    addTake(new Blob(blobs, {type:"audio/mpeg"}), text, (v ? v.name.split(" - ")[0] : "Voice") + " · Premium", "mp3");
+    setStatus("genStatus","Done. Your audio is ready below.","ok");
+    loadCredits();
+  }catch(e){
+    let msg = e.message;
+    if(blobs.length) msg += " (" + blobs.length + " of " + parts.length + " sections finished before this.)";
+    setStatus("genStatus", msg, "err");
+  }
+}
+
+let takeNum = 0;
+function addTake(blob, text, label, ext){
+  takeNum++;
+  const name = $("title").value.trim() || ("Recording " + takeNum);
+  const url = URL.createObjectURL(blob);
+  const file = name.replace(/[^\w ]+/g,"").trim().replace(/\s+/g,"_") || "recording";
+  const el = document.createElement("div");
+  el.className = "take";
+  el.innerHTML = '<div class="top"><b></b><span></span></div><audio controls preload="metadata"></audio><p></p><div class="row"><a class="btn gold" download></a></div>';
+  el.querySelector("b").textContent = name;
+  el.querySelector("span").textContent = label + " · " + preset.charAt(0).toUpperCase() + preset.slice(1).replace("story","Storytime");
+  el.querySelector("audio").src = url;
+  el.querySelector("p").textContent = text;
+  const a = el.querySelector("a"); a.href = url; a.download = file + "." + ext; a.textContent = "Download " + ext.toUpperCase();
+  $("history").prepend(el);
+  el.querySelector("audio").play().catch(()=>{});
+}
+
+/* ---------- Wire up ---------- */
+document.querySelectorAll(".engine").forEach(b => b.onclick = () => setEngine(b.dataset.e));
+$("loadBtn").onclick = () => loadModel().catch(()=>{});
+$("connectBtn").onclick = connect;
+$("apiKey").addEventListener("keydown", e => { if(e.key === "Enter") connect(); });
+$("forgetBtn").onclick = forget;
+$("refreshBtn").onclick = () => { if(key) loadPremVoices().catch(e=>setStatus("connectStatus",e.message,"err")); };
+$("search").oninput = renderVoices;
+$("gender").onchange = renderVoices;
+document.querySelectorAll(".preset").forEach(b => b.onclick = () => applyPreset(b.dataset.p));
+["speed","pause","style","stability"].forEach(id => $(id).oninput = showVals);
+$("model").onchange = () => { store.set("vs_model", $("model").value); toggleTags(); };
+$("script").oninput = () => { updateCount(); store.set("vs_draft", $("script").value); };
+$("genBtn").onclick = generate;
+TAGS.forEach(t => { const b = document.createElement("button"); b.textContent = t; b.onclick = () => insertTag(t); $("tags").appendChild(b); });
+
+if("gpu" in navigator && !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) $("gpuRow").classList.remove("hide");
+const savedModel = store.get("vs_model"); if(savedModel) $("model").value = savedModel;
+const draft = store.get("vs_draft"); if(draft) $("script").value = draft;
+if(key){ $("apiKey").placeholder = "Key saved on this device"; $("connectedRow").classList.remove("hide"); }
+applyPreset(preset); updateCount(); setEngine(engine);
+if(engine === "free" && store.get("vs_loaded_once")) loadModel().catch(()=>{});
+</script>
+</body>
+</html>
