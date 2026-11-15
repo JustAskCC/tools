@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFC83D">
+<meta name="description" content="Sunny is a friendly talk buddy for kids: friends, homework, and big feelings.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sunny">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Sunny, Your Talk Buddy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sky:#EAF6FF; --sky2:#D6EEFF; --sun:#FFC83D; --sun2:#FF9F1C; --ink:#1F2A44;
+    --soft:#5B6785; --card:#FFFFFF; --kid:#7C5CFF; --kidbg:#EFEAFF; --mint:#2EC4B6;
+    --rose:#FF5D73; --line:#DCE6F2;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    font-family:"Nunito",system-ui,sans-serif;color:var(--ink);
+    background:linear-gradient(180deg,var(--sky) 0%,#FFF8EC 100%);
+    display:flex;flex-direction:column;min-height:100vh;
+  }
+  body{padding:env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left)}
+  .bar{padding-bottom:calc(14px + env(safe-area-inset-bottom)) !important}
+  .install{display:none;align-items:center;gap:10px;background:#fff;border:2px solid var(--sun);border-radius:16px;padding:10px 12px;margin:8px 0;font-size:14px}
+  .install.show{display:flex}
+  .install img{width:40px;height:40px;border-radius:10px}
+  .install .go{margin-left:auto;border:none;background:var(--sun2);color:#fff;border-radius:999px;padding:8px 14px;font:800 14px "Baloo 2";cursor:pointer;white-space:nowrap}
+  .install .x{border:none;background:none;font-size:20px;color:var(--soft);cursor:pointer}
+  header{display:flex;align-items:center;gap:12px;padding:14px 18px 6px;max-width:760px;width:100%;margin:0 auto}
+  header h1{font-family:"Baloo 2",cursive;font-size:26px;margin:0;line-height:1}
+  header p{margin:2px 0 0;color:var(--soft);font-size:14px}
+  .ages{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+  .ages button{border:2px solid var(--line);background:#fff;border-radius:999px;padding:5px 10px;font:700 13px "Nunito";color:var(--soft);cursor:pointer}
+  .ages button.on{border-color:var(--kid);color:var(--kid);background:var(--kidbg)}
+  main{flex:1;max-width:760px;width:100%;margin:0 auto;padding:0 14px;display:flex;flex-direction:column;min-height:0}
+
+  .stage{display:flex;flex-direction:column;align-items:center;padding:6px 0 4px}
+  .sunny{width:120px;height:120px;transition:transform .3s}
+  .sunny .rays{transform-origin:60px 60px;animation:spin 18s linear infinite}
+  .sunny.talking .mouth{animation:talk .28s ease-in-out infinite alternate}
+  .sunny.listening{transform:scale(1.06)}
+  .sunny.thinking .eyes{animation:look 1.2s ease-in-out infinite alternate}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes talk{from{transform:scaleY(.4)}to{transform:scaleY(1.2)}}
+  @keyframes look{from{transform:translateX(-3px)}to{transform:translateX(3px)}}
+  .mouth{transform-origin:60px 74px;transform-box:view-box}
+  .status{font-family:"Baloo 2";font-weight:700;color:var(--soft);font-size:16px;min-height:24px}
+
+  .topics{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:6px 0 10px}
+  .topic{border:none;border-radius:16px;padding:10px 14px;font:800 15px "Baloo 2";cursor:pointer;color:var(--ink);box-shadow:0 2px 0 rgba(31,42,68,.12)}
+  .topic:active{transform:translateY(1px)}
+  .t1{background:#FFE3EC}.t2{background:#DFF7F3}.t3{background:#FFF1C9}.t4{background:#E7E2FF}.t5{background:#E3F0FF}
+
+  .chat{flex:1;overflow-y:auto;padding:6px 2px 12px;display:flex;flex-direction:column;gap:10px;min-height:160px}
+  .msg{max-width:84%;padding:12px 14px;border-radius:20px;font-size:17px;line-height:1.45;white-space:pre-wrap;word-wrap:break-word}
+  .msg.sunny-msg{background:var(--card);align-self:flex-start;border-bottom-left-radius:6px;box-shadow:0 2px 8px rgba(31,42,68,.07)}
+  .msg.kid-msg{background:var(--kid);color:#fff;align-self:flex-end;border-bottom-right-radius:6px}
+  .msg .say{display:inline-block;margin-top:6px;border:none;background:var(--sky2);color:var(--ink);border-radius:999px;padding:3px 10px;font:700 13px "Nunito";cursor:pointer}
+  .help-card{align-self:stretch;background:#FFF0F2;border:2px solid var(--rose);border-radius:18px;padding:14px 16px;font-size:16px;line-height:1.45}
+  .help-card b{font-family:"Baloo 2";font-size:18px;color:#C2183A}
+
+  .bar{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(255,248,236,0),#FFF8EC 30%);padding:10px 0 14px}
+  .row{display:flex;gap:10px;align-items:center}
+  .mic{flex:none;width:72px;height:72px;border-radius:50%;border:none;cursor:pointer;
+    background:radial-gradient(circle at 35% 30%,#FFE08A,var(--sun2));box-shadow:0 4px 0 #D97A00, 0 8px 18px rgba(255,159,28,.35);
+    display:grid;place-items:center}
+  .mic svg{width:32px;height:32px}
+  .mic.on{background:radial-gradient(circle at 35% 30%,#FF9AA8,var(--rose));box-shadow:0 4px 0 #B8233A,0 0 0 8px rgba(255,93,115,.18)}
+  .mic[hidden]{display:none}
+  .typebox{flex:1;min-width:0;display:flex;background:#fff;border:2px solid var(--line);border-radius:999px;padding:4px 4px 4px 16px}
+  .typebox input{flex:1;border:none;outline:none;font:600 17px "Nunito";background:transparent;color:var(--ink);min-width:0}
+  .typebox button{border:none;background:var(--kid);color:#fff;border-radius:999px;padding:10px 16px;font:800 15px "Baloo 2";cursor:pointer}
+  .controls{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:13px;color:var(--soft);gap:8px;flex-wrap:wrap}
+  .controls button{border:none;background:none;color:var(--soft);font:700 13px "Nunito";cursor:pointer;text-decoration:underline}
+  .toggle{display:flex;align-items:center;gap:6px}
+  @media (max-width:520px){
+    header{flex-wrap:wrap}
+    .ages{margin-left:0;justify-content:flex-start;width:100%}
+    .sunny{width:96px;height:96px}
+    .mic{width:60px;height:60px}
+    .topic{padding:8px 12px;font-size:14px}
+  }
+  .grownups{max-width:760px;margin:0 auto 18px;padding:0 18px;font-size:13px;color:var(--soft)}
+  .grownups details{background:#fff;border-radius:14px;padding:10px 14px;border:1px solid var(--line)}
+  .grownups summary{font-weight:700;cursor:pointer}
+  .notice{background:#FFF7DD;border:1px solid #F5D77A;border-radius:14px;padding:10px 14px;font-size:14px;margin:6px 0}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Hi, I'm Sunny!</h1>
+    <p>Your talk buddy for friends, homework, and big feelings</p>
+  </div>
+  <div class="ages" id="ages" aria-label="How old are you?">
+    <button data-age="5 to 7">Ages 5 to 7</button>
+    <button data-age="8 to 10" class="on">Ages 8 to 10</button>
+    <button data-age="11 to 13">Ages 11 to 13</button>
+  </div>
+</header>
+
+<main>
+  <div class="stage">
+    <svg class="sunny" id="sunny" viewBox="0 0 120 120" aria-hidden="true">
+      <g class="rays" fill="#FFC83D">
+        <g id="ray"><path d="M60 2 L66 18 L54 18 Z"/></g>
+        <use href="#ray" transform="rotate(30 60 60)"/><use href="#ray" transform="rotate(60 60 60)"/>
+        <use href="#ray" transform="rotate(90 60 60)"/><use href="#ray" transform="rotate(120 60 60)"/>
+        <use href="#ray" transform="rotate(150 60 60)"/><use href="#ray" transform="rotate(180 60 60)"/>
+        <use href="#ray" transform="rotate(210 60 60)"/><use href="#ray" transform="rotate(240 60 60)"/>
+        <use href="#ray" transform="rotate(270 60 60)"/><use href="#ray" transform="rotate(300 60 60)"/>
+        <use href="#ray" transform="rotate(330 60 60)"/>
+      </g>
+      <circle cx="60" cy="60" r="38" fill="#FFD95A" stroke="#FF9F1C" stroke-width="3"/>
+      <circle cx="40" cy="68" r="6" fill="#FF9AA8" opacity=".6"/>
+      <circle cx="80" cy="68" r="6" fill="#FF9AA8" opacity=".6"/>
+      <g class="eyes" fill="#1F2A44">
+        <ellipse cx="47" cy="54" rx="4.5" ry="6"/><ellipse cx="73" cy="54" rx="4.5" ry="6"/>
+        <circle cx="48.5" cy="52" r="1.6" fill="#fff"/><circle cx="74.5" cy="52" r="1.6" fill="#fff"/>
+      </g>
+      <path class="mouth" d="M50 72 Q60 82 70 72 Q60 76 50 72 Z" fill="#1F2A44"/>
+    </svg>
+    <div class="status" id="status">Tap the sun button and talk to me!</div>
+  </div>
+
+  <div class="topics" id="topics">
+    <button class="topic t1" data-topic="I have a problem with a friend.">👫 Friends</button>
+    <button class="topic t2" data-topic="I need help with my homework.">📚 Homework</button>
+    <button class="topic t3" data-topic="I have a big feeling and I don't know what to do.">💛 Big feelings</button>
+    <button class="topic t4" data-topic="Something is going on at home.">🏠 Family</button>
+    <button class="topic t5" data-topic="I'm worried about something at school.">🏫 School worries</button>
+  </div>
+
+  <div class="install" id="install">
+    <img src="icons/icon-192.png" alt="">
+    <div id="installText"><b>Put Sunny on your home screen!</b><br>Then Sunny opens like an app.</div>
+    <button class="go" id="installGo">Add Sunny</button>
+    <button class="x" id="installX" aria-label="Close">×</button>
+  </div>
+  <div id="notice"></div>
+  <div class="chat" id="chat" aria-live="polite"></div>
+
+  <div class="bar">
+    <div class="row">
+      <button class="mic" id="mic" aria-label="Talk to Sunny" hidden>
+        <svg viewBox="0 0 24 24" fill="#1F2A44"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-2.08A7 7 0 0 0 19 12h-2Z"/></svg>
+      </button>
+      <form class="typebox" id="form">
+        <input id="input" placeholder="Or type to Sunny here..." autocomplete="off" aria-label="Type a message">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div class="controls">
+      <label class="toggle"><input type="checkbox" id="voiceOn" checked> Sunny talks out loud</label>
+      <button id="stopTalk">Stop talking</button>
+      <button id="restart">Start over</button>
+    </div>
+  </div>
+</main>
+
+<div class="grownups">
+  <details>
+    <summary>For grown ups</summary>
+    <p>Sunny is an AI talk buddy for kids. It helps kids name feelings, think through friend problems, and work through homework step by step (it guides instead of giving answers). It always encourages kids to talk with a trusted adult, and if a child mentions being hurt, unsafe, or wanting to hurt themselves, Sunny shows a help card telling them to find a grown up right away, with the 988 Suicide and Crisis Lifeline (call or text 988) and 911 for emergencies.</p>
+    <p>Conversations are not saved on the phone or the server. Starting over or closing the app clears everything.</p><p>Sunny is not a therapist and is not a replacement for a parent, teacher, or counselor. Please use it alongside a caring adult.</p>
+  </details>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
