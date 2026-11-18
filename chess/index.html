@@ -133,6 +133,13 @@ h2.q{font-weight:900;font-size:20px;text-align:center;margin:18px 0 10px}
 .brandlogo{display:block;width:min(78%,360px);margin:4px auto -46px;position:relative;z-index:2;filter:drop-shadow(0 8px 18px rgba(0,0,0,.45))}
 .hero .tag{padding-top:20px}
 .onlinebtn{display:block;width:100%;margin:18px 0 0;padding:14px 16px;border-radius:18px;background:linear-gradient(135deg,var(--purple),var(--blue));text-align:left;box-shadow:0 5px 0 rgba(0,0,0,.3)}
+.practicebtn{display:block;width:100%;margin:12px 0 0;padding:14px 16px;border-radius:18px;background:linear-gradient(135deg,#1ABC9C,#2E86FF);text-align:left;box-shadow:0 5px 0 rgba(0,0,0,.3)}
+.practicebtn .ob1{display:block;font-weight:900;font-size:19px}.practicebtn .ob2{display:block;font-size:13px;font-weight:700;opacity:.9;margin-top:2px}
+#game.practice .clock{visibility:hidden}#game.practice .ctrls{display:none}
+.pbar{display:none;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:10px}#game.practice .pbar{display:grid}
+.pbar button{padding:12px 2px;border-radius:12px;font-weight:800;font-size:14px;box-shadow:0 4px 0 rgba(0,0,0,.3)}
+.pbar .pn{background:var(--green)}.pbar .pn.wait{opacity:.45}
+.pdots{text-align:center;margin-top:8px;font-weight:800;font-size:13px;opacity:.85}
 .onlinebtn .ob1{display:block;font-weight:900;font-size:19px}.onlinebtn .ob2{display:block;font-size:13px;font-weight:700;opacity:.9;margin-top:2px}
 .avgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;max-height:300px;overflow:auto;padding:4px}
 .avgrid button{padding:0;border-radius:50%;background:none;border:3px solid transparent;aspect-ratio:1}
@@ -221,6 +228,7 @@ h2.q{font-weight:900;font-size:20px;text-align:center;margin:18px 0 10px}
     <div class="tag"><div class="sub" id="progress"></div></div>
   </div>
   <button class="onlinebtn hide" id="bOnline"><span class="ob1">Play a Friend Online</span><span class="ob2">Play someone at their house with a game code</span></button>
+  <button class="practicebtn" id="bPractice"><span class="ob1">♞ Special Moves Practice</span><span class="ob2">Learn castling, en passant and promotion with Mr. Brooks</span></button>
   <h2 class="q">Who do you want to play?</h2>
   <div id="roster"></div>
 </section>
@@ -247,6 +255,8 @@ h2.q{font-weight:900;font-size:20px;text-align:center;margin:18px 0 10px}
     <button class="k3" id="bResign">Resign</button>
     <button class="k4" id="bNew">New Game</button>
   </div>
+  <div class="pbar"><button style="background:#888" id="pRetry">Try Again</button><button class="pn wait" id="pNext">Next</button><button style="background:var(--coral)" id="pExit">Exit</button></div>
+  <div class="pdots" id="pDots"></div>
   <div class="log" id="log"></div>
 </section>
 </div>
@@ -907,7 +917,7 @@ function say(text,thinking,clip){
   b.innerHTML=thinking?'<span class="dots"><span></span><span></span><span></span></span> '+text:text;
   b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),160);
 }
-function startGame(){if(danceDone)danceDone();
+function startGame(){if(danceDone)danceDone();if(PRACTICE){PRACTICE=null;$("game").classList.remove("practice");}
   if(ONLINE&&!isOnline())closeOnline();
   gameId++;clearTimeout(aiTimer);
   myColor=colorPref==="r"?(Math.random()<.5?"w":"b"):colorPref;
@@ -928,7 +938,7 @@ const fmt=s=>Math.floor(s/60)+":"+String(Math.floor(s%60)).padStart(2,"0");
 /* if you take a long time, the opponent gets restless */
 let idleT=null,idleN=0;
 function armIdle(){clearTimeout(idleT);idleT=setTimeout(function nudge(){
-  if(over||busy||isOnline()||S.turn!==myColor||serious()){return;}
+  if(over||busy||isOnline()||S.turn!==myColor||serious()||PRACTICE){return;}
   const opts=idleN%3===2?["snore"]:["drumFingers","cuckoo","tick"];
   const n=opts[Math.floor(Math.random()*opts.length)];idleN++;
   if(n==="snore"){const b=$("bubble");b.textContent="Zzz...";}
@@ -1019,6 +1029,7 @@ function render(anim){
   $("log").innerHTML=h||"<span style='opacity:.6'>Moves will show up here.</span>";$("log").scrollTop=9999;
   const st=$("status");
   if(over)return;
+  if(PRACTICE){st.textContent=PRACTICE.done?"Nice! Tap Next for the next special move.":(busy?"Watch Mr. Brooks's move...":"Follow Mr. Brooks's directions.");return;}
   if(busy)st.textContent=R[cur].name+" is thinking...";
   else if(S.turn===myColor)st.textContent=inCheck(S,myColor)?"You're in check! Protect your king.":"Your move. Tap a piece, then tap where it goes.";
   drawClock();
@@ -1027,6 +1038,14 @@ function render(anim){
 /* player input */
 function tap(i){
   if(busy||over||S.turn!==myColor)return;
+  if(PRACTICE){const L=LESSONS[PRACTICE.i];if(!L||PRACTICE.done)return;
+    const mv=moves.find(m=>m.to===i);
+    if(sel!==null&&mv){if(mv.promo)return askPromo(mv);return play(mv);}
+    const p=S.b[i];
+    if(p&&p[0]===myColor&&i!==L.from){bubble(L.wrong);sel=null;moves=[];hintMv={from:L.from,to:L.from};render();return;}
+    if(i===L.from){sel=i;moves=legal(S).filter(m=>m.from===i&&m.to===L.to);hintMv=null;sfx("select");}
+    else if(sel!==null){bubble(i===L.to?L.wrong:"Not that square. Look for the dot or ring on the board.");}
+    render();return;}
   hintMv=null;
   const mv=moves.find(m=>m.to===i);
   if(sel!==null&&mv){if(mv.promo)return askPromo(mv);return play(mv);}
@@ -1041,6 +1060,7 @@ function askPromo(mv){
   $("promoOv").classList.remove("hide");
 }
 function play(mv,promoTo){
+  if(PRACTICE)return practicePlay(mv,promoTo);
   const who=S.turn,O=O_(),movedP=S.b[mv.from];
   hist.push({S,last,capsBy:{w:capsBy.w.slice(),b:capsBy.b.slice()},log:log.slice(),timers:{...timers}});
   log.push(san(S,mv,promoTo));
@@ -1215,6 +1235,86 @@ function winnerDance(who,title){
     setTimeout(()=>{ov.onclick=done;},500);
   });
 }
+
+/* ---------- special moves practice with Mr. Brooks ---------- */
+let PRACTICE=null;
+const LESSONS=[
+ {title:"Castling (short side)",
+  set:{60:"wK",63:"wR",56:"wR",53:"wP",54:"wP",55:"wP",48:"wP",49:"wP",50:"wP",4:"bK",12:"bP",13:"bP"},turn:"w",cr:{wK:1,wQ:1,bK:0,bQ:0},
+  from:60,to:62,
+  intro:"Hi! I'm Mr. Brooks from Chess Club. Lesson 1 is Castling. It's the only move where two pieces move at the same time! Tap your king, then tap the square two spaces to the right.",
+  wrong:"Not that piece. Tap your king, the one that's glowing.",
+  done:"You castled! Your king jumped two squares and the rook hopped over to guard him. You can only castle if the king and that rook haven't moved yet, nothing is between them, and your king isn't in check."},
+ {title:"Castling (long side)",
+  set:{60:"wK",63:"wR",56:"wR",53:"wP",54:"wP",55:"wP",48:"wP",49:"wP",50:"wP",4:"bK",12:"bP",13:"bP"},turn:"w",cr:{wK:1,wQ:1,bK:0,bQ:0},
+  from:60,to:58,
+  intro:"Lesson 2: Castling the long way. You can castle on the other side too! Tap your king, then tap the square two spaces to the left.",
+  wrong:"Tap your king first. It's glowing.",
+  done:"Long castle! The king moved two squares to the left and the rook jumped right over him. Same rules as before: the king and rook can't have moved, and nothing can be in between."},
+ {title:"En passant",
+  set:{60:"wK",4:"bK",28:"wP",11:"bP",53:"wP",14:"bP"},turn:"b",cr:{wK:0,wQ:0,bK:0,bQ:0},
+  pre:{from:11,to:27},from:28,to:19,
+  intro:"Lesson 3: En passant. That's French for “in passing.” Watch my pawn...",
+  after:"My pawn jumped two squares and landed right next to yours. That means you can capture it as if it only moved one square! Tap your pawn, then tap the square right behind my pawn.",
+  wrong:"Use your pawn that's right next to mine. It's glowing.",
+  done:"En passant! Your pawn moved diagonally and captured my pawn in passing. You only get this chance on the very next move, so watch for it in your games!"},
+ {title:"Promotion",
+  set:{60:"wK",9:"wP",7:"bK",15:"bP"},turn:"w",cr:{wK:0,wQ:0,bK:0,bQ:0},
+  from:9,to:1,
+  intro:"Lesson 4: Promotion. When a pawn makes it all the way to the other side, it turns into a stronger piece! Tap your pawn and move it to the very last row.",
+  wrong:"Move your pawn, the one that's glowing.",
+  doneQ:"You picked a queen, the strongest piece on the board! That's what most players choose.",
+  done:"Nice choice! You can turn your pawn into a queen, rook, bishop or knight. Most players pick a queen, but sometimes a knight is the smart move."}
+];
+function practiceStart(){
+  if(danceDone)danceDone();if(ONLINE)closeOnline();
+  gameId++;clearTimeout(aiTimer);clearInterval(tick);
+  PRACTICE={i:0};cur="brooks";myColor="w";flip=false;over=false;
+  $("oppAv").src=FACES.brooks;$("oppName").textContent="Mr. Brooks, Chess Coach";
+  $("home").classList.add("hide");$("game").classList.remove("hide");$("game").classList.add("practice");
+  ["endOv","promoOv","confirmOv"].forEach(i=>$(i).classList.add("hide"));
+  sfx("start");loadLesson(0);window.scrollTo(0,0);
+}
+function loadLesson(i){
+  const L=LESSONS[i];PRACTICE={i,done:false,id:++gameId};
+  const b=Array(64).fill(null);for(const k in L.set)b[k]=L.set[k];
+  S={b,turn:L.turn,cr:{...L.cr},ep:-1};
+  hist=[];log=[];last=null;sel=null;moves=[];busy=false;capsBy={w:[],b:[]};timers={w:600,b:600};
+  $("pNext").classList.add("wait");$("pNext").textContent=i===LESSONS.length-1?"Finish":"Next";
+  $("pDots").textContent="Move "+(i+1)+" of "+LESSONS.length+": "+L.title;
+  bubble(L.intro);
+  if(L.pre){
+    busy=true;hintMv=null;render();
+    const id=PRACTICE.id;
+    setTimeout(()=>{if(!PRACTICE||PRACTICE.id!==id)return;
+      const mv=legal(S).find(m=>m.from===L.pre.from&&m.to===L.pre.to);
+      log.push(san(S,mv));const n=apply(S,mv);delete n.cap;S=n;last=mv;busy=false;sfx("move");
+      hintMv={from:L.from,to:L.from};bubble(L.after);render(mv);},2200);
+  }else{hintMv={from:L.from,to:L.from};render();}
+}
+function practicePlay(mv,promoTo){
+  const L=LESSONS[PRACTICE.i],movedP=S.b[mv.from];
+  log.push(san(S,mv,promoTo));
+  const n=apply(S,mv,promoTo);const cap=n.cap;delete n.cap;if(cap)capsBy.w.push(cap);
+  S=n;last=mv;sel=null;moves=[];hintMv=null;PRACTICE.done=true;
+  sfx(cap?"capture":"move");
+  if(mv.castle)setTimeout(()=>toon("whoosh"),60);
+  if(movedP&&movedP[1]==="P"&&(mv.to<8||mv.to>55))setTimeout(()=>toon("sparkle"),80);
+  setTimeout(()=>{toon("tada");setTimeout(()=>toon("applause"),500);},450);
+  bubble(L.doneQ&&promoTo==="Q"?L.doneQ:L.done);
+  $("pNext").classList.remove("wait");
+  render(mv);
+}
+$("bPractice").onclick=practiceStart;
+$("pRetry").onclick=()=>{if(PRACTICE)loadLesson(PRACTICE.i);};
+$("pNext").onclick=()=>{if(!PRACTICE)return;
+  if(!PRACTICE.done){bubble("Try the move first, then tap Next.");return;}
+  if(PRACTICE.i<LESSONS.length-1)loadLesson(PRACTICE.i+1);
+  else{PRACTICE.i=LESSONS.length;bubble("You know all the special moves: castling, en passant and promotion! Now go use them in a real game.");
+    confetti();toon("fanfare");$("pNext").textContent="Done";$("pNext").onclick=()=>{goHome();};
+    $("pDots").textContent="All 4 special moves complete!";}};
+$("pExit").onclick=()=>goHome();
+const pNextHandler=$("pNext").onclick;
 function confetti(){
   const cols=["#2E86FF","#FFC93C","#FF6F61","#1ABC9C","#8E44AD","#2ECC71","#FF8C1A","#E74C3C"];
   for(let k=0;k<100;k++){const d=document.createElement("div");d.className="confetti";d.style.left=Math.random()*100+"vw";d.style.background=cols[k%8];
@@ -1250,7 +1350,7 @@ $("bAgain").onclick=()=>{
   startGame();};
 $("bSwitch").onclick=goHome;
 
-function goHome(){if(danceDone)danceDone();if(ONLINE){send({t:"bye"});setTimeout(closeOnline,200);}["bUndo","bHint"].forEach(i=>$(i).classList.remove("hide"));$("cheers").classList.add("hide");clockSecs=+((document.querySelector("#segClock button.on")||{dataset:{v:600}}).dataset.v);try{speechSynthesis.cancel()}catch(e){}stopClip();gameId++;over=true;clearTimeout(aiTimer);clearInterval(tick);$("endOv").classList.add("hide");$("game").classList.add("hide");$("home").classList.remove("hide");buildRoster();window.scrollTo(0,0);}
+function goHome(){if(danceDone)danceDone();if(PRACTICE){PRACTICE=null;$("game").classList.remove("practice");$("pNext").onclick=pNextHandler;}if(ONLINE){send({t:"bye"});setTimeout(closeOnline,200);}["bUndo","bHint"].forEach(i=>$(i).classList.remove("hide"));$("cheers").classList.add("hide");clockSecs=+((document.querySelector("#segClock button.on")||{dataset:{v:600}}).dataset.v);try{speechSynthesis.cancel()}catch(e){}stopClip();gameId++;over=true;clearTimeout(aiTimer);clearInterval(tick);$("endOv").classList.add("hide");$("game").classList.add("hide");$("home").classList.remove("hide");buildRoster();window.scrollTo(0,0);}
 </script>
 <script>
 if("serviceWorker" in navigator && /justaskcc\.com|coolkidsuniversity\.(com|org)|localhost|127\.0\.0\.1/.test(location.hostname)){
