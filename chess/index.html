@@ -1270,7 +1270,7 @@ const LESSONS=[
 function coach(key,text){
   bubble(text);
   try{speechSynthesis.cancel()}catch(e){}stopClip();
-  if(VOICE&&key)lastSpeech=playOn(0,"audio/brooks_practice/"+key+".mp3");
+  if(VOICE&&key)lastSpeech=playOn(0,"audio/brooks_practice/"+key+".mp3?v=2");
 }
 function practiceStart(){
   if(danceDone)danceDone();if(ONLINE)closeOnline();
