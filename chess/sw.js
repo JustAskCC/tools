@@ -1,5 +1,5 @@
 // Lets the Cool Kids Chess Club work offline once it has been opened.
-const CACHE = 'ckcc-v2';
+const CACHE = 'ckcc-v3';
 const CORE = ['./', 'index.html', 'app.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-180.png', 'audio/manifest.json'];
 
 self.addEventListener('install', e => {
@@ -31,7 +31,7 @@ self.addEventListener('fetch', e => {
     })));
   } else {
     // the game page and voice list: get the newest when online, saved copy when offline
-    e.respondWith(fetch(e.request).then(res => {
+    e.respondWith(fetch(e.request, { cache: 'no-cache' }).then(res => {
       if (res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); }
       return res;
     }).catch(() => caches.match(e.request, { ignoreSearch: true }).then(r => r || caches.match('index.html'))));

@@ -1386,6 +1386,9 @@ function goHome(){if(danceDone)danceDone();if(PRACTICE){PRACTICE=null;try{stopCl
 <script>
 if("serviceWorker" in navigator && /justaskcc\.com|coolkidsuniversity\.(com|org)|localhost|127\.0\.0\.1/.test(location.hostname)){
   window.addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").catch(()=>{});});
+  /* when a newer version of the game arrives, switch to it right away */
+  const hadSW=!!navigator.serviceWorker.controller;let swReloaded=false;
+  navigator.serviceWorker.addEventListener("controllerchange",()=>{if(hadSW&&!swReloaded){swReloaded=true;location.reload();}});
 }
 </script>
 </body>
