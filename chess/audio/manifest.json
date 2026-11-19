@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-19T00:52:04.428Z",
+ "updated": "2026-11-19T01:57:38.888Z",
  "characters": [
   {
    "key": "malik",
@@ -6438,10 +6438,12 @@
    "piece": null,
    "text": "Look at those blue squares, baby. Grandma is helping you, just this once!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_hint.mp3"
+     ]
     }
    ]
   },
@@ -6452,10 +6454,12 @@
    "piece": null,
    "text": "A stalemate? Well, bless it. Nobody won, but we both played beautifully!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_draw.mp3"
+     ]
     }
    ]
   },
@@ -6466,10 +6470,12 @@
    "piece": null,
    "text": "Good game, sweetheart. Grandma is proud of you for playing. Let's try again soon!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_resign.mp3"
+     ]
     }
    ]
   },
@@ -6480,10 +6486,12 @@
    "piece": null,
    "text": "Oh, baby, your time ran out! Patience is a virtue, but so is moving those pieces!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_timewin.mp3"
+     ]
     }
    ]
   },
@@ -6494,10 +6502,12 @@
    "piece": null,
    "text": "Lord, my time ran out! Grandma was too busy praying over that move!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_timelose.mp3"
+     ]
     }
    ]
   },
@@ -6508,10 +6518,12 @@
    "piece": null,
    "text": "Let's play again, sweetheart! Grandma is just getting warmed up. Hallelujah!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/alexis/alexis_rematch.mp3"
+     ]
     }
    ]
   },
