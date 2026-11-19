@@ -837,11 +837,19 @@ let lastSpeech=Promise.resolve();
 let CLIPS=null, CLIPAUDIO=[], clipToken=0;
 fetch("audio/manifest.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(m=>{
   if(!m||!m.clips)return;
-  CLIPS={};
+  CLIPS={};PACKS=new Set(m.packs||[]);
   for(const c of m.clips){(CLIPS[c.char]=CLIPS[c.char]||{});(CLIPS[c.char][c.moment]=CLIPS[c.char][c.moment]||[]).push(c);}
 }).catch(()=>{});
+/* Some copies of the game keep each character's clips in one bundle file, audio/packs/<char>.json */
+let PACKS=new Set();const PACKDATA={};
+function loadPack(ch){if(!PACKS.has(ch))return Promise.resolve(null);
+  return PACKDATA[ch]=PACKDATA[ch]||fetch("audio/packs/"+ch+".json").then(r=>r.json()).then(o=>{const u={};
+    for(const k in o){const b=atob(o[k]),a=new Uint8Array(b.length);for(let i=0;i<b.length;i++)a[i]=b.charCodeAt(i);u[k]=URL.createObjectURL(new Blob([a],{type:"audio/mpeg"}));}return u;}).catch(()=>null);}
+async function resolveSrc(src){const m=/^audio\/([^\/]+)\//.exec(src);if(!m||!PACKS.has(m[1]))return src;
+  const u=await loadPack(m[1]);return (u&&u[src.split("?")[0]])||src;}
 function clipFor(moment,piece){
   if(!CLIPS)return null;
+  loadPack(SCRIPTKEY[cur]||cur);
   const list=(CLIPS[SCRIPTKEY[cur]||cur]||{})[moment];
   if(!list||!list.length)return null;
   let pool=list;
@@ -857,7 +865,7 @@ const PLAYERS=[new Audio(),new Audio()];PLAYERS.forEach(p=>{p.preload="auto";p.s
 let unlocked=false;
 function unlockAudio(){if(unlocked)return;PLAYERS.forEach(p=>{try{p.src=SILENT;const pr=p.play();if(pr)pr.then(()=>{p.pause();unlocked=true;}).catch(()=>{});}catch(e){}});}
 document.addEventListener("pointerdown",unlockAudio);document.addEventListener("touchend",unlockAudio);
-function playOn(i,src){return new Promise(res=>{const p=PLAYERS[i]||PLAYERS[0];try{p.pause();}catch(e){}
+async function playOn(i,src){const tk=clipToken;src=await resolveSrc(src);if(tk!==clipToken)return;return new Promise(res=>{const p=PLAYERS[i]||PLAYERS[0];try{p.pause();}catch(e){}
   p.onended=res;p.onerror=res;p.onpause=res;p.src=src;const pr=p.play();if(pr)pr.catch(res);CLIPAUDIO.push(p);});}
 async function playClip(clip){
   stopClip();const my=clipToken;
