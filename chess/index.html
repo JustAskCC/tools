@@ -873,7 +873,7 @@ const HYPE=["fun9","fun10"];let hypeLast=null;
 function hype(){const c=HYPE.filter(x=>x!==hypeLast);hypeLast=c[Math.floor(Math.random()*c.length)];return hypeLast;}let funFor=null;
 /* these characters always celebrate a capture with "Big, big, big Michael Michael" */
 /* Carter mixes "Big Michael" with "Emotional damage!" */
-const CAPTURE_SOUND={carter:["fun7","carter1"],chloe:"fun7",fred:"fun7",reggie:"fun7"};
+const CAPTURE_SOUND={carter:"carter1",chloe:"fun7",fred:"fun7",reggie:"fun7"};
 function nextFun(){if(funFor!==cur){funFor=cur;funBag=[];}if(!funBag.length)funBag=(FUN_BY[cur]||FUN).slice().sort(()=>Math.random()-.5);return funBag.pop();}
 /* play a sound with music notes in the bubble, then optionally say a line */
 function soundThen(f,next){
@@ -1097,7 +1097,7 @@ function play(mv,promoTo){
     else if(serious()&&Math.random()<.35)sayLine("quiet");
     aiTimer=setTimeout(()=>aiTurn(gameId),cap||inCheck(S,S.turn)?1100:250);
   }else{
-    if(inCheck(S,myColor)){const q=Math.random();if(cur==="carter"&&q<.4)soundThen("carter1",()=>sayLine("gavecheck"));else if(q<.3)soundThen(hype(),()=>sayLine("gavecheck"));else if(q<.5)soundThen("cory1",()=>sayLine("gavecheck"));else sayLine("gavecheck");}
+    if(inCheck(S,myColor)){const q=Math.random();if(cur==="carter")soundThen("carter1",()=>sayLine("gavecheck"));else if(q<.3)soundThen(hype(),()=>sayLine("gavecheck"));else if(q<.5)soundThen("cory1",()=>sayLine("gavecheck"));else sayLine("gavecheck");}
     else if(cap){
       const rr=Math.random();
       const cs=Array.isArray(CAPTURE_SOUND[cur])?CAPTURE_SOUND[cur][Math.floor(Math.random()*CAPTURE_SOUND[cur].length)]:CAPTURE_SOUND[cur];
@@ -1108,7 +1108,8 @@ function play(mv,promoTo){
     else{
       /* ordinary move: mix it up so the game never goes flat */
       const r=Math.random();
-      if(r<.18)soundThen(hype(),null);
+      if(cur==="carter"&&r<.4)soundThen("carter1",r<.2?null:()=>sayLine("quiet"));
+      else if(r<.18)soundThen(hype(),null);
       else if(r<.28)soundThen("cory1",null);
       else if(r<.36)soundThen(silly(),null);
       else if(r<.42)playFun();
@@ -1230,7 +1231,7 @@ function winnerDance(who,title){
     danceTimers.push(setTimeout(()=>{d.className="fbd "+seq[2];},4800));
     ov.classList.remove("hide");danceBeat(7.2);
     try{speechSynthesis.cancel()}catch(e){}stopClip();
-    if(SND){const g=gameId;playOn(0,"audio/fun/fun9.mp3").then(()=>{if(g===gameId&&!ov.classList.contains("hide"))return playOn(0,"audio/fun/fun10.mp3");});}
+    if(SND){const g=gameId;(who==="carter"?playOn(0,"audio/fun/carter1.mp3"):Promise.resolve()).then(()=>g===gameId&&!ov.classList.contains("hide")?playOn(0,"audio/fun/fun9.mp3"):null).then(()=>{if(g===gameId&&!ov.classList.contains("hide"))return playOn(0,"audio/fun/fun10.mp3");});}
     let fin=false;const done=()=>{if(fin)return;fin=true;danceTimers.forEach(clearTimeout);ov.classList.add("hide");ov.onclick=null;d.className="fbd";try{PLAYERS[0].pause()}catch(e){}res(true);};
     danceDone=done;
     danceTimers.push(setTimeout(done,7400));
