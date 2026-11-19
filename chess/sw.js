@@ -1,5 +1,5 @@
 // Lets the Cool Kids Chess Club work offline once it has been opened.
-const CACHE = 'ckcc-v1';
+const CACHE = 'ckcc-v2';
 const CORE = ['./', 'index.html', 'app.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-180.png', 'audio/manifest.json'];
 
 self.addEventListener('install', e => {

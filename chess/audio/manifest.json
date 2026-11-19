@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-19T01:57:38.888Z",
+ "updated": "2026-11-19T21:13:13.154Z",
  "characters": [
   {
    "key": "malik",
@@ -1411,10 +1411,12 @@
    "piece": null,
    "text": "Let's play. I brought confidence. We will see if I brought a strategy.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -1425,10 +1427,12 @@
    "piece": null,
    "text": "I like a challenge. Pull up a chair!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -1439,10 +1443,12 @@
    "piece": null,
    "text": "Wait. I have an idea.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_think_1.mp3"
+     ]
     }
    ]
   },
@@ -1453,10 +1459,12 @@
    "piece": null,
    "text": "Hold on. Let me cook. The board is taking its time agreeing.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_think_2.mp3"
+     ]
     }
    ]
   },
@@ -1467,10 +1475,12 @@
    "piece": null,
    "text": "Your turn. Make it interesting!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -1481,10 +1491,12 @@
    "piece": null,
    "text": "Your turn. That move had a little main character energy.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -1495,10 +1507,12 @@
    "piece": null,
    "text": "Thank you! That piece is joining my team.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_took_1.mp3"
+     ]
     }
    ]
   },
@@ -1509,10 +1523,12 @@
    "piece": null,
    "text": "Your piece was caught in four K. I saw the whole thing.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_took_2.mp3"
+     ]
     }
    ]
   },
@@ -1523,10 +1539,12 @@
    "piece": null,
    "text": "My piece? You really were paying attention!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -1537,10 +1555,12 @@
    "piece": null,
    "text": "Okay, you ate with that move. I need a minute.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -1551,10 +1571,12 @@
    "piece": null,
    "text": "Check! Your king needs a plan!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -1565,10 +1587,12 @@
    "piece": null,
    "text": "Check? Oh, so this is the dramatic episode.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -1579,10 +1603,12 @@
    "piece": null,
    "text": "Checkmate! Ate and left no crumbs. Mrs. Grumble can confirm.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_win.mp3"
+     ]
     }
    ]
   },
@@ -1593,10 +1619,12 @@
    "piece": null,
    "text": "You won. I was not prepared for your victory era. Good game!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_lose.mp3"
+     ]
     }
    ]
   },
@@ -1607,10 +1635,12 @@
    "piece": null,
    "text": "Blue squares. A little help from your extremely generous rival.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_hint.mp3"
+     ]
     }
    ]
   },
@@ -1621,10 +1651,12 @@
    "piece": null,
    "text": "Stalemate! We will have to settle this another time.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_draw.mp3"
+     ]
     }
    ]
   },
@@ -1635,10 +1667,12 @@
    "piece": null,
    "text": "Good game. You can always come back and try again.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_resign.mp3"
+     ]
     }
    ]
   },
@@ -1649,10 +1683,12 @@
    "piece": null,
    "text": "Your clock ran out. This round is mine!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_timewin.mp3"
+     ]
     }
    ]
   },
@@ -1663,10 +1699,12 @@
    "piece": null,
    "text": "I ran out of time! You win this round.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_timelose.mp3"
+     ]
     }
    ]
   },
@@ -1677,10 +1715,12 @@
    "piece": null,
    "text": "Rematch? I cannot let that be the season finale.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brittany/brittany_rematch.mp3"
+     ]
     }
    ]
   },
@@ -1691,10 +1731,12 @@
    "piece": null,
    "text": "The court is now in session. My opponent has chosen to represent themselves.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -1705,10 +1747,12 @@
    "piece": null,
    "text": "Ready? I intend to make a very convincing move.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -1719,10 +1763,12 @@
    "piece": null,
    "text": "Let me examine the evidence.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_think_1.mp3"
+     ]
     }
    ]
   },
@@ -1733,10 +1779,12 @@
    "piece": null,
    "text": "I am reviewing the evidence. It is being very unhelpful.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_think_2.mp3"
+     ]
     }
    ]
   },
@@ -1747,10 +1795,12 @@
    "piece": null,
    "text": "Your move. The board is listening.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -1761,10 +1811,12 @@
    "piece": null,
    "text": "Your move. Please keep your argument on the board.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -1775,10 +1827,12 @@
    "piece": null,
    "text": "I am taking that piece into evidence!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_took_1.mp3"
+     ]
     }
    ]
   },
@@ -1789,10 +1843,12 @@
    "piece": null,
    "text": "I submit this captured piece as evidence of excellent taste.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_took_2.mp3"
+     ]
     }
    ]
   },
@@ -1803,10 +1859,12 @@
    "piece": null,
    "text": "Objection! Oh. That move is allowed.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -1817,10 +1875,12 @@
    "piece": null,
    "text": "Objection! That was legal, but emotionally inconvenient.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -1831,10 +1891,12 @@
    "piece": null,
    "text": "Check! I rest my case.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -1845,10 +1907,12 @@
    "piece": null,
    "text": "Check? I would like a recess. Apparently the clock disagrees.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -1859,10 +1923,12 @@
    "piece": null,
    "text": "Checkmate! A unanimous verdict. Granted, I was the only judge.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_win.mp3"
+     ]
     }
    ]
   },
@@ -1873,10 +1939,12 @@
    "piece": null,
    "text": "You win. I respect the verdict. I have several questions for my defense.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_lose.mp3"
+     ]
     }
    ]
   },
@@ -1887,10 +1955,12 @@
    "piece": null,
    "text": "Blue squares. I am sharing evidence. Please appreciate the paperwork.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_hint.mp3"
+     ]
     }
    ]
   },
@@ -1901,10 +1971,12 @@
    "piece": null,
    "text": "Stalemate! This case ends in a draw.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_draw.mp3"
+     ]
     }
    ]
   },
@@ -1915,10 +1987,12 @@
    "piece": null,
    "text": "Good game. Court is adjourned until next time.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_resign.mp3"
+     ]
     }
    ]
   },
@@ -1929,10 +2003,12 @@
    "piece": null,
    "text": "Your time is up. The ruling goes to me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_timewin.mp3"
+     ]
     }
    ]
   },
@@ -1943,10 +2019,12 @@
    "piece": null,
    "text": "My time is up. The ruling goes to you.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_timelose.mp3"
+     ]
     }
    ]
   },
@@ -1957,10 +2035,12 @@
    "piece": null,
    "text": "Rematch? I have prepared an appeal.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ethan/ethan_rematch.mp3"
+     ]
     }
    ]
   },
@@ -1971,10 +2051,12 @@
    "piece": null,
    "text": "Hi. I debug robots for fun. Somehow, this is the relaxing hobby.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -1985,10 +2067,12 @@
    "piece": null,
    "text": "I like finding patterns. This should be fun.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -1999,10 +2083,12 @@
    "piece": null,
    "text": "I think there is a pattern here.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_think_1.mp3"
+     ]
     }
    ]
   },
@@ -2013,10 +2099,12 @@
    "piece": null,
    "text": "My plan has a bug. Naturally, it worked perfectly in my head.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_think_2.mp3"
+     ]
     }
    ]
   },
@@ -2027,10 +2115,12 @@
    "piece": null,
    "text": "Your turn.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -2041,10 +2131,12 @@
    "piece": null,
    "text": "Your turn. No pressure. Just several possible consequences.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -2055,10 +2147,12 @@
    "piece": null,
    "text": "There was a gap in your defense.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_took_1.mp3"
+     ]
     }
    ]
   },
@@ -2069,10 +2163,12 @@
    "piece": null,
    "text": "I found the gap. Small bug. Fairly large consequence.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_took_2.mp3"
+     ]
     }
    ]
   },
@@ -2083,10 +2179,12 @@
    "piece": null,
    "text": "Oh. I did not account for that.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -2097,10 +2195,12 @@
    "piece": null,
    "text": "That was clever. I dislike how much I admire it.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -2111,10 +2211,12 @@
    "piece": null,
    "text": "Check. I think my idea worked.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -2125,10 +2227,12 @@
    "piece": null,
    "text": "Check. Great. An unscheduled system update.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -2139,10 +2243,12 @@
    "piece": null,
    "text": "Checkmate! My strategy worked. I am trying to look unsurprised.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_win.mp3"
+     ]
     }
    ]
   },
@@ -2153,10 +2259,12 @@
    "piece": null,
    "text": "You won! I need to study that. For science. And the rematch.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_lose.mp3"
+     ]
     }
    ]
   },
@@ -2167,10 +2275,12 @@
    "piece": null,
    "text": "Blue squares. I found something useful while overthinking.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_hint.mp3"
+     ]
     }
    ]
   },
@@ -2181,10 +2291,12 @@
    "piece": null,
    "text": "Stalemate. An interesting result for both of us.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_draw.mp3"
+     ]
     }
    ]
   },
@@ -2195,10 +2307,12 @@
    "piece": null,
    "text": "Good game. Every attempt gives us something to learn.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_resign.mp3"
+     ]
     }
    ]
   },
@@ -2209,10 +2323,12 @@
    "piece": null,
    "text": "Your time ran out. This game goes to me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_timewin.mp3"
+     ]
     }
    ]
   },
@@ -2223,10 +2339,12 @@
    "piece": null,
    "text": "My time ran out. You win. I was still working it out.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_timelose.mp3"
+     ]
     }
    ]
   },
@@ -2237,10 +2355,12 @@
    "piece": null,
    "text": "Again? I have fixed one bug. There are probably others.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/maya/maya_rematch.mp3"
+     ]
     }
    ]
   },
@@ -2251,10 +2371,12 @@
    "piece": null,
    "text": "Let's go! No running on this court. Honestly, a strange rule.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -2265,10 +2387,12 @@
    "piece": null,
    "text": "Different court. Same concentration. Let's play!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -2279,10 +2403,12 @@
    "piece": null,
    "text": "I am looking for an opening.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_think_1.mp3"
+     ]
     }
    ]
   },
@@ -2293,10 +2419,12 @@
    "piece": null,
    "text": "Reading the defense. It is being extremely defensive.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_think_2.mp3"
+     ]
     }
    ]
   },
@@ -2307,10 +2435,12 @@
    "piece": null,
    "text": "Your move. Show me what you have!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -2321,10 +2451,12 @@
    "piece": null,
    "text": "Your move. I believe this is called building suspense.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -2335,10 +2467,12 @@
    "piece": null,
    "text": "I found the opening and took it!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_took_1.mp3"
+     ]
     }
    ]
   },
@@ -2349,10 +2483,12 @@
    "piece": null,
    "text": "Clean steal! No replay needed. Unless it makes me look cooler.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_took_2.mp3"
+     ]
     }
    ]
   },
@@ -2363,10 +2499,12 @@
    "piece": null,
    "text": "Good steal. I left that piece open.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -2377,10 +2515,12 @@
    "piece": null,
    "text": "That was clutch. Terrible timing for me to admit it.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -2391,10 +2531,12 @@
    "piece": null,
    "text": "Check! Protect your king!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -2405,10 +2547,12 @@
    "piece": null,
    "text": "Check? Okay. Your defense just became my problem.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -2419,10 +2563,12 @@
    "piece": null,
    "text": "Checkmate! Taking the dub. Yes, I practiced the celebration too.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_win.mp3"
+     ]
     }
    ]
   },
@@ -2433,10 +2579,12 @@
    "piece": null,
    "text": "You won! Clutch finish. I am annoyed and impressed. Both can happen.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_lose.mp3"
+     ]
     }
    ]
   },
@@ -2447,10 +2595,12 @@
    "piece": null,
    "text": "Blue squares. Consider this a timeout with excellent coaching.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_hint.mp3"
+     ]
     }
    ]
   },
@@ -2461,10 +2611,12 @@
    "piece": null,
    "text": "Stalemate! This one ends in a draw.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_draw.mp3"
+     ]
     }
    ]
   },
@@ -2475,10 +2627,12 @@
    "piece": null,
    "text": "Good game. We can practice again anytime.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_resign.mp3"
+     ]
     }
    ]
   },
@@ -2489,10 +2643,12 @@
    "piece": null,
    "text": "Your time ran out. I take this round!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_timewin.mp3"
+     ]
     }
    ]
   },
@@ -2503,10 +2659,12 @@
    "piece": null,
    "text": "My clock ran out! You take this round.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_timelose.mp3"
+     ]
     }
    ]
   },
@@ -2517,10 +2675,12 @@
    "piece": null,
    "text": "Another game? My comeback needs somewhere to happen.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jayden/jayden_rematch.mp3"
+     ]
     }
    ]
   },
@@ -2531,10 +2691,12 @@
    "piece": null,
    "text": "Hi! I have a new idea. Historically, this is where things get interesting.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -2545,10 +2707,12 @@
    "piece": null,
    "text": "I have an idea. Let's see if it works!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -2559,10 +2723,12 @@
    "piece": null,
    "text": "What happens if I move here?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_think_1.mp3"
+     ]
     }
    ]
   },
@@ -2573,10 +2739,12 @@
    "piece": null,
    "text": "My brain has too many tabs open. One of them has the answer.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_think_2.mp3"
+     ]
     }
    ]
   },
@@ -2587,10 +2755,12 @@
    "piece": null,
    "text": "Your turn! What will you discover?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -2601,10 +2771,12 @@
    "piece": null,
    "text": "Your turn! That was either clever or excellent research material.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -2615,10 +2787,12 @@
    "piece": null,
    "text": "I found a piece I can capture!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_took_1.mp3"
+     ]
     }
    ]
   },
@@ -2629,10 +2803,12 @@
    "piece": null,
    "text": "Experiment successful! I am trying very hard not to look shocked.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_took_2.mp3"
+     ]
     }
    ]
   },
@@ -2643,10 +2819,12 @@
    "piece": null,
    "text": "You got my piece! Nice discovery!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -2657,10 +2835,12 @@
    "piece": null,
    "text": "Oh! A plot twist. My favorite thing, except when it happens to me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -2671,10 +2851,12 @@
    "piece": null,
    "text": "Check! I spotted it!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -2685,10 +2867,12 @@
    "piece": null,
    "text": "Check? That was not in my notes. My notes were mostly arrows.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -2699,10 +2883,12 @@
    "piece": null,
    "text": "Checkmate! It worked! I mean, yes. Exactly as planned. Mostly.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_win.mp3"
+     ]
     }
    ]
   },
@@ -2713,10 +2899,12 @@
    "piece": null,
    "text": "You won! Can you teach me that before I pretend I discovered it?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_lose.mp3"
+     ]
     }
    ]
   },
@@ -2727,10 +2915,12 @@
    "piece": null,
    "text": "Blue squares! I found a clue and resisted making a whole presentation.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_hint.mp3"
+     ]
     }
    ]
   },
@@ -2741,10 +2931,12 @@
    "piece": null,
    "text": "Stalemate! That is a result worth exploring.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_draw.mp3"
+     ]
     }
    ]
   },
@@ -2755,10 +2947,12 @@
    "piece": null,
    "text": "Good game. I am glad we tried this together.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_resign.mp3"
+     ]
     }
    ]
   },
@@ -2769,10 +2963,12 @@
    "piece": null,
    "text": "Your time is up. I win this round!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_timewin.mp3"
+     ]
     }
    ]
   },
@@ -2783,10 +2979,12 @@
    "piece": null,
    "text": "My time is up! I got carried away thinking.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_timelose.mp3"
+     ]
     }
    ]
   },
@@ -2797,10 +2995,12 @@
    "piece": null,
    "text": "Again? I have questions. So many questions.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/jamie/jamie_rematch.mp3"
+     ]
     }
    ]
   },
@@ -2811,16 +3011,22 @@
    "piece": null,
    "text": "Zoe: Two brains. Zuri: One board. Zoe: Somehow, still disagreements.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_hello_1__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_hello_1__2_zuri.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_hello_1__3_zoe.mp3"
+     ]
     }
    ]
   },
@@ -2831,13 +3037,17 @@
    "piece": null,
    "text": "Zuri: You brought a strategy? Zoe: We brought two.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_hello_2__1_zuri.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_hello_2__2_zoe.mp3"
+     ]
     }
    ]
   },
@@ -2848,13 +3058,17 @@
    "piece": null,
    "text": "Zoe: I have an idea. Zuri: Let me hear it first.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_think_1__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_think_1__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -2865,13 +3079,17 @@
    "piece": null,
    "text": "Zoe: Let me cook. Zuri: Last time, we needed a new recipe.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_think_2__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_think_2__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -2882,13 +3100,17 @@
    "piece": null,
    "text": "Zoe: Your move. Zuri: We will be watching the board.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_quiet_1__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_quiet_1__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -2899,13 +3121,17 @@
    "piece": null,
    "text": "Zuri: Your turn. Zoe: We reached a decision. Alert the news.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_quiet_2__1_zuri.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_quiet_2__2_zoe.mp3"
+     ]
     }
    ]
   },
@@ -2916,13 +3142,17 @@
    "piece": null,
    "text": "Zoe: We got your piece! Zuri: Good teamwork.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_took_1__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_took_1__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -2933,13 +3163,17 @@
    "piece": null,
    "text": "Zoe: Got your piece! Zuri: Teamwork. Briefly, but still.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_took_2__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_took_2__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -2950,13 +3184,17 @@
    "piece": null,
    "text": "Zoe: Our piece! Zuri: We both missed that.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_lost_1__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_lost_1__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -2967,13 +3205,17 @@
    "piece": null,
    "text": "Zuri: That was your plan. Zoe: Our plan when it works, remember?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_lost_2__1_zuri.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_lost_2__2_zoe.mp3"
+     ]
     }
    ]
   },
@@ -2984,13 +3226,17 @@
    "piece": null,
    "text": "Zoe: Check! Zuri: Your king needs attention.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_gavecheck__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_gavecheck__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -3001,13 +3247,17 @@
    "piece": null,
    "text": "Zoe: Check? Zuri: I would like to review the meeting minutes.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_gotcheck__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_gotcheck__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -3018,16 +3268,22 @@
    "piece": null,
    "text": "Zoe: Checkmate! Zuri: Two brains, one win. Zoe: I did the important part.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_win__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_win__2_zuri.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_win__3_zoe.mp3"
+     ]
     }
    ]
   },
@@ -3038,16 +3294,22 @@
    "piece": null,
    "text": "Zuri: You won. Zoe: Against both of us. Zuri: Please do not make a speech.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_lose__1_zuri.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_lose__2_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_lose__3_zuri.mp3"
+     ]
     }
    ]
   },
@@ -3058,13 +3320,17 @@
    "piece": null,
    "text": "Zoe: Blue squares. Zuri: We agreed on that immediately. Historic.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_hint__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_hint__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -3075,13 +3341,17 @@
    "piece": null,
    "text": "Zuri: Stalemate. Zoe: Three players and still a draw!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_draw__1_zuri.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_draw__2_zoe.mp3"
+     ]
     }
    ]
   },
@@ -3092,13 +3362,17 @@
    "piece": null,
    "text": "Zoe: Good game. Zuri: Come back when you want another try.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_resign__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_resign__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -3109,13 +3383,17 @@
    "piece": null,
    "text": "Zuri: Your time ran out. Zoe: This round goes to us!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_timewin__1_zuri.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_timewin__2_zoe.mp3"
+     ]
     }
    ]
   },
@@ -3126,13 +3404,17 @@
    "piece": null,
    "text": "Zoe: Our time ran out! Zuri: We discussed too much.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_timelose__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_timelose__2_zuri.mp3"
+     ]
     }
    ]
   },
@@ -3143,19 +3425,27 @@
    "piece": null,
    "text": "Zoe: Rematch? Zuri: First, a private discussion. Zoe: Very private. Zuri: Stop announcing it.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_rematch__1_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_rematch__2_zuri.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_rematch__3_zoe.mp3"
+     ]
     },
     {
-     "files": []
+     "files": [
+      "audio/twins/twins_rematch__4_zuri.mp3"
+     ]
     }
    ]
   },
@@ -3598,10 +3888,12 @@
    "piece": null,
    "text": "Welcome! A chess game with no plot yet. My favorite kind of trouble.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -3612,10 +3904,12 @@
    "piece": null,
    "text": "You do not have to know every move. Let's begin with one.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -3626,10 +3920,12 @@
    "piece": null,
    "text": "Let me read the board carefully.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_think_1.mp3"
+     ]
     }
    ]
   },
@@ -3640,10 +3936,12 @@
    "piece": null,
    "text": "The plot thickens. So does my need for a better move.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_think_2.mp3"
+     ]
     }
    ]
   },
@@ -3654,10 +3952,12 @@
    "piece": null,
    "text": "Your turn. What happens next?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -3668,10 +3968,12 @@
    "piece": null,
    "text": "Your turn. Please give my king a manageable character arc.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -3682,10 +3984,12 @@
    "piece": null,
    "text": "I will take that piece. A new chapter begins!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_took_1.mp3"
+     ]
     }
    ]
   },
@@ -3696,10 +4000,12 @@
    "piece": null,
    "text": "Your piece has left the story. A brief but memorable role.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_took_2.mp3"
+     ]
     }
    ]
   },
@@ -3710,10 +4016,12 @@
    "piece": null,
    "text": "You got my piece! What a twist!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -3724,10 +4032,12 @@
    "piece": null,
    "text": "A plot twist. How thoughtful of you to put it directly in my way.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -3738,10 +4048,12 @@
    "piece": null,
    "text": "Check! How will your king respond?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -3752,10 +4064,12 @@
    "piece": null,
    "text": "Check? Apparently, we have reached the suspense chapter.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -3766,10 +4080,12 @@
    "piece": null,
    "text": "Checkmate! The end. The author would like to thank careful planning.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_win.mp3"
+     ]
     }
    ]
   },
@@ -3780,10 +4096,12 @@
    "piece": null,
    "text": "You won! Excellent ending. I have some notes for my character.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_lose.mp3"
+     ]
     }
    ]
   },
@@ -3794,10 +4112,12 @@
    "piece": null,
    "text": "Blue squares. A clue, because even good mysteries need those.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_hint.mp3"
+     ]
     }
    ]
   },
@@ -3808,10 +4128,12 @@
    "piece": null,
    "text": "Stalemate! This story ends in a draw.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_draw.mp3"
+     ]
     }
    ]
   },
@@ -3822,10 +4144,12 @@
    "piece": null,
    "text": "Good game. We can start a new chapter another time.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_resign.mp3"
+     ]
     }
    ]
   },
@@ -3836,10 +4160,12 @@
    "piece": null,
    "text": "Your clock ran out. This chapter goes to me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_timewin.mp3"
+     ]
     }
    ]
   },
@@ -3850,10 +4176,12 @@
    "piece": null,
    "text": "My time ran out. This chapter goes to you!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_timelose.mp3"
+     ]
     }
    ]
   },
@@ -3864,10 +4192,12 @@
    "piece": null,
    "text": "A sequel? I promise absolutely nothing about the ending.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mrparker/mrparker_rematch.mp3"
+     ]
     }
    ]
   },
@@ -3878,10 +4208,12 @@
    "piece": null,
    "text": "Welcome. Deep breath. Even my excellent advice works better when I use it.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -3892,10 +4224,12 @@
    "piece": null,
    "text": "Ready? You can think through one move at a time.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -3906,10 +4240,12 @@
    "piece": null,
    "text": "I am taking a moment to look carefully.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_think_1.mp3"
+     ]
     }
    ]
   },
@@ -3920,10 +4256,12 @@
    "piece": null,
    "text": "I am practicing patience. The board is providing opportunities.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_think_2.mp3"
+     ]
     }
    ]
   },
@@ -3934,10 +4272,12 @@
    "piece": null,
    "text": "Your turn. Give yourself time to look.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -3948,10 +4288,12 @@
    "piece": null,
    "text": "Your turn. I am modeling calm. There is quite a lot to model today.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -3962,10 +4304,12 @@
    "piece": null,
    "text": "I took your piece. You can still make a new plan.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_took_1.mp3"
+     ]
     }
    ]
   },
@@ -3976,10 +4320,12 @@
    "piece": null,
    "text": "I took your piece. This is a setback, not your whole biography.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_took_2.mp3"
+     ]
     }
    ]
   },
@@ -3990,10 +4336,12 @@
    "piece": null,
    "text": "You got my piece. Good observation!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -4004,10 +4352,12 @@
    "piece": null,
    "text": "Good move. I am calmly reconsidering several decisions.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -4018,10 +4368,12 @@
    "piece": null,
    "text": "Check. Pause and look for your options.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -4032,10 +4384,12 @@
    "piece": null,
    "text": "Check! A lovely chance to practice the breathing I keep recommending.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -4046,10 +4400,12 @@
    "piece": null,
    "text": "Checkmate. Good game. My calm face was doing some serious work.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_win.mp3"
+     ]
     }
    ]
   },
@@ -4060,10 +4416,12 @@
    "piece": null,
    "text": "You won! Look at that. My strategy has some reflecting to do.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_lose.mp3"
+     ]
     }
    ]
   },
@@ -4074,10 +4432,12 @@
    "piece": null,
    "text": "Blue squares. A little support. Even good thinkers get help.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_hint.mp3"
+     ]
     }
    ]
   },
@@ -4088,10 +4448,12 @@
    "piece": null,
    "text": "Stalemate. A draw is part of learning the game.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_draw.mp3"
+     ]
     }
    ]
   },
@@ -4102,10 +4464,12 @@
    "piece": null,
    "text": "Good game. You can choose to try again another time.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_resign.mp3"
+     ]
     }
    ]
   },
@@ -4116,10 +4480,12 @@
    "piece": null,
    "text": "Your clock ran out. I win on time this round.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_timewin.mp3"
+     ]
     }
    ]
   },
@@ -4130,10 +4496,12 @@
    "piece": null,
    "text": "My clock ran out. You win on time this round.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_timelose.mp3"
+     ]
     }
    ]
   },
@@ -4144,10 +4512,12 @@
    "piece": null,
    "text": "Another game? I have taken my own advice and had a breath.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ramirez/ramirez_rematch.mp3"
+     ]
     }
    ]
   },
@@ -4158,10 +4528,12 @@
    "piece": null,
    "text": "Welcome to the lab. Today's safety equipment is a better plan.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -4172,10 +4544,12 @@
    "piece": null,
    "text": "This board is our workshop. Bring your ideas!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -4186,10 +4560,12 @@
    "piece": null,
    "text": "I am testing a possible move.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_think_1.mp3"
+     ]
     }
    ]
   },
@@ -4200,10 +4576,12 @@
    "piece": null,
    "text": "My prototype is having a very educational failure.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_think_2.mp3"
+     ]
     }
    ]
   },
@@ -4214,10 +4592,12 @@
    "piece": null,
    "text": "Your move. Try your idea!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -4228,10 +4608,12 @@
    "piece": null,
    "text": "Your turn. Let's see whether my design survives contact with reality.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -4242,10 +4624,12 @@
    "piece": null,
    "text": "I found a gap in your design!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_took_1.mp3"
+     ]
     }
    ]
   },
@@ -4256,10 +4640,12 @@
    "piece": null,
    "text": "Your piece exposed a design flaw. I have collected the evidence.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_took_2.mp3"
+     ]
     }
    ]
   },
@@ -4270,10 +4656,12 @@
    "piece": null,
    "text": "You got my piece! Time to rebuild.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -4284,10 +4672,12 @@
    "piece": null,
    "text": "You broke my strategy. Very educational. Slightly inconvenient.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -4298,10 +4688,12 @@
    "piece": null,
    "text": "Check! Time to test your defense.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -4312,10 +4704,12 @@
    "piece": null,
    "text": "Check? My defense needs an upgrade. Immediately would be good.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -4326,10 +4720,12 @@
    "piece": null,
    "text": "Checkmate! It works! Please ignore the earlier prototype.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_win.mp3"
+     ]
     }
    ]
   },
@@ -4340,10 +4736,12 @@
    "piece": null,
    "text": "You won! Excellent engineering. I would like my defense back in working order.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_lose.mp3"
+     ]
     }
    ]
   },
@@ -4354,10 +4752,12 @@
    "piece": null,
    "text": "Blue squares. A design suggestion from someone currently testing theirs.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_hint.mp3"
+     ]
     }
    ]
   },
@@ -4368,10 +4768,12 @@
    "piece": null,
    "text": "Stalemate! We built our way to a draw.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_draw.mp3"
+     ]
     }
    ]
   },
@@ -4382,10 +4784,12 @@
    "piece": null,
    "text": "Good game. There is always another idea to try.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_resign.mp3"
+     ]
     }
    ]
   },
@@ -4396,10 +4800,12 @@
    "piece": null,
    "text": "Your clock ran out. This round goes to me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_timewin.mp3"
+     ]
     }
    ]
   },
@@ -4410,10 +4816,12 @@
    "piece": null,
    "text": "My clock ran out. You win this round!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_timelose.mp3"
+     ]
     }
    ]
   },
@@ -4424,10 +4832,12 @@
    "piece": null,
    "text": "Another build? Version two has fewer obvious problems. In theory.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/rivera/rivera_rematch.mp3"
+     ]
     }
    ]
   },
@@ -4438,10 +4848,12 @@
    "piece": null,
    "text": "Hypothesis: we will have fun. My winning is an unrelated personal hope.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -4452,10 +4864,12 @@
    "piece": null,
    "text": "I predict an interesting game. Let's test that idea!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -4466,10 +4880,12 @@
    "piece": null,
    "text": "Let me examine the possibilities.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_think_1.mp3"
+     ]
     }
    ]
   },
@@ -4480,10 +4896,12 @@
    "piece": null,
    "text": "The data has declined to support my first idea. How considerate.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_think_2.mp3"
+     ]
     }
    ]
   },
@@ -4494,10 +4912,12 @@
    "piece": null,
    "text": "Your move. What is your prediction?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -4508,10 +4928,12 @@
    "piece": null,
    "text": "Your move. I predict something interesting. A wonderfully safe prediction.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -4522,10 +4944,12 @@
    "piece": null,
    "text": "My experiment worked. I captured your piece!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_took_1.mp3"
+     ]
     }
    ]
   },
@@ -4536,10 +4960,12 @@
    "piece": null,
    "text": "Experiment successful! I will now pretend I expected that.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_took_2.mp3"
+     ]
     }
    ]
   },
@@ -4550,10 +4976,12 @@
    "piece": null,
    "text": "You got my piece! Excellent observation.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -4564,10 +4992,12 @@
    "piece": null,
    "text": "Excellent observation. A deeply inconvenient discovery for me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -4578,10 +5008,12 @@
    "piece": null,
    "text": "Check! What can you try next?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -4592,10 +5024,12 @@
    "piece": null,
    "text": "Check! Fascinating. I would enjoy this more from your side.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -4606,10 +5040,12 @@
    "piece": null,
    "text": "Checkmate! The results are in. My lab coat did not do the thinking.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_win.mp3"
+     ]
     }
    ]
   },
@@ -4620,10 +5056,12 @@
    "piece": null,
    "text": "You won! The evidence is clear. I am taking it personally. Scientifically personally.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_lose.mp3"
+     ]
     }
    ]
   },
@@ -4634,10 +5072,12 @@
    "piece": null,
    "text": "Blue squares. A useful clue, without the forty minute lecture.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_hint.mp3"
+     ]
     }
    ]
   },
@@ -4648,10 +5088,12 @@
    "piece": null,
    "text": "Stalemate! An interesting result: a draw.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_draw.mp3"
+     ]
     }
    ]
   },
@@ -4662,10 +5104,12 @@
    "piece": null,
    "text": "Good game. We learned something by trying.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_resign.mp3"
+     ]
     }
    ]
   },
@@ -4676,10 +5120,12 @@
    "piece": null,
    "text": "Your time ran out. I win this experiment.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_timewin.mp3"
+     ]
     }
    ]
   },
@@ -4690,10 +5136,12 @@
    "piece": null,
    "text": "My time ran out. You win this experiment!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_timelose.mp3"
+     ]
     }
    ]
   },
@@ -4704,10 +5152,12 @@
    "piece": null,
    "text": "Again? We need more data. Conveniently, I also want a rematch.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/ellis/ellis_rematch.mp3"
+     ]
     }
    ]
   },
@@ -4718,10 +5168,12 @@
    "piece": null,
    "text": "Welcome, friend. I bring calm. My pieces have made no such promise.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -4732,10 +5184,12 @@
    "piece": null,
    "text": "Take a comfortable breath. The board is ready.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -4746,10 +5200,12 @@
    "piece": null,
    "text": "I am giving this move my attention.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_think_1.mp3"
+     ]
     }
    ]
   },
@@ -4760,10 +5216,12 @@
    "piece": null,
    "text": "I am releasing attachment to my first plan. It was not very good.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_think_2.mp3"
+     ]
     }
    ]
   },
@@ -4774,10 +5232,12 @@
    "piece": null,
    "text": "Your move, friend.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -4788,10 +5248,12 @@
    "piece": null,
    "text": "Your turn. We can be peaceful and still want to win.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -4802,10 +5264,12 @@
    "piece": null,
    "text": "I will take that piece and make my move.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_took_1.mp3"
+     ]
     }
    ]
   },
@@ -4816,10 +5280,12 @@
    "piece": null,
    "text": "I gently take your piece. The taking part is quite definite.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_took_2.mp3"
+     ]
     }
    ]
   },
@@ -4830,10 +5296,12 @@
    "piece": null,
    "text": "You captured my piece. Well observed.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -4844,10 +5312,12 @@
    "piece": null,
    "text": "I am letting that piece go. You have made the decision very easy.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -4858,10 +5328,12 @@
    "piece": null,
    "text": "Check, friend. Look for a safe response.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -4872,10 +5344,12 @@
    "piece": null,
    "text": "Check. A wonderful moment for the breathing I was postponing.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -4886,10 +5360,12 @@
    "piece": null,
    "text": "Checkmate. Inner peace. Outer victory. A pleasant combination.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_win.mp3"
+     ]
     }
    ]
   },
@@ -4900,10 +5376,12 @@
    "piece": null,
    "text": "You won. I am accepting this with grace. Grace requires a small moment.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_lose.mp3"
+     ]
     }
    ]
   },
@@ -4914,10 +5392,12 @@
    "piece": null,
    "text": "Blue squares, friend. Wisdom occasionally comes in a very obvious color.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_hint.mp3"
+     ]
     }
    ]
   },
@@ -4928,10 +5408,12 @@
    "piece": null,
    "text": "Stalemate. We have reached a draw together.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_draw.mp3"
+     ]
     }
    ]
   },
@@ -4942,10 +5424,12 @@
    "piece": null,
    "text": "Good game. Thank you for the time we shared.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_resign.mp3"
+     ]
     }
    ]
   },
@@ -4956,10 +5440,12 @@
    "piece": null,
    "text": "Your time has run out. This round goes to me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_timewin.mp3"
+     ]
     }
    ]
   },
@@ -4970,10 +5456,12 @@
    "piece": null,
    "text": "My time has run out. This round goes to you.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_timelose.mp3"
+     ]
     }
    ]
   },
@@ -4984,10 +5472,12 @@
    "piece": null,
    "text": "Another game? My peace is restored. My competitive side never left.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/mali/mali_rematch.mp3"
+     ]
     }
    ]
   },
@@ -4998,10 +5488,12 @@
    "piece": null,
    "text": "Ready? I am here to support you. Unfortunately, I also like winning.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -5012,10 +5504,12 @@
    "piece": null,
    "text": "Let's see what you have been practicing.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -5026,10 +5520,12 @@
    "piece": null,
    "text": "Give me a second to work this out.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_think_1.mp3"
+     ]
     }
    ]
   },
@@ -5040,10 +5536,12 @@
    "piece": null,
    "text": "Let me cook. Preferably before my whole plan burns.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_think_2.mp3"
+     ]
     }
    ]
   },
@@ -5054,10 +5552,12 @@
    "piece": null,
    "text": "Your move. Look before you leap.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -5068,10 +5568,12 @@
    "piece": null,
    "text": "Your turn. I am being quiet because my first idea was terrible.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -5082,10 +5584,12 @@
    "piece": null,
    "text": "I got your piece. Watch that opening.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_took_1.mp3"
+     ]
     }
    ]
   },
@@ -5096,10 +5600,12 @@
    "piece": null,
    "text": "I got your piece. Big brother discount. All the way to free.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_took_2.mp3"
+     ]
     }
    ]
   },
@@ -5110,10 +5616,12 @@
    "piece": null,
    "text": "You got me! Nice move.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -5124,10 +5632,12 @@
    "piece": null,
    "text": "Okay, that was smooth. Who has been teaching you my tricks?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -5138,10 +5648,12 @@
    "piece": null,
    "text": "Check! Make sure your king is safe.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -5152,10 +5664,12 @@
    "piece": null,
    "text": "Check? You came prepared. I should have asked more questions.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -5166,10 +5680,12 @@
    "piece": null,
    "text": "Checkmate! Good game. I will keep the victory speech under an hour.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_win.mp3"
+     ]
     }
    ]
   },
@@ -5180,10 +5696,12 @@
    "piece": null,
    "text": "You won! Proud of you. Slightly wounded, but very proud.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_lose.mp3"
+     ]
     }
    ]
   },
@@ -5194,10 +5712,12 @@
    "piece": null,
    "text": "Blue squares. Do not tell anybody I helped you beat me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_hint.mp3"
+     ]
     }
    ]
   },
@@ -5208,10 +5728,12 @@
    "piece": null,
    "text": "Stalemate! We will call that a draw.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_draw.mp3"
+     ]
     }
    ]
   },
@@ -5222,10 +5744,12 @@
    "piece": null,
    "text": "Good game. You can come back and try again.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_resign.mp3"
+     ]
     }
    ]
   },
@@ -5236,10 +5760,12 @@
    "piece": null,
    "text": "Your time ran out. This round goes to me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_timewin.mp3"
+     ]
     }
    ]
   },
@@ -5250,10 +5776,12 @@
    "piece": null,
    "text": "My time ran out! You take this one.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_timelose.mp3"
+     ]
     }
    ]
   },
@@ -5264,10 +5792,12 @@
    "piece": null,
    "text": "Again? I need to defend my reputation around here.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/reggie/reggie_rematch.mp3"
+     ]
     }
    ]
   },
@@ -5278,10 +5808,12 @@
    "piece": null,
    "text": "No crumbs. No sticky fingers. And no telling me to let you cook. This is not a kitchen.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -5292,10 +5824,12 @@
    "piece": null,
    "text": "No crumbs on the chessboard. I just cleaned it.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -5306,10 +5840,12 @@
    "piece": null,
    "text": "Hmph. I am thinking.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_think_1.mp3"
+     ]
     }
    ]
   },
@@ -5320,10 +5856,12 @@
    "piece": null,
    "text": "Hmph. The obvious move is being suspiciously unhelpful.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_think_2.mp3"
+     ]
     }
    ]
   },
@@ -5334,10 +5872,12 @@
    "piece": null,
    "text": "Your move. The pieces will not move themselves.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -5348,10 +5888,12 @@
    "piece": null,
    "text": "Your move. The suspense is lovely. My patience is limited.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -5362,10 +5904,12 @@
    "piece": null,
    "text": "That piece is coming with me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_took_1.mp3"
+     ]
     }
    ]
   },
@@ -5376,10 +5920,12 @@
    "piece": null,
    "text": "Confiscated. Finally, a rule I enjoy enforcing.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_took_2.mp3"
+     ]
     }
    ]
   },
@@ -5390,10 +5936,12 @@
    "piece": null,
    "text": "My piece! Hmph. Fair move.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -5404,10 +5952,12 @@
    "piece": null,
    "text": "That was clever. Do not become unbearable about it.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -5418,10 +5968,12 @@
    "piece": null,
    "text": "Check! Yes, I meant to do that.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -5432,10 +5984,12 @@
    "piece": null,
    "text": "Check? Hmph. I preferred this game ten seconds ago.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -5446,10 +6000,12 @@
    "piece": null,
    "text": "Checkmate. Ate and left no crumbs. For once, a sensible expression.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_win.mp3"
+     ]
     }
    ]
   },
@@ -5460,10 +6016,12 @@
    "piece": null,
    "text": "You won. Excellent work. There. My daily compliment. Used up.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_lose.mp3"
+     ]
     }
    ]
   },
@@ -5474,10 +6032,12 @@
    "piece": null,
    "text": "Blue squares. I am helping. Try not to look so surprised.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_hint.mp3"
+     ]
     }
    ]
   },
@@ -5488,10 +6048,12 @@
    "piece": null,
    "text": "Stalemate. A draw. At least the board stayed tidy.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_draw.mp3"
+     ]
     }
    ]
   },
@@ -5502,10 +6064,12 @@
    "piece": null,
    "text": "Good game. There is always another day to practice.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_resign.mp3"
+     ]
     }
    ]
   },
@@ -5516,10 +6080,12 @@
    "piece": null,
    "text": "Your time is up. This round is mine.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_timewin.mp3"
+     ]
     }
    ]
   },
@@ -5530,10 +6096,12 @@
    "piece": null,
    "text": "My time is up? Hmph. Well played.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_timelose.mp3"
+     ]
     }
    ]
   },
@@ -5544,10 +6112,12 @@
    "piece": null,
    "text": "Another game? Fine. Apparently, I am having fun. Keep that quiet.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grumble/grumble_rematch.mp3"
+     ]
     }
    ]
   },
@@ -5558,10 +6128,12 @@
    "piece": null,
    "text": "Pull up a chair. I have had years to practice looking harmless.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -5572,10 +6144,12 @@
    "piece": null,
    "text": "A good game and good company. What a pleasant afternoon.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -5586,10 +6160,12 @@
    "piece": null,
    "text": "Let me have a look here.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_think_1.mp3"
+     ]
     }
    ]
   },
@@ -5600,10 +6176,12 @@
    "piece": null,
    "text": "Ah, yes. A position that looked much nicer before I understood it.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_think_2.mp3"
+     ]
     }
    ]
   },
@@ -5614,10 +6192,12 @@
    "piece": null,
    "text": "Your move, my friend.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -5628,10 +6208,12 @@
    "piece": null,
    "text": "Your move. I will be over here looking completely innocent.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -5642,10 +6224,12 @@
    "piece": null,
    "text": "I will take that piece, if you please.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_took_1.mp3"
+     ]
     }
    ]
   },
@@ -5656,10 +6240,12 @@
    "piece": null,
    "text": "I will take that piece. Retired, not retired from winning.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_took_2.mp3"
+     ]
     }
    ]
   },
@@ -5670,10 +6256,12 @@
    "piece": null,
    "text": "Oh, you got my piece! Nicely done.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -5684,10 +6272,12 @@
    "piece": null,
    "text": "Very clever. You have made my afternoon mildly inconvenient.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -5698,10 +6288,12 @@
    "piece": null,
    "text": "Check, my friend.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -5712,10 +6304,12 @@
    "piece": null,
    "text": "Check! Oh, you are not just here for the cookies.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -5726,10 +6320,12 @@
    "piece": null,
    "text": "Checkmate. Experience does come with a few useful side effects.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_win.mp3"
+     ]
     }
    ]
   },
@@ -5740,10 +6336,12 @@
    "piece": null,
    "text": "You won! Well played. I shall blame absolutely nothing. Publicly.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_lose.mp3"
+     ]
     }
    ]
   },
@@ -5754,10 +6352,12 @@
    "piece": null,
    "text": "Blue squares. A little neighborly assistance. No lawn mowing required.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_hint.mp3"
+     ]
     }
    ]
   },
@@ -5768,10 +6368,12 @@
    "piece": null,
    "text": "Stalemate. A good, honest draw.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_draw.mp3"
+     ]
     }
    ]
   },
@@ -5782,10 +6384,12 @@
    "piece": null,
    "text": "Good game. You are welcome back anytime.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_resign.mp3"
+     ]
     }
    ]
   },
@@ -5796,10 +6400,12 @@
    "piece": null,
    "text": "Your clock ran out. This round goes to me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_timewin.mp3"
+     ]
     }
    ]
   },
@@ -5810,10 +6416,12 @@
    "piece": null,
    "text": "My clock ran out. This round goes to you.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_timelose.mp3"
+     ]
     }
    ]
   },
@@ -5824,10 +6432,12 @@
    "piece": null,
    "text": "Another game? My innocent expression still has plenty of life in it.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/harrison/harrison_rematch.mp3"
+     ]
     }
    ]
   },
@@ -5838,10 +6448,12 @@
    "piece": null,
    "text": "Come sit down, baby. Grandma loves you. Grandma also loves a win.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -5852,10 +6464,12 @@
    "piece": null,
    "text": "Grandma is happy to see you. Now, bring your best game.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -5866,10 +6480,12 @@
    "piece": null,
    "text": "Let Grandma think for a moment.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_think_1.mp3"
+     ]
     }
    ]
   },
@@ -5880,10 +6496,12 @@
    "piece": null,
    "text": "Let Grandma think. Wisdom still needs a minute.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_think_2.mp3"
+     ]
     }
    ]
   },
@@ -5894,10 +6512,12 @@
    "piece": null,
    "text": "Your turn, honey.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -5908,10 +6528,12 @@
    "piece": null,
    "text": "Your turn, honey. I cannot do everything around here.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -5922,10 +6544,12 @@
    "piece": null,
    "text": "Grandma is taking that piece.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_took_1.mp3"
+     ]
     }
    ]
   },
@@ -5936,10 +6560,12 @@
    "piece": null,
    "text": "Thank you for that piece. Such a thoughtful visit.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_took_2.mp3"
+     ]
     }
    ]
   },
@@ -5950,10 +6576,12 @@
    "piece": null,
    "text": "You got Grandma's piece! Good thinking.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -5964,10 +6592,12 @@
    "piece": null,
    "text": "Oh, you took Grandma's piece. So that is the kind of visit this is.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -5978,10 +6608,12 @@
    "piece": null,
    "text": "Check, sweetheart. Look after your king.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -5992,10 +6624,12 @@
    "piece": null,
    "text": "Check? You have been practicing without telling Grandma. Interesting.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -6006,10 +6640,12 @@
    "piece": null,
    "text": "Checkmate, baby. Sweetheart is a term of affection, not a promise to let you win.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_win.mp3"
+     ]
     }
    ]
   },
@@ -6020,10 +6656,12 @@
    "piece": null,
    "text": "You beat Grandma! I am proud. I am also requesting another game.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_lose.mp3"
+     ]
     }
    ]
   },
@@ -6034,10 +6672,12 @@
    "piece": null,
    "text": "Blue squares, honey. Advice is free. That next piece might cost you.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_hint.mp3"
+     ]
     }
    ]
   },
@@ -6048,10 +6688,12 @@
    "piece": null,
    "text": "Stalemate! We both held our ground.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_draw.mp3"
+     ]
     }
    ]
   },
@@ -6062,10 +6704,12 @@
    "piece": null,
    "text": "Good game, sweetheart. We can play another time.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_resign.mp3"
+     ]
     }
    ]
   },
@@ -6076,10 +6720,12 @@
    "piece": null,
    "text": "Your time ran out. Grandma takes this round.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_timewin.mp3"
+     ]
     }
    ]
   },
@@ -6090,10 +6736,12 @@
    "piece": null,
    "text": "Grandma ran out of time. You win, honey!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_timelose.mp3"
+     ]
     }
    ]
   },
@@ -6104,10 +6752,12 @@
    "piece": null,
    "text": "Again? Grandma is still sweet. The strategy is getting less sweet.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/grandmalu/grandmalu_rematch.mp3"
+     ]
     }
    ]
   },
@@ -6852,10 +7502,12 @@
    "piece": null,
    "text": "Welcome to chess club. Confidence is welcome. Evidence is preferred.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -6866,10 +7518,12 @@
    "piece": null,
    "text": "Ready? Watch how the pieces work together.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -6880,10 +7534,12 @@
    "piece": null,
    "text": "I am looking for a useful pattern.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_think_1.mp3"
+     ]
     }
    ]
   },
@@ -6894,10 +7550,12 @@
    "piece": null,
    "text": "There is a pattern here. It is doing an excellent job of hiding.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_think_2.mp3"
+     ]
     }
    ]
   },
@@ -6908,10 +7566,12 @@
    "piece": null,
    "text": "Your move. What do you notice?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -6922,10 +7582,12 @@
    "piece": null,
    "text": "Your move. I have asked the board a question. It has declined to answer.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -6936,10 +7598,12 @@
    "piece": null,
    "text": "I took that piece. What left it open?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_took_1.mp3"
+     ]
     }
    ]
   },
@@ -6950,10 +7614,12 @@
    "piece": null,
    "text": "That piece was open. The board does not award points for optimism.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_took_2.mp3"
+     ]
     }
    ]
   },
@@ -6964,10 +7630,12 @@
    "piece": null,
    "text": "Excellent. You found the opening.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -6978,10 +7646,12 @@
    "piece": null,
    "text": "Excellent move. My lesson plan now includes being surprised.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -6992,10 +7662,12 @@
    "piece": null,
    "text": "Check. Look for the moves that keep your king safe.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -7006,10 +7678,12 @@
    "piece": null,
    "text": "Check! Good thinking. Poor timing for my peace of mind.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -7020,10 +7694,12 @@
    "piece": null,
    "text": "Checkmate. Showing your work does have its benefits.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_win.mp3"
+     ]
     }
    ]
   },
@@ -7034,10 +7710,12 @@
    "piece": null,
    "text": "You won! Excellent reasoning. I have been assigned the homework.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_lose.mp3"
+     ]
     }
    ]
   },
@@ -7048,10 +7726,12 @@
    "piece": null,
    "text": "Blue squares. A clue. Please appreciate my heroic restraint from giving a lecture.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_hint.mp3"
+     ]
     }
    ]
   },
@@ -7062,10 +7742,12 @@
    "piece": null,
    "text": "Stalemate. A draw is a result we can study too.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_draw.mp3"
+     ]
     }
    ]
   },
@@ -7076,10 +7758,12 @@
    "piece": null,
    "text": "Good game. We can learn from the position we reached.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_resign.mp3"
+     ]
     }
    ]
   },
@@ -7090,10 +7774,12 @@
    "piece": null,
    "text": "Your clock ran out. I win on time.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_timewin.mp3"
+     ]
     }
    ]
   },
@@ -7104,10 +7790,12 @@
    "piece": null,
    "text": "My clock ran out. You win on time.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_timelose.mp3"
+     ]
     }
    ]
   },
@@ -7118,10 +7806,12 @@
    "piece": null,
    "text": "Again? I have a new question. It is how to stop that last strategy.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/brooks/brooks_rematch.mp3"
+     ]
     }
    ]
   },
@@ -7452,10 +8142,12 @@
    "piece": null,
    "text": "Five, six, seven, eight. Confidence is lovely. Please bring a plan too.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -7466,10 +8158,12 @@
    "piece": null,
    "text": "Find your focus. We have a whole board to work with.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -7480,10 +8174,12 @@
    "piece": null,
    "text": "I am planning the next few steps.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_think_1.mp3"
+     ]
     }
    ]
   },
@@ -7494,10 +8190,12 @@
    "piece": null,
    "text": "I am finding the rhythm. The board has chosen a very awkward tempo.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_think_2.mp3"
+     ]
     }
    ]
   },
@@ -7508,10 +8206,12 @@
    "piece": null,
    "text": "Your move. Make it count.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -7522,10 +8222,12 @@
    "piece": null,
    "text": "Your move, darling. A dramatic pause is still a pause.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -7536,10 +8238,12 @@
    "piece": null,
    "text": "That piece missed a step.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_took_1.mp3"
+     ]
     }
    ]
   },
@@ -7550,10 +8254,12 @@
    "piece": null,
    "text": "Your piece missed a step. I provided an exit.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_took_2.mp3"
+     ]
     }
    ]
   },
@@ -7564,10 +8270,12 @@
    "piece": null,
    "text": "You took my piece! Nice footwork.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -7578,10 +8286,12 @@
    "piece": null,
    "text": "Nice footwork. Deeply inconvenient choreography.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -7592,10 +8302,12 @@
    "piece": null,
    "text": "Check! Time for your next step.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -7606,10 +8318,12 @@
    "piece": null,
    "text": "Check? A surprise solo for my king. How generous.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -7620,10 +8334,12 @@
    "piece": null,
    "text": "Checkmate! Ate and left no crumbs. Now that is a clean finish.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_win.mp3"
+     ]
     }
    ]
   },
@@ -7634,10 +8350,12 @@
    "piece": null,
    "text": "You won! Standing ovation. My strategy is in the dressing room reconsidering.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_lose.mp3"
+     ]
     }
    ]
   },
@@ -7648,10 +8366,12 @@
    "piece": null,
    "text": "Blue squares, darling. Direction, free of charge. Enjoy this rare occasion.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_hint.mp3"
+     ]
     }
    ]
   },
@@ -7662,10 +8382,12 @@
    "piece": null,
    "text": "Stalemate! We finish this dance with a draw.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_draw.mp3"
+     ]
     }
    ]
   },
@@ -7676,10 +8398,12 @@
    "piece": null,
    "text": "Good game. Thank you for sharing the floor.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_resign.mp3"
+     ]
     }
    ]
   },
@@ -7690,10 +8414,12 @@
    "piece": null,
    "text": "Your time is up. This round goes to me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_timewin.mp3"
+     ]
     }
    ]
   },
@@ -7704,10 +8430,12 @@
    "piece": null,
    "text": "My time is up. This round goes to you!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_timelose.mp3"
+     ]
     }
    ]
   },
@@ -7718,10 +8446,12 @@
    "piece": null,
    "text": "An encore? I have adjusted the choreography.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/chanel/chanel_rematch.mp3"
+     ]
     }
    ]
   },
@@ -7732,10 +8462,12 @@
    "piece": null,
    "text": "Welcome to the library. Quiet voices. Loud plot twists.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -7746,10 +8478,12 @@
    "piece": null,
    "text": "Settle in, young reader. Let's see where this game goes.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -7760,10 +8494,12 @@
    "piece": null,
    "text": "Let me study this page of the story.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_think_1.mp3"
+     ]
     }
    ]
   },
@@ -7774,10 +8510,12 @@
    "piece": null,
    "text": "I have read mysteries with fewer problems than this position.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_think_2.mp3"
+     ]
     }
    ]
   },
@@ -7788,10 +8526,12 @@
    "piece": null,
    "text": "Your move, young reader.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -7802,10 +8542,12 @@
    "piece": null,
    "text": "Your move. Kindly stop making the villain in my story so competent.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -7816,10 +8558,12 @@
    "piece": null,
    "text": "That piece is joining my collection.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_took_1.mp3"
+     ]
     }
    ]
   },
@@ -7830,10 +8574,12 @@
    "piece": null,
    "text": "Checked out. No renewal. A very strict lending policy.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_took_2.mp3"
+     ]
     }
    ]
   },
@@ -7844,10 +8590,12 @@
    "piece": null,
    "text": "You got my piece! Quite the plot twist.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -7858,10 +8606,12 @@
    "piece": null,
    "text": "A plot twist. I preferred the earlier draft.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -7872,10 +8622,12 @@
    "piece": null,
    "text": "Check! A little suspense for our story.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -7886,10 +8638,12 @@
    "piece": null,
    "text": "Check! My king would like to skip ahead to a happier chapter.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -7900,10 +8654,12 @@
    "piece": null,
    "text": "Checkmate! The end. A modest masterpiece, if I may review myself.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_win.mp3"
+     ]
     }
    ]
   },
@@ -7914,10 +8670,12 @@
    "piece": null,
    "text": "You won! An excellent ending. I was clearly the supporting character.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_lose.mp3"
+     ]
     }
    ]
   },
@@ -7928,10 +8686,12 @@
    "piece": null,
    "text": "Blue squares. A clue from the librarian. No overdue fees attached.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_hint.mp3"
+     ]
     }
    ]
   },
@@ -7942,10 +8702,12 @@
    "piece": null,
    "text": "Stalemate! This tale closes with a draw.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_draw.mp3"
+     ]
     }
    ]
   },
@@ -7956,10 +8718,12 @@
    "piece": null,
    "text": "Good game. A new story can begin another day.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_resign.mp3"
+     ]
     }
    ]
   },
@@ -7970,10 +8734,12 @@
    "piece": null,
    "text": "Your clock ran out. This chapter belongs to me.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_timewin.mp3"
+     ]
     }
    ]
   },
@@ -7984,10 +8750,12 @@
    "piece": null,
    "text": "My clock ran out. This chapter belongs to you.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_timelose.mp3"
+     ]
     }
    ]
   },
@@ -7998,10 +8766,12 @@
    "piece": null,
    "text": "A sequel? My character has requested a better ending.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/whitaker/whitaker_rematch.mp3"
+     ]
     }
    ]
   },
