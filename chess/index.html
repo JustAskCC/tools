@@ -872,7 +872,8 @@ const FUN_BY={cory:["cory1","cory2"]};
 const HYPE=["fun9","fun10"];let hypeLast=null;
 function hype(){const c=HYPE.filter(x=>x!==hypeLast);hypeLast=c[Math.floor(Math.random()*c.length)];return hypeLast;}let funFor=null;
 /* these characters always celebrate a capture with "Big, big, big Michael Michael" */
-const CAPTURE_SOUND={carter:"fun7",chloe:"fun7",fred:"fun7",reggie:"fun7"};
+/* Carter mixes "Big Michael" with "Emotional damage!" */
+const CAPTURE_SOUND={carter:["fun7","carter1"],chloe:"fun7",fred:"fun7",reggie:"fun7"};
 function nextFun(){if(funFor!==cur){funFor=cur;funBag=[];}if(!funBag.length)funBag=(FUN_BY[cur]||FUN).slice().sort(()=>Math.random()-.5);return funBag.pop();}
 /* play a sound with music notes in the bubble, then optionally say a line */
 function soundThen(f,next){
@@ -1096,10 +1097,11 @@ function play(mv,promoTo){
     else if(serious()&&Math.random()<.35)sayLine("quiet");
     aiTimer=setTimeout(()=>aiTurn(gameId),cap||inCheck(S,S.turn)?1100:250);
   }else{
-    if(inCheck(S,myColor)){const q=Math.random();if(q<.3)soundThen(hype(),()=>sayLine("gavecheck"));else if(q<.5)soundThen("cory1",()=>sayLine("gavecheck"));else sayLine("gavecheck");}
+    if(inCheck(S,myColor)){const q=Math.random();if(cur==="carter"&&q<.4)soundThen("carter1",()=>sayLine("gavecheck"));else if(q<.3)soundThen(hype(),()=>sayLine("gavecheck"));else if(q<.5)soundThen("cory1",()=>sayLine("gavecheck"));else sayLine("gavecheck");}
     else if(cap){
       const rr=Math.random();
-      const capSound=CAPTURE_SOUND[cur]||(rr<.35?hype():rr<.55?nextFun():rr<.75?silly():null);
+      const cs=Array.isArray(CAPTURE_SOUND[cur])?CAPTURE_SOUND[cur][Math.floor(Math.random()*CAPTURE_SOUND[cur].length)]:CAPTURE_SOUND[cur];
+      const capSound=cs||(rr<.35?hype():rr<.55?nextFun():rr<.75?silly():null);
       if(capSound)soundThen(capSound,()=>sayLine("took",PN[cap[1]]));else sayLine("took",PN[cap[1]]);
     }
     else if(earlyTurn()&&movedP&&movedP[1]==="P")playFun();
