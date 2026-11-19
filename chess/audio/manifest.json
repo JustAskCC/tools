@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-13T01:33:03.365Z",
+ "updated": "2026-11-19T00:52:04.428Z",
  "characters": [
   {
    "key": "malik",
@@ -8000,10 +8000,12 @@
    "piece": null,
    "text": "You challenged the principal? Bold. I have canceled a very important paperclip meeting.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_hello_1.mp3"
+     ]
     }
    ]
   },
@@ -8014,10 +8016,12 @@
    "piece": null,
    "text": "High expectations. Good sportsmanship. Let's begin!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_hello_2.mp3"
+     ]
     }
    ]
   },
@@ -8028,10 +8032,12 @@
    "piece": null,
    "text": "I am considering a very important decision.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_think_1.mp3"
+     ]
     }
    ]
   },
@@ -8042,10 +8048,12 @@
    "piece": null,
    "text": "I am not overthinking. This is an executive review.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_think_2.mp3"
+     ]
     }
    ]
   },
@@ -8056,10 +8064,12 @@
    "piece": null,
    "text": "Your move. Make a thoughtful choice.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_quiet_1.mp3"
+     ]
     }
    ]
   },
@@ -8070,10 +8080,12 @@
    "piece": null,
    "text": "Your move. Yes, I am watching. It is in the job description.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_quiet_2.mp3"
+     ]
     }
    ]
   },
@@ -8084,10 +8096,12 @@
    "piece": null,
    "text": "That piece has been called to my office!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_took_1.mp3"
+     ]
     }
    ]
   },
@@ -8098,10 +8112,12 @@
    "piece": null,
    "text": "That piece is reporting to my office. Immediately.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_took_2.mp3"
+     ]
     }
    ]
   },
@@ -8112,10 +8128,12 @@
    "piece": null,
    "text": "My piece? That was a bold decision!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_lost_1.mp3"
+     ]
     }
    ]
   },
@@ -8126,10 +8144,12 @@
    "piece": null,
    "text": "Bold move. I admire it. I would admire it more if it happened to someone else.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_lost_2.mp3"
+     ]
     }
    ]
   },
@@ -8140,10 +8160,12 @@
    "piece": null,
    "text": "Check! Your king requires immediate attention!",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_gavecheck.mp3"
+     ]
     }
    ]
   },
@@ -8154,10 +8176,12 @@
    "piece": null,
    "text": "Check? In front of my entire imaginary faculty?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_gotcheck.mp3"
+     ]
     }
    ]
   },
@@ -8168,10 +8192,12 @@
    "piece": null,
    "text": "Checkmate! Principal energy. Now, who authorized my victory parade?",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_win.mp3"
+     ]
     }
    ]
   },
@@ -8182,10 +8208,12 @@
    "piece": null,
    "text": "You won! A champion! I will be processing this privately and announcing it loudly.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_lose.mp3"
+     ]
     }
    ]
   },
@@ -8196,10 +8224,12 @@
    "piece": null,
    "text": "Blue squares. An official announcement. For once, it is useful immediately.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_hint.mp3"
+     ]
     }
    ]
   },
@@ -8210,10 +8240,12 @@
    "piece": null,
    "text": "Stalemate! The official result is a draw.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_draw.mp3"
+     ]
     }
    ]
   },
@@ -8224,10 +8256,12 @@
    "piece": null,
    "text": "Good game. My door is open for another challenge.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_resign.mp3"
+     ]
     }
    ]
   },
@@ -8238,10 +8272,12 @@
    "piece": null,
    "text": "Your time is up. This round goes to the principal.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_timewin.mp3"
+     ]
     }
    ]
   },
@@ -8252,10 +8288,12 @@
    "piece": null,
    "text": "My time is up! The win goes to you.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_timelose.mp3"
+     ]
     }
    ]
   },
@@ -8266,10 +8304,12 @@
    "piece": null,
    "text": "Rematch? I have cleared my extremely important schedule.",
    "sfx": null,
-   "ready": false,
+   "ready": true,
    "parts": [
     {
-     "files": []
+     "files": [
+      "audio/principal/principal_rematch.mp3"
+     ]
     }
    ]
   },
