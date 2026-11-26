@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chloe and Carter Universe: Character Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f1e7; --card:#fffdf8; --ink:#1f1a14; --muted:#6b6257; --line:#e6dccb;
+    --gold:#b8862b; --green:#1f4d3a; --soft:#efe6d4; --flag:#a3412b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+  header{background:var(--green);color:#fff;padding:40px 24px 28px;text-align:center}
+  header h1{font-family:Fraunces,serif;font-weight:800;font-size:clamp(28px,5vw,44px);margin:0 0 6px;letter-spacing:.2px}
+  header p{margin:0;opacity:.85}
+  nav{position:sticky;top:0;z-index:5;background:rgba(246,241,231,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;gap:8px;overflow-x:auto;padding:12px 20px;max-width:1200px;margin:0 auto}
+  nav a{flex:none;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:14px;font-weight:500;white-space:nowrap}
+  nav a:hover{border-color:var(--gold);color:var(--gold)}
+  main{max-width:1200px;margin:0 auto;padding:28px 20px 60px}
+  section{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;margin:0 0 28px;scroll-margin-top:70px}
+  .top{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-bottom:4px}
+  .num{font-size:13px;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:1px}
+  h2{font-family:Fraunces,serif;font-weight:800;font-size:clamp(24px,3.4vw,34px);margin:0;width:100%}
+  .role{color:var(--muted);margin:2px 0 14px}
+  .quote{font-family:Fraunces,serif;font-size:19px;font-weight:600;color:var(--green);border-left:4px solid var(--gold);padding:4px 0 4px 14px;margin:0 0 18px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+  @media (max-width:760px){.grid2{grid-template-columns:1fr}section{padding:20px}}
+  .box{background:var(--soft);border-radius:12px;padding:14px 16px}
+  .box h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:0 0 8px}
+  .box ul{margin:0;padding-left:18px}
+  .box li{margin:3px 0}
+  .box.flag{background:#f7e9e3}
+  .box.flag h3{color:var(--flag)}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+  figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:zoom-in;transition:transform .15s,box-shadow .15s}
+  figure:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+  figure img{display:block;width:100%;height:220px;object-fit:cover;object-position:top;background:#eee}
+  figcaption{padding:8px 10px;font-size:13px}
+  figcaption b{color:var(--gold)}
+  #lb{position:fixed;inset:0;background:rgba(15,12,8,.92);display:none;align-items:center;justify-content:center;z-index:20;padding:20px;flex-direction:column}
+  #lb.on{display:flex}
+  #lb img{max-width:100%;max-height:84vh;border-radius:8px}
+  #lb p{color:#fff;margin:12px 0 0;text-align:center;max-width:800px}
+  #lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;font-size:26px;width:48px;height:48px;border-radius:50%;cursor:pointer}
+  #lb .x{top:16px;right:16px}
+  #lb .prev{left:16px;top:50%}
+  #lb .next{right:16px;top:50%}
+  .fix h2{margin-bottom:6px}
+  .fix .grp{margin-top:18px}
+  .fix .grp h3{font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--flag);margin:0 0 8px}
+  .fix ol{margin:0;padding-left:22px}
+  .fix li{margin:5px 0}
+  .fix .note{color:var(--muted);margin:0}
+  .up{margin-top:16px;border:2px dashed var(--line);border-radius:12px;padding:14px;display:none}
+  .up.on{display:block}
+  .up h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:0 0 8px}
+  .up .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .up input[type=text]{flex:1;min-width:180px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font:inherit}
+  .up label.btn,.up button{background:var(--green);color:#fff;border:0;border-radius:999px;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer}
+  .up input[type=file]{display:none}
+  .up .msg{font-size:13px;color:var(--muted);margin-top:6px;min-height:1em}
+  .added{margin-top:14px}
+  .added:empty{display:none}
+  figure .del{position:absolute;top:6px;right:6px;background:rgba(0,0,0,.6);color:#fff;border:0;border-radius:50%;width:26px;height:26px;cursor:pointer;display:none}
+  figure{position:relative}
+  body.can-edit figure .del{display:block}
+  .tag{display:inline-block;background:var(--gold);color:#fff;font-size:11px;border-radius:6px;padding:1px 6px;margin-right:4px}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 40px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Chloe and Carter Universe</h1>
+  <p>Character Gallery: the family and the faculty of Cool Kids University</p>
+</header>
+<nav><div class="wrap" id="nav"></div></nav>
+<main id="main"></main>
+<footer>Click any image to view it full size. Use the arrow keys to move between images. Pictures added here show a gold New tag.</footer>
+
+<div id="lb" role="dialog" aria-modal="true">
+  <button class="x" aria-label="Close">×</button>
+  <button class="prev" aria-label="Previous">‹</button>
+  <button class="next" aria-label="Next">›</button>
+  <img alt="">
+  <p></p>
+</div>
+
+<script>
+const characters = [
+  {
+    id:"jules-park", name:'Mr. Julian "Jules" Park',
+    role:"Music Production and Audio Engineering Teacher · Age 35 · Brooklyn, New York · Korean American",
+    quote:"Don't chase trends. Build your own sound.",
+    about:[
+      "Hip hop was his first language; Korean traditions at home. He blends both worlds.",
+      "Incredibly cool, never loud, rarely says no. Asks, \"Can you make it better?\"",
+      "Uncle to Kaito, his sister's son. Tells Carter only one word: \"Again.\"",
+      "Classroom: The Lab. Running gag: students rank his Monday sneakers.",
+      "Secret: owns thousands of vinyl records."
+    ],
+    style:[
+      "Hanbok inspired jackets and layered Korean robes",
+      "Burgundy, black, cream and gold palette",
+      "Gold grills, chains, rings, diamond studs, luxury watch",
+      "Headphones around his neck, Jordan 4s, Supreme hat and socks"
+    ],
+    flags:[
+      "JP1 robe text is made up characters, not real Korean",
+      "JP2 robe shows the Korean name 박준용; confirm it is intended",
+      "Supreme and Jordan logos may raise trademark issues"
+    ],
+    images:[
+      ["JP1","Full body, leaning on The Lab desk"],
+      ["JP2","Seated in The Lab at the BROOKLYN MPC"],
+      ["JP3","Full character sheet"]
+    ]
+  },
+  {
+    id:"danielle-evans", name:"Mrs. Danielle Evans",
+    role:"African American History Teacher · Age 35 · HBCU Graduate · A \"Legendary Teacher\"",
+    quote:"Know your history. Know your power.",
+    about:[
+      "Brilliant historian and storyteller. Turns every lesson into an experience.",
+      "Expects excellence. Firm but fair. Inspires confidence and pride.",
+      "Intimidating on day one; remembered for life by the end of the year.",
+      "Loves museums, art, literature, music and travel."
+    ],
+    style:[
+      "Oversized designer sunglasses, statement earrings",
+      "Layered African inspired jewelry",
+      "Bold prints mixed with street fashion",
+      "Natural textured updo; signature striped kimono"
+    ],
+    flags:[
+      "DE1 and DE4 chalkboard timelines are garbled and duplicated",
+      "DE3 and DE4 shelf coins look like Roman emperor coins",
+      "DE5 to DE7 sandals show a designer logo pattern",
+      "DE1 inspiration panel uses photos of real people"
+    ],
+    images:[
+      ["DE1","Full character sheet with six signature looks"],
+      ["DE2","Seated portrait in signature striped kimono"],
+      ["DE3","Culture Curator look, standing"],
+      ["DE4","Culture Curator look, teaching the timeline"],
+      ["DE5","Signature kimono and ripped jeans, full body"],
+      ["DE6","Power Professor look"],
+      ["DE7","HBCU Pride look"]
+    ]
+  },
+  {
+    id:"elijah-brooks", name:"Mr. Elijah Brooks",
+    role:"Mathematics Teacher · Age 42 · B.S. Mathematics, M.Ed. · Former Data Analyst",
+    quote:"There is always a pattern.",
+    about:[
+      "Never raises his voice. Asks questions until students find the answer.",
+      "Painted on his classroom wall: \"Mistakes prove you're thinking.\"",
+      "Celebrates improvement over perfect scores.",
+      "Runs the Chess and Strategy Club; Carter and Kaito are his best students.",
+      "The teacher students hope they get every year."
+    ],
+    style:[
+      "Written: tailored sport coats, button downs, chinos, loafers",
+      "Mustard beret, round glasses, long beard",
+      "Leather messenger bag, colorful markers in his pocket",
+      "Jordans on Fridays"
+    ],
+    flags:[
+      "Math and chess are his lane; financial literacy belongs to Mr. Smith",
+      "W.E.B. Du Bois appears on the Famous Mathematicians poster",
+      "One whiteboard factoring line may read x cubed in EB1 (correct in EB2)",
+      "EB2 is more stylized than EB1, with a shorter beard; pick one style"
+    ],
+    images:[
+      ["EB1","Full character sheet"],
+      ["EB2","Character sheet, stylized version with pi details"]
+    ]
+  },
+  {
+    id:"layla-chanel", name:"Ms. Layla Chanel",
+    role:"Dance and Creative Movement Teacher · Age 38 · Detroit to Cleveland · BFA, Howard University",
+    quote:"You weren't born to blend in. You were born to stand out.",
+    about:[
+      "Retired dancer and runway model; insists she is \"between major opportunities.\"",
+      "Theatrical, glamorous, sarcastic about excuses, deeply caring underneath.",
+      "Famous hallway move: pose, double finger snap, keep walking.",
+      "Arc: learning that influential does not always mean famous."
+    ],
+    style:[
+      "All black, always; designer everything",
+      "Platinum close cropped curls, cat eye sunglasses",
+      "Gold ball earrings, cuffs and ring stacks",
+      "Signature black and gold cane"
+    ],
+    flags:[
+      "Sheet says age 38 and 15 years; profile says 44 and nearly 20",
+      "Cane missing from LC1 and LC2",
+      "Nike swoosh on sneakers in LC2 to LC4",
+      "School logo colors differ across sheets"
+    ],
+    images:[
+      ["LC1","Full character sheet"],
+      ["LC2","Hallway runway walk with SNAP!"],
+      ["LC3","Full body with cane"],
+      ["LC4","Full body with cane, alternate"]
+    ]
+  },
+  {
+    id:"naomi-sinclair", name:"Ms. Naomi Sinclair",
+    role:"Visual Arts Teacher · Age 38 · BFA (HBCU), MFA in Studio Art · Cleveland Mural Artist",
+    quote:"Art isn't about being perfect. It's about telling your story.",
+    about:[
+      "The creative genius of the school. Her room feels like an art gallery.",
+      "Creative, encouraging, patient, calm; sees potential in every student.",
+      "Secret: paints massive public murals around Cleveland.",
+      "Sheet introduces Principal Hawthorne."
+    ],
+    style:[
+      "Paint splattered designer overalls",
+      "Rainbow statement glasses, handmade beaded jewelry",
+      "Patched denim jacket, stylish sneakers",
+      "Natural locs in a high bun with colorful scarves"
+    ],
+    flags:[
+      "Sheet text uses em dashes; swap for commas or colons"
+    ],
+    images:[
+      ["NS1","Standing in her art room"],
+      ["NS2","Close up portrait"],
+      ["NS3","Full character sheet"],
+      ["NS4","Seated in her art room"]
+    ]
+  },
+  {
+    id:"cici", name:"CiCi Caver (Mom)",
+    role:"Single Mom, Realtor and Entrepreneur · Age 42 · The Heart of the Family",
+    quote:"I'm building a life my kids never have to recover from.",
+    about:[
+      "Strong, loving, resourceful and funny. Keeps everyone grounded when the house gets loud.",
+      "Not the strict TV mom: jokes with her kids, admits when she doesn't know, teaches through conversations.",
+      "High expectations, firm when needed; the one everyone comes to for advice.",
+      "Mom to Big Brother Reggie (24), Big Brother Fred (19), Chloe (11) and Carter (9)."
+    ],
+    style:[
+      "Short natural pixie cut and red lips",
+      "Black, red and gold palette",
+      "Suspenders, high waist trousers, gold C necklace",
+      "Looks: Office Ready, Client Meeting, On the Go, Casual Day, Girls Night Out"
+    ],
+    flags:[
+      "Grandmother to Rocky, Reggie's son, who is in the toddlers and preschool group",
+      "Client Meeting tote shows a designer monogram pattern",
+      "Sheet wording leans strict (\"gets tougher\"); story voice should stay warm and conversational"
+    ],
+    images:[
+      ["CI1","Full character sheet"]
+    ]
+  },
+  {
+    id:"marcus-love", name:"Mr. Marcus Love",
+    role:"4th Grade Teacher · Age 36 · 6'0\" · Carter's Teacher",
+    quote:"I believe you can figure it out.",
+    about:[
+      "Calm, patient, funny and encouraging. Never embarrasses a student.",
+      "Tells Carter, \"I think you've got an idea. Let's hear it.\" One of the first adults to see his potential.",
+      "Points younger kids to Chloe as a great example of leadership.",
+      "Classroom: plants, chess boards, basketballs, books, flexible seating, a beat machine for reward time."
+    ],
+    style:[
+      "Modern professional, no loud patterns",
+      "Quarter zips, knit polos, oxford shirts",
+      "Chinos and slacks with loafers, Chelsea boots or brown dress shoes",
+      "Smart watch and leather messenger bag"
+    ],
+    flags:[
+      "Height chart sneakers on Chloe and Carter resemble Jordan 1 colorways",
+      "His school is not named yet",
+      "ML2 is more cartoon than ML1; his written direction asks for ultra realistic 3D. Pick one style"
+    ],
+    images:[
+      ["ML1","Full character sheet"],
+      ["ML2","Character sheet, more stylized version"]
+    ]
+  },
+  {
+    id:"reggie", name:"Big Brother Reggie",
+    role:"Big Brother · Age 24 · 5'8\" · Navy Veteran and Music Producer",
+    quote:"We'll figure it out.",
+    about:[
+      "The cool big brother every kid wishes they had; the bridge between CiCi and the kids.",
+      "Chloe tells him what she isn't ready to tell Mom. He always listens first.",
+      "Carter thinks he's the coolest person alive; Reggie teaches him beats, basketball, handshakes, respect and confidence.",
+      "Served in the Navy, then got out and started producing music. Shorter, huskier and more muscular than Fred."
+    ],
+    style:[
+      "Modern Black professional, never trying too hard",
+      "Heavyweight tees, premium hoodies, bomber and varsity jackets",
+      "Cargos, tailored jeans, Chelsea boots, unbranded sneakers",
+      "Neutrals: black, cream, olive, navy, charcoal"
+    ],
+    flags:[
+      "Son Rocky is CiCi's grandson and is in the toddlers and preschool group",
+      "Locs are canon, matching real life",
+      "Sneakers resemble Jordan and Nike models; laptop shows an Apple logo to replace",
+      "RG2 typos: \"BROTHOTHER\" and \"FAVOR MOM\""
+    ],
+    images:[
+      ["RG1","Full character sheet"],
+      ["RG2","Second character sheet, stylized, with Chloe, Carter and CiCi scenes"],
+      ["RG3","Close up headshot"]
+    ]
+  },,
+  {
+    id:"fred", name:"Big Brother Fred",
+    role:"Big Brother · Age 19 · In College · Taller and Leaner",
+    quote:"Stay focused, stay humble, and keep God first.",
+    about:[
+      "Funny, charismatic, ambitious, protective, social and a natural leader.",
+      "Teases Chloe constantly but would defend her without hesitation.",
+      "Carter thinks he's the coolest teenager in the world. Reggie is more like his best friend than his brother.",
+      "Youthful confidence and a little more swagger than Reggie's grounded energy."
+    ],
+    style:[
+      "Locs, styled with a clean taper fade",
+      "Oversized tees, cargos, hoodies, relaxed denim",
+      "Varsity jackets and original unbranded sneakers",
+      "Clean silhouettes, modern streetwear"
+    ],
+    flags:[
+      "Age 19 and in college; the sheet says 18 and is about a year old, so update it",
+      "Locs are canon; he is the taller, leaner brother",
+      "Suit look differs from the streetwear direction; style is nearly photorealistic",
+      "Court hoodie shows an \"alo\" brand logo to replace"
+    ],
+    images:[
+      ["FR1","Character sheet with lifestyle shots"]
+    ]
+  },,
+  {
+    id:"skylar-brooks", name:"Skylar Price",
+    role:"Student · Age 11 · 6th Grade · Volleyball Player",
+    quote:"Doesn't need to be the loudest to lead.",
+    about:[
+      "The athlete: a calm leader on the volleyball team.",
+      "Excellent student with quiet confidence.",
+      "Prefers quality over quantity; her loyalty runs deep.",
+      "Feelings lesson: handling pressure and losing gracefully."
+    ],
+    style:[
+      "Minimalist athletic fashion",
+      "Earth tones: olive, sand, brown, cream",
+      "Natural hair in a high puff",
+      "Gold hoops and an S initial necklace"
+    ],
+    flags:[
+      "Volleyball shot shows a ponytail instead of her high puff"
+    ],
+    images:[
+      ["SB1","Full character sheet with lifestyle shots"]
+    ]
+  },,
+  {
+    id:"jessica-romano", name:"Jessica Romano",
+    role:"Student · Age 11 · 6th Grade · Italian American · Future Designer",
+    quote:"Always knows how to make an entrance.",
+    about:[
+      "Loves being the center of attention; confident and sometimes dramatic.",
+      "Popular, kind and fiercely loyal to the people she loves.",
+      "Fashion is her passion; dreams of becoming a designer.",
+      "Signature expression: a confident smirk with raised eyebrows."
+    ],
+    style:[
+      "Trendy, girly and always coordinated",
+      "Black, beige, white, blush pink and gold",
+      "Dark brown curls, high ponytail with pink scrunchie",
+      "Gold J necklace, heart earrings, quilted J crossbody"
+    ],
+    flags:[
+      "Sheet lists no sport, but her Sporty look shows volleyball",
+      "Sneakers resemble Nike Dunks; quilted bag evokes a designer style; iPhone shown"
+    ],
+    images:[
+      ["JR1","Full character sheet"]
+    ]
+  },
+  {
+    id:"nyla-washington", name:"Nyla Washington",
+    role:"Student · Age 11 · 6th Grade · Basketball Player",
+    quote:"Never backs down from a challenge.",
+    about:[
+      "The heart of the group: hilarious, super competitive, always brings the energy.",
+      "A leader on the court who still gets her work done in class.",
+      "Fearless and loyal; rides hard for her friends.",
+      "Signature expression: big grin and a raised eyebrow when she's teasing."
+    ],
+    style:[
+      "Sporty, comfortable streetwear",
+      "Maroon, black, charcoal, white and gold",
+      "Fulani braids with gold beads, middle part",
+      "Gold hoops and N necklace; jersey #23"
+    ],
+    flags:[
+      "Jersey says WESTVIEW; confirm the kids' school name",
+      "Sneakers resemble Air Jordan 1s; Takis bag and a branded basketball shown"
+    ],
+    images:[
+      ["NW1","Full character sheet"]
+    ]
+  },
+  {
+    id:"brittany-sullivan", name:"Brittany Sullivan",
+    role:"Student · Age 11 · 6th Grade · Irish American · Class Clown",
+    quote:"Don't let the attitude fool you. She cares deeply.",
+    about:[
+      "Funny, sarcastic, loyal, stubborn and sensitive.",
+      "Loud and a little crazy, but always there for her friends.",
+      "Loves snacks, animals, music and sleepovers; hates mean girls and waking up early.",
+      "Dreams of being a dancer or opening an animal bakery."
+    ],
+    style:[
+      "Tomboy and comfy; doesn't care about being perfect",
+      "Messy red bun, freckles, green eyes",
+      "Oversized tees and hoodies, ripped baggy jeans, flannel at the waist",
+      "Canvas high tops, beaded bracelets, patched backpack"
+    ],
+    flags:[
+      "Turnaround tee shows a real band logo (Def Leppard); casual hoodie shows Thrasher",
+      "Converse, Takis, Dunkin and TikTok logos in favorites",
+      "Sheet text uses an em dash"
+    ],
+    images:[
+      ["BS1","Full character sheet"]
+    ]
+  },
+  {
+    id:"maya-kim", name:"Maya Kim",
+    role:"Student · Age 11 · 6th Grade · Korean American · Chloe's Classmate",
+    quote:"Let me tinker with it... I think I can make it work!",
+    about:[
+      "A bright, curious problem solver who loves building things and turning ideas into real projects.",
+      "A little shy at first, with a dry, witty sense of humor; gaining confidence.",
+      "Builds robots in a school club and teams up with Carter on tech projects.",
+      "Can be hard on herself; worries about not being \"good enough.\""
+    ],
+    style:[
+      "Messy ponytail and round black glasses",
+      "Navy robot hoodie, olive cargos, canvas high tops",
+      "Robot pendant, star studs, backpack covered in pins",
+      "Navy, olive, charcoal, cream and lavender"
+    ],
+    flags:[
+      "Sneakers resemble Converse",
+      "Anime image in her favorites may resemble existing anime art"
+    ],
+    images:[
+      ["MK1","Full character sheet"]
+    ]
+  },
+  {
+    id:"kaito-nakamura", name:"Kaito Nakamura",
+    role:"Student · Age 9 · 4th Grade · Korean and Japanese American · Jules's Nephew · The Thoughtful Inventor",
+    quote:"Let's build a better way!",
+    about:[
+      "Calm, curious and creative; loves solving problems and building things.",
+      "Carter's classmate and beat builder; Maya is the coder and designer.",
+      "A little quiet at first; learning to share his big ideas with confidence.",
+      "Has a pet gecko named Pixel and a sketchbook full of inventions."
+    ],
+    style:[
+      "No visual design yet",
+      "Interests: robotics, coding, video games, anime",
+      "Favorite subject: STEM; also strong in math and art",
+      "Big goal: inventions that make life easier and more fun for kids"
+    ],
+    flags:[
+      "Text only sheet; needs character art",
+      "Sheet names Chloe and Carter's last name as Charles",
+      "Jules's nephew (his mom is Jules's sister)",
+      "Very similar to Maya Kim (robotics, coding, anime, shy, overthinks)",
+      "Names the LEGO trademark; sheet uses em dashes"
+    ],
+    images:[
+      ["KN1","Text character sheet"]
+    ]
+  },
+  {
+    id:"mariyah-jordan", name:"Mariyah Jordan",
+    role:"Student · Age 11 · 6th Grade · Chloe's Best Friend · Lives a Few Houses Over",
+    quote:"I may be extra... but at least I'm extra with a purpose.",
+    about:[
+      "Bold, bright and loyal; defends Chloe like a bodyguard.",
+      "Chloe is the calm to her chaos; she's the spark that reminds Chloe to have fun.",
+      "Running gag: \"Mariyah, calm down.\" \"I am calm. You're just boring.\"",
+      "Wants to be a performer; memorizes dance moves in 5 minutes."
+    ],
+    style:[
+      "Curly bun with star and heart hair clips",
+      "Patchwork corduroy jacket with star and smiley patches",
+      "Black denim skirt with chain, purple striped socks",
+      "Purple high tops, floral messenger bag"
+    ],
+    flags:[
+      "Chloe in the friendship panel looks different from her other appearances",
+      "Converse star logo; purple #23 jersey looks like a pro team"
+    ],
+    images:[
+      ["MJ1","Full character sheet"],
+      ["MJ2","Full body, patchwork jacket"]
+    ]
+  },
+  {
+    id:"noelle-bellamy", name:"Mrs. Noelle Bellamy",
+    role:"6th Grade Language Arts Teacher · Age 32 · Renamed from Mrs. Johnson",
+    quote:"You don't have to be perfect to be amazing. You just have to be you.",
+    about:[
+      "Smart, patient and kind but firm; her class is a safe space to be you.",
+      "Known for creative lessons, the best pep talks and remembering small details.",
+      "When a kid says \"I can't do this,\" she says \"Not yet.\"",
+      "Loves reading, creative writing, podcasting and coffee shops.",
+      "Says \"Every student has a story. My job is to help them write the next chapter.\""
+    ],
+    style:[
+      "Curly hair always up in a puff",
+      "Glasses and gold hoops",
+      "Cardigans are her thing; always carries a tote",
+      "Comfy, classy, classroom ready"
+    ],
+    flags:[
+      "Sheet name tag still says Mrs. Johnson; update to Noelle Bellamy",
+      "Chloe's 6th grade Language Arts teacher",
+      "Keeps the \"Not yet.\" gag; Mr. Smith has his own",
+      "Sheet text uses em dashes"
+    ],
+    images:[
+      ["NB1","Full character sheet"],
+      ["NB2","Full body, holding books"]
+    ]
+  },
+  {
+    id:"mr-parker", name:"Mr. Andre Smith",
+    role:"Financial Literacy Teacher · Age 34 · 6'2\" · Chloe's 6th Grade Teacher",
+    quote:"Your zip code doesn't determine your destiny. Your choices do.",
+    about:[
+      "Calm, fair and patient, but won't let you waste your potential.",
+      "Teaches budgeting, saving and business basics; makes money make sense.",
+      "Runs after school help and basketball practice.",
+      "When a kid says \"I'm not a math person,\" he flexes his arm and says \"Nobody is on day one. Let's get some reps in.\""
+    ],
+    style:[
+      "Short curly hair, low fade, neatly lined beard",
+      "Glasses; a hoodie and cap on game days",
+      "Olive shirt jackets over henleys, dark jeans",
+      "Sneakers almost every day"
+    ],
+    flags:[
+      "Sheet still says Parker; redraw the name tag",
+      "Mrs. Bellamy keeps the \"Not yet.\" gag; Mr. Smith has his own",
+      "Replace the \"MJ inspired\" reference with a made up one"
+    ],
+    images:[
+      ["MP1","Full character sheet"]
+    ]
+  },,
+  {
+    id:"liam-murphy", name:"Mr. Liam Murphy",
+    role:"Reading Intervention Specialist (K to 6) · Age 29 · Irish · Bikes to School",
+    quote:"The right book at the right time can change everything.",
+    about:[
+      "Believes every student can grow as a reader; one word, one story, one win at a time.",
+      "Patient, empathetic, punny; calm until you interrupt story time.",
+      "When a kid says \"I can't read this,\" he says \"Challenge accepted.\"",
+      "Has over 300 books at home and collects bookmarks."
+    ],
+    style:[
+      "Curly red hair, freckles, red beard, glasses",
+      "Shirt jackets, flannels, sweaters and chinos",
+      "Canvas sneakers, lanyard and ID",
+      "Always carrying a book; \"Readers Gonna Read\" mug"
+    ],
+    flags:[
+      "School name retired; the school is Cool Kids University",
+      "\"Challenge accepted.\" follows the same pattern as the \"Not yet.\" gags",
+      "Keep only a few small shamrock touches; fix the garbled schedule text",
+      "Sneakers resemble Vans and Converse; sheet uses em dashes"
+    ],
+    images:[
+      ["LM1","Full character sheet"]
+    ]
+  },
+  {
+    id:"alica", name:"Alicia",
+    role:"Mother and Nurse · CiCi's Sister · Mom of Bailey, BeBe (Bianca), Cameila and Celina",
+    quote:"Mother of Cameila, Celina, BeBe (Bianca), and Bailey.",
+    about:[
+      "A nurse and mom of four girls.",
+      "Personality and connection to Chloe and Carter's family not set yet."
+    ],
+    style:[
+      "Big copper auburn curls and square black glasses",
+      "Teal scrubs for work",
+      "Off duty: black lace sleeve dress, leopard platform heels",
+      "Gold hoops and bangles"
+    ],
+    flags:[
+      "Spelling confirmed: Alicia",
+      "Her four girls are Chloe and Carter's cousins",
+      "Nearly photorealistic style"
+    ],
+    images:[
+      ["AL1","Character sheet"]
+    ]
+  },
+  {
+    id:"mike", name:"Mike",
+    role:"Father and Electrician · Alicia's Husband · Dad of Bailey, BeBe (Bianca), Cameila and Celina",
+    quote:"Father of Cameila, Celina, BeBe (Bianca), and Bailey.",
+    about:[
+      "An electrician, Alicia's husband, and dad of four girls.",
+      "Personality not set yet."
+    ],
+    style:[
+      "Long locs pulled back, trimmed beard, warm smile",
+      "Navy work shirt with sleeves rolled, khaki cargo work pants, brown work boots",
+      "Tool belt with pliers, screwdrivers and tape measure",
+      "Accessories: work gloves, voltage tester pen, red and yellow screwdriver"
+    ],
+    flags:[
+      "As the girls' dad, he is Chloe and Carter's uncle by marriage",
+      "Quote and personality to confirm with CiCi"
+    ],
+    images:[
+      ["MK1","Character sheet: turnaround, expressions, accessories"]
+    ]
+  },
+  {
+    id:"bailey", name:"Bailey",
+    role:"Age 8 · Oldest Sister · Alicia's Daughter",
+    quote:"The oldest sister.",
+    about:[
+      "The oldest of Alicia's four girls.",
+      "Cheerleader.",
+      "Personality not set yet."
+    ],
+    style:[
+      "Twist out curls with a big purple and white bow",
+      "Purple, white and gold cheer uniform",
+      "Purple and silver pom poms",
+      "White sneakers and striped socks"
+    ],
+    flags:[
+      "No personality written yet"
+    ],
+    images:[
+      ["BA1","Character sheet"],
+      ["BA2", "Official design guide: outfit, colors, expressions"]
+    ]
+  },
+  {
+    id:"bebe", name:"BeBe (Bianca)",
+    role:"Age 6 · Alicia's Daughter",
+    quote:"Heart hands, always.",
+    about:[
+      "Alicia's 6 year old, with a gap toothed smile.",
+      "Personality not set yet."
+    ],
+    style:[
+      "Chunky twists with purple butterfly clips",
+      "Pink tank and shorts",
+      "Pink and white sneakers"
+    ],
+    flags:[
+      "Name confirmed: BeBe, short for Bianca",
+      "No personality written yet"
+    ],
+    images:[
+      ["BB1","Character sheet"],
+      ["BB2", "Character sheet: turnaround and expressions"],
+      ["BB3", "Character sheet with heart hands"]
+    ]
+  },
+  {
+    id:"cameila", name:"Cameila",
+    role:"Toddlers and Preschool · Twin, age 4 · Alicia's Daughter · Paired with Celina",
+    quote:"Fun, outgoing, and sweet.",
+    about:[
+      "Fun, outgoing and sweet.",
+      "Expressions: happy smile, welcoming wave, caring smile."
+    ],
+    style:[
+      "Short curls with a big hot pink bow",
+      "Hot pink name sweatsuit with cargo joggers",
+      "Pink and white high tops"
+    ],
+    flags:[
+      "Spelling confirmed: Cameila",
+      "Twins with Celina, age 4",
+      "Sneakers show a Nike swoosh"
+    ],
+    images:[
+      ["CC1","Twins' character sheet (shared with Celina)"]
+    ]
+  },
+  {
+    id:"celina", name:"Celina",
+    role:"Toddlers and Preschool · Twin, age 4 · Alicia's Daughter · Paired with Cameila",
+    quote:"Mischievous, strong willed, and sometimes not so nice.",
+    about:[
+      "Mischievous, strong willed and sometimes not so nice.",
+      "Expressions: impish grin, defiant frown, side eye."
+    ],
+    style:[
+      "Short curls with a big purple bow",
+      "Lavender name sweatsuit",
+      "Lavender and white high tops"
+    ],
+    flags:[
+      "Twins with Cameila, age 4",
+      "Sneakers show a Nike swoosh"
+    ],
+    images:[
+      ["CC1","Twins' character sheet (shared with Cameila)"]
+    ]
+  },
+  {
+    id:"stormy", name:"Stormy",
+    role:"Cameila and Celina's family dog · Large black Schnauzer · Young adult",
+    quote:"A big black shaggy family dog with a habit of showing up right when things get interesting.",
+    about:[
+      "The twins' lovable family dog: energetic, curious, loyal, and always somehow in the middle of the action.",
+      "Playful, alert, affectionate, and a little nosy. He means well, but his timing is not always helpful, which is what makes him funny.",
+      "Very affectionate with Cameila and follows her around; has funny energy with Celina, who is more likely to pull him into trouble. Listens a little more to BeBe and Bailey.",
+      "Loves following the girls, being included, treats, running, and sniffing everything. Dislikes being left out, loud scolding, closed doors, waiting for food, and bath time (a running joke).",
+      "Writing rules: Stormy does not speak; show him through action, sound, and expression. Keep him funny but never wild or mean."
+    ],
+    style:[
+      "Large black dog with a shaggy beard and muzzle, floppy ears, sweet expressive eyes",
+      "Short trimmed coat on the body, longer fur on legs and face",
+      "Purple collar with a bone shaped name tag that says Stormy"
+    ],
+    flags:[],
+    images:[
+      ["ST1", "Character sheet"]
+    ]
+  },
+  {
+    id:"mateo-rivera", name:"Mr. Mateo Rivera",
+    role:"STEM, Robotics and Innovation Teacher · Age 32 · Chicago · Puerto Rican",
+    quote:"Build it. Break it. Make it better.",
+    about:[
+      "Former robotics engineer who left tech to inspire young inventors.",
+      "Funny, high energy, competitive and patient; the \"Human Google.\"",
+      "Runs The Garage: 3D printers, drone zone, coding and AI stations, invention wall.",
+      "His robotics teams have won national championships. Proud uncle to Gabby."
+    ],
+    style:[
+      "Curly hair, glasses, short beard",
+      "Black tech jacket with blue accents over a white hoodie",
+      "Cargo joggers, high top sneakers, fingerless gloves",
+      "Utility backpack, tablet blueprints, robot drone"
+    ],
+    flags:[
+      "Runs the robotics club and competition team in The Garage",
+      "\"Apple Watch Ultra\" named; Nike style sneakers; \"Battle Bots\" is a trademarked name",
+      "Some garbled small text; school not named"
+    ],
+    images:[
+      ["MR1","Full character sheet"]
+    ]
+  },
+  {
+    id:"rafa-santiago", name:"Professor Rafa Santiago",
+    role:"Voice, Choir, Vocal Performance and Songwriting · Age 37 · Spanish Harlem · Puerto Rican and Dominican",
+    quote:"Don't sing the note. Sing the feeling.",
+    about:[
+      "Joyful, dramatic, charismatic and warm.",
+      "When someone says \"I can't sing,\" he hands them a microphone. Five minutes later, they're singing.",
+      "Encourages Carter to write lyrics and Chloe to perform; produces student songs with Jules.",
+      "Hidden talent: can imitate almost anyone's singing voice."
+    ],
+    style:[
+      "Long dark curls under a wide brim hat",
+      "Embroidered plum long coat and colorful scarves",
+      "Handcrafted earrings, swirl pendant, vintage rings",
+      "Royal purple, emerald teal, gold, ruby, terracotta"
+    ],
+    flags:[
+      "Replace the crest with the Cool Kids University logo",
+      "\"I can't sing\" is another student doubts, teacher responds gag",
+      "Adds another adult discovering Carter",
+      "RS4 is nearly photorealistic and shows a plain black hat instead of his plum hat"
+    ],
+    images:[
+      ["RS1","Full character sheet"],
+      ["RS2","Full body, celebrating"],
+      ["RS3","Full body, arms crossed"],
+      ["RS4","Close up headshot"]
+    ]
+  },
+  {
+    id:"darius-charles", name:"Darius Charles",
+    role:"Chloe and Carter's Father · Age 39 · \"Entrepreneur\" (Unstable)",
+    quote:"I'll be back soon.",
+    about:[
+      "Big dreams, big talk, zero consistency; shows up when it's convenient.",
+      "Loves his kids in his own way, but it comes with excuses and broken promises.",
+      "Chloe wants to believe him; Carter sees right through him.",
+      "His potential: he could be an amazing dad if he stopped choosing himself."
+    ],
+    style:[
+      "Bald with a full black beard",
+      "Black hoodie, ripped black jeans, canvas high tops",
+      "Gold chain and gold watch",
+      "Always dressed like he has somewhere to be"
+    ],
+    flags:[
+      "Kids' last name is Charles; Reggie and Fred are Big Brothers with no last names",
+      "Captions softened for young readers; keep the hopeful side and the lessons",
+      "Canvas sneakers resemble Converse; DC2 shows Nike swoosh high tops"
+    ],
+    images:[
+      ["DC1","Full character sheet"],
+      ["DC2","Full body, hands in pocket"]
+    ]
+  },
+  {
+    id:"carter", name:"Carter Charles",
+    role:"Core Cast · Age 9 · 4th Grade · About 4'4\"",
+    quote:"Comfortable first. Athletic always.",
+    about:[
+      "Funny, confident, loyal and competitive.",
+      "Loves basketball, sneakers and making people laugh.",
+      "Mr. Love sees his ideas first; Jules, Mr. Brooks and Professor Santiago each push his talent.",
+      "Thinks Reggie and Fred are the coolest people alive."
+    ],
+    style:[
+      "Short tapered curls; warm brown skin; big brown eyes",
+      "Athletic streetwear: hoodies, basketball shorts, cargos",
+      "Black, white, navy, royal blue, red",
+      "Royal blue lightning bolt tee in scenes"
+    ],
+    flags:[
+      "His teacher is Mr. Love; redraw the CT5 and CT7 teacher images",
+      "Heavy real brands: Nike, Jordan and named sneaker models, LA Dodgers cap, Bulls #23 jersey, AirPods, New Balance",
+      "CT6 tee shows a bolt in a circle, similar to a superhero logo",
+      "Wears glasses (add them to his sheet); height 4'4\" here vs 4'5\" on Reggie's chart"
+    ],
+    images:[
+      ["CT1","Base model turnaround sheet"],
+      ["CT2","Full body, black sweatsuit"],
+      ["CT3","Head turnaround"],
+      ["CT4","School hallway scene"],
+      ["CT5","Classroom arrival, teacher version A"],
+      ["CT6","Bedroom, tying his sneakers"],
+      ["CT7","Classroom arrival, teacher version B"]
+    ]
+  },
+  {
+    id:"grandma-lu", name:"Grandma Lu",
+    role:"CiCi's Mother · Chloe and Carter's Grandmother · Age 65 · Retired Accountant · The Root of the Family",
+    quote:"Family is the one place where you never have to earn your seat at the table. You already belong.",
+    about:[
+      "Warm, funny, stylish and soft spoken; calls everyone \"Baby.\"",
+      "Divorced from Grandpa Robert and never remarried on his side; they still argue over whose peach cobbler is best.",
+      "Drives \"Her Baby,\" a bright red sports car, and keeps it spotless.",
+      "Loves watching Chloe perform and hearing Carter's newest beat."
+    ],
+    style:[
+      "Big silver gray afro, gold rimmed glasses",
+      "Red and gold African print dresses and wraps",
+      "Gold jewelry, red handbags",
+      "Colorful, bold and unapologetically hers"
+    ],
+    flags:[
+      "Tagline is \"The Root of the Family\"; CiCi keeps \"The Heart of the Family\"",
+      "Chevrolet Corvette is a real brand; CiCi has long hair in her panel"
+    ],
+    images:[
+      ["GL1","Full character sheet"]
+    ]
+  },,
+  {
+    id:"thaddeus-whitmore", name:"Mr. Thaddeus Whitmore",
+    role:"World History Teacher · Age 68 · Renamed from Alaric Whitaker",
+    quote:"The past isn't gone. It's just waiting to teach you.",
+    about:[
+      "Wise, humorous and passionate; a born storyteller.",
+      "Known for legendary \"History Moments\" students talk about for years.",
+      "Has traveled to over 40 countries and collects artifacts from each.",
+      "Quotes history, poetry and philosophy; believes every student has a story."
+    ],
+    style:[
+      "Long white hair and beard, cream top hat",
+      "Round tinted glasses, olive neck scarf",
+      "Brown plaid frock coat and vest with pocket watch chain",
+      "Brass handled cane and two tone wingtips"
+    ],
+    flags:[
+      "Sheet name tag still says Alaric Whitaker; update to Thaddeus Whitmore",
+      "Second history teacher with Mrs. Evans (could be a great pairing)",
+      "Cane overlaps Ms. Chanel's signature cane; TW2 cane handle is silver vs brass on his sheet"
+    ],
+    images:[
+      ["TW1","Full character sheet"],
+      ["TW2","Full body, arms crossed"]
+    ]
+  },
+  {
+    id:"ms-ramirez", name:"Ms. Ramirez",
+    role:"Elementary School Counselor · Age 29",
+    quote:"Big feelings don't make you bad. They make you human.",
+    about:[
+      "Compassionate, patient and calm; helps students feel heard, safe and confident.",
+      "Keeps a calm box: stress ball, glitter jar, breathing cards, kindness notes.",
+      "Never misses a student's birthday; has a rescue dog named Luna.",
+      "Helps Lily Grace Parker with her worries, including the door lock checks."
+    ],
+    style:[
+      "Wavy chin length blonde hair, round glasses",
+      "Soft cardigans, blouses, comfortable flats",
+      "Always wearing her School Counselor lanyard",
+      "Purple is her color"
+    ],
+    flags:[
+      "Disney named in her fun facts to remove"
+    ],
+    images:[
+      ["RZ1","Full character sheet"]
+    ]
+  },,
+  {
+    id:"izzy", name:"Izzy",
+    role:"Creative Writing and Poetry Teacher · Last name to come",
+    quote:"Stories Change Everything.",
+    about:[
+      "Calm, soulful and a little dramatic about words; reads poems out loud like they're music.",
+      "Carries Toni Morrison, James Baldwin, Zora Neale Hurston, Langston Hughes and Nikki Giovanni.",
+      "Runs the poetry club Amara wants to join; helps Carter turn his beats into lyrics.",
+      "Her room: floor pillows, string lights and a \"Stories Change Everything\" banner."
+    ],
+    style:[
+      "Long locs piled up in a green, red and gold head wrap",
+      "Tortoiseshell glasses, gold hoops",
+      "Forest green embroidered long coat, cream blouse, camel trousers",
+      "Oxblood heeled boots"
+    ],
+    flags:[
+      "Head wrap colors and long green coat to confirm",
+      "Full name still to come; she keeps the name Izzy for now",
+      "Mr. Rivera's niece is now Gabby"
+    ],
+    images:[
+      ["IZ1","Full body with books"]
+    ]
+  },,
+  {
+    id:"amara-ellis", name:"Amara Collins",
+    role:"Student · Age 11 · 6th Grade · Future Author and Illustrator",
+    quote:"I don't have to be the loudest person to have something important to say.",
+    about:[
+      "Quiet, thoughtful and observant; notices what everyone else misses.",
+      "Writes stories and poetry, draws flowers, takes photos.",
+      "Admires Chloe and wants to be her friend but doesn't know how.",
+      "Feelings lesson: shyness and how to make a new friend."
+    ],
+    style:[
+      "Two big curly puffs and gold hoops",
+      "Lavender hoodie, ripped light jeans",
+      "Lavender and white sneakers, beige patched backpack",
+      "\"Notes and Ideas\" composition notebook"
+    ],
+    flags:[
+      "Chloe in her friendship panel looks different from other sheets",
+      "Playlist names real artists, some with explicit songs; sneakers show a Nike swoosh to replace"
+    ],
+    images:[
+      ["AE1","Full character sheet"],
+      ["AE2","Full body, tan background"],
+      ["AE3","Full body, white background"]
+    ]
+  },,
+  {
+    id:"zoe-carter", name:"Zoe Banks",
+    role:"Age 11 · Twin · The Banks Sisters",
+    quote:"That's not tea, that's the whole café.",
+    about:[
+      "Half of \"The Banks Sisters\": cool, confident and always watching.",
+      "Mischievous hallway judge: stands up in the hallway, judges people and whispers rumors with her twin.",
+      "Queens of side eye; usually right about what happens next.",
+      "Style in 3 words: Bold. Edgy. Fearless."
+    ],
+    style:[
+      "Big braided buns",
+      "Cat eye glasses with tinted lenses, hoops",
+      "Lime green zip hoodie, black tee, black cargos",
+      "Lime and white high tops"
+    ],
+    flags:[
+      "Nike logos and a Bulls style jersey to replace with Cool Kids University gear",
+      "Sheet says 13 and older; the twins are both 11"
+    ],
+    images:[
+      ["ZC1","The Carter Sisters sheet (shared with Zuri)"]
+    ]
+  },,
+  {
+    id:"zuri-carter", name:"Zuri Banks",
+    role:"Age 11 · Twin · The Banks Sisters",
+    quote:"Yup, called it.",
+    about:[
+      "Zoe's twin; they finish each other's sentences and whisper about everyone.",
+      "Always knows when someone is lying.",
+      "Expressions: watching, suspicious, smirking, impressed, not surprised.",
+      "Feelings lesson: gossip hurts people."
+    ],
+    style:[
+      "Braided buns with long braids hanging down",
+      "Round glasses, hoops",
+      "Lime green zip hoodie, black tee, black cargos",
+      "Lime and white high tops"
+    ],
+    flags:[
+      "ZU1 and ZU2 both look like Zuri; confirm if either is Zoe",
+      "Same brand notes as Zoe; replace with Cool Kids University gear"
+    ],
+    images:[
+      ["ZC1","The Carter Sisters sheet (shared with Zoe)"],
+      ["ZU1","Full body, olive background"],
+      ["ZU2","Full body, darker olive background"]
+    ]
+  },,
+  {
+    id:"gladys-grumble", name:"Mrs. Gladys Grumble",
+    role:"Lunch Aide Extraordinaire · Age 52 · The Cafeteria",
+    quote:"No seconds. No excuses. No problem.",
+    about:[
+      "Runs the cafeteria like a military operation; always says \"No.\"",
+      "Not mean, just permanently overworked; secretly writes kind notes to kids having a hard day.",
+      "Former baker: leaves anonymous Friday cinnamon rolls in the break room.",
+      "Secret dream: a quiet bakery by the beach."
+    ],
+    style:[
+      "Tall messy brown bun, heavy brows",
+      "Brown collared dress, stained cream apron",
+      "Dark loafers",
+      "Tools: the ladle of justice, clipboard, walkie talkie"
+    ],
+    flags:[
+      "School name retired; the school is Cool Kids University",
+      "Much more exaggerated cartoon style than the rest of the cast",
+      "Typos: \"Her keeps the lunch line moving,\" \"Comfortabe,\" \"Fids Trip Day,\" \"Clipboard Ofges Rules\""
+    ],
+    images:[
+      ["GG1","Full character sheet"],
+      ["GG2","Full body, hands on hips"]
+    ]
+  },
+  {
+    id:"mr-harrison", name:"Mr. Harrison",
+    role:"The Neighbor · Age 68 · Retired History Teacher · Widower of Margaret",
+    quote:"The best days aren't the busy ones. They're the ones you remember.",
+    about:[
+      "Gentle, wise, quietly funny; waves hello every morning.",
+      "Misses his late wife Margaret every day; keeps going one kind deed at a time.",
+      "Gives Chloe life advice and extra cookies; Carter fixes his TV remote and phone.",
+      "Famous for Mr. Harrison's Chocolate Chip Cookies."
+    ],
+    style:[
+      "Bald with white side hair, bushy brows",
+      "Round black glasses, white stubble",
+      "Navy henley sweater over a plaid collar, khakis",
+      "Margaret's Tea Cup in hand"
+    ],
+    flags:[
+      "New neighborhood name to come",
+      "Third 68 year old (with Grandma Lu and Mr. Whitmore); second history teacher",
+      "Famous cookies overlap Mrs. Grumble's Friday cookies",
+      "Typo: \"part od the neighborhood\""
+    ],
+    images:[
+      ["HA1","Full character sheet"],
+      ["HA2","Full body, hands clasped"]
+    ]
+  },
+  {
+    id:"grandpa-robert", name:"Grandpa Robert Caver",
+    role:"CiCi's Dad · Chloe and Carter's Grandpa · Age 72 · U.S. Army Veteran · Divorced",
+    quote:"A man is measured by his character, not his circumstances.",
+    about:[
+      "Disciplined, protective and traditional; tough outside, soft for his grandkids.",
+      "Saturday breakfasts, stories and real talk; famous Sunday talks.",
+      "Wakes at 5AM, fixes anything, and claims the best peach cobbler in the family.",
+      "Divorced from Grandma Lu and never remarried; teaches hard lessons about discipline."
+    ],
+    style:[
+      "Bald with a gray full beard",
+      "Plaid flannel over a henley, dog tags",
+      "Dark jeans and brown work boots",
+      "Veterans Day cap and medals"
+    ],
+    flags:[
+      "Medal of Honor kept on purpose: extreme, so he can teach hard lessons about discipline",
+      "Remembering birthdays and the Great Cobbler War rivalry with Grandma Lu"
+    ],
+    images:[
+      ["GR1","Full character sheet"],
+      ["GR2","Full body, hands in pockets"]
+    ]
+  },,
+  {
+    id:"lily-thompson", name:"Ms. Lily Thompson",
+    role:"3rd Grade Teacher · Age 30 · Chloe and Carter's Former Teacher",
+    quote:"Be kind. Be brave. Be you.",
+    about:[
+      "Warm, creative and fun loving; makes every kid feel safe and capable.",
+      "Read alouds, a confidence booster jar and a drawer of silly socks.",
+      "Pushes Chloe to think bigger; never gives up on Carter.",
+      "Cries at every graduation, even 3rd grade.",
+      "Dreams of opening a cozy children's bookstore with a reading nook."
+    ],
+    style:[
+      "Messy light brown curly bun, freckles",
+      "Cozy orange sweaters, cuffed jeans",
+      "White canvas high tops",
+      "Sunflower everything"
+    ],
+    flags:[
+      "Her former 3rd grade students Chloe and Carter still visit her",
+      "The mistakes line now belongs to Mr. Brooks",
+      "Converse star logo in LT2 to replace",
+      "Typos: \"She seeg the potential\" and a garbled expression label"
+    ],
+    images:[
+      ["LT1","Full character sheet"],
+      ["LT2","Full body, orange sweater"]
+    ]
+  },,
+  {
+    id:"ava-brooks", name:"Ava Lawson",
+    role:"Student · 6th Grade · Chloe's Classmate",
+    quote:"I like listening first. People usually tell you everything if you let them.",
+    about:[
+      "Very quiet, gentle and deeply observant; loud places overwhelm her.",
+      "Artist and problem solver; knows every bird in the schoolyard.",
+      "Says one quiet sentence that turns out exactly right.",
+      "Feelings lesson: feeling overwhelmed by noise, then finding calm."
+    ],
+    style:[
+      "Big black curls with a mustard headband, freckles",
+      "Denim jacket, mustard top, olive cargos",
+      "Black canvas high tops, brown satchel",
+      "Layered necklaces, always a sketchbook"
+    ],
+    flags:[
+      "Chloe in her friendship panel looks different again; Converse logo to replace"
+    ],
+    images:[
+      ["AB1","Full character sheet"],
+      ["AB2","Full body"]
+    ]
+  },,
+  {
+    id:"aaliyah-carter", name:"Aaliyah Smith",
+    role:"Age 16 · 11th Grade · Neighbor and Big Sister Figure · Two Houses Down",
+    quote:"You don't have to be the loudest person in the room to change it.",
+    about:[
+      "Focused, wise and protective; the heart of the neighborhood.",
+      "Helps Chloe with life stuff; treats Carter like a little brother.",
+      "When Chloe says \"I don't get it\": \"You will. Give yourself five minutes.\"",
+      "Tutors kids, volunteers, collects vintage cameras."
+    ],
+    style:[
+      "Big curls with an orange scrunchie, freckles",
+      "Oversized orange zip hoodie",
+      "Olive cargos and high tops",
+      "Always has a backpack (and snacks)"
+    ],
+    flags:[
+      "Sister of Malik Smith, the picture book hero (Malik is also called Little M); they are neighbors",
+      "Nike swoosh sneakers to replace"
+    ],
+    images:[
+      ["AC1","Full character sheet"],
+      ["AC2","Full body"]
+    ]
+  },
+  {
+    id:"malik", name:"Malik Smith",
+    role:"Main Character · Age 7 · 2nd Grade · Aaliyah's Little Brother · Called Little M",
+    quote:"That wasn't my fault... probably.",
+    about:[
+      "Mischievous but very smart. Big ideas, big feelings, and a little trouble along the way.",
+      "Aaliyah's little brother; the Smiths live on the block, two houses down from Chloe and Carter.",
+      "Star of the Malik and the T rex picture book and story series; loves dinosaurs and fossils.",
+      "In the Learn to Read series: a 2nd grade book with Bailey and BeBe, and a 3rd grade book where he wants to beat Carter at chess and learns to slow down."
+    ],
+    style:[
+      "High curly top with a fade, big expressive brows",
+      "Navy zip hoodie over a white graphic tee, black backpack"
+    ],
+    flags:[
+      "Quote pulled from his 2nd grade book; confirm or swap with CiCi",
+      "Add his full character sheet when ready"
+    ],
+    images:[
+      ["MS1","Portrait"],
+      ["MS2","In the CKU fossil lab"]
+    ]
+  },
+  {
+    id:"jordan-ellis", name:"Mr. Jordan Ellis",
+    role:"4th Grade Everyday Science Teacher · Age 29",
+    quote:"Curiosity builds the future.",
+    about:[
+      "Brilliant, energetic and a big kid at heart; makes hard things easy.",
+      "Famous for his Rube Goldberg machines and \"Let's test that theory!\"",
+      "Built an arcade machine and a leaf blower hovercraft.",
+      "Builds with Carter and friends in the STEM lab."
+    ],
+    style:[
+      "Short curly hair, round gold glasses, short beard",
+      "Cream STEM pocket tee or white lab coat",
+      "Olive cuffed chinos, black canvas high tops",
+      "Lanyard and calculator watch"
+    ],
+    flags:[
+      "Teaches everyday science to the younger kids; Mr. Rivera runs the robotics club",
+      "Amara's surname is now Collins",
+      "JE4 chalkboard and badge text garbled; periodic table has errors; Converse style sneakers"
+    ],
+    images:[
+      ["JE1","Full character sheet"],
+      ["JE2","Full body, lab coat with flask"],
+      ["JE3","Full body, lab coat (clean cutout)"],
+      ["JE4","Science classroom scene"]
+    ]
+  },
+  {
+    id:"jahi-rivers", name:"Jahi Rivers",
+    role:"The Neighborhood Yogi · Age 42 · Owner of Still Waters Wellness Studio · Renamed from Malik \"Mali\" Rivers",
+    quote:"The answer usually shows up once your mind gets quiet.",
+    about:[
+      "Calm, wise and funny without trying; makes everyone feel heard.",
+      "Gives advice without telling you what to do, and smooth stones for tough days.",
+      "Talks with Chloe on his porch; plays chess with Carter.",
+      "Secret: a former nationally ranked track athlete."
+    ],
+    style:[
+      "Big curly afro with tiny orange flowers",
+      "Floral kimono jacket over a cream shirt",
+      "Olive harem pants and sandals",
+      "Beaded necklaces and bracelets"
+    ],
+    flags:[
+      "Sheet name tag still says Malik \"Mali\" Rivers; update to Jahi Rivers",
+      "Another adult who remembers every birthday; career ending injury echoes Ms. Chanel",
+      "Carter wears glasses in the chess panel but not on his own sheet"
+    ],
+    images:[
+      ["JH1","Full character sheet"]
+    ]
+  },
+  {
+    id:"ollie-bennett", name:"Oliver \"Ollie\" Bennett",
+    role:"Student · Age 9 · 4th Grade · Always Dressed for Success",
+    quote:"A goal without a plan is just a wish.",
+    about:[
+      "Polite, organized and ambitious; wants to own several businesses.",
+      "Wears a suit every day; teachers just expect it now.",
+      "With Carter: \"Carter makes the beats. Ollie makes the business plan.\"",
+      "Practices his handshake in the mirror; still loves Friday pizza day."
+    ],
+    style:[
+      "Tousled light brown hair, freckles",
+      "Navy suit, tie, gold lapel pin, pocket square",
+      "Leather briefcase with O.B. initials",
+      "Starry socks and brown oxfords"
+    ],
+    flags:[
+      "Carter wears glasses in the chess panel but not on his own sheet",
+      "Dream of building a school echoes Ms. Thompson"
+    ],
+    images:[
+      ["OB1","Full character sheet"]
+    ]
+  },
+  {
+    id:"lily-grace-parker", name:"Lily Grace Parker",
+    role:"Student · Age 9 · 4th Grade · Worries a Lot, Loves a Lot More",
+    quote:"It's okay to worry. It just means you care.",
+    about:[
+      "Kind, creative and loyal; worries about everything and asks \"what if.\"",
+      "Carries a worry kit and an epinephrine pen for her many allergies.",
+      "Carter helps calm her worries; art is where they get quiet.",
+      "Laugh higher than a dog whistle; sleeps with 7 stuffed animals."
+    ],
+    style:[
+      "Messy black space buns, rosy cheeks, freckles",
+      "Blue gingham ruffle top",
+      "Cuffed jeans and pink sneakers",
+      "Yellow raincoat on rainy days"
+    ],
+    flags:[
+      "Surname Parker shared with Mr. Parker; first name Lily shared with Ms. Thompson",
+      "Very exaggerated face compared to the cast",
+      "Lock checking reads like a compulsion; handle with care (Ms. Ramirez could help)",
+      "EpiPen is a brand name; Carter shown with glasses again"
+    ],
+    images:[
+      ["LP1","Full character sheet"]
+    ]
+  },
+  {
+    id:"ethan-anderson", name:"Ethan Anderson",
+    role:"Student · Age 9 · 4th Grade · Future Lawyer",
+    quote:"Well, actually....",
+    about:[
+      "Loves facts, rules and being right; deep down wants the world to be fair.",
+      "Corrects teachers politely and reads the dictionary for fun.",
+      "With Carter: \"Facts vs. beats. Brain vs. creativity.\"",
+      "Dreams of arguing in front of the Supreme Court."
+    ],
+    style:[
+      "Big messy dark curls",
+      "Green short sleeve hoodie, jeans, canvas sneakers",
+      "Pencil behind his ear, legal pad, case file folder",
+      "Blazer and briefcase on Moot Court Day"
+    ],
+    flags:[
+      "Names a real TV show",
+      "Another chess buddy for Carter (with Ollie); Carter shown with glasses again"
+    ],
+    images:[
+      ["EA1","Full character sheet"]
+    ]
+  },
+  {
+    id:"coach-daniels", name:"Coach Brielle Daniels",
+    role:"PE Teacher and Dance Fitness Queen · Age 31",
+    quote:"It's not about being the best, it's about being your best!",
+    about:[
+      "Energetic, playful and fair but firm; nobody sits out in her class.",
+      "Knows all the school drama, and keeps every secret.",
+      "Chloe tells her everything; Carter thinks she's hilarious.",
+      "Former college dancer with a 500 song playlist."
+    ],
+    style:[
+      "Big dark high ponytail with a pompadour",
+      "Purple everything: track jacket, leggings, sneakers",
+      "Whistle and \"Coach D\" water bottle",
+      "Purple sunglasses off duty"
+    ],
+    flags:[
+      "Classes are called dance fitness; Zumba is a trademark",
+      "\"Teaches life\" line duplicates Mrs. Bellamy's; dance overlaps Ms. Chanel",
+      "First name not given; \"who has a crush on who\" may read old for young readers"
+    ],
+    images:[
+      ["CD1","Full character sheet"]
+    ]
+  },
+  {
+    id:"autumn-johnson", name:"Autumn Marie Johnson",
+    role:"Student · Age 9 · 4th Grade · Young Artist",
+    quote:"Every color has a reason to shine.",
+    about:[
+      "Creative, curious and kind; sees beauty in everything.",
+      "With Carter: he thinks of the ideas, she brings them to life.",
+      "Her art won a school award; she has a pet fish named Splash.",
+      "Believes every day is a new canvas."
+    ],
+    style:[
+      "Curly puff with a big yellow bow",
+      "Yellow tee and paint splattered apron",
+      "Cuffed jeans and yellow sneakers",
+      "Always carrying her art bag"
+    ],
+    flags:[
+      "Art overlaps Ava and Amara",
+      "Called Carter's best friend while Kaito, Ollie and Ethan are also close friends",
+      "Carter shown with glasses again"
+    ],
+    images:[
+      ["AJ1","Full character sheet"]
+    ]
+  },
+  {
+    id:"harmony-reyes", name:"Ms. Harmony Reyes",
+    role:"Instruments and Band Teacher · Age 25 · Singer and Songwriter",
+    quote:"Music is how the heart speaks when words can't find the way.",
+    about:[
+      "Passionate, warm and free spirited; turns anything into a song.",
+      "Plays guitar, piano, ukulele and a little drums.",
+      "Used to sing in coffee shops; never starts class without a song.",
+      "Helps Carter and friends find their own voice."
+    ],
+    style:[
+      "Long wavy dark brown hair, freckles",
+      "Denim jacket over a graphic tee",
+      "Ripped black jeans and canvas high tops",
+      "Boho and concert night looks"
+    ],
+    flags:[
+      "Third music teacher: overlaps Professor Santiago (voice, songwriting) and Jules",
+      "Nike logo on her tee; playlist names real artists, some explicit, and lists one twice",
+      "Carter shown with glasses again"
+    ],
+    images:[
+      ["HR1","Full character sheet"]
+    ]
+  },
+  {
+    id:"principal-hawthorne", name:"Ms. Vivian Hawthorne",
+    role:"Principal · Cool Kids University",
+    quote:"Good morning, brilliant people. Let us make decisions that support that description.",
+    about:[
+      "Brilliant, eccentric, theatrical and quick with a sarcastic remark; turns a morning announcement into a production.",
+      "Keeps Cool Kids University moving, even when she gets carried away with her own elaborate plans.",
+      "Protective and deeply invested: quietly replaces missing supplies, celebrates overlooked wins and makes room for a second chance.",
+      "Makes learning feel like an occasion and uses humor to help children recover from mistakes."
+    ],
+    style:[
+      "Orange tie, always straightened before she takes charge",
+      "Glasses she lowers slowly when an explanation sounds suspicious",
+      "Signature pose: one palm raised as if addressing an entire auditorium",
+      "Front, side and back views and six expressions still to upload"
+    ],
+    flags:[
+      "Text only: her front, side and back views, signature pose and expression sheet still need to be uploaded",
+      "Sample lines: \"I asked for a quiet hallway. Apparently, I should have been more specific.\" \"Take your time. Thinking is encouraged here.\""
+    ],
+    images:[
+      ["VH1", "Character sheet: turnaround and expressions"]
+    ]
+  },
+  {
+    id:"helen-hobbs", name:"Great Grandma Helen",
+    role:"Grandma Lu's Mother · CiCi's Grandmother · Age 96 · Retired Homemaker",
+    quote:"The secret ingredient isn't in the recipe. It's in the love you put into it.",
+    about:[
+      "Quiet strength and living history of the Carter family; the best cook and a storyteller.",
+      "Gentle, patient, wise and faithful; calls everyone \"Baby\" or \"Sweetheart.\"",
+      "Never uses a written recipe; everything comes from memory and love.",
+      "Keeper of the family's history; shares a story from her life when Chloe or Carter face a challenge."
+    ],
+    style:[
+      "Gray curly updo, light blue floral dress, lavender cardigan",
+      "White apron with lace trim, brown loafers",
+      "Favorite color: light blue",
+      "Expressions: happy, kind, thoughtful, amused, surprised, loving, playful"
+    ],
+    flags:[
+      "Sheet says Chloe and Carter are her great grandchildren, consistent with the family tree"
+    ],
+    images:[
+      ["HH1","Full character sheet"]
+    ]
+  },
+  {
+    id:"kg-noah", name:"Noah",
+    role:"Toddlers and Preschool · Age 4",
+    quote:"Quote to come",
+    about:[
+      "Calm and sweet, with a quiet, steady presence in the room."
+    ],
+    style:[
+      "Dark tousled hair, Asian boy"
+    ],
+    flags:[
+      "Clothing will change; describe look by features, not outfit",
+      "Quote and details to confirm with CiCi"
+    ],
+    images:[
+      ["NO1", "Full figure"],
+      ["NO2", "Character sheet: turnaround and expressions"]
+    ]
+  },
+  {
+    id:"kg-mia", name:"Mia",
+    role:"Toddlers and Preschool · Age 4",
+    quote:"Quote to come",
+    about:[
+      "Confident and cheerful, the bright voice of the group."
+    ],
+    style:[
+      "Curly puff ponytails, oversized round glasses, Black girl"
+    ],
+    flags:[
+      "Sugarbear logo on sweatshirt must be removed or redrawn",
+      "Quote and details to confirm with CiCi"
+    ],
+    images:[
+      ["MI1", "Full sheet (Sugarbear logo to redraw)"],
+      ["MI2","Full figure, no sweatshirt"],
+      ["MI3", "Character sheet: turnaround and expressions"]
+    ]
+  },
+  {
+    id:"kg-micah", name:"Micah",
+    role:"Toddlers and Preschool · Age 4 · Twin of Michael",
+    quote:"Quote to come",
+    about:[
+      "Energetic and friendly, always ready to play."
+    ],
+    style:[
+      "Black boy, short curly fade, bright smile"
+    ],
+    flags:[
+      "Clothing will change; describe look by features, not outfit",
+      "Quote and details to confirm with CiCi"
+    ],
+    images:[
+      ["MC1", "Twin sheet with Michael"],
+      ["MC2", "Adventure Base scene"],
+      ["MA1", "Character sheet: turnaround and expressions"]
+    ]
+  },
+  {
+    id:"kg-michael", name:"Michael",
+    role:"Toddlers and Preschool · Age 4 · Twin of Micah",
+    quote:"Quote to come",
+    about:[
+      "Micah's twin counterpart, bright and friendly like his brother."
+    ],
+    style:[
+      "Black boy, short curly fade, bright smile"
+    ],
+    flags:[
+      "Clothing will change; describe look by features, not outfit",
+      "Quote and details to confirm with CiCi"
+    ],
+    images:[
+      ["MC1", "Twin sheet with Micah"],
+      ["MH1", "Character sheet: turnaround and expressions"]
+    ]
+  },
+  {
+    id:"kg-charlotte", name:"Charlotte",
+    role:"Kindergarten · Age 4",
+    quote:"Quote to come",
+    about:[
+      "Creative and bohemian, expressive through her style."
+    ],
+    style:[
+      "Redheaded girl with freckles, curly pigtail buns, beaded jewelry"
+    ],
+    flags:[
+      "Quote and details to confirm with CiCi"
+    ],
+    images:[
+      ["CH1", "Full figure"],
+      ["CH2", "Character sheet: turnaround and expressions"]
+    ]
+  },
+  {
+    id:"kg-sophia", name:"Sophia",
+    role:"Kindergarten · Age 4",
+    quote:"Quote to come",
+    about:[
+      "More serious and independent looking, thoughtful and self-possessed."
+    ],
+    style:[
+      "Brunette girl, round glasses, denim jacket and jeans, pink backpack"
+    ],
+    flags:[
+      "Quote and details to confirm with CiCi"
+    ],
+    images:[
+      ["SO1", "Full figure with backpack"],
+      ["SO2", "Character sheet: turnaround and expressions"]
+    ]
+  },
+  {
+    id:"kg-amir", name:"Amir",
+    role:"Kindergarten · Age 5",
+    quote:"Every big rocket starts with one little block.",
+    about:[
+      "Pakistani American. Loves building with blocks and anything about space: rockets, planets, stars.",
+      "A careful thinker who likes to plan before he builds. He can worry he is too slow, so a friend cheering him on helps a lot."
+    ],
+    style:[
+      "Short dark wavy hair, navy rocket and planets tee over a cream long sleeve, khaki cargo joggers, navy space backpack with a star charm"
+    ],
+    flags:[
+      "Quote written Nov 2026; swap anytime"
+    ],
+    images:[
+      ["AM1", "Full figure with block tower"]
+    ]
+  },
+  {
+    id:"kg-diego", name:"Diego",
+    role:"Kindergarten · Age 5",
+    quote:"¡Mira! That's so cool!",
+    about:[
+      "Mexican American, speaks Spanish and English. Loves soccer and trucks.",
+      "Lots of energy, curious and kind. Quick to cheer, and he tosses a Spanish word into his talk now and then (¡Mira!).",
+      "Favorites: soccer, toy trucks (especially dump trucks), bugs and exploring outside, tacos, upbeat fun songs. Dreams of playing on a big team."
+    ],
+    style:[
+      "Main look: curly dark hair, green and white number 10 soccer jersey, dark cargo shorts, white socks, black sneakers",
+      "Outfit variations: red hoodie and jeans, yellow cap and truck tee, varsity jacket, green vest over plaid"
+    ],
+    flags:[
+      "Green jersey is his main look; the blue jersey art is an earlier version"
+    ],
+    images:[
+      ["DI3", "Character sheet: turnaround, expressions, outfits, favorites (main look)"],
+      ["DI1", "Earlier version: blue jersey, full figure"],
+      ["DI2", "Earlier version: blue jersey character sheet"]
+    ]
+  },
+  {
+    id:"kg-albert", name:"Albert",
+    role:"Toddlers and Preschool · Age 4",
+    quote:"Quote to come",
+    about:[
+      "Relaxed and easygoing."
+    ],
+    style:[
+      "Blonde curly hair, round glasses, relaxed gray outfit"
+    ],
+    flags:[
+      "Quote and details to confirm with CiCi"
+    ],
+    images:[
+      ["AL2", "Full figure"],
+      ["AL3", "Character sheet: turnaround and expressions"]
+    ]
+  },
+  {
+    id:"kg-rocky", name:"Rocky",
+    role:"Toddlers and Preschool · The Little Philosopher · Age 4 · Reggie's Son · CiCi's Grandson",
+    quote:"Ummmmmmm... I have a question.",
+    about:[
+      "Wise beyond his years, speaks in full sentences and thinks before he talks.",
+      "Before almost every sentence he pauses and begins with \"Ummmmmmm...\", because something funny, smart, or thoughtful is about to come out.",
+      "Very intelligent, curious about everything, observant, gentle, funny and confident.",
+      "Fearless explorer with a big heart who always asks questions and speaks like he is older than he is.",
+      "Nicknames: Ro, Little Professor, Little Man. The youngest member of the family.",
+      "Loves monster trucks, construction equipment, dinosaurs, toy cars, building blocks, collecting treasures, nature walks, snacks, puddles, and learning how things work.",
+      "Carries random treasures in his pockets or backpack, stops conversations to ask one important question, and explains things like he is the teacher.",
+      "Thinks Chloe is the smartest person in the world and Carter is the coolest person alive. Chloe takes care of him and Carter includes him in everything."
+    ],
+    style:[
+      "Short barrel locs with clean parts, big expressive brown eyes, warm smile",
+      "Modern preschool streetwear: plaid shirt, black tee, jeans, and black and white sneakers with purple accents",
+      "Sneakers that pick up a little dirt from exploring; tiny backpack or pockets full of treasures"
+    ],
+    flags:[
+          "Part of the toddlers and preschool group"
+    ],
+    images:[
+      ["RO1","Full character profile sheet"],
+      ["RO2", "Full character sheet with personality and catchphrases"]
+    ]
+  },
+];
+
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const all = [];
+const nav = document.getElementById("nav"), main = document.getElementById("main");
+characters.forEach((c, i) => {
+  nav.insertAdjacentHTML("beforeend", `<a href="#${c.id}">${i+1}. ${esc(c.name)}</a>`);
+  const figs = c.images.map(([code, cap]) => {
+    const idx = all.push({src:`img/${code}.jpg`, cap:`${code}: ${cap}`}) - 1;
+    return `<figure data-i="${idx}"><img src="img/${code}.jpg" alt="${esc(c.name)}, ${esc(cap)}" loading="lazy"><figcaption><b>${code}</b> ${esc(cap)}</figcaption></figure>`;
+  }).join("");
+  main.insertAdjacentHTML("beforeend", `
+    <section id="${c.id}">
+      <div class="top"><span class="num">Section ${i+1}</span><h2>${esc(c.name)}</h2></div>
+      <p class="role">${esc(c.role)}</p>
+      <p class="quote">"${esc(c.quote)}"</p>
+      <div class="grid2">
+        <div class="box"><h3>Who they are</h3><ul>${c.about.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
+        <div class="box"><h3>Signature style</h3><ul>${c.style.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
+      </div>
+      <div class="gallery">${figs}</div>
+      <div class="gallery added" id="added-${c.id}"></div>
+      <div class="up" data-char="${c.id}" data-name="${esc(c.name)}">
+        <h3>Add pictures for ${esc(c.name)}</h3>
+        <div class="row">
+          <input type="text" placeholder="Caption (optional)" class="cap">
+          <label class="btn">Choose images<input type="file" accept="image/*" multiple></label>
+        </div>
+        <div class="msg"></div>
+      </div>
+      ${c.flags.length ? `<div class="box flag" style="margin-top:18px"><h3>To fix before publishing</h3><ul>${c.flags.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+    </section>`);
+});
+
+
+const fixes = [
+  ["Decided on the voice call (applied)", [
+    "Principal is Ms. Vivian Hawthorne (text sheet added; views and expressions still to upload).",
+    "Mr. Thaddeus Whitmore keeps his name; history teacher.",
+    "Grandpa Robert and Grandma Lu are divorced and he never remarried. Margaret is gone from his sheet; Mr. Harrison is the only widower named Margaret.",
+    "Grandma Lu is CiCi's mother. Her name is just Grandma Lu. Tagline is The Root of the Family; CiCi keeps The Heart of the Family.",
+    "CiCi goes by Caver (her dad's name). Chloe, Carter, Reggie and Fred keep their dad's name, Charles. Reggie and Fred are Big Brother Reggie and Big Brother Fred, with no last names.",
+    "Great Cobbler War: Grandma Lu and Grandpa Robert argue over whose peach cobbler is best.",
+    "Twins Zoe and Zuri are the Banks Sisters, both age 11, mischievous hallway judges who whisper rumors.",
+    "Aaliyah Smith, age 16, sister of Malik Smith (the picture book hero, also called Little M). They are neighbors.",
+    "Ava Lawson (feeling overwhelmed by noise, then finding calm). Skylar Price, the volleyball athlete (handling pressure and losing gracefully). Amara Collins (shyness and making a new friend).",
+    "Mr. Brooks keeps his name and teaches math and chess. Beret, round glasses and long beard as drawn. The mistakes line is painted on his wall: Mistakes prove you're thinking.",
+    "Mr. Andre Smith (Black, 6 feet 2) teaches financial literacy and is Chloe's 6th grade teacher. Says Nobody is on day one. Let's get some reps in.",
+    "Mrs. Noelle Bellamy keeps the Not yet gag and the Every student has a story line. Chloe's 6th grade Language Arts teacher.",
+    "Mr. Jordan Ellis teaches everyday science to the younger kids. Mr. Mateo Rivera runs the robotics club and competition team in The Garage; his niece is Gabby.",
+    "Izzy (locs, green red and gold head wrap) is the creative writing and poetry teacher, with a Stories Change Everything banner. Her full name comes later.",
+    "Ms. Harmony Reyes teaches instruments and band. Professor Santiago handles voice, choir and songwriting; Jules handles production.",
+    "Carter's discoverers: Mr. Love sees his ideas first, Jules pushes his beats, Professor Santiago helps with lyrics, Mr. Brooks sharpens chess strategy, Reggie mentors his production.",
+    "Mr. Love teaches Carter. Mrs. Bellamy and Mr. Smith teach Chloe.",
+    "Ms. Lily Thompson is Chloe and Carter's former 3rd grade teacher. Her saying is Be kind. Be brave. Be you. Her dream is a cozy children's bookstore.",
+    "Ms. Ramirez, the counselor, has her own saying: Big feelings don't make you bad. They make you human. She helps Lily Grace with her worries, and the lock checking stays.",
+    "Coach Brielle Daniels teaches dance fitness (Zumba is a trademark).",
+    "Mr. Murphy keeps only a few small shamrock touches.",
+    "Jules keeps the Korean name Park Jun Yong on his robe. Kaito is Jules's nephew (Jules's sister's son), Korean and Japanese American, and a beat builder with Carter. Maya is the coder and designer.",
+    "Mrs. Grumble does cinnamon rolls on Friday now, not cookies. Mr. Harrison keeps his famous chocolate chip cookies.",
+    "Alicia (CiCi's sister) has four girls: Bailey (8), BeBe (Bianca, 6), and twins Cameila and Celina, age 4. Her four girls are Chloe and Carter's cousins. Her husband Mike, an electrician, is the girls' dad.",
+    "Reggie is 5'8\", shorter, huskier and more muscular. Navy veteran turned music producer. Locs are canon for both him and Fred.",
+    "Fred is 19 and in college, taller and leaner.",
+    "Darius's sheet softened for young readers; the lessons stay.",
+    "Carter wears glasses; add them to his own sheet.",
+    "Grandpa Robert keeps the Medal of Honor on purpose, to teach hard lessons about discipline.",
+    "Ms. Chanel is 38.",
+    "Everyone is stylized Pixar. Mr. Love and Mr. Brooks use their stylized sheets.",
+    "Real brands come off. The cast wears Cool Kids University gear, with simple look alike styles where needed.",
+    "Every school is Cool Kids University. Sugarbear, Westview, Friendly Elementary and Maple Grove are gone, along with the Sugarbear crests.",
+    "Maple Grove neighborhood is dropped; new neighborhood names come later.",
+    "Reggie keeps locs and Fred keeps locs."
+  ]],
+  ["Still open", [
+    "Chloe: upload her sheet (she has braids). Her friendship panels in other sheets need to match her.",
+    "Izzy's full name.",
+    "Mia, Micah and Michael, and Principal Hawthorne's views and expressions.",
+    "New neighborhood names.",
+    "Redraw sheets that still show old names or logos: Mr. Smith's name tag, Mr. Brooks's sheet, Izzy's head wrap, Mrs. Grumble's school text, Lily Thompson's school text.",
+    "Replace real brand logos on every sheet with Cool Kids University designs (Nike, Jordan, Converse, Vans, Apple, Dodgers, Bulls, alo, Dunks, LEGO, Takis, EpiPen, Apple Watch).",
+    "Add a Cool Kids University logo to every sheet.",
+    "Mr. Murphy's shamrock touches and Jules's robe text need one more pass.",
+    "Carter's sheet needs glasses added.",
+    "Art: Chloe looks different in other sheets' friendship panels."
+  ]]
+];
+nav.insertAdjacentHTML("afterbegin", `<a href="#fix-list" style="border-color:var(--flag);color:var(--flag)">Fix List</a>`);
+main.insertAdjacentHTML("afterbegin", `<section id="fix-list" class="fix">
+  <div class="top"><span class="num">Running Notes</span><h2>Fix List</h2></div>
+  <p class="note">Everything we need to change or decide. We'll go through it together.</p>
+  ${fixes.map(([t, items]) => `<div class="grp"><h3>${esc(t)}</h3><ol>${items.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></div>`).join("")}
+</section>`);
+
+main.insertAdjacentHTML("beforeend", `<section id="new-characters">
+  <div class="top"><span class="num">Inbox</span><h2>New Characters</h2></div>
+  <p class="role">Drop pictures of a character who doesn't have a section yet. Claude will give them a section next time you ask.</p>
+  <div class="gallery added" id="added-new"></div>
+  <div class="up" data-char="new" data-name="New character">
+    <h3>Add a new character</h3>
+    <div class="row">
+      <input type="text" placeholder="Character name and any notes" class="cap">
+      <label class="btn">Choose images<input type="file" accept="image/*" multiple></label>
+    </div>
+    <div class="msg"></div>
+  </div>
+</section>`);
+nav.insertAdjacentHTML("beforeend", `<a href="#new-characters">+ New Characters</a>`);
+
+const lb = document.getElementById("lb"), lbImg = lb.querySelector("img"), lbCap = lb.querySelector("p");
+let cur = 0;
+function show(i){ cur = (i + all.length) % all.length; lbImg.src = all[cur].src; lbCap.textContent = all[cur].cap; lb.classList.add("on"); }
+function showSrc(src, cap){ lbImg.src = src; lbCap.textContent = cap; lb.classList.add("on"); }
+function hide(){ lb.classList.remove("on"); }
+main.addEventListener("click", e => {
+  if (e.target.closest(".del")) return;
+  const f = e.target.closest("figure"); if (!f) return;
+  if (f.dataset.src) showSrc(f.dataset.src, f.dataset.cap); else show(+f.dataset.i);
+});
+lb.querySelector(".x").onclick = hide;
+lb.querySelector(".prev").onclick = e => { e.stopPropagation(); show(cur-1); };
+lb.querySelector(".next").onclick = e => { e.stopPropagation(); show(cur+1); };
+lb.addEventListener("click", e => { if (e.target === lb) hide(); });
+document.addEventListener("keydown", e => {
+  if (!lb.classList.contains("on")) return;
+  if (e.key === "Escape") hide();
+  if (e.key === "ArrowLeft") show(cur-1);
+  if (e.key === "ArrowRight") show(cur+1);
+});
+
+(() => {
+  const REPO = "JustAskCC/tools", BRANCH = "main", DIR = "gallery";
+  const KEY = "ckuGalleryToken";
+  let token = ""; try { token = localStorage.getItem(KEY) || ""; } catch (e) {}
+  let uploads = [];
+  const foot = document.querySelector("footer");
+  const owner = document.createElement("p");
+  owner.style.cssText = "margin-top:10px;font-size:13px";
+  foot.appendChild(owner);
+
+  const setOwner = () => {
+    const on = !!token;
+    document.body.classList.toggle("can-edit", on);
+    document.querySelectorAll(".up").forEach(u => u.classList.toggle("on", on));
+    owner.innerHTML = on ? 'Signed in to add pictures. <a href="#" id="so">Sign out</a>' : '<a href="#" id="si">Owner sign in</a>';
+    const a = owner.querySelector("a");
+    a.onclick = e => { e.preventDefault();
+      if (on) { token = ""; try { localStorage.removeItem(KEY); } catch (e) {} setOwner(); return; }
+      const t = (prompt("Paste your GitHub access token for the tools site. It stays only in this browser.") || "").trim();
+      if (!t) return; token = t; try { localStorage.setItem(KEY, t); } catch (e) {} setOwner(); };
+  };
+
+  const render = () => {
+    document.querySelectorAll(".added").forEach(g => g.innerHTML = "");
+    uploads.forEach(v => {
+      const g = document.getElementById("added-" + v.character) || document.getElementById("added-new");
+      if (!g) return;
+      const src = "uploads/" + v.file;
+      const cap = v.caption || v.characterName || "Added picture";
+      g.insertAdjacentHTML("beforeend", `<figure data-src="${esc(src)}" data-cap="${esc(cap)}"><button class="del" title="Remove" data-file="${esc(v.file)}">×</button><img src="${esc(src)}" alt="${esc(cap)}" loading="lazy"><figcaption><span class="tag">New</span>${v.caption ? esc(v.caption) : ""}</figcaption></figure>`);
+    });
+  };
+
+  const api = async (path, opts = {}) => {
+    const r = await fetch("https://api.github.com/repos/" + REPO + path, { ...opts, headers: { "Authorization": "Bearer " + token, "Accept": "application/vnd.github+json", ...(opts.body ? { "Content-Type": "application/json" } : {}) } });
+    if (!r.ok) { const t = await r.text(); const err = new Error(r.status === 401 ? "Your access token didn't work. Sign out and sign in again." : "GitHub said " + r.status + ": " + t.slice(0, 120)); err.status = r.status; throw err; }
+    return r.status === 204 ? null : r.json();
+  };
+  const b64 = async blob => { const buf = new Uint8Array(await blob.arrayBuffer()); let s = ""; for (let i = 0; i < buf.length; i += 0x8000) s += String.fromCharCode.apply(null, buf.subarray(i, i + 0x8000)); return btoa(s); };
+  const toUtf8b64 = str => btoa(unescape(encodeURIComponent(str)));
+
+  // Read the newest list straight from GitHub so two edits never clobber each other
+  const freshList = async () => {
+    const f = await api("/contents/" + DIR + "/uploads.json?ref=" + BRANCH);
+    return JSON.parse(decodeURIComponent(escape(atob(f.content.replace(/\n/g, "")))));
+  };
+
+  // One commit: add or remove files and write the new uploads.json
+  const commit = async (addFiles, removeFiles, makeList, message) => {
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const ref = await api("/git/ref/heads/" + BRANCH);
+      const head = await api("/git/commits/" + ref.object.sha);
+      const list = makeList(await freshList());
+      const tree = [];
+      for (const f of addFiles) { if (!f.blob) f.blob = (await api("/git/blobs", { method: "POST", body: JSON.stringify({ content: f.content, encoding: "base64" }) })).sha; tree.push({ path: DIR + "/uploads/" + f.name, mode: "100644", type: "blob", sha: f.blob }); }
+      for (const n of removeFiles) tree.push({ path: DIR + "/uploads/" + n, mode: "100644", type: "blob", sha: null });
+      const lb = (await api("/git/blobs", { method: "POST", body: JSON.stringify({ content: toUtf8b64(JSON.stringify(list, null, 1)), encoding: "base64" }) })).sha;
+      tree.push({ path: DIR + "/uploads.json", mode: "100644", type: "blob", sha: lb });
+      const t = await api("/git/trees", { method: "POST", body: JSON.stringify({ base_tree: head.tree.sha, tree }) });
+      const c = await api("/git/commits", { method: "POST", body: JSON.stringify({ message, tree: t.sha, parents: [ref.object.sha] }) });
+      try { await api("/git/refs/heads/" + BRANCH, { method: "PATCH", body: JSON.stringify({ sha: c.sha }) }); return list; }
+      catch (e) { if (e.status !== 422 || attempt === 2) throw e; }
+    }
+  };
+
+  // Shrink big images before saving so the site stays fast. Keeps transparency.
+  const shrink = file => new Promise((res, rej) => {
+    const img = new Image(), url = URL.createObjectURL(file);
+    img.onload = () => { const max = 1800, k = Math.min(1, max / Math.max(img.width, img.height));
+      const c = document.createElement("canvas"); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url);
+      c.toBlob(b => b ? res(b) : rej(new Error("Couldn't read " + file.name)), "image/webp", 0.86); };
+    img.onerror = () => rej(new Error("Couldn't read " + file.name)); img.src = url; });
+
+  document.querySelectorAll(".up input[type=file]").forEach(inp => {
+    inp.addEventListener("change", async () => {
+      const box = inp.closest(".up"), msg = box.querySelector(".msg"), capEl = box.querySelector(".cap");
+      const files = [...inp.files]; if (!files.length) return;
+      const caption = capEl.value.trim(), adds = [], entries = [];
+      try {
+        for (let i = 0; i < files.length; i++) {
+          msg.textContent = `Preparing ${i + 1} of ${files.length}...`;
+          const blob = await shrink(files[i]);
+          const name = box.dataset.char + "-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6) + ".webp";
+          adds.push({ name, content: await b64(blob) });
+          entries.push({ file: name, character: box.dataset.char, characterName: box.dataset.name, caption, createdAt: Date.now() });
+        }
+        msg.textContent = "Saving to your website...";
+        uploads = await commit(adds, [], list => list.concat(entries), `Gallery: add ${files.length} picture${files.length === 1 ? "" : "s"} for ${box.dataset.name}`);
+        render();
+        msg.textContent = `Added ${files.length} picture${files.length === 1 ? "" : "s"}. They show for everyone in about a minute.`;
+      } catch (e) { msg.textContent = (e && e.message) || "Something went wrong. Please try again."; }
+      capEl.value = ""; inp.value = "";
+    });
+  });
+
+  main.addEventListener("click", async e => {
+    const b = e.target.closest(".del"); if (!b) return;
+    e.stopPropagation();
+    if (!b.dataset.confirm) { b.dataset.confirm = "1"; b.textContent = "?"; b.title = "Click again to remove"; setTimeout(() => { delete b.dataset.confirm; b.textContent = "×"; }, 3000); return; }
+    const f = b.dataset.file;
+    try { uploads = await commit([], [f], list => list.filter(v => v.file !== f), "Gallery: remove a picture"); render(); }
+    catch (err) { alert((err && err.message) || "Couldn't remove it. Please try again."); }
+  });
+
+  setOwner();
+  fetch("uploads.json?v=" + Date.now()).then(r => r.ok ? r.json() : []).then(l => { uploads = l; render(); }).catch(() => {});
+})();
+</script>
+</body>
+</html>
