@@ -1725,7 +1725,7 @@ characters.forEach((c, i) => {
   nav.insertAdjacentHTML("beforeend", `<a href="#${c.id}">${i+1}. ${esc(c.name)}</a>`);
   const figs = c.images.map(([code, cap]) => {
     const idx = all.push({src:`img/${code}.jpg`, cap:`${code}: ${cap}`}) - 1;
-    return `<figure data-i="${idx}"><img src="img/${code}.jpg" alt="${esc(c.name)}, ${esc(cap)}" loading="lazy"><figcaption><b>${code}</b> ${esc(cap)}</figcaption></figure>`;
+    return `<figure data-i="${idx}" data-code="${code}"><button class="del" title="Remove" data-orig="${code}">×</button><img src="img/${code}.jpg" alt="${esc(c.name)}, ${esc(cap)}" loading="lazy"><figcaption><b>${code}</b> ${esc(cap)}</figcaption></figure>`;
   }).join("");
   main.insertAdjacentHTML("beforeend", `
     <section id="${c.id}">
@@ -1876,8 +1876,11 @@ document.addEventListener("keydown", e => {
   };
 
   const render = () => {
+    const hidden = new Set(uploads.filter(v => v.hide).map(v => v.hide));
+    document.querySelectorAll("figure[data-code]").forEach(f => f.classList.toggle("hide", hidden.has(f.dataset.code)));
     document.querySelectorAll(".added").forEach(g => g.innerHTML = "");
     uploads.forEach(v => {
+      if (!v.file) return;
       const g = document.getElementById("added-" + v.character) || document.getElementById("added-new");
       if (!g) return;
       const src = "uploads/" + v.file;
@@ -1953,8 +1956,11 @@ document.addEventListener("keydown", e => {
     const b = e.target.closest(".del"); if (!b) return;
     e.stopPropagation();
     if (!b.dataset.confirm) { b.dataset.confirm = "1"; b.textContent = "?"; b.title = "Click again to remove"; setTimeout(() => { delete b.dataset.confirm; b.textContent = "×"; }, 3000); return; }
-    const f = b.dataset.file;
-    try { uploads = await commit([], [f], list => list.filter(v => v.file !== f), "Gallery: remove a picture"); render(); }
+    const f = b.dataset.file, code = b.dataset.orig;
+    try {
+      if (code) uploads = await commit([], [], list => list.concat([{ hide: code, createdAt: Date.now() }]), "Gallery: remove picture " + code);
+      else uploads = await commit([], [f], list => list.filter(v => v.file !== f), "Gallery: remove a picture");
+      render(); }
     catch (err) { alert((err && err.message) || "Couldn't remove it. Please try again."); }
   });
 
