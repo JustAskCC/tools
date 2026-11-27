@@ -71,6 +71,12 @@
   body.can-edit figure .del{display:block}
   .tag{display:inline-block;background:var(--gold);color:#fff;font-size:11px;border-radius:6px;padding:1px 6px;margin-right:4px}
   footer{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 40px}
+  nav .glab{flex:none;align-self:center;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);padding:0 2px 0 10px}
+  nav .find{max-width:1200px;margin:0 auto;padding:10px 20px 0;display:flex;gap:8px;align-items:center}
+  nav .find input{flex:1;padding:9px 14px;border:1px solid var(--line);border-radius:999px;font:inherit;font-size:15px;background:var(--card)}
+  nav .find button,nav .find a{flex:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;color:var(--ink);text-decoration:none;cursor:pointer}
+  .ghead{max-width:1200px;margin:34px auto 6px;padding:0 24px;font-family:Fraunces,serif;font-size:26px;color:var(--green)}
+  .hide{display:none!important}
 </style>
 </head>
 <body>
@@ -78,7 +84,7 @@
   <h1>Chloe and Carter Universe</h1>
   <p>Character Gallery: the family and the faculty of Cool Kids University</p>
 </header>
-<nav><div class="wrap" id="nav"></div></nav>
+<nav><div class="find"><input id="q" type="search" placeholder="Find a character" aria-label="Find a character"><span id="ownerSlot"></span></div><div class="wrap" id="nav"></div></nav>
 <main id="main"></main>
 <footer>Click any image to view it full size. Use the arrow keys to move between images. Pictures added here show a gold New tag.</footer>
 
@@ -823,6 +829,22 @@ const characters = [
       ["DC1","Full character sheet"],
       ["DC2","Full body, hands in pocket"]
     ]
+  },
+  {
+    id:"chloe", name:"Chloe Charles",
+    role:"Core Cast · Age 11 · 6th Grade · Carter's Big Sister",
+    quote:"Quote to come",
+    about:[
+      "One of the two heart characters of the Chloe and Carter Universe, Carter's big sister and CiCi's daughter.",
+      "In 6th grade at Cool Kids University; Mariyah is her best friend."
+    ],
+    style:[
+      "Braids (match her look across every sheet)"
+    ],
+    flags:[
+      "Upload her character sheet; her friendship panels in other sheets need to match her"
+    ],
+    images:[]
   },
   {
     id:"carter", name:"Carter Charles",
@@ -1680,7 +1702,26 @@ const characters = [
 const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const all = [];
 const nav = document.getElementById("nav"), main = document.getElementById("main");
+const GROUPS = [
+  ["The Family", ["chloe","carter","cici","darius-charles","reggie","fred","kg-rocky","grandma-lu","grandpa-robert","helen-hobbs","alica","mike","bailey","bebe","cameila","celina","stormy"]],
+  ["Neighbors", ["aaliyah-carter","malik","mr-harrison","jahi-rivers"]],
+  ["Toddlers and Preschool", ["kg-albert","kg-mia","kg-micah","kg-michael","kg-noah"]],
+  ["Kindergarten", ["kg-amir","kg-charlotte","kg-diego","kg-sophia"]],
+  ["4th Grade: Carter's Class", ["autumn-johnson","ethan-anderson","jamie","kaito-nakamura","lily-grace-parker","ollie-bennett"]],
+  ["6th Grade: Chloe's Class", ["mariyah-jordan","amara-ellis","ava-brooks","brittany-sullivan","jessica-romano","maya-kim","nyla-washington","skylar-brooks","zoe-carter","zuri-carter"]],
+  ["Faculty and Staff", ["principal-hawthorne","noelle-bellamy","elijah-brooks","layla-chanel","coach-daniels","jordan-ellis","danielle-evans","gladys-grumble","izzy","marcus-love","liam-murphy","jules-park","ms-ramirez","harmony-reyes","mateo-rivera","rafa-santiago","naomi-sinclair","mr-parker","lily-thompson","thaddeus-whitmore"]]
+];
+{
+  const order = [], seen = new Set();
+  GROUPS.forEach(([g, ids]) => ids.forEach(id => { const c = characters.find(x => x.id === id); if (c && !seen.has(id)) { c._g = g; order.push(c); seen.add(id); } }));
+  characters.forEach(c => { if (!seen.has(c.id)) { c._g = "More Characters"; order.push(c); } });
+  characters.length = 0; order.forEach(c => characters.push(c));
+}
+let lastG = "";
 characters.forEach((c, i) => {
+  if (c._g !== lastG) { lastG = c._g;
+    nav.insertAdjacentHTML("beforeend", `<span class="glab">${esc(lastG)}</span>`);
+    main.insertAdjacentHTML("beforeend", `<h2 class="ghead">${esc(lastG)}</h2>`); }
   nav.insertAdjacentHTML("beforeend", `<a href="#${c.id}">${i+1}. ${esc(c.name)}</a>`);
   const figs = c.images.map(([code, cap]) => {
     const idx = all.push({src:`img/${code}.jpg`, cap:`${code}: ${cap}`}) - 1;
@@ -1761,8 +1802,8 @@ const fixes = [
     "Art: Chloe looks different in other sheets' friendship panels."
   ]]
 ];
-nav.insertAdjacentHTML("afterbegin", `<a href="#fix-list" style="border-color:var(--flag);color:var(--flag)">Fix List</a>`);
-main.insertAdjacentHTML("afterbegin", `<section id="fix-list" class="fix">
+nav.insertAdjacentHTML("beforeend", `<span class="glab">Notes</span><a href="#fix-list" style="border-color:var(--flag);color:var(--flag)">Fix List</a>`);
+main.insertAdjacentHTML("beforeend", `<section id="fix-list" class="fix">
   <div class="top"><span class="num">Running Notes</span><h2>Fix List</h2></div>
   <p class="note">Everything we need to change or decide. We'll go through it together.</p>
   ${fixes.map(([t, items]) => `<div class="grp"><h3>${esc(t)}</h3><ol>${items.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></div>`).join("")}
@@ -1783,6 +1824,13 @@ main.insertAdjacentHTML("beforeend", `<section id="new-characters">
 </section>`);
 nav.insertAdjacentHTML("beforeend", `<a href="#new-characters">+ New Characters</a>`);
 
+
+document.getElementById("q").addEventListener("input", e => {
+  const q = e.target.value.trim().toLowerCase();
+  document.querySelectorAll("#nav a").forEach(a => a.classList.toggle("hide", !!q && !a.textContent.toLowerCase().includes(q)));
+  document.querySelectorAll("#nav .glab, .ghead").forEach(x => x.classList.toggle("hide", !!q));
+  document.querySelectorAll("main > section").forEach(sec => { const h = sec.querySelector("h2"); sec.classList.toggle("hide", !!q && !(h && h.textContent.toLowerCase().includes(q))); });
+});
 const lb = document.getElementById("lb"), lbImg = lb.querySelector("img"), lbCap = lb.querySelector("p");
 let cur = 0;
 function show(i){ cur = (i + all.length) % all.length; lbImg.src = all[cur].src; lbCap.textContent = all[cur].cap; lb.classList.add("on"); }
@@ -1818,12 +1866,13 @@ document.addEventListener("keydown", e => {
     const on = !!token;
     document.body.classList.toggle("can-edit", on);
     document.querySelectorAll(".up").forEach(u => u.classList.toggle("on", on));
-    owner.innerHTML = on ? 'Signed in to add pictures. <a href="#" id="so">Sign out</a>' : '<a href="#" id="si">Owner sign in</a>';
-    const a = owner.querySelector("a");
-    a.onclick = e => { e.preventDefault();
+    owner.innerHTML = on ? 'Signed in to add pictures. <a href="#">Sign out</a>' : '<a href="#">Owner sign in</a>';
+    document.getElementById("ownerSlot").innerHTML = on ? '<a href="#" title="Signed in">Sign out</a>' : '<a href="#">Owner sign in</a>';
+    const links = [owner.querySelector("a"), document.querySelector("#ownerSlot a")];
+    links.forEach(a => a.onclick = e => { e.preventDefault();
       if (on) { token = ""; try { localStorage.removeItem(KEY); } catch (e) {} setOwner(); return; }
       const t = (prompt("Paste your GitHub access token for the tools site. It stays only in this browser.") || "").trim();
-      if (!t) return; token = t; try { localStorage.setItem(KEY, t); } catch (e) {} setOwner(); };
+      if (!t) return; token = t; try { localStorage.setItem(KEY, t); } catch (e) {} setOwner(); });
   };
 
   const render = () => {
