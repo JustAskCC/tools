@@ -1713,8 +1713,8 @@ const GROUPS = [
 ];
 {
   const order = [], seen = new Set();
-  GROUPS.forEach(([g, ids]) => ids.forEach(id => { const c = characters.find(x => x.id === id); if (c && !seen.has(id)) { c._g = g; order.push(c); seen.add(id); } }));
-  characters.forEach(c => { if (!seen.has(c.id)) { c._g = "More Characters"; order.push(c); } });
+  GROUPS.forEach(([g, ids]) => ids.forEach(id => { const c = characters.find(x => x && x.id === id); if (c && !seen.has(id)) { c._g = g; order.push(c); seen.add(id); } }));
+  characters.forEach(c => { if (c && !seen.has(c.id)) { c._g = "More Characters"; order.push(c); } });
   characters.length = 0; order.forEach(c => characters.push(c));
 }
 let lastG = "";
